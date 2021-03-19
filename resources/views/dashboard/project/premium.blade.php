@@ -129,7 +129,10 @@
                         <div class="col-md-10 col-md-offset-1">
                             <div class="animate-box svg-sm colored">
                                 <img src="assets/img/premium/flaticon/svg/004-nature.svg" class="svg" alt="">
+                                @if (isset($qs['u']))
                                 <h2>Dear, {{$qs['u']}}</h2>
+
+                                @endif
                                 <h1 class="holder"><span>Welcome to the Wedding of</span></h1>
                                 <h2>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</h2>
                                 <p>{{date("l jS F Y", strtotime($calon->akadNikah->tgl))}}</p>
