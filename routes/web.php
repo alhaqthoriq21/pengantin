@@ -25,7 +25,7 @@ use App\Http\Controllers\LoveStoryController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\SongController;
 
-Route::domain(env('APP_MAIN_DOMAIN', 'localhost'))->prefix("/")->group(function () {
+
     Route::get('/', function () {
         return view('home');
     });
@@ -113,17 +113,4 @@ Route::domain(env('APP_MAIN_DOMAIN', 'localhost'))->prefix("/")->group(function 
     Route::get('/reservasi/list', [ReservasiController::class, 'getData'])->name("get.reservasi.data");
     Route::get("/reservasi/show/{reservasiId}", [ReservasiController::class, "show"])->name("reservasi.show");
 
-
-
-    Route::get('/test', function () {
-        return view("store.auth.confirmation")->render();
-    });
-
     /* disini */
-});
-
-Route::domain(env('APP_IMG_DOMAIN', 'localhost'))->prefix(env('APP_IMG_DOMAIN_PREFIX', 'img'))->group(function () {
-    Route::get("/", function () {
-        return "HI";
-    });
-});

@@ -161,10 +161,10 @@
                         <img src="{{$calon->foto_pria}}" class="img-responsive" alt="">
                         <h3>{{$calon->calon_pria}}</h3>
                         <h1>Putra Dari</h1>
-                        <span>{{$calon->ayah_pria}}</span>
-                        <span>&{{$calon->ibu_pria}}</span>
-                        <span><a href="https://www.instagram.com/{{$calon->sosmed_pria}}/"><i
-                                    class="icon-instagram"></i></a></span>
+                        <h2>{{$calon->ayah_pria}}</h2>
+                        <h2>&{{$calon->ibu_pria}}</h2>
+                        <h2><a href="https://www.instagram.com/{{$calon->sosmed_pria}}/"><i
+                                    class="icon-instagram"></i></a></h2>
                     </div>
                     <div class="col-md-2 col-sm-2 col-xs-2 nopadding">
                         <h2 class="amp-center"><img src="assets/img/premium/flaticon/svg/003-luxury.svg"
@@ -174,10 +174,10 @@
                         <img src="{{$calon->foto_wanita}}" class="img-responsive" alt="">
                         <h3>{{$calon->calon_wanita}}</h3>
                         <h1>Putri Dari</h1>
-                        <span>{{$calon->ayah_wanita}}</span>
-                        <span>&{{$calon->ibu_wanita}}</span>
-                        <span><a href="https://www.instagram.com/{{$calon->sosmed_wanita}}/"><i
-                                    class="icon-instagram"></i></a></span>
+                        <h2>{{$calon->ayah_wanita}}</h2>
+                        <h2>&{{$calon->ibu_wanita}}</h2>
+                        <h2><a href="https://www.instagram.com/{{$calon->sosmed_wanita}}/"><i
+                                    class="icon-instagram"></i></a></h2>
                     </div>
                 </div>
             </div>
