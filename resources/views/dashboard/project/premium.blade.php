@@ -16,19 +16,6 @@
     <meta name="keywords" content="" />
     <meta name="author" content="" />
 
-    <!-- 
-	//////////////////////////////////////////////////////
-
-	FREE HTML5 TEMPLATE 
-	DESIGNED & DEVELOPED by QBOOTSTRAP.COM
-		
-	Website: 		http://qbootstrap.com/
-	Email: 			info@qbootstrap.com
-	Twitter: 		http://twitter.com/Q_bootstrap
-	Facebook: 		https://www.facebook.com/Qbootstrap
-	//////////////////////////////////////////////////////
-	 -->
-
     <!-- Facebook and Twitter integration -->
     <meta property="og:title" content="" />
     <meta property="og:image" content="" />
@@ -87,33 +74,6 @@
 </head>
 
 <body>
-    <!-- <header role="banner" id="qbootstrap-header">
-        <div class="container"> -->
-    <!-- <div class="row"> -->
-    <!-- <nav class="navbar navbar-default"> -->
-    <!-- <div class="navbar-header">
-                    Mobile Toggle Menu Button
-                    <a href="#" class="js-qbootstrap-nav-toggle qbootstrap-nav-toggle" data-toggle="collapse"
-                        data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
-                    <a class="navbar-brand" href="index.html">Wedding</a>
-                </div> -->
-    <!-- <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="active"><a href="#" data-nav-section="home"><span>Home</span></a></li>
-                        <li><a href="#" data-nav-section="groom-bride"><span>Groom &amp; Bride</span></a></li>
-                        <li><a href="#" data-nav-section="story"><span>Love Story</span></a></li>
-                        <li><a href="#" data-nav-section="greetings"><span>Greetings</span></a></li>
-                        <li><a href="#" data-nav-section="people"><span>People</span></a></li>
-                        <li><a href="#" data-nav-section="when-where"><span>When &amp; Where</span></a></li>
-                        <li><a href="#" data-nav-section="rsvp"><span>RSVP</span></a></li>
-                        <li><a href="#" data-nav-section="gallery"><span>Gallery</span></a></li>
-                        <li><a href="#" data-nav-section="blog"><span>Blog</span></a></li>
-                    </ul>
-                </div> -->
-    <!-- </nav> -->
-    <!-- </div> -->
-    <!-- </div> -->
-    <!-- </header> -->
 
     <audio controls autoplay loop hidden>
         <source src="https://media.vocaroo.com/mp3/6JEBAPEMA6A">
@@ -616,7 +576,7 @@
                 <div class="col-md-12">
                     <ul id="fh5co-gallery-list">
                         @foreach($calon->fotoFooter as $data)
-                        <li class="one-third animate-box" data-animate-effect="fadeIn"
+                        <li class="one-third animate-box center-bg" data-animate-effect="fadeIn"
                             style="background-image: url({{$data->foto}});">
                             <a href="{{$data->foto}}">
                                 <div class="case-studies-summary">
@@ -788,16 +748,15 @@
                 </div>
 
             </div>
-            <div class="row">
-                <div class="col-12 horizontal-line">
-                    <div class="media d-block d-md-flex mt-3">
-                        <div class="media-body text-left text-md-left ml-md-3 ml-0 komentar">
+            <div class="row horizontal-line">
+                <div class="col-md-12">
+                    <div class="media g-mb-30 media-comment">
+                        <div class="media-body u-shadow-v18 g-bg-secondary g-pa-30">
                             @foreach($calon->comment as $data)
-                            <h2 class="komentar"><strong>{{ $data->nama }}</strong>
-                                <a href="" class="pull-left">
-                                </a>
-                            </h2>
-                            {{ $data->comment }}
+                            <div class="g-pd">
+                                <h2>{{ $data->nama }}</h2>
+                                <h7>{{ $data->comment }}.</h7>
+                            </div>
                             @endforeach
                         </div>
                     </div>
@@ -805,6 +764,16 @@
             </div>
         </div>
     </div>
+
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <div class="container">
+        
+    </div> -->
+
+
+
+
 
 
     <!-- <div id="qbootstrap-press" data-section="blog">
@@ -889,7 +858,8 @@
         <div class="container">
             <div class="row row-bottom-padded-sm">
                 <div class="col-md-12">
-                    <p class="copyright text-center">&copy; 2021 <a href="index.html">TobeABrideXCloudStudio</a>. All
+                    <p class="copyright text-center">&copy; 2021 <a href="index.html">TobeABrideXCloudStudio</a>.
+                        All
                         Rights Reserved.</p>
                 </div>
             </div>
