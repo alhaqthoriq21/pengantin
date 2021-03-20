@@ -116,7 +116,7 @@
     </header>
 
     <audio controls autoplay loop hidden>
-        <source src="uploads/songs/onelastbreath.mp3" type="audio/mpeg">
+        <source src="uploads/songs/Perfect-EdSheeran.mp3" type="audio/mpeg">
     </audio>
 
 
@@ -547,7 +547,7 @@
                             <p>{{$calon->akadNikah->tempat}}</p>
                             <p>{{$calon->akadNikah->alamat}}</p>
                             <p><a href="https://maps.google.com/?q={{$calon->akadNikah->google_loc}}"><i
-                                        class="fas fa-map-marker-alt">Location</a></i></p>
+                                        class="fas fa-map-marker-alt"></i> Location</a></p>
                         </div>
                     </div>
                 </div>
@@ -583,7 +583,7 @@
                             <p>{{$calon->resepsi->tempat_rsp}}</p>
                             <p> {{$calon->resepsi->alamat_rsp}}</p>
                             <p><a href="https://maps.google.com/?q={{$calon->resepsi->google_loc_rsp}}"><i
-                                        class="fas fa-map-marker-alt"></i>Location</a></p>
+                                        class="fas fa-map-marker-alt"></i> Location</a></p>
 
 
                         </div>
