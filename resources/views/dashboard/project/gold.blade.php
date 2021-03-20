@@ -128,7 +128,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+                        @if (isset($qs['u']))
                         <h2>Welcome, Dear {{$qs['u']}}!</h2>
+                        @endif
                         <h3> {{date("l jS F Y", strtotime($calon->akadNikah->tgl))}}</h3>
                         <p>We invited you to celebrate our wedding</p>
                     </div>
@@ -325,7 +327,6 @@
 
         <div id="fh5co-gallery" class="fh5co-section-gray">
             <div class="container">
-
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
                         <span>Our Memories in photograph</span>
@@ -351,8 +352,9 @@
                     </div>
                 </div>
             </div>
+        </div>
 
-            <!-- <div id="fh5co-counter" class="fh5co-bg fh5co-counter"
+        <!-- <div id="fh5co-counter" class="fh5co-bg fh5co-counter"
             style="background-image:url(assets/img/gold/img_bg_5.jpg);">
             <div class="overlay"></div>
             <div class="container">
@@ -410,7 +412,7 @@
             </div>
         </div> -->
 
-            <!-- <div id="fh5co-testimonial">
+        <!-- <div id="fh5co-testimonial">
             <div class="container">
                 <div class="row">
                     <div class="row animate-box">
@@ -470,7 +472,7 @@
             </div>
         </div> -->
 
-            <!-- <div id="fh5co-services" class="fh5co-section-gray">
+        <!-- <div id="fh5co-services" class="fh5co-section-gray">
             <div class="container">
 
                 <div class="row animate-box">
@@ -534,136 +536,135 @@
 
 
 
-            <div id="fh5co-started" class="fh5co-bg" style="background-image:url(assets/img/gold/img_bg_4.jpg);">
+        <div id="fh5co-started" class="fh5co-bg" style="background-image:url(assets/img/gold/img_bg_4.jpg);">
 
-                <div class="overlay"></div>
-                <div class="container">
-                    <div class="row animate-box">
-                        <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-                            <h2>Guest Book</h2>
-                            <p>Leave a message or send wishes for the Couple!</p>
-                        </div>
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row animate-box">
+                    <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+                        <h2>Guest Book</h2>
+                        <p>Leave a message or send wishes for the Couple!</p>
                     </div>
-                    <div class="row animate-box">
-                        <div class="col-md-10 col-md-offset-1">
-                            <form action="{{route('comment.save')}}" method="post" class="form-inline">
-                                <input type="hidden" name="calon_id" id="calon_id" value="{{$calon->id}}">
-                                <input type="hidden" name="slug" id="slug" value="{{$calon->slug}}">
-                                @csrf
-                                <div class="col-md-4 col-sm-4">
-                                    <div class="form-group">
-                                        <label for="name" class="sr-only">Name</label>
-                                        <input type="name" class="form-control" name="nama" id="nama"
-                                            placeholder="Name">
-                                    </div>
+                </div>
+                <div class="row animate-box">
+                    <div class="col-md-10 col-md-offset-1">
+                        <form action="{{route('comment.save')}}" method="post" class="form-inline">
+                            <input type="hidden" name="calon_id" id="calon_id" value="{{$calon->id}}">
+                            <input type="hidden" name="slug" id="slug" value="{{$calon->slug}}">
+                            @csrf
+                            <div class="col-md-4 col-sm-4">
+                                <div class="form-group">
+                                    <label for="name" class="sr-only">Name</label>
+                                    <input type="name" class="form-control" name="nama" id="nama" placeholder="Name">
                                 </div>
-                                <div class="col-md-4 col-sm-4">
-                                    <div class="form-group">
-                                        <label for="comment" class="sr-only">Comment</label>
-                                        <input type="text" class="form-control" name="comment" id="comment"
-                                            placeholder="Comment">
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-4">
-                                    <button type="submit" class="btn btn-default btn-block">Kirim</button>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="col-md-4 col-sm-4">
-                            <div class="form-group">
-                                @foreach($calon->comment as $data)
-                                <p>&ldquo;{{ $data->nama }}&rdquo;</p>
-                                <p>&ldquo;{{ $data->comment }}&rdquo;</p>
-                                @endforeach
                             </div>
+                            <div class="col-md-4 col-sm-4">
+                                <div class="form-group">
+                                    <label for="comment" class="sr-only">Comment</label>
+                                    <input type="text" class="form-control" name="comment" id="comment"
+                                        placeholder="Comment">
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4">
+                                <button type="submit" class="btn btn-default btn-block">Kirim</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="form-group">
+                            @foreach($calon->comment as $data)
+                            <p>&ldquo;{{ $data->nama }}&rdquo;</p>
+                            <p>&ldquo;{{ $data->comment }}&rdquo;</p>
+                            @endforeach
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <footer id="fh5co-footer" role="contentinfo">
-                <div class="container">
+        <footer id="fh5co-footer" role="contentinfo">
+            <div class="container">
 
-                    <div class="row copyright">
-                        <div class="col-md-12 text-center">
-                            <p>
-                            <p class="copyright text-center">&copy;2021 All
-                                Rights Reserved. <a href="index.html">TimeStoryXCloudStudio</a></p>
-                            </p>
-                            <p>
-                            <ul class="fh5co-social-icons">
-                                <a href="https://www.instagram.com/alhaqthoriq/"><i class="icon-instagram"></i></a>
-                            </ul>
-                            </p>
-                        </div>
+                <div class="row copyright">
+                    <div class="col-md-12 text-center">
+                        <p>
+                        <p class="copyright text-center">&copy;2021 All
+                            Rights Reserved. <a href="index.html">TimeStoryXCloudStudio</a></p>
+                        </p>
+                        <p>
+                        <ul class="fh5co-social-icons">
+                            <a href="https://www.instagram.com/alhaqthoriq/"><i class="icon-instagram"></i></a>
+                        </ul>
+                        </p>
                     </div>
-
                 </div>
-            </footer>
-        </div>
 
-        <div class="gototop js-top">
-            <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
-        </div>
+            </div>
+        </footer>
+    </div>
 
-        <!-- jQuery -->
-        <script src="{{asset('assets/js/gold/jquery.min.js')}}"></script>
-        <!-- jQuery Easing -->
-        <script src="{{asset('assets/js/gold/jquery.easing.1.3.js')}}"></script>
-        <!-- Bootstrap -->
-        <script src="{{asset('assets/js/gold/bootstrap.min.js')}}"></script>
-        <!-- Waypoints -->
-        <script src="{{asset('assets/js/gold/jquery.waypoints.min.js')}}"></script>
-        <!-- Carousel -->
-        <script src="{{asset('assets/js/gold/owl.carousel.min.js')}}"></script>
-        <!-- countTo -->
-        <script src="{{asset('assets/js/gold/jquery.countTo.js')}}"></script>
-        <!-- Stellar -->
-        <script src="{{asset('assets/js/gold/jquery.stellar.min.js')}}"></script>
-        <!-- Magnific Popup -->
-        <script src="{{asset('assets/js/gold/jquery.magnific-popup.min.js')}}"></script>
-        <script src="{{asset('assets/js/gold/magnific-popup-options.js')}}"></script>
-        <!-- // <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script> -->
-        <script src=" {{asset('assets/js/gold/simplyCountdown.js')}}"></script>
-        <!-- Main -->
-        <script src="{{asset('assets/js/gold/main.js')}}"></script>
+    <div class="gototop js-top">
+        <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+    </div>
 
-        <script>
-        var d = new Date(new Date("{{$calon->akadNikah->tgl}}").getTime());
-        // var d = new Date("{{$calon->akadNikah->tgl}}").getTime() + 200 * 120 * 120 * 2000;
-        // var d = new Date("{{$calon->akadNikah->tgl}}").getTime();
+    <!-- jQuery -->
+    <script src="{{asset('assets/js/gold/jquery.min.js')}}"></script>
+    <!-- jQuery Easing -->
+    <script src="{{asset('assets/js/gold/jquery.easing.1.3.js')}}"></script>
+    <!-- Bootstrap -->
+    <script src="{{asset('assets/js/gold/bootstrap.min.js')}}"></script>
+    <!-- Waypoints -->
+    <script src="{{asset('assets/js/gold/jquery.waypoints.min.js')}}"></script>
+    <!-- Carousel -->
+    <script src="{{asset('assets/js/gold/owl.carousel.min.js')}}"></script>
+    <!-- countTo -->
+    <script src="{{asset('assets/js/gold/jquery.countTo.js')}}"></script>
+    <!-- Stellar -->
+    <script src="{{asset('assets/js/gold/jquery.stellar.min.js')}}"></script>
+    <!-- Magnific Popup -->
+    <script src="{{asset('assets/js/gold/jquery.magnific-popup.min.js')}}"></script>
+    <script src="{{asset('assets/js/gold/magnific-popup-options.js')}}"></script>
+    <!-- // <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script> -->
+    <script src=" {{asset('assets/js/gold/simplyCountdown.js')}}"></script>
+    <!-- Main -->
+    <script src="{{asset('assets/js/gold/main.js')}}"></script>
 
-        // default example
-        simplyCountdown('.simply-countdown-one', {
-            // "{$calon->akadNikah->tgl}"
-            year: d.getFullYear(),
-            month: d.getMonth() + 1,
-            day: d.getDate(),
-            hours: d.getHours(),
-            minutes: d.getMinutes(),
-            seconds: d.getSeconds()
-        });
+    <script>
+    var d = new Date(new Date("{{$calon->akadNikah->tgl}}").getTime());
+    // var d = new Date("{{$calon->akadNikah->tgl}}").getTime() + 200 * 120 * 120 * 2000;
+    // var d = new Date("{{$calon->akadNikah->tgl}}").getTime();
 
-
-        // $('#simply-countdown-losange').simplyCountdown({
-        //     year: 2015, // required
-        //     month: 6, // required
-        //     day: 30, // required
-
-        // });
+    // default example
+    simplyCountdown('.simply-countdown-one', {
+        // "{$calon->akadNikah->tgl}"
+        year: d.getFullYear(),
+        month: d.getMonth() + 1,
+        day: d.getDate(),
+        hours: d.getHours(),
+        minutes: d.getMinutes(),
+        seconds: d.getSeconds()
+    });
 
 
-        // jQuery example
-        // $('#simply-countdown-losange').simplyCountdown(
-        // year: d.getFullYear(),
-        // month: d.getMonth() + 1,
-        // day: d.getDate(),
-        // enableUtc: false,
-        // // });
-        // 
-        </script>
+    // $('#simply-countdown-losange').simplyCountdown({
+    //     year: 2015, // required
+    //     month: 6, // required
+    //     day: 30, // required
 
-        <!-- <script>
+    // });
+
+
+    // jQuery example
+    // $('#simply-countdown-losange').simplyCountdown(
+    // year: d.getFullYear(),
+    // month: d.getMonth() + 1,
+    // day: d.getDate(),
+    // enableUtc: false,
+    // // });
+    // 
+    </script>
+
+    <!-- <script>
     var countDownDate = new Date("{{$calon->akadNikah->tgl}}").getTime();
 
     // Update the count down every 1 second

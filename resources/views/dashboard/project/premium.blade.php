@@ -67,6 +67,9 @@
     <link rel="stylesheet" href="{{asset('assets/css/premium/bootstrap.css')}}">
 
     <link rel="stylesheet" href="{{asset('assets/css/premium/style.css')}}">
+
+    <!-- //font awesome -->
+    <link rel="stylesheet" href="{{asset('assets/plugins/fontawesome-free-5.15.2/css/all.css')}}">
     <!-- // datetimepicker -->
     <!-- <link rel="stylesheet" type="text/css" href="{{asset('assets/css/premium/jquery.datetimepicker.css')}}" /> -->
 
@@ -120,7 +123,7 @@
     <div class="qbootstrap-hero" data-section="home">
         <div class="qbootstrap-overlay"></div>
         @if($calon->fotoHeader->foto_header)
-        <div class="qbootstrap-cover text-center" data-stellar-background-ratio="0.5"
+        <div class="qbootstrap-cover text-center center-bg" data-stellar-background-ratio="0.5"
             style="background-image: url({{$calon->fotoHeader->foto_header}});">
             @endif
             <div class="display-t">
@@ -164,8 +167,8 @@
                         <img src="{{$calon->foto_pria}}" class="img-responsive" alt="">
                         <h3>{{$calon->calon_pria}}</h3>
                         <h1>Putra Dari</h1>
-                        <h2>{{$calon->ayah_pria}}</h2>
-                        <h2>&{{$calon->ibu_pria}}</h2>
+                        <span>Bpk. {{$calon->ayah_pria}}</span>
+                        <span>& Ibu {{$calon->ibu_pria}}</span>
                         <h2><a href="https://www.instagram.com/{{$calon->sosmed_pria}}/"><i
                                     class="icon-instagram"></i></a></h2>
                     </div>
@@ -177,8 +180,8 @@
                         <img src="{{$calon->foto_wanita}}" class="img-responsive" alt="">
                         <h3>{{$calon->calon_wanita}}</h3>
                         <h1>Putri Dari</h1>
-                        <h2>{{$calon->ayah_wanita}}</h2>
-                        <h2>&{{$calon->ibu_wanita}}</h2>
+                        <span>Bpk. {{$calon->ayah_wanita}}</span>
+                        <span>& Ibu {{$calon->ibu_wanita}}</span>
                         <h2><a href="https://www.instagram.com/{{$calon->sosmed_wanita}}/"><i
                                     class="icon-instagram"></i></a></h2>
                     </div>
@@ -186,9 +189,10 @@
             </div>
         </div>
     </div>
-
+    @if($calon->fotoHeader->foto_countdown)
     <div id="qbootstrap-countdown" data-stellar-background-ratio="0.5"
-        style="background-image: url(assets/img/premium/cover_bg_2.jpg);" data-section="wedding-day">
+        style="background-image: url({{$calon->fotoHeader->foto_countdown}});" data-section="wedding-day">
+        @endif
         <div class="overlay"></div>
         <div class="display-over">
             <div class="container">
@@ -542,8 +546,8 @@
                             </div>
                             <p>{{$calon->akadNikah->tempat}}</p>
                             <p>{{$calon->akadNikah->alamat}}</p>
-                            <p><a href="https://maps.google.com/?q={{$calon->akadNikah->google_loc}}"
-                                    class="btn btn-primary btn-sm">Learn more</a></p>
+                            <p><a href="https://maps.google.com/?q={{$calon->akadNikah->google_loc}}"><i
+                                        class="fas fa-map-marker-alt">Location</a></i></p>
                         </div>
                     </div>
                 </div>
@@ -578,8 +582,10 @@
                             </div>
                             <p>{{$calon->resepsi->tempat_rsp}}</p>
                             <p> {{$calon->resepsi->alamat_rsp}}</p>
-                            <p><a href="https://maps.google.com/?q={{$calon->resepsi->google_loc_rsp}}"
-                                    class="btn btn-primary btn-sm">Learn more</a></p>
+                            <p><a href="https://maps.google.com/?q={{$calon->resepsi->google_loc_rsp}}"><i
+                                        class="fas fa-map-marker-alt"></i>Location</a></p>
+
+
                         </div>
                     </div>
                 </div>
@@ -593,10 +599,42 @@
     </div>
     </div>
 
+    <div id="fh5co-gallery" class="fh5co-section-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center section-heading svg-sm colored">
+                    <img src="assets/img/premium/flaticon/svg/005-two.svg" class="svg" alt="">
+                    <h2>Our Galleries</h2>
+                    <div class="row">
+                        <div class="col-md-10 col-md-offset-1 subtext">
+                            <h1>Our memories in photograph.</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-bottom-padded-md">
+                <div class="col-md-12">
+                    <ul id="fh5co-gallery-list">
+                        @foreach($calon->fotoFooter as $data)
+                        <li class="one-third animate-box" data-animate-effect="fadeIn"
+                            style="background-image: url({{$data->foto}});">
+                            <a href="{{$data->foto}}">
+                                <div class="case-studies-summary">
+                                    <!-- <span>14 Photos</span>
+                                        <h2>Two Glas of Juice</h2> -->
+                                </div>
+                            </a>
+                        </li>
+                        @endforeach
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
-    <div id="qbootstrap-gallery" data-section="gallery">
+
+    <!-- <div id="qbootstrap-gallery" data-section="gallery">
         <div class="container">
             <div class="row animate-box">
                 <div class="col-md-8 col-md-offset-2">
@@ -639,7 +677,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <div id="qbootstrap-started" class="qbootstrap-bg" data-section="rsvp" data-stellar-background-ratio="0.5">
         <!-- style="background-image: url(assets/img/cover_bg_1.jpg);"  -->
@@ -703,8 +741,10 @@
             </div>
         </div>
     </div>
+    <div class="container bg-white">
+    </div>
 
-    <div id="qbootstrap-started" class="qbootstrap-bg" data-section="rsvp" data-stellar-background-ratio="0.5">
+    <div id="qbootstrap-comment" class="qbootstrap-bg" data-section="comment" data-stellar-background-ratio="0.5">
         <!-- style="background-image: url(assets/img/cover_bg_1.jpg);"  -->
         <div class="overlay"></div>
         <div class="container">
@@ -745,12 +785,20 @@
                         </div>
                     </form>
                 </div>
-                <div class="col-md-4 col-sm-4">
-                    <div class="form-group">
-                        @foreach($calon->comment as $data)
-                        <p>&ldquo;{{ $data->nama }}&rdquo;</p>
-                        <p>&ldquo;{{ $data->comment }}&rdquo;</p>
-                        @endforeach
+
+            </div>
+            <div class="row">
+                <div class="col-12 horizontal-line">
+                    <div class="media d-block d-md-flex mt-3">
+                        <div class="media-body text-left text-md-left ml-md-3 ml-0 komentar">
+                            @foreach($calon->comment as $data)
+                            <h2 class="komentar"><strong>{{ $data->nama }}</strong>
+                                <a href="" class="pull-left">
+                                </a>
+                            </h2>
+                            {{ $data->comment }}
+                            @endforeach
+                        </div>
                     </div>
                 </div>
             </div>

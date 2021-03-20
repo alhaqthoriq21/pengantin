@@ -65,7 +65,7 @@ class SongController extends Controller
         try {
             $input = $request->only(["calon_id","judul","song","status"]);
             $song = Song::create($input);
-            $this->uploadImage($request, $song->id);
+            $this->uploadSong($request, $song->id);
             return redirect(route("get.song.data"))->with("success", "Songs Footer Has Been Added");
         } catch (\Exception $e) {
             return redirect(route("get.song.data"))->with("error", $e->getMessage());
@@ -91,7 +91,7 @@ class SongController extends Controller
                     $song->{$key} = $value;
                 }
                 $song->save();
-                $this->uploadImage($request, $song->id);
+                $this->uploadSong($request, $song->id);
                 return redirect(route("get.song.data"))->with("success", "Songs Has Been Edited");
             }
             return $this->sendError("Tidak ditemukan");
@@ -107,7 +107,7 @@ class SongController extends Controller
         return view('dashboard.song.updateSong', compact('song','calon'));
     }
 
-    public function uploadImage(Request $request, $songId)
+    public function uploadSong(Request $request, $songId)
     {
         $uploader = new ImageUploadController();
         $data = ["type" => "song", "uniq_id" => $songId];

@@ -89,7 +89,9 @@
                             <div class="container">
                                 <div class="col-md-10 col-md-offset-1">
                                     <div class="animate-box">
+                                        @if (isset($qs['u']))
                                         <h2>Dear, {{$qs['u']}}</h2>
+                                        @endif
                                         <h1>Welcome to the Wedding of</h1>
                                         <h2>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</h2>
                                         <p><span>{{date("l jS F Y", strtotime($calon->akadNikah->tgl))}}</span></p>

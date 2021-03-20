@@ -152,7 +152,7 @@
                                     <div class="col-sm-8">
                                         <div class="d-flex flex-row">
                                             <input type="file" name="song" id="song" class="form-control"
-                                                accept="image/*">
+                                                accept="song/*">
                                             <div id="uploadProgress"></div>
                                         </div>
                                     </div>
