@@ -115,8 +115,7 @@
     <!-- </div> -->
     <!-- </header> -->
 
-    <audio controls autoplay loop hidden>
-        <source src="uploads/songs/Perfect-EdSheeran.mp3" type="audio/mpeg">
+    <audio controls source src="uploads/songs/Perfect-EdSheeran.mp3" autoplay loop hidden>
     </audio>
 
 
@@ -710,7 +709,7 @@
                         </div>
                         <div class="col-md-4 col-sm-4">
                             <div class="form-group">
-                                <label for="alamat" class="sr-only">Alamat</label>
+                                <label for="alamat" class="sr-only">Address</label>
                                 <input type="text" class="form-control" name="alamat" id="alamat" placeholder="Alamat">
                             </div>
                         </div>
@@ -719,17 +718,18 @@
                                 <!-- <label for="ket" class="sr-only">Apakah Anda Akan Datang?</label> -->
                                 <select name="ket" id="ket" placeholder="Apakah anda Datang?" class="form-control">
                                     <!-- <option value=""></option> -->
+                                    <option value="Leave a message!">Leave a message!</option>
                                     <option value="Ya, tentu saja!">Ya, tentu saja!</option>
                                     <option value="Maaf, saya tidak bisa.">Maaf, saya tidak bisa.</option>
                                 </select>
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-4">
-                            <button type="submit" class="btn btn-default btn-block">Kirim</button>
+                            <button type="submit" class="btn btn-default btn-block">Submit</button>
                         </div>
                     </form>
                 </div>
-                <div class="col-md-4 col-sm-4">
+                <!-- <div class="col-md-4 col-sm-4">
                     <div class="form-group">
                         @foreach($calon->reservasi as $data)
                         <p>&ldquo;{{ $data->nama }}&rdquo;</p>
@@ -737,7 +737,7 @@
                         <p>&ldquo;{{ $data->ket }}&rdquo;</p>
                         @endforeach
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -781,7 +781,7 @@
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-4">
-                            <button type="submit" class="btn btn-default btn-block">Kirim</button>
+                            <button type="submit" class="btn btn-default btn-block">Submit</button>
                         </div>
                     </form>
                 </div>
