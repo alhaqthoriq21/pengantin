@@ -10,7 +10,7 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>TimeStoryXCloudStudio</title>
+    <title>ToBeAbrideXCloudStudio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -888,7 +888,7 @@
         <div class="container">
             <div class="row row-bottom-padded-sm">
                 <div class="col-md-12">
-                    <p class="copyright text-center">&copy; 2021 <a href="index.html">TimeStoryXCloudStudio</a>. All
+                    <p class="copyright text-center">&copy; 2021 <a href="index.html">TobeABrideXCloudStudio</a>. All
                         Rights Reserved.</p>
                 </div>
             </div>
