@@ -39,7 +39,7 @@ a:focus {
 }
 
 p {
-    margin-bottom: 1.5em;
+    margin-bottom: 0;
 }
 
 h1,
@@ -51,6 +51,7 @@ h6 {
     color: #000;
     font-family: "Clicker Script", cursive;
     font-weight: 400;
+    margin: 0;
 }
 
 ::-webkit-selection {
@@ -826,7 +827,7 @@ h6 {
 }
 
 #qbootstrap-countdown .section-heading .datewed {
-    font-size: 24px;
+    font-size: 40px;
     color: rgba(255, 255, 255, 0.7);
 }
 
@@ -1001,6 +1002,9 @@ h6 {
 .fh5co-section-gray {
     background: rgba(0, 0, 0, 0.04);
 }
+
+/* //welcome gateway */
+
 
 body {
     margin-top: 20px;
@@ -1572,7 +1576,7 @@ g.pd {
 }
 
 .wedding-events .desc:after {
-    position: absolute;
+    position: relative;
     top: 10px;
     bottom: 10px;
     left: 10px;
@@ -1606,7 +1610,7 @@ g.pd {
 }
 
 .wedding-events .desc .icon {
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     right: 0;
@@ -1625,7 +1629,7 @@ g.pd {
 
 @media screen and (max-width: 768px) {
     .wedding-events .desc .icon {
-        position: relative;
+        position: relative !important;
         margin: 0;
     }
 }
@@ -1655,7 +1659,7 @@ g.pd {
 }
 
 #qbootstrap-started .section-heading .datewed {
-    font-size: 24px;
+    font-size: 40px;
     color: rgba(255, 255, 255, 0.7);
 }
 
@@ -1782,7 +1786,7 @@ h2.komentar {
 }
 
 #qbootstrap-comment .section-heading .datewed {
-    font-size: 24px;
+    font-size: 40px;
     color: rgba(255, 255, 255, 0.7);
 }
 
@@ -2311,5 +2315,81 @@ h2.komentar {
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
 }
+
+/*** music box ***/
+.music-box {
+    position: fixed;
+    width: 300px;
+    height: 160px;
+    z-index: 120;
+    bottom: 30px;
+    right: 30px;
+}
+
+@media (max-width: 991px) {
+    .music-box {
+        width: 250px;
+        height: 120px;
+        right: auto;
+        left: 30px;
+    }
+}
+
+.music-box .music-holder {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: -30px;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+
+.music-box .music-holder iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.music-box button {
+    background: rgba(0, 0, 0, 0.1);
+    width: 40px;
+    height: 40px;
+    line-height: 35px;
+    font-size: 18px;
+    color: #9a8c40;
+    border: 1px solid #e6e6e6;
+    outline: 0;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.music-box.music-box-2 button {
+    color: #b16f90;
+}
+
+@media (max-width: 991px) {
+    .music-box button {
+        right: auto;
+        left: 0;
+    }
+}
+
+.music-box .toggle-music-box {
+    top: -50px;
+    visibility: visible;
+    opacity: 1;
+}
+
 
 /*# sourceMappingURL=style.css.map */

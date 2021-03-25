@@ -9,7 +9,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>TimeStoryXCloudStudio</title>
+    <title>ToBeABrideXCloudStudio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -27,6 +27,7 @@
     <meta name="twitter:image" content="" />
     <meta name="twitter:url" content="" />
     <meta name="twitter:card" content="" />
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/tobeabride.ico">
 
     <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,400italic,700' rel='stylesheet'
         type='text/css'>
@@ -47,25 +48,32 @@
     <link rel="stylesheet" href="{{asset('assets/css/gold/style.css')}}">
     <!-- Modernizr JS -->
     <script src="{{asset('assets/js/gold/modernizr-2.6.2.min.js')}}"></script>
+
+    <link rel="stylesheet" href="{{asset('assets/css/premium/icomoon.css')}}">
     <!-- FOR IE9 below -->
     <!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 
+    <style>
+    .commentText p {
+        margin: 0px;
+        margin-bottom: 0px;
+    }
+    </style>
+
 </head>
 
 <body>
 
-    <audio controls autoplay loop hidden>
-        <source src="uploads/songs/onelastbreath.mp3" type="audio/mpeg">
-    </audio>
+
 
     <div class="fh5co-loader"></div>
 
     <div id="page">
-        <nav class="fh5co-nav" role="navigation">
-            <div class="container">
-                <!-- <div class="row">
+        <!-- <nav class="fh5co-nav" role="navigation">
+            <div class="container"> -->
+        <!-- <div class="row">
                     <div class="col-xs-2">
                         <div id="fh5co-logo"><a href="index.html">Wedding<strong>.</strong></a></div>
                     </div>
@@ -96,11 +104,12 @@
                     </div>
                 </div> -->
 
-            </div>
-        </nav>
-
-        <header id="fh5co-header" class="fh5co-cover" role="banner"
-            style="background-image:url(assets/img/gold/img_bg_2.jpg);" data-stellar-background-ratio="0.5">
+        <!-- </div>
+        </nav> -->
+        @if($calon->fotoHeader->foto_header)
+        <header id="fh5co-header" class="fh5co-cover centre-bg c-hero-banner" role="banner"
+            style="background-image:url({{$calon->fotoHeader->foto_header}});" data-stellar-background-ratio="0.5">
+            @endif
             <div class="overlay"></div>
             <div class="container">
                 <div class="row">
@@ -122,6 +131,9 @@
                     </div>
                 </div>
             </div>
+            <div class="mask">
+                <img src="assets\img\gold\mask.png" alt="">
+            </div>
         </header>
 
         <div id="fh5co-couple">
@@ -141,8 +153,8 @@
                             <img src="{{$calon->foto_pria}}" alt="groom" class="img-responsive">
                         </div>
                         <div class="desc-groom">
-                            <h3>{{$calon->calon_pria}}</h3>
-                            <p>Putra Dari</p>
+                            <h3><strong>{{$calon->calon_pria}}</strong></h3>
+                            <p><strong>Putra Dari</strong></p>
                             <p>Bpk. {{$calon->ayah_pria}} </p>
                             <p>& Ibu {{$calon->ibu_pria}} </p>
                         </div>
@@ -153,8 +165,8 @@
                             <img src="{{$calon->foto_wanita}}" alt="groom" class="img-responsive">
                         </div>
                         <div class="desc-bride">
-                            <h3>{{$calon->calon_wanita}}</h3>
-                            <p>Putri Dari</p>
+                            <h3><strong>{{$calon->calon_wanita}}</strong></h3>
+                            <p><strong>Putri Dari</strong></p>
                             <p>Bpk. {{$calon->ayah_wanita}} </p>
                             <p>& Ibu {{$calon->ibu_wanita}} </p>
                         </div>
@@ -163,7 +175,8 @@
             </div>
         </div>
         @if($calon->fotoBody->foto_pertama)
-        <div id="fh5co-event" class="fh5co-bg" style="background-image:url({{$calon->fotoBody->foto_pertama}});">
+        <div id="fh5co-event" class="fh5co-bg center-bg"
+            style="background-image:url({{$calon->fotoBody->foto_pertama}});">
             @endif
             <div class="overlay"></div>
             <div class="container">
@@ -250,9 +263,9 @@
                     <div class="col-md-12 col-md-offset-0">
                         <ul class="timeline animate-box">
                             <li class="animate-box">
-                                @if($calon->loveStory->foto_firstdate)
+                                @if($calon->loveStory->foto_firstmeet)
                                 <div class="timeline-badge"
-                                    style="background-image:url({{$calon->loveStory->foto_firstdate}});">
+                                    style="background-image:url({{$calon->loveStory->foto_firstmeet}});">
                                     @endif
                                 </div>
                                 <div class="timeline-panel">
@@ -268,9 +281,9 @@
                                 </div>
                             </li>
                             <li class="timeline-inverted animate-box">
-                                @if($calon->loveStory->foto_firstmeet)
+                                @if($calon->loveStory->foto_firstdate)
                                 <div class="timeline-badge"
-                                    style="background-image:url({{$calon->loveStory->foto_firstmeet}});">
+                                    style="background-image:url({{$calon->loveStory->foto_firstdate}});">
                                     @endif
                                 </div>
                                 <div class="timeline-panel">
@@ -536,7 +549,8 @@
 
 
 
-        <div id="fh5co-started" class="fh5co-bg" style="background-image:url(assets/img/gold/img_bg_4.jpg);">
+        <div id="fh5co-started" class="fh5co-bg">
+            <!-- style="background-image:url(assets/img/gold/img_bg_4.jpg);" -->
 
             <div class="overlay"></div>
             <div class="container">
@@ -554,7 +568,7 @@
                             @csrf
                             <div class="col-md-4 col-sm-4">
                                 <div class="form-group">
-                                    <label for="name" class="sr-only">Name</label>
+                                    <label for="name" class="sr-only">Nama</label>
                                     <input type="name" class="form-control" name="nama" id="nama" placeholder="Name">
                                 </div>
                             </div>
@@ -566,42 +580,81 @@
                                 </div>
                             </div>
                             <div class="col-md-4 col-sm-4">
-                                <button type="submit" class="btn btn-default btn-block">Kirim</button>
+                                <button type="submit" class="btn btn-default btn-block">Submit</button>
                             </div>
                         </form>
                     </div>
-                    <div class="col-md-4 col-sm-4">
-                        <div class="form-group">
-                            @foreach($calon->comment as $data)
-                            <p>&ldquo;{{ $data->nama }}&rdquo;</p>
-                            <p>&ldquo;{{ $data->comment }}&rdquo;</p>
-                            @endforeach
+                </div>
+                <div class="row horizontal-line">
+                    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+                        rel="stylesheet"
+                        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+                        crossorigin="anonymous">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="media g-mb-30 media-comment">
+                                    <h7><strong>Comment Section</strong></h7>
+                                    <!-- <img class="d-flex g-width-50 g-height-50 rounded-circle g-mt-3 g-mr-15"> -->
+                                    <div class="media-body u-shadow-v18 g-bg-secondary g-pa-30">
+                                        @foreach($calon->comment as $data)
+                                        <div class="commentText">
+                                            <p><strong>{{ $data->nama }}</strong></p>
+                                            <p class="">{{ $data->comment }}</p>
+                                        </div>
+                                        @endforeach
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <footer id="fh5co-footer" role="contentinfo">
-            <div class="container">
-
-                <div class="row copyright">
-                    <div class="col-md-12 text-center">
-                        <p>
-                        <p class="copyright text-center">&copy;2021 All
-                            Rights Reserved. <a href="index.html">TimeStoryXCloudStudio</a></p>
-                        </p>
-                        <p>
-                        <ul class="fh5co-social-icons">
-                            <a href="https://www.instagram.com/alhaqthoriq/"><i class="icon-instagram"></i></a>
-                        </ul>
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-        </footer>
     </div>
+    <!-- </div> -->
+
+    <footer class="section">
+        <div class="container text-white position-relative">
+            <div class="footer__title">
+                <div class="text-center">Thank You</div>
+                <div class="text-center"><strong>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</strong></div>
+            </div>
+            <div class="row pb-4">
+                <div class="col-md-12 text-center">
+                    <p>Turut Mengundang :</p>
+                </div>
+                <div class="col-md-12 text-center">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </div>
+            <div class="copyright text-center">&copy;2021. ToBeABrideXCloudStudio.</div>
+            <p><img class="center" style="width:200px;height:200px;" src="assets/img/logo/tobeabride.png" alt=""></p>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <ul class="social social-circle">
+                        <li><a href="https://www.instagram.com/tobeabride/"><i class="icon-instagram"></i></a></li>
+                        <li><a href="https://www.instagram.com/cloudstudio/"><i class="icon-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- strat music-box -->
+    <div class="music-box music-box-2">
+        <button class="music-box-toggle-btn">
+            <i class="fa fa-music" aria-hidden="true"></i>
+        </button>
+        <div class="music-holder">
+            <iframe src="{{$calon->song->song}}"></iframe>
+        </div>
+    </div>
+    <!-- end music box -->
 
     <div class="gototop js-top">
         <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>

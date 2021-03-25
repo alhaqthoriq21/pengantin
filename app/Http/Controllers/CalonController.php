@@ -72,7 +72,11 @@ class CalonController extends Controller
 
         try {
             $input = $request->only(["slug","template","color","nick_pria","nick_wanita","calon_pria","calon_wanita","sosmed_pria",
-            "sosmed_wanita","foto_pria","foto_wanita","ayah_pria","ibu_pria","ayah_wanita","ibu_wanita"]);
+            "sosmed_wanita","foto_pria","foto_wanita","ayah_pria","ibu_pria","ayah_wanita","ibu_wanita","undang"]);
+            if ($request->undang != null) {
+                $undang = str_replace(",","|",$request->undang);
+                 $input['undang'] = $undang;
+            }
             $calon = Calon::create($input);
             $this->uploadImage($request, $calon->id);
 
@@ -115,8 +119,8 @@ class CalonController extends Controller
         }
 
         try {
-            $calon = $request->only(["slug","template","color","nick_pria","nick_wanita","calon_pria","calon_wanita","sosmed_pria",
-            "sosmed_wanita","foto_pria","foto_wanita","ayah_pria","ibu_pria","ayah_wanita","ibu_wanita"]);
+            $calon = $request->only(["slug","template","nick_pria","nick_wanita","calon_pria","calon_wanita","sosmed_pria",
+            "sosmed_wanita","foto_pria","foto_wanita","ayah_pria","ibu_pria","ayah_wanita","ibu_wanita","undang"]);
             $calon = Calon::find($calonId);
             // dd($request);
             if ($calon) {

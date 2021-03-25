@@ -26,6 +26,7 @@ use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\SongController;
 
 
+    Route::domain(env('APP_MAIN_DOMAIN', 'localhost'))->prefix("/")->group(function () {
     Route::get('/', function () {
         return view('home');
     });
@@ -113,4 +114,7 @@ use App\Http\Controllers\SongController;
     Route::get('/reservasi/list', [ReservasiController::class, 'getData'])->name("get.reservasi.data");
     Route::get("/reservasi/show/{reservasiId}", [ReservasiController::class, "show"])->name("reservasi.show");
 
-    /* disini */
+    });
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

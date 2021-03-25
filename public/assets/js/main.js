@@ -21,7 +21,9 @@ $(document).ready(function () {
 
     $('.project-area .grid .test-popup-link').magnificPopup({
         type: 'image',
-        gallery: { enabled: true }
+        gallery: {
+            enabled: true
+        }
     });
 
 
@@ -59,5 +61,18 @@ $(document).ready(function () {
     }
 
     navbarFixed();
+
+    /*------------------------------------------
+        = TOGGLE MUSUC BIX
+    -------------------------------------------*/
+    if ($(".music-box").length) {
+        var musicBtn = $(".music-box-toggle-btn"),
+            musicBox = $(".music-holder");
+
+        musicBtn.on("click", function () {
+            musicBox.toggleClass("toggle-music-box");
+            return false;
+        })
+    }
 
 });

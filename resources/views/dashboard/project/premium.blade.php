@@ -15,6 +15,7 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta name="author" content="" />
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/tobeabride.ico">
 
     <!-- Facebook and Twitter integration -->
     <meta property="og:title" content="" />
@@ -71,13 +72,166 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 
+    <style>
+    body,
+    html {
+        height: 100%;
+        margin: 0;
+    }
+
+    .gateway {
+        background-image: url('{{$calon->fotoHeader->foto_header}}');
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        color: white;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 25px;
+    }
+
+    .topleft {
+        position: absolute;
+        top: 0;
+        left: 16px;
+    }
+
+    .bottomleft {
+        position: absolute;
+        bottom: 0;
+        left: 16px;
+    }
+
+    .middle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    hr {
+        margin: auto;
+        width: 40%;
+    }
+
+    body {
+        margin-top: 20px;
+        background: #eee;
+    }
+
+    @media (min-width: 0) {
+        .g-mr-15 {
+            margin-right: 1.07143rem !important;
+        }
+    }
+
+    @media (min-width: 0) {
+        .g-mt-3 {
+            margin-top: 0.21429rem !important;
+        }
+    }
+
+    .g-height-50 {
+        height: 50px;
+    }
+
+    .g-width-50 {
+        width: 50px !important;
+    }
+
+    @media (min-width: 0) {
+        .g-pa-30 {
+            padding: 2.14286rem !important;
+        }
+    }
+
+    .g-bg-secondary {
+        background-color: #fafafa !important;
+    }
+
+    .u-shadow-v18 {
+        box-shadow: 0 5px 10px -6px rgba(0, 0, 0, 0.15);
+    }
+
+    .g-color-gray-dark-v4 {
+        color: #777 !important;
+    }
+
+    .g-font-size-12 {
+        font-size: 0.85714rem !important;
+    }
+
+    .media-comment {
+        margin-top: 20px
+    }
+
+    .p {
+        margin: 0;
+    }
+
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+
+    .commentText p {
+        margin: 0;
+    }
+    </style>
+
 </head>
 
 <body>
 
-    <audio controls autoplay loop hidden>
-        <source src="https://media.vocaroo.com/mp3/6JEBAPEMA6A">
-    </audio>
+    <!-- strat music-box -->
+    <div class="music-box music-box-2">
+        <button class="music-box-toggle-btn">
+            <i class="fa fa-music" aria-hidden="true"></i>
+        </button>
+        <div class="music-holder">
+            <iframe src="{{$calon->song->song}}"></iframe>
+        </div>
+    </div>
+    <!-- end music box -->
+
+    <div class="gateway" id="gt">
+        <div class="qbootstrap-hero" data-section="home">
+            <div class="qbootstrap-overlay"></div>
+            @if($calon->fotoHeader->foto_header)
+            <div class="qbootstrap-cover text-center center-bg" data-stellar-background-ratio="0.5"
+                style="background-image: url({{$calon->fotoHeader->foto_header}});">
+                @endif
+                <div class="display-t">
+                    <div class="display-tc">
+                        <div class="container">
+                            <div class="col-md-10 col-md-offset-1">
+                                <div class="animate-box svg-sm colored">
+                                    <img src="assets/img/premium/flaticon/svg/004-nature.svg" class="svg" alt="">
+                                    @if (isset($qs['u']))
+                                    <h2>Dear, {{$qs['u']}}</h2>
+                                    @endif
+                                    <p><span>You're Invited!</span></p>
+                                    <h1 class="holder"><span>Welcome to the Wedding of</span></h1>
+                                    <h2>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</h2>
+                                    <p><a href="#" class="button">Link Button</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- <audio controls autoplay loop style="display:none;">
+        <source src="https://media.vocaroo.com/mp3/6JEBAPEMA6A" type="audio/mpeg">
+    </audio> -->
 
 
     <div class="qbootstrap-hero" data-section="home">
@@ -92,11 +246,7 @@
                         <div class="col-md-10 col-md-offset-1">
                             <div class="animate-box svg-sm colored">
                                 <img src="assets/img/premium/flaticon/svg/004-nature.svg" class="svg" alt="">
-                                @if (isset($qs['u']))
-                                <h2>Dear, {{$qs['u']}}</h2>
-
-                                @endif
-                                <h1 class="holder"><span>Welcome to the Wedding of</span></h1>
+                                <h1 class="holder"><span>The Wedding of</span></h1>
                                 <h2>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</h2>
                                 <p>{{date("l jS F Y", strtotime($calon->akadNikah->tgl))}}</p>
                             </div>
@@ -127,8 +277,8 @@
                         <img src="{{$calon->foto_pria}}" class="img-responsive" alt="">
                         <h3>{{$calon->calon_pria}}</h3>
                         <h1>Putra Dari</h1>
-                        <span>Bpk. {{$calon->ayah_pria}}</span>
-                        <span>& Ibu {{$calon->ibu_pria}}</span>
+                        <p>Bpk. {{$calon->ayah_pria}}</p>
+                        <p>& Ibu {{$calon->ibu_pria}}</p>
                         <h2><a href="https://www.instagram.com/{{$calon->sosmed_pria}}/"><i
                                     class="icon-instagram"></i></a></h2>
                     </div>
@@ -140,8 +290,8 @@
                         <img src="{{$calon->foto_wanita}}" class="img-responsive" alt="">
                         <h3>{{$calon->calon_wanita}}</h3>
                         <h1>Putri Dari</h1>
-                        <span>Bpk. {{$calon->ayah_wanita}}</span>
-                        <span>& Ibu {{$calon->ibu_wanita}}</span>
+                        <p>Bpk. {{$calon->ayah_wanita}}</p>
+                        <p>& Ibu {{$calon->ibu_wanita}}</p>
                         <h2><a href="https://www.instagram.com/{{$calon->sosmed_wanita}}/"><i
                                     class="icon-instagram"></i></a></h2>
                     </div>
@@ -161,7 +311,7 @@
                         <img src="assets/img/premium/flaticon/svg/006-flower-bell-outline-design-variant-with-vines-and-leaves.svg"
                             class="svg" alt="">
                         <h2 class="">The Wedding Day</h2>
-                        <span class="datewed">{{date("l jS F Y", strtotime($calon->akadNikah->tgl))}}</span>
+                        <h1 class="datewed">{{date("l jS F Y", strtotime($calon->akadNikah->tgl))}}</h1>
                     </div>
                 </div>
                 <div class="row animate-box">
@@ -746,18 +896,26 @@
                         </div>
                     </form>
                 </div>
-
             </div>
             <div class="row horizontal-line">
-                <div class="col-md-12">
-                    <div class="media g-mb-30 media-comment">
-                        <div class="media-body u-shadow-v18 g-bg-secondary g-pa-30">
-                            @foreach($calon->comment as $data)
-                            <div class="g-pd">
-                                <h2>{{ $data->nama }}</h2>
-                                <h7>{{ $data->comment }}.</h7>
+                <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+                    rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+                    crossorigin="anonymous">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3><strong>Comment Section</strong></h3>
+                            <div class="media g-mb-30 media-comment">
+                                <!-- <img class="d-flex g-width-50 g-height-50 rounded-circle g-mt-3 g-mr-15"> -->
+                                <div class="media-body u-shadow-v18 g-bg-secondary g-pa-30">
+                                    @foreach($calon->comment as $data)
+                                    <div class="commentText">
+                                        <hp><strong>{{ $data->nama }}</strong></hp>
+                                        <p class="">{{ $data->comment }}</p>
+                                    </div>
+                                    @endforeach
+                                </div>
                             </div>
-                            @endforeach
                         </div>
                     </div>
                 </div>
@@ -856,17 +1014,33 @@
 
     <footer id="footer" role="contentinfo">
         <div class="container">
+            <div class="col-md-12 text-center">
+                <p>Thank You</p>
+                <h1><strong>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</strong></h1>
+            </div>
+            <div class="row pb-4">
+                <div class="col-md-12 text-center">
+                    <p>Turut Mengundang :</p>
+                </div>
+                <div class="col-md-12 text-center">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </div>
             <div class="row row-bottom-padded-sm">
                 <div class="col-md-12">
-                    <p class="copyright text-center">&copy; 2021 <a href="index.html">TobeABrideXCloudStudio</a>.
-                        All
-                        Rights Reserved.</p>
+                    <p class="copyright text-center">ToBeABrideXCloudStudio</p>
+                    <img class="center" style="width:200px;height:200px;" src="assets/img/logo/tobeabride.png" alt="">
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12 text-center">
                     <ul class="social social-circle">
-                        <li><a href="#"><i class="icon-instagram"></i></a></li>
+                        <li><a href="https://www.instagram.com/tobeabride/"><i class="icon-instagram"></i></a></li>
+                        <li><a href="https://www.instagram.com/cloudstudio/"><i class="icon-instagram"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -935,6 +1109,14 @@
             document.getElementById("seconds").innerHTML = 0 + " <small>seconds</small> ";
         }
     }, 1000);
+
+    // $('.nothanks').click(function() {
+    //     $('#gt').addClass('move-gate');
+    // });
+
+    $(".button").click(function() {
+        $(".gateway").fadeOut("slow");
+    });
     </script>
 
 </body>

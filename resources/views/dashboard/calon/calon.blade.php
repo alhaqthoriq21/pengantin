@@ -207,11 +207,14 @@
                                                                         <option value="gold">Gold</option>
                                                                         <option value="silver">Silver</option>
                                                                         <option value="bronze">Bronze</option>
+                                                                        <option value="honey">Honey</option>
+                                                                        <!-- <option value="cherry">Cherry</option>
+                                                                        <option value="clone">Clone</option> -->
                                                                     </select>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="row form-group">
+                                                        <!-- <div class="row form-group">
                                                             <div class="col-sm-4">
                                                                 <label for="" class="col-form-label">Pick Text
                                                                     Color</label>
@@ -221,7 +224,7 @@
                                                                     value="#00AABB" class="form-control" />
                                                                 <span class="input-group-addon"><i></i></span>
                                                             </div>
-                                                        </div>
+                                                        </div> -->
                                                     </div>
                                                     <div class="col-12 card--shadow">
                                                         <h5>Calon Pengantin Pria</h5>
@@ -379,6 +382,20 @@
                                                                     <input name="ibu_wanita" id="ibu_wanita"
                                                                         placeholder="" type="text" class="form-control"
                                                                         value="">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 card--shadow">
+                                                        <h5>Turut Mengundang</h5>
+                                                        <div class="row form-group">
+                                                            <div class="col-sm-4">
+                                                                <label for="" class="col-form-label">Undang</label>
+                                                            </div>
+                                                            <div class="col-sm-8">
+                                                                <div class="d-flex flex-row">
+                                                                    <input type="text" data-role="tagsinput"
+                                                                        name="undang" id="undang" class="form-control">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -761,11 +778,9 @@
     media="screen">
 <link href="{{asset('assets/plugins/bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.min.css')}}"
     rel="stylesheet" media="screen">
-
+<link rel="stylesheet" type="text/css" href="{{asset('assets/plugins/taginput/bootstrap-tagsinput.css')}}">
 <!-- Bootstrap Color Picker -->
-<link rel="stylesheet" href="{{asset('assets/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css')}}">
-
-
+<!-- <link rel="stylesheet" href="{{asset('assets/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css')}}"> -->
 
 @endpush
 
@@ -781,6 +796,7 @@
 <script type="text/javascript"
     src="{{asset('assets/plugins/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.fr.js')}}"
     charset="UTF-8"></script>
+<script type="text/javascript" src="{{asset('assets/plugins/taginput/bootstrap-tagsinput.js')}}"></script>
 
 <!-- <script src="https://code.jquery.com/jquery-2.2.2.min.js"></script> -->
 <!-- bootstrap color picker -->
@@ -789,6 +805,7 @@
 
 <script src="{{asset('assets/plugins/daterangepicker/daterangepicker.js')}}"></script>
 <script src="{{asset('assets/plugins/datatables/jquery.dataTables.min.js')}}"></script>
+
 <script>
 $(document).ready(function() {
     $("tbody").on("click", ".btn-status", function(e) {

@@ -147,46 +147,44 @@
                                 </div>
                                 <div class="row form-group">
                                     <div class="col-sm-4">
-                                        <label for="" class="col-form-label">Upload Lagu</label>
+                                        <label for="" class="col-form-label">Link Lagu</label>
                                     </div>
                                     <div class="col-sm-8">
                                         <div class="d-flex flex-row">
-                                            <input type="file" name="song" id="song" class="form-control"
-                                                accept="song/*">
-                                            <div id="uploadProgress"></div>
+                                            <input name="song" id="song" placeholder="" min="1" type="text"
+                                                class="form-control" value="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 card--shadow">
+                                <h5>Status Lagu</h5>
+                                <div class="row form-group">
+                                    <div class="col-sm-4">
+                                        <label for="" class="col-form-label">Status</label>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <div class="d-flex flex-row">
+                                            <select name="status" id="status" class="form-control">
+                                                @foreach ($statusSong as $key => $value)
+                                                <option value="{{$key}}">{{$value}}</option>
+                                                @endforeach
+                                            </select>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 card--shadow">
-                            <h5>Status Lagu</h5>
-                            <div class="row form-group">
-                                <div class="col-sm-4">
-                                    <label for="" class="col-form-label">Status</label>
-                                </div>
-                                <div class="col-sm-8">
-                                    <div class="d-flex flex-row">
-                                        <select name="status" id="status" class="form-control">
-                                            @foreach ($statusSong as $key => $value)
-                                            <option value="{{$key}}">{{$value}}</option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="col-md-12 form-group">
+                            <button class="btn btn-success btn-save" type="submit"><i class="fas fa-save"></i>
+                                Simpan</button>
+                            <button class="btn btn-warning btn-cancel" type="button"><i class="fas fa-times"></i>
+                                Batal</button>
                         </div>
                 </div>
-                <div class="col-md-12 form-group">
-                    <button class="btn btn-success btn-save" type="submit"><i class="fas fa-save"></i>
-                        Simpan</button>
-                    <button class="btn btn-warning btn-cancel" type="button"><i class="fas fa-times"></i>
-                        Batal</button>
-                </div>
+                </form>
             </div>
-            </form>
         </div>
-    </div>
     </div>
     </div>
     <!-- /.col-->

@@ -1,359 +1,593 @@
-<!-- <div class="et_pb_blurb_content">
-
-    <div class="et_pb_blurb_container">
-        <h4 class="et_pb_module_header"><span>{{$calon->calon_pria}}</span>
-        </h4>
-        <div class="et_pb_blurb_description">
-            <p>Putra dari<br><span>{{$calon->ayah_pria}}</span><br> &amp;
-                <span>{{$calon->ayah_wanita}}</span>
-            </p>
-        </div>
-    </div>
-</div> -->
-
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js">
-<!--<![endif]-->
+<html lang="en">
 
 <head>
+    <title>ToBeABrideXCloudStudio</title>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>TimeStoryXCloudStudio</title>
+    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <meta name="author" content="" />
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/tobeabride.ico">
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/silver/vendor/bootstrap.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/silver/vendor/slick.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/silver/vendor/slick-theme.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/silver/vendor/lightbox.min.css')}}">
 
-    <!-- Facebook and Twitter integration -->
-    <meta property="og:title" content="" />
-    <meta property="og:image" content="" />
-    <meta property="og:url" content="" />
-    <meta property="og:site_name" content="" />
-    <meta property="og:description" content="" />
-    <meta name="twitter:title" content="" />
-    <meta name="twitter:image" content="" />
-    <meta name="twitter:url" content="" />
-    <meta name="twitter:card" content="" />
+    <link rel="stylesheet" href="{{asset('assets/css/premium/icomoon.css')}}">
 
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <link rel="shortcut icon" href="favicon.ico">
-
-    <link href="https://fonts.googleapis.com/css?family=Montez" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
-
-    <!-- Animate.css -->
-
-    <link rel="stylesheet" href="{{asset('assets/css/silver/animate.css')}}">
-    <!-- Icomoon Icon Fonts-->
-
-    <link rel="stylesheet" href="{{asset('assets/css/silver/icomoon.css')}}">
-    <!-- Bootstrap  -->
-
-    <link rel="stylesheet" href="{{asset('assets/css/silver/bootstrap.css')}}">
-    <!-- Superfish -->
-    <link rel="stylesheet" href="{{asset('assets/css/silver/superfish.css')}}">
-    <!-- Magnific Popup -->
-    <link rel="stylesheet" href="{{asset('assets/css/silver/magnific-popup.css')}}">
-
-    <link rel="stylesheet" href="{{asset('assets/css/silver/style.css')}}">
-
-
-    <!-- Modernizr JS -->
-    <script src="{{asset('assets/js/silver/modernizr-2.6.2.min.js')}}"></script>
-    <!-- FOR IE9 below -->
+    <!-- Main style -->
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/silver/main.css')}}">
+    <!-- Fonts -->
+    <link rel="stylesheet" type="text/css"
+        href="{{asset('assets/css/fonts/font-awesome-4.7.0\css\font-awesome.min.css')}}">
+    <link
+        href="https://fonts.googleapis.com/css?family=Playfair+Display%7COpen+Sans:300,400,600,700%7CSource+Serif+Pro%7CDosis"
+        rel="stylesheet">
+    <!-- <link rel="shortcut icon" type="image/png" href="/favicon.ico"> -->
     <!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
+			<script src="js/vendor/html5shiv.min.js"></script>
+			<script src="js/vendor/respond.min.js"></script>
+		<![endif]-->
 
+    <style>
+    .gateway {
+        background-image: url('{{$calon->fotoHeader->foto_header}}');
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        color: white;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 25px;
+    }
+
+    .h4 {
+        margin: 0px;
+        margin-bottom: 0px;
+    }
+
+    .commentText p {
+        margin: 0px;
+    }
+    </style>
 </head>
 
-<body>
+<body id="home">
+    <div id="loader" class="loader">
+        <div id="my-svg"></div>
+        <div class="loader-img text-center">
+            <img src="assets\img\silver\story-flowers.png" alt="flowers">
+        </div>
+    </div>
 
-    <audio controls autoplay loop hidden>
-        <source src="uploads/songs/onelastbreath.mp3" type="audio/mpeg">
-    </audio>
-
-    <div id="fh5co-wrapper">
-        <div id="fh5co-page">
-
-            <div class="fh5co-hero" data-section="home">
-                <div class="fh5co-overlay"></div>
-                <div class="fh5co-cover text-center" data-stellar-background-ratio="0.5"
-                    style="background-image: url(assets/img/love/7.jpg);">
-                    <div class="display-t">
-                        <div class="display-tc">
-                            <div class="container">
-                                <div class="col-md-10 col-md-offset-1">
-                                    <div class="animate-box">
-                                        @if (isset($qs['u']))
-                                        <h2>Dear, {{$qs['u']}}</h2>
-                                        @endif
-                                        <h1>Welcome to the Wedding of</h1>
-                                        <h2>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</h2>
-                                        <p><span>{{date("l jS F Y", strtotime($calon->akadNikah->tgl))}}</span></p>
-                                    </div>
-                                </div>
+    <div class="qbootstrap-hero" data-section="home">
+        <div class="qbootstrap-overlay"></div>
+        @if($calon->fotoHeader->foto_header)
+        <div class="qbootstrap-cover text-center center-bg" data-stellar-background-ratio="0.5"
+            style="background-image: url({{$calon->fotoHeader->foto_header}});">
+            @endif
+            <div class="display-t">
+                <div class="display-tc">
+                    <div class="container">
+                        <div class="col-md-10 col-md-offset-1">
+                            <div class="animate-box svg-sm colored">
+                                <!-- <img src="assets/img/premium/flaticon/svg/004-nature.svg" class="svg" alt=""> -->
+                                <h1 class="holder"><span>The Wedding of</span></h1>
+                                <h2>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</h2>
+                                <p>{{date("l jS F Y", strtotime($calon->akadNikah->tgl))}}</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
 
-            <!-- <header id="fh5co-header-section" class="sticky-banner">
-                <div class="container">
-                    <div class="nav-header"> -->
-            <!-- <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle dark"><i></i></a>
-                        <h1 id="fh5co-logo"><a href="index.html">Nuptial</a></h1> -->
-            <!-- START #fh5co-menu-wrap -->
-            <!-- <nav id="fh5co-menu-wrap" role="navigation">
-                            <ul class="sf-menu" id="fh5co-primary-menu">
-                                <li class="active"><a href="index.html">Home</a></li>
-                                <li>
-                                    <a href="groom-bride.html" class="fh5co-sub-ddown">Groom &amp; Bride</a>
-                                    <ul class="fh5co-sub-menu">
-                                        <li><a href="#">Dropdown Menu 1</a></li>
-                                        <li><a href="#">Dropdown Menu 2</a></li>
-                                        <li><a href="#">Dropdown Menu 3</a></li>
-                                        <li><a href="#">Dropdown Menu 4</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="when-where.html">When &amp; Where</a></li>
-                                <li><a href="guest.html">Guest</a></li>
-                                <li><a href="gallery.html">Gallery</a></li>
-                                <li><a href="blog.html">Blog</a></li>
-                            </ul>
-                        </nav> -->
-            <!-- </div>
-                </div>
-            </header> -->
 
-            <!-- end:header-top -->
-            <div id="fh5co-couple" class="fh5co-section-gray">
-                <div class="container">
-                    <div class="row row-bottom-padded-md animate-box">
-                        <div class="col-md-6 col-md-offset-3 text-center">
-                            <div class="col-md-5 col-sm-5 col-xs-5 nopadding">
-                                <img src="{{$calon->foto_pria}}" class="img-responsive" alt="">
-                                <h3>{{$calon->calon_pria}}</h3>
-                                <p>Putra Dari</p>
-                                <p>Bpk. {{$calon->ayah_pria}}</p>
-                                <p>& Ibu {{$calon->ibu_pria}}</p>
-                            </div>
-                            <div class="col-md-2 col-sm-2 col-xs-2 nopadding">
-                                <h2 class="amp-center"><i class="icon-heart"></i></h2>
-                            </div>
-                            <div class="col-md-5 col-sm-5 col-xs-5 nopadding">
-                                <img src="{{$calon->foto_wanita}}" class="img-responsive" alt="">
-                                <h3>{{$calon->calon_wanita}}</h3>
-                                <p>Putri Dari</p>
-                                <p>Bpk. {{$calon->ayah_wanita}}</p>
-                                <p>& Ibu {{$calon->ibu_wanita}}</p>
-                            </div>
+    <!-- <nav id="navbar" class="navbar navbar-expand-lg fixed-top p-0 text-white">
+        <div class="d-lg-flex w-100 align-items-start">
+            <a class="navbar-brand text-primary" href="#">
+                <img class="d-none d-lg-block navbar-brand__img" src="assets\img\silver\logo.png" alt="logo">
+                <img class="d-lg-none navbar-brand__img" src="assets\img\silver\logo-small.png" alt="logo">
+            </a>
+            <button type="button" class="d-lg-none navbar-toggle collapsed" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar top-bar"></span>
+                <span class="icon-bar middle-bar"></span>
+                <span class="icon-bar bottom-bar"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active page-scroll" href="#top">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#events">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#rsvp">RSVP</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Pages
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="blog.html">Blog</a>
+                            <a class="dropdown-item" href="gallery.html">Gallery</a>
+                            <a class="dropdown-item" href="rsvp.html">RSVP</a>
+                            <a class="dropdown-item" href="blog-single.html">Single Post</a>
                         </div>
-                    </div>
+                    </li>
+                    <li class="nav-item d-flex ml-lg-4">
+                        <a class="nav-link nav-link_social" href="#">
+                            <i class="fa fa-2x fa-facebook-square"></i>
+                        </a>
+                        <a class="nav-link nav-link_social" href="#">
+                            <i class="fa fa-2x fa-twitter-square"></i>
+                        </a>
+                        <a class="nav-link nav-link_social" href="#">
+                            <i class="fa fa-2x fa-google-plus-square"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item ml-lg-4 d-lg-none">
+                        <span class="nav-link">&copy; Joseph and Sophia 2018.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav> -->
+    <!-- <div id="loader" class="loader">
+        <div id="my-svg"></div>
+        <div class="loader-img text-center">
+            <img src="assets\img\silver\story-flowers.png" alt="flowers">
+        </div>
+    </div>
+    <div id="top" class="main-hero">
+        <div class="c-hero-banner c-hero-banner--main">
+            <div class="cover"></div>
+            <div class="c-hero-banner__section c-hero-banner__image">
+                <img class="lazyload" src="assets\img\silver\banner.jpg" alt="image">
+            </div>
+            <div class="mask">
+                <img src="img\mask.png" alt="">
+            </div>
+        </div>
+    </div> -->
+    <!-- Section Love story -->
+    <section class="love-story section position-relative text-center">
+        <div class="d-none d-sm-block love-story__flower-parallax position-absolute parallax">
+            <img src="assets\img\silver\ls-flower-prlx.png" alt="flower">
+        </div>
+        <div class="container">
+            <div class="love-story__flowers m-auto">
+                <img src="assets\img\silver\story-flowers.png" alt="flowers">
+            </div>
+            <h1 class="title">Quotes</h1>
+            <p class="m-auto">{{$calon->quotes->isi}}.</p>
+            <span>&ldquo;{{$calon->quotes->judul}}&rdquo;</span>
+        </div>
+    </section>
+    <!-- Section Date -->
+    <section class="date-section section section--blue countdown text-center">
+        <div class="container">
+            <div class="date-section__flowers m-auto">
+                <img src="assets\img\silver\date-flowers.png" alt="flowers">
+            </div>
+            <div class="date-section__block">
+                <div class="d-inline-block">
+                    <h2 class="title--special">{{date("l jS F Y", strtotime($calon->akadNikah->tgl))}}</h2>
+                    <h3 class="date-section__place">
+                        {{$calon->akadNikah->tempat}}<br>
+                        {{$calon->akadNikah->alamat}}
+                    </h3>
                 </div>
             </div>
-            <div class="row animate-box">
-                <div class="col-md-8 col-md-offset-2">
-                    <div class="col-md-12 text-center heading-section">
-                        <h2>Are Getting Married</h2>
-                        <p><strong>on {{$calon->akadNikah->tgl}} &mdash; {{$calon->akadNikah->alamat}}</strong></p>
-                    </div>
+            <div id="qbootstrap-countdown" class="timer d-flex justify-content-center">
+                <div class="timer-item">
+                    <span id="days" class="days timer__digit"></span>
+                    <div class="timer__text">days</div>
+                </div>
+                <div class="timer-item">
+                    <span id="hours" class="hours timer__digit"></span>
+                    <div class="timer__text">hours</div>
+                </div>
+                <div class="timer-item">
+                    <span id="minutes" class="minutes timer__digit"></span>
+                    <div class="timer__text">minutes</div>
+                </div>
+                <div class="timer-item">
+                    <span id="seconds" class="seconds timer__digit"></span>
+                    <div class="timer__text">seconds</div>
                 </div>
             </div>
-            <div id="fh5co-countdown">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
-                        <h1>Countdown the Wedding Day</h1>
-                    </div>
-                    <div class="col-md-8 col-md-offset-2 text-center animate-box">
-                        <!-- <h1 id="demo"></h1> -->
-                        <p class="countdown" id="countdown">
-                            <span id="days"></span>
-                            <span id="hours"></span>
-                            <span id="minutes"></span>
-                            <span id="seconds"></span>
-                        </p>
-                    </div>
+        </div>
+    </section>
+    <!-- Section Events -->
+    <section id="events" class="events section text-center">
+        <div class="container">
+            <h1 class="title">Wedding events</h1>
+            <p class="subtitle mx-auto">Real life will begins.</p>
+            <div id="accordion">
+                <div class="accordion__header d-flex justify-content-center">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                        aria-controls="collapseOne">
+                        Akad Nikah
+                    </button>
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                        aria-expanded="false" aria-controls="collapseTwo">
+                        Resepsi
+                    </button>
                 </div>
-            </div>
-
-            <div id="fh5co-when-where" class="fh5co-section-gray">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
-                            <h2>When &amp; Where</h2>
-                        </div>
-                    </div>
-                    <div class="row row-bottom-padded-md">
-                        <div class="col-md-6 text-center animate-box">
-                            <div class="wedding-events">
-                                @if($calon->fotoBody->foto_pertama)
-                                <div class="ceremony-bg"
-                                    style="background-image: url({{$calon->fotoBody->foto_pertama}});">
-                                </div>
-                                @endif
-                                <div class="desc">
-                                    <h3>Akad Nikah</h3>
-                                    <p><strong>{{date("l jS F Y", strtotime($calon->akadNikah->tgl))}}</strong></p>
-                                    <p><strong>{{$calon->akadNikah->waktu}}</strong></p>
-                                    <p><strong>{{$calon->akadNikah->tempat}}</strong></p>
-                                    <p><a href="https://maps.google.com/?q={{$calon->akadNikah->google_loc}}"
-                                            class="icon-location">Location</a></p>
-                                </div>
+                <div class="accordion__body">
+                    <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                        <div class="row">
+                            <h2 class="accordion__item-heading">Akad Nikah</h2>
+                            @if($calon->fotoBody->foto_pertama)
+                            <div class="col-md-6">
+                                <img class="accordion__item-img" src="{{$calon->fotoBody->foto_pertama}}"
+                                    alt="ceremony">
                             </div>
-                        </div>
-                        <div class="col-md-6 text-center animate-box">
-                            <div class="wedding-events">
-                                @if($calon->fotoBody->foto_kedua)
-                                <div class="ceremony-bg"
-                                    style="background-image: url({{$calon->fotoBody->foto_kedua}});">
-                                </div>
-                                @endif
-                                <div class="desc">
-                                    <h3>Resepsi</h3>
-                                    <p><strong>{{date("l jS F Y", strtotime($calon->resepsi->tgl_rsp))}}</strong></p>
-                                    <p><strong>{{$calon->resepsi->waktu_rsp}}</strong></p>
-                                    <p><strong>{{$calon->resepsi->tempat_rsp}}</strong></p>
-                                    <p><a href="https://maps.google.com/?q={{$calon->resepsi->google_loc_rsp}}"
-                                            class="icon-location">Location</a></p>
-                                </div>
+                            @endif
+                            <div class="col-md-6 text-left">
+                                <h3 class="accordion__item-subheading">When and Where</h3>
+                                <p class="d-flex align-items-center"><i
+                                        class="fa fa-2x fa-map-marker align-middle pr-1"></i>{{$calon->akadNikah->alamat}}
+                                </p>
+                                <p class="d-flex align-items-center"><i
+                                        class="fa fa-2x fa-clock-o align-middle pr-1"></i>{{$calon->akadNikah->waktu}}
+                                    WIB, {{date("l jS F Y", strtotime($calon->akadNikah->tgl))}}
+                                </p>
+                                <!-- <p class="font-weight-bold">Keep it classy</p> -->
+                                <a href="https://maps.google.com/?q={{$calon->akadNikah->google_loc}}"
+                                    class="btn btn-outline-dark rounded-0 px-2 py-1">View on map</a>
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="row">
-                        <div class="col-md-12">
-                            <div id="map" class="fh5co-map"></div>
+                    <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                        <div class="row">
+                            <h2 class="accordion__item-heading">Resepsi</h2>
+                            @if($calon->fotoBody->foto_kedua)
+                            <div class="col-md-6">
+                                <img class="accordion__item-img" src="{{$calon->fotoBody->foto_kedua}}" alt="ceremony">
+                            </div>
+                            @endif
+                            <div class="col-md-6 text-left">
+                                <h3 class="accordion__item-subheading">When and Where</h3>
+                                <p class="d-flex align-items-center"><i
+                                        class="fa fa-2x fa-map-marker align-middle pr-1"></i>{{$calon->resepsi->alamat_rsp}}
+                                </p>
+                                <p class="d-flex align-items-center"><i
+                                        class="fa fa-2x fa-clock-o align-middle pr-1"></i>{{$calon->resepsi->waktu_rsp}}
+                                    WIB, {{date("l jS F Y", strtotime($calon->resepsi->tgl_rsp))}}
+                                </p>
+                                <!-- <p class="font-weight-bold">Keep it classy</p> -->
+                                <a href="https://maps.google.com/?q={{$calon->akadNikah->google_loc_rsp}}"
+                                    class="btn btn-outline-dark rounded-0 px-2 py-1">View on map</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div id="collapseThree" class="collapse" data-parent="#accordion">
+                        <div class="row">
+                            <h2 class="accordion__item-heading">Party</h2>
+                            <div class="col-md-6">
+                                <img class="accordion__item-img" src="assets\img\silver\party.jpg" alt="ceremony">
+                            </div>
+                            <div class="col-md-6 text-left">
+                                <h3 class="accordion__item-subheading">When and Where</h3>
+                                <p class="d-flex align-items-center"><i
+                                        class="fa fa-2x fa-map-marker align-middle pr-1"></i>W Hotel, 1423 Hobart St,
+                                    Pittsburgh, PA, 15217</p>
+                                <p class="d-flex align-items-center"><i
+                                        class="fa fa-2x fa-clock-o align-middle pr-1"></i>21:00 - 00:00, Sep 15, 2018
+                                </p>
+                                <p class="font-weight-bold">Keep it classy</p>
+                                <div class="btn btn-outline-dark rounded-0 px-2 py-1">View on map</div>
+                            </div>
                         </div>
                     </div> -->
                 </div>
             </div>
+            <!-- <div class="events__info">
+                <div class="row text-left">
+                    <div class="col-md-4 event__info-item">
+                        <h6 class="event__info-header font-weight-bold">Getting there</h6>
+                        <p>You can get there using the car, bus or train.</p>
+                    </div>
+                    <div class="col-md-4 event__info-item">
+                        <h6 class="event__info-header font-weight-bold">Where to stay</h6>
+                        <p>Hotel, Motel</p>
+                        <p>There are many options to choose around. You can book accommodation online, either at hotel's
+                            own web site or at web site of an agency.</p>
+                    </div>
+                    <div class="col-md-4 event__info-item">
+                        <h6 class="event__info-header font-weight-bold">Activities</h6>
+                        <p>Here are a few of our favorite local spots.</p>
+                        <ul>
+                            <li>Climbing Park</li>
+                            <li>Bowling</li>
+                            <li>Golf</li>
+                            <li>Spa center</li>
+                            <li>Biking</li>
+                        </ul>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </section>
+    <!-- Section Gallery -->
+    <section id="gallery" class="gallery section text-center">
+        <div class="d-none d-lg-block gallery__flower-prlx-l position-absolute parallax">
+            <img src="assets\img\silver\gallery-prlx-l.png" alt="flower">
+        </div>
+        <div class="d-none d-lg-block gallery__flower-prlx-r position-absolute parallax">
+            <img src="assets\img\silver\gallery-prlx-r.png" alt="flower">
+        </div>
+        <div class="container position-relative">
+            <h1 class="title">Gallery</h1>
+            <p class="subtitle mx-auto">Our hapiness in photograph...</p>
+            <div class="gallery__slider">
+                <div class="slick-gallery slick mb-0 ">
+                    @foreach($calon->fotoFooter as $data)
+                    <div class="slider__item">
+                        <img src="{{$data->foto}}" alt="slider">
+                    </div>
+                    @endforeach
+                </div>
 
-            <div id="fh5co-gallery">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
-                            <h2>Wedding Gallery</h2>
+                <div class="gallery__slider-num d-none d-lg-flex">
+                    <div class="gallery__slider-current pr-1"></div>
+                    <div class="pr-1">from</div>
+                    <div class="gallery__slider-all"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section Wishes -->
+    <!-- <section class="wishes section text-center">
+        <div class="container">
+            <h1 class="title">Wishes</h1>
+            <p class="subtitle m-auto">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                incididunt</p>
+            <div class="wishes__slider">
+                <div class="slick slick-wishes mb-0">
+                    <div class="slider__item">
+                        <div class="wishes__person">
+                            <img class="rounded-circle m-auto" src="assets\img\silver\person1.jpg" alt="slider">
                         </div>
+                        <h4 class="wishes__title font-weight-bold">Alex Cooper</h4>
+                        <p class="mx-auto">"With warm congratulations to a very special pair. May you always find in
+                            each other the love, laughter and happiness that only partners in life share!"</p>
                     </div>
-                    <div class="row">
-                        @php
-                        $index = 0;
-                        @endphp
-                        @foreach($calon->fotoFooter as $data)
-                        @if(($index == (count($calon->fotoFooter)) || $index % 3 == 0 ) && $index != 0)
+                    <div class="slider__item">
+                        <div class="wishes__person">
+                            <img class="rounded-circle m-auto" src="assets\img\silver\person2.jpg" alt="slider">
+                        </div>
+                        <h4 class="wishes__title font-weight-bold">Mary Alen</h4>
+                        <p class="mx-auto">"True love stories never end! Happy wedding day and may there be many more
+                            chapters in the wonderful story of your love for one another."</p>
                     </div>
-
-                    <div class="col-md-4">
-                        @endif
-                        @if($index == 0)
-                        <div class="col-md-4">
-                            @endif
-                            <div class="gallery animate-box">
-                                <a class="gallery-img image-popup image-popup" href="{{$data->foto}}"><img
-                                        src="{{$data->foto}}" class="img-responsive" alt=""></a>
+                    <div class="slider__item">
+                        <div class="wishes__person">
+                            <img class="rounded-circle m-auto" src="assets\img\silver\person3.jpg" alt="slider">
+                        </div>
+                        <h4 class="wishes__title font-weight-bold">John Colen</h4>
+                        <p class="mx-auto">"A wedding wish for two special person: love is best when shared by two. You
+                            know that together you are stronger, together you are one. Have a wonderful married life!"
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- Section Gift -->
+    <!-- <section class="gifts section section--blue text-center">
+        <div class="container">
+            <h1 class="title">Gift registry</h1>
+            <p class="subtitle m-auto">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                incididunt</p>
+            <div class="wishes__slider">
+                <div class="slick slick-gifts mb-0 pb-0">
+                    <div class="slider__item">
+                        <img class="m-auto" src="assets\img\silver\gift1.png" alt="gift">
+                    </div>
+                    <div class="slider__item">
+                        <img class="m-auto" src="assets\img\silver\gift2.png" alt="gift">
+                    </div>
+                    <div class="slider__item">
+                        <img class="m-auto" src="assets\img\silver\gift3.png" alt="gift">
+                    </div>
+                    <div class="slider__item">
+                        <img class="m-auto" src="assets\img\silver\gift4.png" alt="gift">
+                    </div>
+                    <div class="slider__item">
+                        <img class="m-auto" src="assets\img\silver\gift1.png" alt="gift">
+                    </div>
+                    <div class="slider__item">
+                        <img class="m-auto" src="assets\img\silver\gift2.png" alt="gift">
+                    </div>
+                    <div class="slider__item">
+                        <img class="m-auto" src="assets\img\silver\gift3.png" alt="gift">
+                    </div>
+                    <div class="slider__item">
+                        <img class="m-auto" src="assets\img\silver\gift4.png" alt="gift">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- RSVP -->
+    <section id="rsvp" class="rsvp section">
+        <div class="container">
+            <div class="row">
+                <div class="d-none d-md-block col-sm-12 col-md-4">
+                    <img src="assets\img\silver\rsvp-flower.png" class="parallax" alt="flower">
+                </div>
+                <div class="col-sm-12 col-md-8 align-self-center">
+                    <h2 class="title">RSVP</h2>
+                    <h6 class="text-uppercase font-weight-bold mb-0">Will you attend?</h6>
+                    <form id="rsvp-form" action="{{route('reservasi.save')}}" method="post">
+                        <input type="hidden" name="calon_id" id="calon_id" value="{{$calon->id}}">
+                        <input type="hidden" name="slug" id="slug" value="{{$calon->slug}}">
+                        @csrf
+                        <div class="row">
+                            <div class="col-md-8 mb-3 m-md-0">
+                                <div class="form-group">
+                                    <label class="control-label" for="inputName">Name</label>
+                                    <input type="text" class="form-control" id="nama" name="nama" required="">
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label" for="inputNumber">Address</label>
+                                    <input type="tel" class="form-control" id="alamat" name="alamat" required="">
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label" for="ket"></label>
+                                    <div class="form-group">
+                                        <!-- <label for="ket" class="sr-only">Apakah Anda Akan Datang?</label> -->
+                                        <select name="ket" id="ket" placeholder="Apakah anda Datang?"
+                                            class="form-control">
+                                            <!-- <option value=""></option> -->
+                                            <option disabled="" selected="">Will you Attending?</option>
+                                            <option value="Ya, tentu saja!">Ya, tentu saja!</option>
+                                            <option value="Maaf, saya tidak bisa.">Maaf, saya tidak bisa.</option>
+                                        </select>
+                                    </div>
+                                </div>
                             </div>
+                            <div class="col-md-4 align-self-end">
+                                <button type="submit"
+                                    class="btn btn-outline-dark rounded-0 px-3 py-1 font-weight-bold">Submit</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="success-msg"></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                            @php
-                            $index++;
-                            @endphp
+    <section id="comment" class="comment section">
+        <div class="container">
+            <div class="row">
+                <div class="d-none d-md-block col-sm-12 col-md-4">
+                    <img src="assets\img\silver\rsvp-flower.png" class="parallax" alt="flower">
+                </div>
+                <div class="col-sm-12 col-md-8 align-self-center">
+                    <h2 class="title">Comment</h2>
+                    <h6 class="text-uppercase font-weight-bold mb-0">Send wishes or your comment!</h6>
+                    <form id="rsvp-form" action="{{route('comment.save')}}" method="post">
+                        <input type="hidden" name="calon_id" id="calon_id" value="{{$calon->id}}">
+                        <input type="hidden" name="slug" id="slug" value="{{$calon->slug}}">
+                        @csrf
+                        <div class="row">
+                            <div class="col-md-8 mb-3 m-md-0">
+                                <div class="form-group">
+                                    <label class="control-label" for="inputName">Name</label>
+                                    <input type="text" class="form-control" id="nama" name="nama" required="">
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label" for="inputNumber">Comment</label>
+                                    <input type="tel" class="form-control" id="comment" name="comment" required="">
+                                </div>
+                            </div>
+                            <div class="col-md-4 align-self-end">
+                                <button type="submit"
+                                    class="btn btn-outline-dark rounded-0 px-3 py-1 font-weight-bold">Submit</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="success-msg"></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="komentar panel" class="comment section">
+        <!-- <div class="row horizontal-line"> -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h4><strong>Comment Section</strong></h4>
+                    <div class="media g-mb-30 media-comment">
+                        <div class="media-body u-shadow-v18 g-bg-secondary g-pa-30">
+                            @foreach($calon->comment as $data)
+                            <div class="commentText">
+                                <h6><strong>{{ $data->nama }}</strong></h6>
+                                <p class="">{{ $data->comment }}</p>
+                            </div>
                             @endforeach
                         </div>
-
                     </div>
                 </div>
             </div>
-
-
-            <div id="fh5co-started" style="background-image:url();" data-stellar-background-ratio="0.5">
-                <div class="overlay"></div>
-                <div class="container">
-                    <div class="row animate-box">
-                        <div class="col-md-8 col-md-offset-2 text-center heading-section">
-                            <h2>Guest Book</h2>
-                            <p>Please Fill-up the form to notify you that you're attending. Thanks.
-                        </div>
-                    </div>
-                    <div class="row animate-box">
-                        <div class="col-md-10 col-md-offset-1">
-                            <form action="{{route('comment.save')}}" method="post" class="form-inline">
-                                <input type="hidden" name="calon_id" id="calon_id" value="{{$calon->id}}">
-                                <input type="hidden" name="slug" id="slug" value="{{$calon->slug}}">
-                                @csrf
-                                <div class="col-md-4 col-sm-4">
-                                    <div class="form-group">
-                                        <label for="nama" class="sr-only">Nama</label>
-                                        <input type="nama" class="form-control" name="nama" id="nama"
-                                            placeholder="Nama">
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-4">
-                                    <div class="form-group">
-                                        <label for="comment" class="sr-only">Comment</label>
-                                        <input type="comment" class="form-control" name="comment" id="comment"
-                                            placeholder="Comment">
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-4">
-                                    <button type="submit" class="btn btn-primary btn-block">Kirim</button>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="col-md-4 col-sm-4">
-                            <div class="form-group">
-                                @foreach($calon->comment as $data)
-                                <p>&ldquo;{{ $data->nama }}&rdquo;</p>
-                                <p>&ldquo;{{ $data->comment }}&rdquo;</p>
-                                @endforeach
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <footer>
-                <div id="footer">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12 text-center">
-                                <h2>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</h2>
-                            </div>
-                            <div class="col-md-6 col-md-offset-3 text-center">
-                                <p class="fh5co-social-icons">
-                                    <a href="https://www.instagram.com/alhaqthoriq/"><i class="icon-instagram"></i></a>
-                                </p>
-                                <p class="copyright text-center">&copy;2021 All
-                                    Rights Reserved. <a href="index.html">TimeStoryXCloudStudio<img
-                                            src="assets/img/silver/awesome.jpg"></a>
-                                </p>
-                                <!-- <p><a href="#"></a>2021. All Rights Reserved<br>Made with Feel
-                                    <i class="icon-heart3"></i> by TimeStoryXCloudStudio <img
-                                        src="assets/img/silver/awesome.jpg">
-                                </p> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-
-
-
         </div>
-        <!-- END fh5co-page -->
-
+        <!-- </div> -->
+    </section>
+    <!-- Footer -->
+    <footer class="section">
+        <div class="container text-white position-relative">
+            <div class="footer__title">
+                <div class="text-center">Thank You</div>
+                <div class="text-center"><strong>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</strong></div>
+            </div>
+            <div class="row pb-4">
+                <div class="col-md-12 text-center">
+                    <p>Turut Mengundang :</p>
+                </div>
+                <div class="col-md-12 text-center">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </div>
+            <div class="copyright text-center">&copy;2021. ToBeABrideXCloudStudio.</div>
+            <p><img class="center" style="width:200px;height:200px;" src="assets/img/logo/tobeabride.png" alt=""></p>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <ul class="social social-circle">
+                        <li><a href="https://www.instagram.com/tobeabride/"><i class="icon-instagram"></i></a></li>
+                        <li><a href="https://www.instagram.com/cloudstudio/"><i class="icon-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- strat music-box -->
+    <div class="music-box music-box-2">
+        <button class="music-box-toggle-btn">
+            <i class="fa fa-music" aria-hidden="true"></i>
+        </button>
+        <div class="music-holder">
+            <iframe src="{{$calon->song->song}}"></iframe>
+        </div>
     </div>
-    <!-- END fh5co-wrapper -->
+    <!-- end music box -->
+    <script src="{{asset('assets/js/silver/vendor/jquery.min.js')}}"></script>
+    <script src="{{asset('assets/js/silver/vendor/jquery.easing.1.3.js')}}"></script>
+    <script src="{{asset('assets/js/silver/vendor/popper.min.js')}}"></script>
+    <script src="{{asset('assets/js/silver/vendor/bootstrap.min.js')}}"></script>
+    <script src="{{asset('assets/js/silver/vendor/slick.min.js')}}"></script>
+    <script src="{{asset('assets/js/silver/vendor/vivus.min.js')}}"></script>
+    <script src="{{asset('assets/js/silver/vendor/circletype.min.js')}}"></script>
+    <script src="{{asset('assets/js/silver/vendor/masonry.pkgd.min.js')}}"></script>
+    <script src="{{asset('assets/js/silver/vendor/lightbox.min.js')}}"></script>
+    <script src="{{asset('assets/js/silver/main.js')}}"></script>
 
-    <!-- Google Map -->
-    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"> -->
-    </script>
-    <!-- jQuery -->
 
-    <script src="{{asset('assets/dist/silver/scripts.min.js')}}"></script>
     <script>
     var countDownDate = new Date("{{$calon->akadNikah->tgl}}").getTime();
 
@@ -377,23 +611,24 @@
         // + minutes + "Minutes " + seconds + "Seconds ";
 
         // Display the result in an element with id="demo"
-        document.getElementById("days").innerHTML = days + " <small>days</small>";
-        document.getElementById("hours").innerHTML = hours + " <small>hours</small> ";
-        document.getElementById("minutes").innerHTML = minutes + " <small>minutes</small> ";
-        document.getElementById("seconds").innerHTML = seconds + " <small>seconds</small> ";
+        document.getElementById("days").innerHTML = days + " <small></small>";
+        document.getElementById("hours").innerHTML = hours + " <small></small> ";
+        document.getElementById("minutes").innerHTML = minutes + " <small></small> ";
+        document.getElementById("seconds").innerHTML = seconds + " <small></small> ";
 
         // If the count down is finished, write some text 
         if (distance < 0) {
             clearInterval(x);
-            document.getElementById("demo").innerHTML = "The Wedding Ceremony is Over";
+            document.getElementById("demo").innerHTML = "The Wedding Ceremony Already Begin";
             // document.getElementById("countdown").style.visibility = "hidden";
-            document.getElementById("days").innerHTML = 0 + " <small>days</small>";
-            document.getElementById("hours").innerHTML = 0 + " <small>hours</small> ";
-            document.getElementById("minutes").innerHTML = 0 + " <small>minutes</small> ";
-            document.getElementById("seconds").innerHTML = 0 + " <small>seconds</small> ";
+            document.getElementById("days").innerHTML = 0 + " <small></small>";
+            document.getElementById("hours").innerHTML = 0 + " <small></small> ";
+            document.getElementById("minutes").innerHTML = 0 + " <small></small> ";
+            document.getElementById("seconds").innerHTML = 0 + " <small></small> ";
         }
     }, 1000);
     </script>
+
 </body>
 
 </html>

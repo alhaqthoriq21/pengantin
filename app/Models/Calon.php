@@ -11,9 +11,9 @@ class Calon extends Model
     protected $table = 'calon';
 
     protected $fillable = [
-        "slug","template","color","nick_pria","nick_wanita","calon_pria", "calon_wanita", 
+        "slug","template","nick_pria","nick_wanita","calon_pria", "calon_wanita", 
         "sosmed_pria","sosmed_wanita","foto_pria","foto_wanita","ayah_pria","ibu_pria",
-        "ayah_wanita","ibu_wanita","status"
+        "ayah_wanita","ibu_wanita","undang","status"
     ];
 
     public function akadNikah()
@@ -44,6 +44,11 @@ class Calon extends Model
     public function comment()
     {
         return $this->hasMany("App\Models\Comment", "calon_id", "id");
+    }
+
+    public function user()
+    {
+        return $this->hasOne("App\Models\User", "id", "id");
     }
 
     public function loveStory()

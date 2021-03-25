@@ -12,7 +12,7 @@ class ProjectController extends Controller
 {
     public function getData($slug, Request $request){
         $calon = Calon::where('slug',$slug)->with("akadNikah","loveStory","resepsi",
-        "quotes","song","comment","reservasi","fotoHeader","fotoBody","fotoFooter")->first();
+        "quotes","song","comment","reservasi","fotoHeader","fotoBody","fotoFooter","user")->first();
         $qs =$request->only(["u"]);
         // dd($calon);
         return $this->pickTemplate($calon->template,$calon, $qs);
@@ -32,6 +32,15 @@ class ProjectController extends Controller
         break;
     case "bronze":
         return view('dashboard.project.bronze', compact('calon', 'qs'));
+        break;
+    case "honey":
+        return view('dashboard.project.honey', compact('calon', 'qs'));
+        break;
+    case "cherry":
+        return view('dashboard.project.cherry', compact('calon', 'qs'));
+        break;
+    case "clone":
+        return view('dashboard.project.clone', compact('calon', 'qs'));
         break;
     }
     }
