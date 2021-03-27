@@ -191,6 +191,17 @@
     .commentText p {
         margin: 0;
     }
+
+
+    div.parent {
+        text-align: center;
+    }
+
+    ul {
+        list-style: inside;
+        display: inline-block;
+        text-align: left;
+    }
     </style>
 
 </head>
@@ -209,7 +220,7 @@
     <!-- end music box -->
 
     <div class="gateway gt-section" id="gt">
-        <div class="qbootstrap-hero " data-section="home">
+        <div class="qbootstrap-hero" data-section="home">
             <div class="qbootstrap-overlay"></div>
             @if($calon->fotoHeader->foto_header)
             <div class="qbootstrap-cover text-center center-bg" data-stellar-background-ratio="0.5"
@@ -1033,12 +1044,16 @@
                 <div class="col-md-12 text-center">
                     <p>Turut Mengundang :</p>
                 </div>
-                <div class="col-md-12 text-center">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <div class="col-md-12 text-center parent">
+                    <?php 
+                    $undang = explode("|",$calon->undang);
+                    ?>
+                    <ul>
+                        @foreach($undang as $data)
+                        <li>{{$data}}</li>
+                        @endforeach
+                    </ul>
+
                 </div>
             </div>
             <div class="row row-bottom-padded-sm">
@@ -1049,10 +1064,10 @@
             </div>
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <ul class="social social-circle">
+                    <ol class="social social-circle">
                         <li><a href="https://www.instagram.com/tobeabride/"><i class="icon-instagram"></i></a></li>
                         <li><a href="https://www.instagram.com/cloudstudio/"><i class="icon-instagram"></i></a></li>
-                    </ul>
+                    </ol>
                 </div>
             </div>
         </div>
@@ -1126,7 +1141,7 @@
     // });
 
     $(".button").click(function() {
-        $(".gateway").fadeOut();
+        $(".gateway").fadeOut("slow");
     });
     </script>
 

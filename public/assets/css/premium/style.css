@@ -24,6 +24,40 @@ body {
     position: relative;
 }
 
+/* List */
+ul,
+ol,
+dl {
+    line-height: 1.6;
+    margin-bottom: 0;
+    list-style-position: outside;
+    padding: 0;
+}
+
+li {
+    /* stylelint-disable-next-line sh-waqar/declaration-use-variable */
+    font-size: inherit;
+}
+
+ul {
+
+    margin-left: 0rem;
+}
+
+ol {
+    list-style-type: none;
+    margin-left: 0rem;
+}
+
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+    margin-left: 1.25rem;
+    margin-bottom: 0;
+}
+
+
 a {
     color: #FF847C;
     -webkit-transition: 0.5s;
@@ -385,7 +419,7 @@ h6 {
     bottom: 0;
     right: 0;
     z-index: 1;
-    background: rgba(0, 0, 0, 0.4);
+    /* background: rgba(0, 0, 0, 0.4); */
 
 }
 

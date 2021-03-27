@@ -843,6 +843,16 @@ couple-area end
         bottom: -75px;
         right: 0;
     }
+
+    div.parent {
+        text-align: center;
+    }
+
+    ul {
+        /* list-style: inside; */
+        display: inline-block;
+        text-align: left;
+    }
     </style>
 </head>
 
@@ -1654,25 +1664,26 @@ couple-area end
                 <div class="text-center"><strong>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</strong></div>
             </div>
             <div class="row pb-4">
-                <div class="col-md-12 text-center">
+                <div class="col-md-12 text-center parent">
                     <p>Turut Mengundang :</p>
-                </div>
-                <div class="col-md-12 text-center">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <?php 
+                    $undang = explode("|",$calon->undang);
+                    ?>
+                    <ul>
+                        @foreach($undang as $data)
+                        <li>{{$data}}</li>
+                        @endforeach
+                    </ul>
                 </div>
             </div>
             <div class="copyright text-center">&copy;2021. ToBeABrideXCloudStudio.</div>
             <p><img class="center" style="width:200px;height:200px;" src="assets/img/logo/tobeabride.png" alt=""></p>
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <ul class="social social-circle">
+                    <ol class="social social-circle">
                         <li><a href="https://www.instagram.com/tobeabride/"><i class="icon-instagram"></i></a></li>
                         <li><a href="https://www.instagram.com/cloudstudio/"><i class="icon-instagram"></i></a></li>
-                    </ul>
+                    </ol>
                 </div>
             </div>
         </div>

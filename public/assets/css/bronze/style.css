@@ -86,7 +86,6 @@ a:active.a:focus {
 ul {
     margin: 0;
     padding: 0;
-    list-style: none;
 }
 
 
@@ -2070,7 +2069,7 @@ footer:before {
 }
 
 .social li {
-    list-style: none;
+    /* list-style: none; */
     padding: 0;
     margin: 0;
     display: inline-block;

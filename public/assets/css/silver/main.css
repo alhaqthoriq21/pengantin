@@ -146,11 +146,12 @@ li {
 }
 
 ul {
-    list-style-type: none;
+
     margin-left: 0rem;
 }
 
 ol {
+    list-style-type: none;
     margin-left: 0rem;
 }
 

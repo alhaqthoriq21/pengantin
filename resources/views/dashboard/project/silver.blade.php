@@ -292,6 +292,16 @@
         visibility: visible;
         opacity: 1;
     }
+
+    div.parent {
+        text-align: center;
+    }
+
+    ul {
+        list-style: inside;
+        display: inline-block;
+        text-align: left;
+    }
     </style>
 </head>
 
@@ -786,7 +796,7 @@
                 <div class="text-center"><strong>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</strong></div>
             </div>
             <div class="row pb-4">
-                <div class="col-md-12 text-center">
+                <div class="col-md-12 text-center parent">
                     <p>Turut Mengundang :</p>
                     <?php 
                     $undang = explode("|",$calon->undang);
@@ -796,20 +806,16 @@
                         <li>{{$data}}</li>
                         @endforeach
                     </ul>
-
-                </div>
-                <div class="col-md-12 text-center">
-                    <p id="undang"></p>
                 </div>
             </div>
             <div class="copyright text-center">&copy;2021. ToBeABrideXCloudStudio.</div>
             <p><img class="center" style="width:200px;height:200px;" src="assets/img/logo/tobeabride.png" alt=""></p>
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <ul class="social social-circle">
+                    <ol class="social social-circle">
                         <li><a href="https://www.instagram.com/tobeabride/"><i class="icon-instagram"></i></a></li>
                         <li><a href="https://www.instagram.com/cloudstudio/"><i class="icon-instagram"></i></a></li>
-                    </ul>
+                    </ol>
                 </div>
             </div>
         </div>
