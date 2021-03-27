@@ -49,6 +49,249 @@
     .commentText p {
         margin: 0px;
     }
+
+    .rsvp {
+        position: relative;
+    }
+
+    .rsvp:after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: url(assets/img/silver/rsvp-flowers-r.png) no-repeat;
+        background-size: contain;
+        background-position: 0 100%;
+        max-width: 500px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+
+    @media only screen and (min-width: 768px) {
+        .rsvp:before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: url(assets/img/silver/rsvp-flowers-l.png) no-repeat;
+            background-size: contain;
+            background-position: left;
+            max-width: 400px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+    }
+
+    .rsvp .title {
+        font-family: "Playfair Display", serif;
+        display: block;
+    }
+
+    .rsvp .title:after,
+    .rsvp .title:before {
+        display: none;
+    }
+
+    /* //comment */
+    .comment {
+        position: relative;
+    }
+
+    .comment:after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: url(assets/img/silver/rsvp-flowers-r.png) no-repeat;
+        background-size: contain;
+        background-position: 0 100%;
+        max-width: 500px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+
+    @media only screen and (min-width: 768px) {
+        .comment:before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: url(assets/img/silver/rsvp-flowers-l.png) no-repeat;
+            background-size: contain;
+            background-position: left;
+            max-width: 400px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+    }
+
+    .comment .title {
+        font-family: "Playfair Display", serif;
+        display: block;
+    }
+
+    .comment .title:after,
+    .comment .title:before {
+        display: none;
+    }
+
+    /* //gallery  */
+
+    .gallery {
+        position: relative;
+        background: url("{{$calon->fotoBody->foto_kedua}}");
+        background-size: cover;
+        background-position: center;
+    }
+
+    .gallery:before {
+        content: '';
+        background: rgba(245, 226, 228, 0.5);
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+    }
+
+    .gallery__slider {
+        position: relative;
+        margin-top: 80px;
+    }
+
+    @media only screen and (min-width: 992px) {
+        .gallery__slider {
+            margin-bottom: 100px;
+        }
+    }
+
+    .gallery__slider .slick-list {
+        margin-bottom: 30px;
+    }
+
+    .gallery__slider-num {
+        position: absolute;
+        bottom: -79px;
+        display: -ms-flexbox;
+        display: flex;
+        left: 50%;
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+        font-size: 30px;
+        font-family: georgia;
+    }
+
+    .gallery__flower-prlx-l {
+        top: -150px;
+    }
+
+    .gallery__flower-prlx-r {
+        bottom: -75px;
+        right: 0;
+    }
+
+    /* Body */
+    html,
+    body {
+        height: 100%;
+    }
+
+    body {
+        font-family: "Open Sans", sans-serif;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1.7;
+        color: #212529;
+        overflow-x: hidden;
+        background: url(assets/img/silver/seamless.png);
+    }
+
+    body.offcanvas {
+        overflow: hidden;
+    }
+
+    /*** music box ***/
+    .music-box {
+        position: fixed;
+        width: 300px;
+        height: 160px;
+        z-index: 120;
+        bottom: 30px;
+        right: 30px;
+    }
+
+    @media (max-width: 991px) {
+        .music-box {
+            width: 250px;
+            height: 120px;
+            right: auto;
+            left: 30px;
+        }
+    }
+
+    .music-box .music-holder {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: -30px;
+        visibility: hidden;
+        opacity: 0;
+        -webkit-transition: all 0.5s ease-out;
+        -o-transition: all 0.5s ease-out;
+        transition: all 0.5s ease-out;
+    }
+
+    .music-box .music-holder iframe {
+        width: 100%;
+        height: 100%;
+    }
+
+    .music-box button {
+        background: rgba(0, 0, 0, 0.1);
+        width: 40px;
+        height: 40px;
+        line-height: 35px;
+        font-size: 18px;
+        color: #9a8c40;
+        border: 1px solid #e6e6e6;
+        outline: 0;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -o-border-radius: 50%;
+        -ms-border-radius: 50%;
+        border-radius: 50%;
+    }
+
+    .music-box.music-box-2 button {
+        color: #4b4e4e;
+    }
+
+    @media (max-width: 991px) {
+        .music-box button {
+            right: auto;
+            left: 0;
+        }
+    }
+
+    .music-box .toggle-music-box {
+        top: -50px;
+        visibility: visible;
+        opacity: 1;
+    }
     </style>
 </head>
 
@@ -545,13 +788,18 @@
             <div class="row pb-4">
                 <div class="col-md-12 text-center">
                     <p>Turut Mengundang :</p>
+                    <?php 
+                    $undang = explode("|",$calon->undang);
+                    ?>
+                    <ul>
+                        @foreach($undang as $data)
+                        <li>{{$data}}</li>
+                        @endforeach
+                    </ul>
+
                 </div>
                 <div class="col-md-12 text-center">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p id="undang"></p>
                 </div>
             </div>
             <div class="copyright text-center">&copy;2021. ToBeABrideXCloudStudio.</div>
@@ -627,6 +875,20 @@
             document.getElementById("seconds").innerHTML = 0 + " <small></small> ";
         }
     }, 1000);
+
+    // $(document).ready(function() {
+
+    //     const calon = @json($calon);
+    //     console.log(calon);
+
+
+    //     const undang = calon.undang.replaceAll("|", ",");
+    //     $("#undang").tagsinput('add', undang)
+
+    // $('#key_category').val(product.key_category.split("|")); // Select the option with a value of '1'
+    // $('#key_category').trigger('change'); // Notify any JS components that the value changed
+
+    // })
     </script>
 
 </body>

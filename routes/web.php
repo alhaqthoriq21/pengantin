@@ -28,8 +28,12 @@ use App\Http\Controllers\SongController;
 
     Route::domain(env('APP_MAIN_DOMAIN', 'localhost'))->prefix("/")->group(function () {
     Route::get('/', function () {
-        return view('home');
+        return view('auth/login');
     });
+
+    Auth::routes();
+
+    Route::get('/login/dashboard', [App\Http\Controllers\CalonController::class, 'index'])->name('home');
 
     //routing slug
     Route::get("/{slug}", [ProjectController::class, "getData"])->name("get.project.data");
@@ -115,6 +119,3 @@ use App\Http\Controllers\SongController;
     Route::get("/reservasi/show/{reservasiId}", [ReservasiController::class, "show"])->name("reservasi.show");
 
     });
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

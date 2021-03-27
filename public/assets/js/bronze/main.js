@@ -4,11 +4,11 @@
 
 ==========================================*/
 
-(function($) {
+(function ($) {
     var swiper = new Swiper('.swiper-container', {
         loop: true,
         speed: 4000,
-        autoplay:true,
+        autoplay: true,
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
@@ -18,7 +18,7 @@
     /*================================
     Window Load
     ==================================*/
-    $(window).on('load', function() {
+    $(window).on('load', function () {
         smoothScrolling($(".main-menu nav ul li a[href^='#']"), headerHeight);
         smoothScrolling($(".scrollup a[href^='#']"), 0);
         smoothScrolling($(".welcome-content .btn a[href^='#']"), 0);
@@ -33,27 +33,34 @@
     /*================================
     Preloader
     ==================================*/
-      /*------------------------------------------
+    /*------------------------------------------
         = HIDE PRELOADER
     -------------------------------------------*/
     function preloader() {
-        if($('.preloader').length) {
-            $('.preloader').delay(100).fadeOut(500, function() {
-            });
+        if ($('.preloader').length) {
+            $('.preloader').delay(100).fadeOut(500, function () {});
         }
     }
+
+    //slider
+    $('.project-area .grid .test-popup-link').magnificPopup({
+        type: 'image',
+        gallery: {
+            enabled: true
+        }
+    });
 
     /*================================
      sticky-header
      ==================================*/
-    $(window).scroll(function() {
+    $(window).scroll(function () {
 
         if ($(window).scrollTop() > 10) {
             $('.sticky-header').addClass('sticky'),
-            $('.scrollup').addClass('show_hide');
+                $('.scrollup').addClass('show_hide');
         } else {
             $('.sticky-header').removeClass('sticky'),
-             $('.scrollup').removeClass('show_hide');
+                $('.scrollup').removeClass('show_hide');
         }
 
     });
@@ -134,18 +141,18 @@
                     url: "mail.php",
                     data: $(form).serialize(),
                     success: function () {
-                        $( "#loader").hide();
-                        $( "#success").slideDown( "slow" );
-                        setTimeout(function() {
-                        $( "#success").slideUp( "slow" );
+                        $("#loader").hide();
+                        $("#success").slideDown("slow");
+                        setTimeout(function () {
+                            $("#success").slideUp("slow");
                         }, 3000);
                         form.reset();
                     },
-                    error: function() {
-                        $( "#loader").hide();
-                        $( "#error").slideDown( "slow" );
-                        setTimeout(function() {
-                        $( "#error").slideUp( "slow" );
+                    error: function () {
+                        $("#loader").hide();
+                        $("#error").slideDown("slow");
+                        setTimeout(function () {
+                            $("#error").slideUp("slow");
                         }, 3000);
                     }
                 });
@@ -167,10 +174,10 @@
     /*================================
       Isotope Portfolio
      ==================================*/
-    $('.grid').imagesLoaded(function() {
+    $('.grid').imagesLoaded(function () {
 
         // filter items on button click
-        $('.gallery-menu').on('click', 'button', function() {
+        $('.gallery-menu').on('click', 'button', function () {
             var filterValue = $(this).attr('data-filter');
             $grid.isotope({
                 filter: filterValue
@@ -191,7 +198,7 @@
 
     });
 
-    $('.gallery-menu button').on('click', function() {
+    $('.gallery-menu button').on('click', function () {
         $('.gallery-menu button').removeClass('active');
         $(this).addClass('active');
     });
@@ -201,7 +208,7 @@
         = COUNTDOWN CLOCK
     -------------------------------------------*/
     if ($("#clock").length) {
-        $('#clock').countdown('2018/12/25', function(event) {
+        $('#clock').countdown('2018/12/25', function (event) {
             var $this = $(this).html(event.strftime('' +
                 '<div class="box"><div class="date">%D</div> <span>month</span> </div>' +
                 '<div class="box"><div class="date">%D</div> <span>Days</span> </div>' +
@@ -222,7 +229,7 @@
         var links = $links;
         var topGap = $topGap;
 
-        links.on("click", function() {
+        links.on("click", function () {
             if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
                 var target = $(this.hash);
                 target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
@@ -237,17 +244,88 @@
         });
     }
 
-/*------------------------------------------
-    = BACK TO TOP
--------------------------------------------*/
-    if($(".scrollup").length) {
-        $(".scrollup").on("click", function() {
+    /*------------------------------------------
+        = BACK TO TOP
+    -------------------------------------------*/
+    if ($(".scrollup").length) {
+        $(".scrollup").on("click", function () {
             $("html,body").animate({
                 scrollTop: 0
             }, 1000, "easeInOutExpo");
             return false;
         })
     }
+
+
+    /* 6. Slick slider
+	====================*/
+    var slider = function () {
+        if ($('.slick-gallery')) {
+            $('.slick-gallery').slick({
+                centerMode: false,
+                dots: false,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                responsive: [{
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 3,
+                            infinite: true,
+                            dots: true
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            dots: true
+                        }
+                    }
+                ]
+            });
+        }
+        if ($('.slick-wishes')) {
+            $('.slick-wishes').slick({
+                dots: true,
+                arrows: false
+            });
+        }
+        if ($('.slick-gifts')) {
+            $('.slick-gifts').slick({
+                dots: true,
+                arrows: false,
+                slidesToShow: 5,
+                responsive: [{
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 3,
+                            infinite: true,
+                            dots: true
+                        }
+                    },
+                    {
+                        breakpoint: 640,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                        }
+                    }
+                ]
+            });
+        }
+    }
+    var sliderNum = function () {
+        var $slides = $('.slick-gallery .slick-slide').not('.slick-cloned');
+        var $currentSlide = $('.slick-slide.slick-current').attr('data-slick-index');
+        $('.gallery__slider-current').text(+$currentSlide + 1);
+        $('.gallery__slider-all').text($slides.length);
+    }
+    $('.slick').on('afterChange', sliderNum);
 
 
     /*================================
@@ -268,9 +346,9 @@
             }
         });
     }
-/*------------------------------------------
-    = WATER RIPPLE
--------------------------------------------*/
+    /*------------------------------------------
+        = WATER RIPPLE
+    -------------------------------------------*/
     if ($(".ripple").length) {
         $('.ripple').ripples({
             resolution: 512,
@@ -279,7 +357,7 @@
         });
 
         // Automatic drops
-        setInterval(function() {
+        setInterval(function () {
             var $el = $('.ripple');
             var x = Math.random() * $el.outerWidth();
             var y = Math.random() * $el.outerHeight();
@@ -290,16 +368,16 @@
         }, 400);
     }
 
-   if ($(".particleground").length) {
-    $('.particleground').particleground({
-        dotColor: '#999999',
-        lineColor: '#999999',
-        particleRadius:5,
-        lineWidth:2,
-        curvedLines:true,
-        proximity:20,
-        parallaxMultiplier:10,
-    });
+    if ($(".particleground").length) {
+        $('.particleground').particleground({
+            dotColor: '#999999',
+            lineColor: '#999999',
+            particleRadius: 5,
+            lineWidth: 2,
+            curvedLines: true,
+            proximity: 20,
+            parallaxMultiplier: 10,
+        });
 
     }
 
@@ -339,15 +417,24 @@
     /*------------------------------------------
         = TOGGLE MUSUC BIX
     -------------------------------------------*/
-    if($(".music-box").length) {
+    if ($(".music-box").length) {
         var musicBtn = $(".music-box-toggle-btn"),
             musicBox = $(".music-holder");
 
-        musicBtn.on("click", function() {
+        musicBtn.on("click", function () {
             musicBox.toggleClass("toggle-music-box");
             return false;
         })
     }
+
+    $(function () {
+        slider();
+        sliderNum();
+        countdown();
+        filledLabels();
+        pageScroll();
+        submitForm();
+    });
 
 
 

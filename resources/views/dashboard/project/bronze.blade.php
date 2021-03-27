@@ -12,7 +12,7 @@
     <!-- magnific-popup.css -->
     <link rel="stylesheet" href="{{asset('assets/css/bronze/magnific-popup.css')}}">
     <!-- slicknav.min.css -->
-    <link rel="stylesheet" href="{{asset('assets/css/bronze/slicknav.min.css')}}">
+    <!-- <link rel="stylesheet" href="{{asset('assets/css/bronze/slicknav.min.css')}}"> -->
     <!-- font-awesome.min.css -->
     <link rel="stylesheet" href="{{asset('assets/css/bronze/font-awesome.min.css')}}">
     <!-- owl.carousel.min.css -->
@@ -29,6 +29,9 @@
     <link rel="stylesheet" href="{{asset('assets/css/bronze/responsive.css')}}">
 
     <link rel="stylesheet" href="{{asset('assets/css/premium/icomoon.css')}}">
+
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/bronze/slick.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/bronze/slick-theme.css')}}">
     <style>
     body,
     html {
@@ -136,6 +139,709 @@
 
     .commentText p {
         margin: 0;
+    }
+
+    /*===========================
+ count-down
+=============================*/
+
+    .count-down-area {
+        background: url("{{$calon->fotoHeader->foto_countdown}}") no-repeat center center / cover;
+        background-attachment: fixed;
+        position: relative;
+    }
+
+    .count-down-area:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: #5e9a8e;
+        opacity: .8;
+        left: 0;
+        top: 0;
+    }
+
+    .count-down-section {
+        padding: 100px 0;
+    }
+
+    .count-down-section h2 {
+        font-family: "Great Vibes", cursive;
+        font-size: 60px;
+        color: #fff;
+        margin: 0;
+    }
+
+    @media (max-width: 1199px) {
+        .count-down-section h2 {
+            font-size: 62px;
+            font-size: 3.44444rem;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .count-down-section h2 {
+            font-size: 50px;
+            font-size: 2.77778rem;
+        }
+    }
+
+    .count-down-section h2>span {
+        font-size: 30px;
+        display: block;
+        margin-bottom: 0.6em;
+    }
+
+    .count-down-item2 h2>span {
+        font-size: 24px;
+        display: block;
+        margin-bottom: 0.6em;
+    }
+
+    @media (max-width: 1199px) {
+        .count-down-section h2>span {
+            font-size: 25px;
+            font-size: 1.38889rem;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .count-down-section h2>span {
+            font-size: 60px;
+            font-size: 1.11111rem;
+        }
+    }
+
+
+    .count-down-section #clock {
+        color: #5e9a8e;
+        overflow: hidden;
+    }
+
+    .count-down-section #clock>div {
+        width: 18%;
+        float: left;
+        text-align: center;
+        border: 1px solid #fff;
+        color: #fff;
+        padding: 20px 0;
+    }
+
+    @media (max-width: 767px) {
+        .count-down-section #clock>div {
+            width: calc(50% - 5px);
+        }
+    }
+
+    .count-down-section #clock>div+div {
+        margin-left: 2%;
+    }
+
+    @media (max-width: 767px) {
+        .count-down-section #clock {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .count-down-section #clock>div {
+            flex-basis: calc(100% * (1/2) - 15px);
+            margin-bottom: 30px;
+        }
+    }
+
+    .count-down-section #clock .box>div {
+        font-size: 60px;
+        font-weight: 600;
+        line-height: 1em;
+        font-family: 'Great Vibes', cursive;
+    }
+
+    @media (max-width: 1199px) {
+        .count-down-section #clock .box>div {
+            font-size: 60px;
+        }
+    }
+
+    @media (max-width: 991px) {
+        .count-down-section #clock .box>div {
+            font-size: 40px;
+            line-height: 1.3em;
+        }
+    }
+
+    .count-down-section #clock .box span {
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+
+    /*===============================
+welcome-area
+=================================*/
+
+    .welcome-area {
+        background: url("{{$calon->fotoBody->foto_pertama}}") no-repeat center center / cover;
+        position: relative;
+        background-attachment: fixed;
+    }
+
+    .welcome-area:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #649e93;
+        opacity: .9;
+    }
+
+    .welcome-content {
+        text-align: center;
+        padding: 100px 0;
+    }
+
+    .welcome-content h2 {
+        font-size: 55px;
+        color: #fff;
+        font-family: 'Great Vibes', cursive;
+    }
+
+    .welcome-content p {
+        font-size: 18px;
+        padding: 20px 50px 30px;
+        color: #fff;
+        max-width: 700px;
+        margin: auto;
+    }
+
+    .btn a {
+        display: inline-block;
+        background: #fff;
+        color: #649e93;
+        padding: 10px 38px;
+        font-size: 18px;
+        transition: all .3s;
+        font-weight: 600;
+    }
+
+    .btn a:hover {
+        background: #3f7267;
+        color: #fff;
+    }
+
+    /*=============================
+guest-area
+===============================*/
+
+    .guest-area {
+        background: url("{{$calon->fotoBody->foto_kedua}}") no-repeat center center / cover;
+        padding: 100px 0;
+        position: relative;
+        background-attachment: fixed;
+        z-index: 1;
+    }
+
+    .guest-area:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: #649e93;
+        opacity: .5;
+        z-index: -1;
+    }
+
+    .guest-area.guest-2:before {
+        background: #9a8c40;
+    }
+
+    .guest-wrap {
+        background: rgba(255, 255, 255, .5);
+        padding: 70px;
+    }
+
+    .section-title2.section-title3 h2:before {
+        position: absolute;
+        content: "";
+        background: url(assets/img/bronze/section/3.png) no-repeat center center / cover;
+        width: 40%;
+        height: 53%;
+        bottom: -9px;
+        left: 31%;
+    }
+
+    .contact-form input {
+        width: 100%;
+        height: 45px;
+        margin-top: 20px;
+        padding-left: 10px;
+        background: #fff;
+        opacity: 1;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .form-control {
+        margin-top: 20px;
+        font-size: 16px;
+        background: #fff;
+    }
+
+    select.form-control:not([size]):not([multiple]) {
+        height: 50px;
+        border-radius: 5px;
+        color: #666;
+        font-size: 14px;
+        -webkit-appearance: none;
+        -ms-appearance: none;
+        -o-appearance: none;
+        appearance: none;
+        -moz-appearance: none;
+        background: #fff url(assets/img/bronze/select-icon.png) no-repeat calc(100% - 15px) center;
+        position: relative;
+
+    }
+
+    .contact-textarea {
+        width: 100%;
+        height: 170px;
+        margin-top: 20px;
+        padding-left: 10px;
+        padding-top: 10px;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .section-title p {
+        padding-top: 10px;
+    }
+
+    .contact-form button {
+        background: none;
+        border: none;
+        padding: 5px 15px 8px;
+        background: #649e93;
+        color: #fff;
+        border-radius: 5px;
+        margin-top: 20px;
+        cursor: pointer;
+    }
+
+    .guest-2 button#submit {
+        background: #9a8c40;
+    }
+
+    .contact-form button:hover {
+        background: #3f7267;
+    }
+
+    ::-webkit-input-placeholder {
+        /* Chrome/Opera/Safari */
+
+        color: #666;
+        font-size: 14px;
+    }
+
+    ::-moz-placeholder {
+        /* Firefox 19+ */
+
+        color: #666;
+        font-size: 14px;
+    }
+
+    :-ms-input-placeholder {
+        /* IE 10+ */
+
+        color: #666;
+        font-size: 14px;
+    }
+
+    :-moz-placeholder {
+        /* Firefox 18- */
+
+        color: #666;
+        font-size: 14px;
+    }
+
+    /* //comment area */
+    /*=============================
+comment-area
+===============================*/
+
+    .comment-area {
+        background: url("{{$calon->fotoBody->foto_pertama}}") no-repeat center center / cover;
+        padding: 100px 0;
+        position: relative;
+        background-attachment: fixed;
+        z-index: 1;
+    }
+
+    .comment-area:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: #649e93;
+        opacity: .5;
+        z-index: -1;
+    }
+
+    .comment-area.guest-2:before {
+        background: #9a8c40;
+    }
+
+    .comment-wrap {
+        background: rgba(255, 255, 255, .5);
+        padding: 70px;
+    }
+
+    .section-title2.section-title3 h2:before {
+        position: absolute;
+        content: "";
+        background: url(assets/img/bronze/section/3.png) no-repeat center center / cover;
+        width: 40%;
+        height: 53%;
+        bottom: -9px;
+        left: 31%;
+    }
+
+    .contact-form input {
+        width: 100%;
+        height: 45px;
+        margin-top: 20px;
+        padding-left: 10px;
+        background: #fff;
+        opacity: 1;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .form-control {
+        margin-top: 20px;
+        font-size: 16px;
+        background: #fff;
+    }
+
+    select.form-control:not([size]):not([multiple]) {
+        height: 50px;
+        border-radius: 5px;
+        color: #666;
+        font-size: 14px;
+        -webkit-appearance: none;
+        -ms-appearance: none;
+        -o-appearance: none;
+        appearance: none;
+        -moz-appearance: none;
+        background: #fff url(assets/img/bronze/select-icon.png) no-repeat calc(100% - 15px) center;
+        position: relative;
+
+    }
+
+    .contact-textarea {
+        width: 100%;
+        height: 170px;
+        margin-top: 20px;
+        padding-left: 10px;
+        padding-top: 10px;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .section-title p {
+        padding-top: 10px;
+    }
+
+    .contact-form button {
+        background: none;
+        border: none;
+        padding: 5px 15px 8px;
+        background: #649e93;
+        color: #fff;
+        border-radius: 5px;
+        margin-top: 20px;
+        cursor: pointer;
+    }
+
+    .comment-2 button#submit {
+        background: #9a8c40;
+    }
+
+    .contact-form button:hover {
+        background: #3f7267;
+    }
+
+    ::-webkit-input-placeholder {
+        /* Chrome/Opera/Safari */
+
+        color: #666;
+        font-size: 14px;
+    }
+
+    ::-moz-placeholder {
+        /* Firefox 19+ */
+
+        color: #666;
+        font-size: 14px;
+    }
+
+    :-ms-input-placeholder {
+        /* IE 10+ */
+
+        color: #666;
+        font-size: 14px;
+    }
+
+    :-moz-placeholder {
+        /* Firefox 18- */
+
+        color: #666;
+        font-size: 14px;
+    }
+
+    /*===================================
+couple-area
+=====================================*/
+
+    .section-title h2 {
+        position: relative;
+        font-size: 50px;
+        font-family: 'Great Vibes', cursive;
+        margin-bottom: 50px;
+        color: #649e93;
+    }
+
+    .section-title h2:before {
+        position: absolute;
+        content: "";
+        background: url(assets/img/bronze/section/2.png) no-repeat center center / cover;
+        width: 26%;
+        height: 22%;
+        top: -13px;
+        left: 37%;
+    }
+
+    .section-title h2:after {
+        position: absolute;
+        content: "";
+        background: url(assets/img/bronze/section/1.png) no-repeat center center / cover;
+        width: 26%;
+        height: 22%;
+        bottom: -13px;
+        left: 37%;
+    }
+
+    .section-title4 h2:before {
+        width: 50%;
+        height: 22%;
+        top: -13px;
+        left: 25%;
+    }
+
+    .section-title4 h2:after {
+        width: 50%;
+        height: 22%;
+        bottom: -13px;
+        left: 26%;
+    }
+
+
+    .couple-item {
+        padding-top: 50px;
+    }
+
+    .couple-img {
+        overflow: hidden;
+        border: 2px solid #5e9a8e;
+        border-radius: 100%;
+    }
+
+    .couple-img:hover.couple-img img {
+        transform: scale(1);
+    }
+
+    .couple-img img {
+        border-radius: 100%;
+        transform: scale(1.2);
+        transition: all .3s;
+    }
+
+    .couple-wrap2 {
+        background: #fefdf8;
+    }
+
+    .couple-wrap2.couple-s-3 {
+        background: #f2fbf9;
+    }
+
+    .couple-wrap2 .couple-text i {
+        color: #9a8c40;
+        font-size: 20px;
+    }
+
+    .couple-wrap2.couple-s-3 .couple-text i {
+        color: #5e9a8e;
+    }
+
+    .couple-content h4 {
+        font-size: 21px;
+        color: #5e9a8e;
+    }
+
+    .couple-content2 h4 {
+        font-size: 21px;
+        color: #9a8c40;
+    }
+
+
+    .couple-content p {
+        padding: 0;
+    }
+
+    .couple-content2 p {
+        padding: 0;
+    }
+
+    .couple-content {
+        text-align: center;
+    }
+
+    .couple-text {
+        padding: 23px 0;
+    }
+
+    .social-icon ul li a {
+        font-size: 24px;
+        color: #5e9a8e;
+    }
+
+    .social-icon ul li {
+        padding: 0px 10px;
+    }
+
+    .couple-shape {
+        padding-top: 100px;
+    }
+
+    .social-icon ul {
+        justify-content: center;
+    }
+
+    .social-list2 ul li:last-child {
+        margin-right: 0;
+    }
+
+    .couple-img2 {
+        position: relative;
+    }
+
+    .couple-img2:before {
+        position: absolute;
+        content: "";
+        left: 10px;
+        top: 11px;
+        width: 94%;
+        height: 95%;
+        background: url(assets/img/bronze/couple/4.png) no-repeat center center / cover;
+    }
+
+    .couple-img2:after {
+        position: absolute;
+        content: "";
+        left: 10px;
+        top: 11px;
+        width: 94%;
+        height: 95%;
+        background: url(assets/img/bronze/couple/5.png) no-repeat center center / cover;
+    }
+
+    .couple-img3 {
+        position: relative;
+    }
+
+    .couple-img3:before {
+        position: absolute;
+        content: "";
+        left: 8px;
+        top: 10px;
+        width: 45%;
+        height: 51%;
+        background: url(assets/img/bronze/couple/6.png) no-repeat center center / cover;
+    }
+
+    .couple-img3:after {
+        position: absolute;
+        content: "";
+        left: 52%;
+        bottom: 10px;
+        width: 45%;
+        height: 51%;
+        background: url(assets/img/bronze/couple/7.png) no-repeat center center / cover;
+    }
+
+
+    /*===================================
+couple-area end
+=====================================*/
+
+    /* //gallery  */
+
+    .gallery {
+        position: relative;
+        /* background: url("{{$calon->fotoBody->foto_kedua}}"); */
+        background-size: cover;
+        background-position: center;
+    }
+
+    .gallery:before {
+        content: '';
+        background: rgba(94, 154, 142, .5);
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+    }
+
+    .gallery__slider {
+        position: relative;
+        margin-top: 80px;
+    }
+
+    @media only screen and (min-width: 992px) {
+        .gallery__slider {
+            margin-bottom: 100px;
+        }
+    }
+
+    .gallery__slider .slick-list {
+        margin-bottom: 30px;
+    }
+
+    .gallery__slider-num {
+        position: absolute;
+        bottom: -79px;
+        display: -ms-flexbox;
+        display: flex;
+        left: 50%;
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+        font-size: 30px;
+        font-family: georgia;
+    }
+
+    .gallery__flower-prlx-l {
+        top: -150px;
+    }
+
+    .gallery__flower-prlx-r {
+        bottom: -75px;
+        right: 0;
     }
     </style>
 </head>
@@ -682,16 +1388,43 @@
         </div>
     </div> -->
     <!--person-area end -->
+    <!-- Section Gallery -->
+    <section id="gallery" class="gallery section text-center">
+        <div class="container position-relative">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title text-center">
+                        <h2>Our Gellary</h2>
+                    </div>
+                    <div class="gallery__slider">
+                        <div class="slick-gallery slick mb-0 ">
+                            @foreach($calon->fotoFooter as $data)
+                            <div class="slider__item">
+                                <img src="{{$data->foto}}" alt="slider">
+                            </div>
+                            @endforeach
+                        </div>
+
+                        <div class="gallery__slider-num d-none d-lg-flex">
+                            <div class="gallery__slider-current pr-1"></div>
+                            <div class="pr-1">from</div>
+                            <div class="gallery__slider-all"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- gallery area start -->
-    <div id="gallery" class="gallery-area pt--100 pb--70">
+    <!-- <div id="gallery" class="gallery-area pt--100 pb--70">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="section-title text-center">
                         <h2>Our Gallery</h2>
                     </div>
-                </div>
-                <!-- <div class="col-12">
+                </div> -->
+    <!-- <div class="col-12">
                     <div class="gallery-menu text-center">
                         <button class="active" data-filter="*">All</button>
                         <button data-filter=".Pre-Wedding">Pre Wedding</button>
@@ -699,12 +1432,12 @@
                         <button data-filter=".Parties">Parties</button>
                     </div>
                 </div> -->
-            </div>
-            <div class="row grid">
+    <!-- </div> -->
+    <!-- <div class="row grid">
                 <div class="col-lg-4 col-md-6 col-sm-6 col-12 grid-item Pre-Wedding">
                     <div class="gallery-single">
                         @foreach($calon->fotoFooter as $data)
-                        <!-- <img src="{{$data->foto}}" alt=""> -->
+                        <img src="{{$data->foto}}" alt="">
                         <div class="social-1st">
                             <ul>
                                 <li><a href="{{$data->foto}}" class="expand-img"><i class="fa fa-search"></i></a>
@@ -713,8 +1446,8 @@
                         </div>
                     </div>
                     @endforeach
-                </div>
-                <!-- <div class="col-lg-4 col-md-6 col-sm-6 col-12 grid-item Enagagement">
+                </div> -->
+    <!-- <div class="col-lg-4 col-md-6 col-sm-6 col-12 grid-item Enagagement">
                     <div class="gallery-single">
                         <img src="assets\img\bronze\gallery\4.jpg" alt="">
                         <div class="social-1st">
@@ -772,9 +1505,9 @@
                         </div>
                     </div>
                 </div> -->
-            </div>
-        </div>
-    </div>
+    <!-- </div> -->
+    <!-- </div>
+    </div> -->
     <!-- gallery area end -->
     <!-- guest-area strat -->
     <div id="Contact" class="guest-area">
@@ -986,6 +1719,8 @@
     <script src="{{asset('assets/js/bronze/validation.js')}}"></script>
     <!-- main.js -->
     <script src="{{asset('assets/js/bronze/main.js')}}"></script>
+
+    <script src="{{asset('assets/js/bronze/slick.min.js')}}"></script>
 
     <script>
 

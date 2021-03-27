@@ -90,6 +90,17 @@
         font-size: 25px;
     }
 
+    .gt-section {
+        z-index: 11;
+        position: relative;
+        height: 100vh;
+        position: fixed;
+        width: 100%;
+        top: 0px;
+        display: flex;
+        flex-direction: column;
+    }
+
     .topleft {
         position: absolute;
         top: 0;
@@ -197,8 +208,8 @@
     </div>
     <!-- end music box -->
 
-    <div class="gateway" id="gt">
-        <div class="qbootstrap-hero" data-section="home">
+    <div class="gateway gt-section" id="gt">
+        <div class="qbootstrap-hero " data-section="home">
             <div class="qbootstrap-overlay"></div>
             @if($calon->fotoHeader->foto_header)
             <div class="qbootstrap-cover text-center center-bg" data-stellar-background-ratio="0.5"
@@ -1115,7 +1126,7 @@
     // });
 
     $(".button").click(function() {
-        $(".gateway").fadeOut("slow");
+        $(".gateway").fadeOut();
     });
     </script>
 
