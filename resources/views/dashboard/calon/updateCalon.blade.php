@@ -72,6 +72,11 @@
                                                     aria-controls="custom-tabs-four-settings"
                                                     aria-selected="false">Quotes</a>
                                             </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="custom-tabs-four-song-tab" data-toggle="pill"
+                                                    href="#custom-tabs-four-song" role="tab"
+                                                    aria-controls="custom-tabs-four-song" aria-selected="false">Song</a>
+                                            </li>
                                         </ul>
                                     </div>
                                     <div class="card-body">
@@ -111,6 +116,17 @@
                                                                         <option value="bronze">Bronze</option>
                                                                     </select>
                                                                 </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row form-group">
+                                                            <div class="col-sm-4">
+                                                                <label for="" class="col-form-label">Pick Background
+                                                                    Color</label>
+                                                            </div>
+                                                            <div id="color" class="input-group colorpicker-component">
+                                                                <input type="text" name="color" id="color"
+                                                                    value="#00AABB" class="form-control" />
+                                                                <span class="input-group-addon"><i></i></span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -456,6 +472,38 @@
                                                                     <textarea name="isi" id="isi" placeholder=""
                                                                         class="form-control" rows="5" cols="33">
                                                                     </textarea>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="custom-tabs-four-song" role="tabpanel"
+                                                aria-labelledby="custom-tabs-four-song-tab">
+                                                <div class="tab-pane">
+                                                    <div class="col-12 card--shadow">
+                                                        <h5>Song</h5>
+                                                        <div class="row form-group">
+                                                            <div class="col-sm-4">
+                                                                <label for="" class="col-form-label">Judul Lagu</label>
+                                                            </div>
+                                                            <div class="col-sm-8">
+                                                                <div class="d-flex flex-row">
+                                                                    <input name="judul" id="judul" placeholder=""
+                                                                        type="text" class="form-control"
+                                                                        value="{{$calon->song->judul}}">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row form-group">
+                                                            <div class="col-sm-4">
+                                                                <label for="" class="col-form-label">Link Lagu</label>
+                                                            </div>
+                                                            <div class="col-sm-8">
+                                                                <div class="d-flex flex-row">
+                                                                    <input name="song" id="song" placeholder=""
+                                                                        type="text" class="form-control"
+                                                                        value="{{$calon->song->song}}">
                                                                 </div>
                                                             </div>
                                                         </div>

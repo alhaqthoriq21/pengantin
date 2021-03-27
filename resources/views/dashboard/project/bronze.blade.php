@@ -715,12 +715,12 @@ couple-area
         padding: 23px 0;
     }
 
-    .social-icon ul li a {
+    .social-icon ol li a {
         font-size: 24px;
         color: #5e9a8e;
     }
 
-    .social-icon ul li {
+    .social-icon ol li {
         padding: 0px 10px;
     }
 
@@ -728,11 +728,11 @@ couple-area
         padding-top: 100px;
     }
 
-    .social-icon ul {
+    .social-icon ol {
         justify-content: center;
     }
 
-    .social-list2 ul li:last-child {
+    .social-list2 ol li:last-child {
         margin-right: 0;
     }
 
@@ -849,7 +849,6 @@ couple-area end
     }
 
     ul {
-        /* list-style: inside; */
         display: inline-block;
         text-align: left;
     }
@@ -918,7 +917,7 @@ couple-area end
                     <div class="col-lg-4 col-md-6 col-sm-6 couple-single">
                         <div class="couple-wrap2 couple-s-3">
                             <div class="couple-img3">
-                                <img src="{{$calon->foto_wanita}}" alt="">
+                                <img class="center" src="{{$calon->foto_wanita}}" alt="">
                             </div>
                             <div class="couple-text">
                                 <div class="couple-content">
@@ -928,13 +927,13 @@ couple-area end
                                     <p>Ibu {{$calon->ibu_wanita}}</p>
                                 </div>
                                 <div class="social-icon">
-                                    <ul class="d-flex">
+                                    <ol class="d-flex">
                                         <li><a href="https://www.instagram.com/{{$calon->sosmed_wanita}}/"><i
                                                     class="fa fa-instagram"></i></a></li>
                                         <!-- <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                                         <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
                                         <li><a href="#"><i class="fa fa-linkedin"></i></a></li> -->
-                                    </ul>
+                                    </ol>
                                 </div>
                             </div>
                         </div>
@@ -949,7 +948,7 @@ couple-area end
                     <div class="col-lg-4 col-md-6 col-sm-6 couple-single md-0">
                         <div class="couple-wrap2 couple-s-3">
                             <div class="couple-img3">
-                                <img src="{{$calon->foto_pria}}" alt="">
+                                <img class="center" src="{{$calon->foto_pria}}" alt="">
                             </div>
                             <div class="couple-text">
                                 <div class="couple-content">
@@ -959,13 +958,13 @@ couple-area end
                                     <p>Ibu {{$calon->ibu_pria}}</p>
                                 </div>
                                 <div class="social-icon">
-                                    <ul class="d-flex">
+                                    <ol class="d-flex">
                                         <li><a href="https://www.instagram.com/{{$calon->sosmed_pria}}/"><i
                                                     class="fa fa-instagram"></i></a></li>
                                         <!-- <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                                         <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
                                         <li><a href="#"><i class="fa fa-linkedin"></i></a></li> -->
-                                    </ul>
+                                    </ol>
                                 </div>
                             </div>
                         </div>
@@ -1404,7 +1403,7 @@ couple-area end
             <div class="row">
                 <div class="col-12">
                     <div class="section-title text-center">
-                        <h2>Our Gellary</h2>
+                        <h2>Our Gallery</h2>
                     </div>
                     <div class="gallery__slider">
                         <div class="slick-gallery slick mb-0 ">

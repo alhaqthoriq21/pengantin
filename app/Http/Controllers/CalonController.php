@@ -9,6 +9,7 @@ use App\Models\FotoFooter;
 use App\Models\LoveStory;
 use App\Models\Quotes;
 use App\Models\Resepsi;
+use App\Models\Song;
 use Illuminate\Http\Request;
 use Validator;
 
@@ -98,6 +99,10 @@ class CalonController extends Controller
             $quotes = $request->only(["calon_id","judul","isi"]);
             $quotes['calon_id'] = $calon->id;
             $quotes = Quotes::create($quotes);
+
+            $song = $request->only(["calon_id","judul","song"]);
+            $song['calon_id'] = $calon->id;
+            $song = Song::create($song);
 
 
             // dd($input,$akadNikah,$resepsi,$quotes);

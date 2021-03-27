@@ -172,6 +172,11 @@
                                                     aria-controls="custom-tabs-four-settings"
                                                     aria-selected="false">Quotes</a>
                                             </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="custom-tabs-four-song-tab" data-toggle="pill"
+                                                    href="#custom-tabs-four-song" role="tab"
+                                                    aria-controls="custom-tabs-four-song" aria-selected="false">Song</a>
+                                            </li>
                                         </ul>
                                     </div>
                                     <div class="card-body">
@@ -214,9 +219,9 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <!-- <div class="row form-group">
+                                                        <div class="row form-group">
                                                             <div class="col-sm-4">
-                                                                <label for="" class="col-form-label">Pick Text
+                                                                <label for="" class="col-form-label">Pick Background
                                                                     Color</label>
                                                             </div>
                                                             <div id="color" class="input-group colorpicker-component">
@@ -224,7 +229,7 @@
                                                                     value="#00AABB" class="form-control" />
                                                                 <span class="input-group-addon"><i></i></span>
                                                             </div>
-                                                        </div> -->
+                                                        </div>
                                                     </div>
                                                     <div class="col-12 card--shadow">
                                                         <h5>Calon Pengantin Pria</h5>
@@ -580,6 +585,36 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            <div class="tab-pane fade" id="custom-tabs-four-song" role="tabpanel"
+                                                aria-labelledby="custom-tabs-four-song-tab">
+                                                <div class="tab-pane">
+                                                    <div class="col-12 card--shadow">
+                                                        <h5>Song</h5>
+                                                        <div class="row form-group">
+                                                            <div class="col-sm-4">
+                                                                <label for="" class="col-form-label">Judul Lagu</label>
+                                                            </div>
+                                                            <div class="col-sm-8">
+                                                                <div class="d-flex flex-row">
+                                                                    <input name="judul" id="judul" placeholder=""
+                                                                        type="text" class="form-control" value="">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row form-group">
+                                                            <div class="col-sm-4">
+                                                                <label for="" class="col-form-label">Link Lagu</label>
+                                                            </div>
+                                                            <div class="col-sm-8">
+                                                                <div class="d-flex flex-row">
+                                                                    <input name="song" id="song" placeholder=""
+                                                                        type="text" class="form-control" value="">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                             <div class="tab-pane fade" id="custom-tabs-four-loveStory" role="tabpanel"
                                                 aria-labelledby="custom-tabs-four-loveStory-tab">
                                                 <div class="tab-pane">
@@ -780,7 +815,7 @@
     rel="stylesheet" media="screen">
 <link rel="stylesheet" type="text/css" href="{{asset('assets/plugins/taginput/bootstrap-tagsinput.css')}}">
 <!-- Bootstrap Color Picker -->
-<!-- <link rel="stylesheet" href="{{asset('assets/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css')}}"> -->
+<link rel="stylesheet" href="{{asset('assets/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css')}}">
 
 @endpush
 

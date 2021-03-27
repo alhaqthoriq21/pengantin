@@ -64,6 +64,8 @@
     <!-- Modernizr JS -->
 
     <script src="{{asset('assets/js/premium/modernizr-2.6.2.min.js')}}"></script>
+
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
     <!-- datetime/ -->
     <!-- <script src="{{asset('assets/js/premium/jquery.js')}}"></script>
     <script src="/build/jquery.datetimepicker.full.min.js"></script> -->
@@ -202,6 +204,19 @@
         display: inline-block;
         text-align: left;
     }
+
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+
+    .button4 {
+        background-color: #ffffff;
+        color: black;
+        border-radius: 12px;
+    }
     </style>
 
 </head>
@@ -238,7 +253,10 @@
                                     <p><span>You're Invited!</span></p>
                                     <h1 class="holder"><span>Welcome to the Wedding of</span></h1>
                                     <h2>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</h2>
-                                    <p><a href="#" class="button">Link Button</a></p>
+                                    <p><button href="#" style="width: 350px; height:50px;"
+                                            class="button button4 w3-round-large"><i class="fa fa-heart"></i> Open
+                                            Invitation</button>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -296,9 +314,10 @@
             <div class="row animate-box">
                 <div class="col-md-8 col-md-offset-2 text-center">
                     <div class="col-md-5 col-sm-5 col-xs-5 nopadding">
-                        <img src="{{$calon->foto_pria}}" class="img-responsive" alt="">
+                        <img class="center" src="{{$calon->foto_pria}}" style="width:150px;height:150px;"
+                            class="img-responsive" alt="">
                         <h3>{{$calon->calon_pria}}</h3>
-                        <h1>Putra Dari</h1>
+                        <p>Putra Dari</p>
                         <p>Bpk. {{$calon->ayah_pria}}</p>
                         <p>& Ibu {{$calon->ibu_pria}}</p>
                         <h2><a href="https://www.instagram.com/{{$calon->sosmed_pria}}/"><i
@@ -309,9 +328,10 @@
                                 class="svg img-responsive" alt=""></h2>
                     </div>
                     <div class="col-md-5 col-sm-5 col-xs-5 nopadding">
-                        <img src="{{$calon->foto_wanita}}" class="img-responsive" alt="">
+                        <img class="center" src="{{$calon->foto_wanita}}" style="width:150px;height:150px;"
+                            class="img-responsive" alt="">
                         <h3>{{$calon->calon_wanita}}</h3>
-                        <h1>Putri Dari</h1>
+                        <p>Putri Dari</p>
                         <p>Bpk. {{$calon->ayah_wanita}}</p>
                         <p>& Ibu {{$calon->ibu_wanita}}</p>
                         <h2><a href="https://www.instagram.com/{{$calon->sosmed_wanita}}/"><i

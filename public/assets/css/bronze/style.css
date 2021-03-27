@@ -48,7 +48,40 @@ body {
     line-height: 28px;
 }
 
-h1,
+/* List */
+ul,
+ol,
+dl {
+    line-height: 1.6;
+    margin-bottom: 0;
+    list-style-position: outside;
+    padding: 0;
+}
+
+li {
+    /* stylelint-disable-next-line sh-waqar/declaration-use-variable */
+    font-size: inherit;
+}
+
+ul {
+    /* list-style-type: none; */
+    margin-left: 0rem;
+}
+
+ol {
+    list-style-type: none;
+    margin-left: 0rem;
+}
+
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+    margin-left: 1.25rem;
+    margin-bottom: 0;
+}
+
+
 h2,
 h3,
 h4,
@@ -57,8 +90,13 @@ h6 {
     color: #333;
 }
 
+h1 {
+    color: #649e93;
+}
+
 p {
     margin: 0px;
+    margin-bottom: 0px;
 }
 
 img {

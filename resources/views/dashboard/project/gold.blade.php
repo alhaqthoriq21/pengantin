@@ -160,7 +160,8 @@
                 <div class="couple-wrap animate-box">
                     <div class="couple-half">
                         <div class="groom">
-                            <img src="{{$calon->foto_pria}}" alt="groom" class="img-responsive">
+                            <img src="{{$calon->foto_pria}}" style="width:15px;height:150px;" alt="groom"
+                                class="img-responsive">
                         </div>
                         <div class="desc-groom">
                             <h3><strong>{{$calon->calon_pria}}</strong></h3>
@@ -172,7 +173,8 @@
                     <p class="heart text-center"><i class="icon-heart2"></i></p>
                     <div class="couple-half">
                         <div class="bride">
-                            <img src="{{$calon->foto_wanita}}" alt="groom" class="img-responsive">
+                            <img src="{{$calon->foto_wanita}}" style="width:150px;height:150px;" alt="groom"
+                                class="img-responsive">
                         </div>
                         <div class="desc-bride">
                             <h3><strong>{{$calon->calon_wanita}}</strong></h3>

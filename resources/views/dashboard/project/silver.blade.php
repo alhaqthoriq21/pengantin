@@ -411,6 +411,76 @@
             </div>
         </div>
     </div> -->
+    <!-- Section Wishes -->
+    <section class="wishes section section--blue text-center">
+        <div class="container">
+            <div class="date-section__flowers m-auto">
+                <img src="assets\img\silver\date-flowers.png" alt="flowers">
+            </div>
+            <h1 class="title">Happy Couple</h1>
+            <p class="subtitle m-auto">Our Happiness is begun..</p>
+            <div class="wishes__slider">
+                <div class="slick slick-wishes mb-0">
+                    <div class="slider__item">
+                        <div class="wishes__person">
+                            <img class="rounded-circle m-auto" style="width:200px;height:200px;"
+                                src="{{$calon->foto_pria}}" alt="slider">
+                        </div>
+                        <h4 class="wishes__title font-weight-bold">{{$calon->calon_pria}}</h4>
+                        <p class="mx-auto">Putra Dari</p>
+                        <h5 class="mx-auto">Bpk. {{$calon->ayah_pria}}</h5>
+                        <h5 class="mx-auto">Ibu {{$calon->ibu_pria}}</h5>
+                    </div>
+                    <div class="slider__item">
+                        <div class="wishes__person">
+                            <img class="rounded-circle m-auto" style="width:200px;height:200px;"
+                                src="{{$calon->foto_wanita}}" alt="slider">
+                        </div>
+                        <h4 class="wishes__title font-weight-bold">{{$calon->calon_wanita}}</h4>
+                        <p class="mx-auto">Putri Dari</p>
+                        <h5>Bpk. {{$calon->ayah_pria}}</h5>
+                        <h5>Ibu {{$calon->ibu_pria}}</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section Gift -->
+    <!-- <section class="gifts section section--blue text-center">
+        <div class="container">
+            <h1 class="title">Gift registry</h1>
+            <p class="subtitle m-auto">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                incididunt</p>
+            <div class="wishes__slider">
+                <div class="slick slick-gifts mb-0 pb-0">
+                    <div class="slider__item">
+                        <img class="m-auto" src="assets\img\silver\gift1.png" alt="gift">
+                    </div>
+                    <div class="slider__item">
+                        <img class="m-auto" src="assets\img\silver\gift2.png" alt="gift">
+                    </div>
+                    <div class="slider__item">
+                        <img class="m-auto" src="assets\img\silver\gift3.png" alt="gift">
+                    </div>
+                    <div class="slider__item">
+                        <img class="m-auto" src="assets\img\silver\gift4.png" alt="gift">
+                    </div>
+                    <div class="slider__item">
+                        <img class="m-auto" src="assets\img\silver\gift1.png" alt="gift">
+                    </div>
+                    <div class="slider__item">
+                        <img class="m-auto" src="assets\img\silver\gift2.png" alt="gift">
+                    </div>
+                    <div class="slider__item">
+                        <img class="m-auto" src="assets\img\silver\gift3.png" alt="gift">
+                    </div>
+                    <div class="slider__item">
+                        <img class="m-auto" src="assets\img\silver\gift4.png" alt="gift">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
     <!-- Section Love story -->
     <section class="love-story section position-relative text-center">
         <div class="d-none d-sm-block love-story__flower-parallax position-absolute parallax">
@@ -600,79 +670,7 @@
             </div>
         </div>
     </section>
-    <!-- Section Wishes -->
-    <!-- <section class="wishes section text-center">
-        <div class="container">
-            <h1 class="title">Wishes</h1>
-            <p class="subtitle m-auto">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                incididunt</p>
-            <div class="wishes__slider">
-                <div class="slick slick-wishes mb-0">
-                    <div class="slider__item">
-                        <div class="wishes__person">
-                            <img class="rounded-circle m-auto" src="assets\img\silver\person1.jpg" alt="slider">
-                        </div>
-                        <h4 class="wishes__title font-weight-bold">Alex Cooper</h4>
-                        <p class="mx-auto">"With warm congratulations to a very special pair. May you always find in
-                            each other the love, laughter and happiness that only partners in life share!"</p>
-                    </div>
-                    <div class="slider__item">
-                        <div class="wishes__person">
-                            <img class="rounded-circle m-auto" src="assets\img\silver\person2.jpg" alt="slider">
-                        </div>
-                        <h4 class="wishes__title font-weight-bold">Mary Alen</h4>
-                        <p class="mx-auto">"True love stories never end! Happy wedding day and may there be many more
-                            chapters in the wonderful story of your love for one another."</p>
-                    </div>
-                    <div class="slider__item">
-                        <div class="wishes__person">
-                            <img class="rounded-circle m-auto" src="assets\img\silver\person3.jpg" alt="slider">
-                        </div>
-                        <h4 class="wishes__title font-weight-bold">John Colen</h4>
-                        <p class="mx-auto">"A wedding wish for two special person: love is best when shared by two. You
-                            know that together you are stronger, together you are one. Have a wonderful married life!"
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-    <!-- Section Gift -->
-    <!-- <section class="gifts section section--blue text-center">
-        <div class="container">
-            <h1 class="title">Gift registry</h1>
-            <p class="subtitle m-auto">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                incididunt</p>
-            <div class="wishes__slider">
-                <div class="slick slick-gifts mb-0 pb-0">
-                    <div class="slider__item">
-                        <img class="m-auto" src="assets\img\silver\gift1.png" alt="gift">
-                    </div>
-                    <div class="slider__item">
-                        <img class="m-auto" src="assets\img\silver\gift2.png" alt="gift">
-                    </div>
-                    <div class="slider__item">
-                        <img class="m-auto" src="assets\img\silver\gift3.png" alt="gift">
-                    </div>
-                    <div class="slider__item">
-                        <img class="m-auto" src="assets\img\silver\gift4.png" alt="gift">
-                    </div>
-                    <div class="slider__item">
-                        <img class="m-auto" src="assets\img\silver\gift1.png" alt="gift">
-                    </div>
-                    <div class="slider__item">
-                        <img class="m-auto" src="assets\img\silver\gift2.png" alt="gift">
-                    </div>
-                    <div class="slider__item">
-                        <img class="m-auto" src="assets\img\silver\gift3.png" alt="gift">
-                    </div>
-                    <div class="slider__item">
-                        <img class="m-auto" src="assets\img\silver\gift4.png" alt="gift">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
+
     <!-- RSVP -->
     <section id="rsvp" class="rsvp section">
         <div class="container">
