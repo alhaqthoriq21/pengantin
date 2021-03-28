@@ -24,14 +24,13 @@ use App\Http\Controllers\FotoFooterController;
 use App\Http\Controllers\LoveStoryController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\SongController;
-use App\Http\Middleware\Authenticate;
 use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
         return view('auth/login');
     });
 
-    Authenticate::routes();
+    Auth::routes();
 
     Route::get('/login/dashboard', [App\Http\Controllers\CalonController::class, 'index'])->name('home');
 

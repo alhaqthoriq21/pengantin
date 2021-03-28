@@ -17,8 +17,8 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    // public const HOME = '/home';
-    public const CALON = '/calon/list';
+    public const HOME = '/calon/list';
+    // public const CALON = '/calon/list';
 
     /**
      * The controller namespace for the application.
