@@ -130,10 +130,6 @@
                                 <h2>We Are Getting Married</h2>
                                 <!-- <div class="simply-countdown-losange" id="simply-countdown-losange"></div> -->
                                 <div class="simply-countdown simply-countdown-one">
-                                    <span id="days"></span>
-                                    <span id="hours"></span>
-                                    <span id="minutes"></span>
-                                    <span id="seconds"></span>
                                 </div>
                                 <!-- <p><a href="#" class="btn btn-default btn-sm">Save the date</a></p> -->
                             </div>
@@ -699,80 +695,28 @@
     <script src="{{asset('assets/js/gold/main.js')}}"></script>
 
     <script>
-    var d = new Date(new Date("{{$calon->akadNikah->tgl}}").getTime());
-    // var d = new Date("{{$calon->akadNikah->tgl}}").getTime() + 200 * 120 * 120 * 2000;
-    // var d = new Date("{{$calon->akadNikah->tgl}}").getTime();
+    const calon = @json($calon);
+    // console.log(d);
+    // var d = new Date(new Date("{{$calon->akadNikah->tgl}}").getTime());
+
+    var d = new Date(new Date(calon.akad_nikah.tgl).getTime());
+    console.log(new Date());
 
     // default example
     simplyCountdown('.simply-countdown-one', {
-        // "{$calon->akadNikah->tgl}"
+        year: d.getFullYear(),
+        month: d.getMonth() + 1,
+        day: d.getDate()
+    });
+
+    //jQuery example
+    $('#simply-countdown-losange').simplyCountdown({
         year: d.getFullYear(),
         month: d.getMonth() + 1,
         day: d.getDate(),
-        hours: d.getHours(),
-        minutes: d.getMinutes(),
-        seconds: d.getSeconds()
+        enableUtc: false
     });
-
-
-    // $('#simply-countdown-losange').simplyCountdown({
-    //     year: 2015, // required
-    //     month: 6, // required
-    //     day: 30, // required
-
-    // });
-
-
-    // jQuery example
-    // $('#simply-countdown-losange').simplyCountdown(
-    // year: d.getFullYear(),
-    // month: d.getMonth() + 1,
-    // day: d.getDate(),
-    // enableUtc: false,
-    // // });
-    // 
     </script>
-
-    <!-- <script>
-    var countDownDate = new Date("{{$calon->akadNikah->tgl}}").getTime();
-
-    // Update the count down every 1 second
-    var x = setInterval(function() {
-
-        // Get todays date and time
-        var now = new Date().getTime();
-
-        // Find the distance between now an the count down date
-        var distance = countDownDate - now;
-
-        // Time calculations for days, hours, minutes and seconds
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        // Display the result in an element with id="demo"
-        // document.getElementById("demo").innerHTML = days + "Days " + hours + "Hours "
-        // + minutes + "Minutes " + seconds + "Seconds ";
-
-        // Display the result in an element with id="demo"
-        document.getElementById("days").innerHTML = days + " <small>days</small>";
-        document.getElementById("hours").innerHTML = hours + " <small>hours</small> ";
-        document.getElementById("minutes").innerHTML = minutes + " <small>minutes</small> ";
-        document.getElementById("seconds").innerHTML = seconds + " <small>seconds</small> ";
-
-        // If the count down is finished, write some text 
-        if (distance < 0) {
-            clearInterval(x);
-            document.getElementById("demo").innerHTML = "The Wedding Ceremony Already Begin";
-            // document.getElementById("countdown").style.visibility = "hidden";
-            document.getElementById("days").innerHTML = 0 + " <small>days</small>";
-            document.getElementById("hours").innerHTML = 0 + " <small>hours</small> ";
-            document.getElementById("minutes").innerHTML = 0 + " <small>minutes</small> ";
-            document.getElementById("seconds").innerHTML = 0 + " <small>seconds</small> ";
-        }
-    }, 1000);
-    </script> -->
 
 
 </body>

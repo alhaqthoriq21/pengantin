@@ -841,58 +841,27 @@
 
 
     <script>
-    var countDownDate = new Date("{{$calon->akadNikah->tgl}}").getTime();
+    const calon = @json($calon);
+    console.log(calon);
 
-    // Update the count down every 1 second
-    var x = setInterval(function() {
+    var countdown = function() {
+        var countdown = document.querySelector('.countdown');
 
-        // Get todays date and time
-        var now = new Date().getTime();
-
-        // Find the distance between now an the count down date
-        var distance = countDownDate - now;
-
-        // Time calculations for days, hours, minutes and seconds
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        // Display the result in an element with id="demo"
-        // document.getElementById("demo").innerHTML = days + "Days " + hours + "Hours "
-        // + minutes + "Minutes " + seconds + "Seconds ";
-
-        // Display the result in an element with id="demo"
-        document.getElementById("days").innerHTML = days + " <small></small>";
-        document.getElementById("hours").innerHTML = hours + " <small></small> ";
-        document.getElementById("minutes").innerHTML = minutes + " <small></small> ";
-        document.getElementById("seconds").innerHTML = seconds + " <small></small> ";
-
-        // If the count down is finished, write some text 
-        if (distance < 0) {
-            clearInterval(x);
-            document.getElementById("demo").innerHTML = "The Wedding Ceremony Already Begin";
-            // document.getElementById("countdown").style.visibility = "hidden";
-            document.getElementById("days").innerHTML = 0 + " <small></small>";
-            document.getElementById("hours").innerHTML = 0 + " <small></small> ";
-            document.getElementById("minutes").innerHTML = 0 + " <small></small> ";
-            document.getElementById("seconds").innerHTML = 0 + " <small></small> ";
+        function getTimeRemaining(endtime) {
+            var t = Date.parse(endtime) - Date.parse(new Date(calon.akad_nikah.tgl));
+            var seconds = Math.floor((t / 1000) % 60);
+            var minutes = Math.floor((t / 1000 / 60) % 60);
+            var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+            var days = Math.floor(t / (1000 * 60 * 60 * 24));
+            return {
+                'total': t,
+                'days': days,
+                'hours': hours,
+                'minutes': minutes,
+                'seconds': seconds
+            };
         }
-    }, 1000);
-
-    // $(document).ready(function() {
-
-    //     const calon = @json($calon);
-    //     console.log(calon);
-
-
-    //     const undang = calon.undang.replaceAll("|", ",");
-    //     $("#undang").tagsinput('add', undang)
-
-    // $('#key_category').val(product.key_category.split("|")); // Select the option with a value of '1'
-    // $('#key_category').trigger('change'); // Notify any JS components that the value changed
-
-    // })
+    }
     </script>
 
 </body>
