@@ -31,9 +31,9 @@ use App\Http\Controllers\SongController;
         return view('auth/login');
     });
 
-    Auth::routes();
+    // Auth::routes();
 
-    Route::get('/login/dashboard', [App\Http\Controllers\CalonController::class, 'index'])->name('home');
+    // Route::get('/login/dashboard', [App\Http\Controllers\CalonController::class, 'index'])->name('home');
 
     //routing slug
     Route::get("/{slug}", [ProjectController::class, "getData"])->name("get.project.data");
