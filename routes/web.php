@@ -24,12 +24,15 @@ use App\Http\Controllers\FotoFooterController;
 use App\Http\Controllers\LoveStoryController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\SongController;
+use Illuminate\Support\Facades\Auth;
 
-
-    Route::domain(env('APP_MAIN_DOMAIN', 'localhost'))->prefix("/")->group(function () {
-    Route::get('/', function () {
+Route::get('/', function () {
         return view('auth/login');
     });
+
+    Auth::routes();
+
+    Route::get('/login/dashboard', [App\Http\Controllers\CalonController::class, 'index'])->name('home');
 
     //routing slug
     Route::get("/{slug}", [ProjectController::class, "getData"])->name("get.project.data");
@@ -113,5 +116,3 @@ use App\Http\Controllers\SongController;
 
     Route::get('/reservasi/list', [ReservasiController::class, 'getData'])->name("get.reservasi.data");
     Route::get("/reservasi/show/{reservasiId}", [ReservasiController::class, "show"])->name("reservasi.show");
-
-    });
