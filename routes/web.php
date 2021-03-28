@@ -116,3 +116,6 @@ Route::get('/', function () {
 
     Route::get('/reservasi/list', [ReservasiController::class, 'getData'])->name("get.reservasi.data");
     Route::get("/reservasi/show/{reservasiId}", [ReservasiController::class, "show"])->name("reservasi.show");
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
