@@ -136,7 +136,7 @@
                 <div class="card-body table-responsive">
                     <form action="{{route('calon.save')}}" method="post" id="formCalon" enctype="multipart/form-data">
                         @csrf
-                        <input type="hidden" id="calonId">
+                        <input type="hidden" id="calonId" name="calonId">
                         <input type="hidden" id="statusSave">
                         <div class="row">
                             <div class="col-12 col-sm-12">
@@ -808,7 +808,6 @@
 @endsection
 
 @push("style")
-<link rel="stylesheet" type="text/css" href="{{asset('assets/plugins/datetime/daterangepicker/daterangepicker.css')}}">
 <link href="{{asset('assets/plugins/bootstrap-datetimepicker-master/css/bootstrap.min.css')}}" rel="stylesheet"
     media="screen">
 <link href="{{asset('assets/plugins/bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.min.css')}}"

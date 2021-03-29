@@ -109,7 +109,7 @@
 @endsection
 
 @push("style")
-<link rel="stylesheet" type="text/css" href="{{asset('assets/plugins/datetime/daterangepicker/daterangepicker.css')}}">
+<!-- <link rel="stylesheet" type="text/css" href="{{asset('assets/plugins/datetime/daterangepicker/daterangepicker.css')}}"> -->
 
 @endpush
 

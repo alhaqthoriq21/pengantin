@@ -50,6 +50,31 @@
         font-size: 25px;
     }
 
+
+    .gt-section {
+        z-index: 11;
+        position: relative;
+        height: 100vh;
+        position: fixed;
+        width: 100%;
+        top: 0px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .centered {
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .button4 {
+        background-color: #ffffff;
+        color: black;
+        border-radius: 12px;
+    }
+
     .topleft {
         position: absolute;
         top: 0;
@@ -882,20 +907,28 @@ couple-area end
         </div>
     </header>
     <!-- header-area end -->
-    <!-- slider-area start -->
-    @if($calon->fotoHeader->foto_header)
-    <div class="slider-area slider-style-2 slider-two parallax qbootstrap-cover text-center center-bg"
-        style="background-image:url({{$calon->fotoHeader->foto_header}});">
-        @endif
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="single-slider swiper-slide">
-                    <div class="container">
-                        <div class="slider-content sd-default-content">
-                            <div class="col-lg-12">
-                                <span>WE’RE GETTING MARRIED</span>
-                                <h4>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</h4>
-                                <p>{{date("l jS F Y", strtotime($calon->akadNikah->tgl))}}</p>
+    <!-- //Gateway  -->
+    <div class="gateway gt-section" id="gt">
+        <div class="qbootstrap-hero" data-section="home">
+            <div class="qbootstrap-overlay"></div>
+            <div class="qbootstrap-cover text-center center-bg" data-stellar-background-ratio="0.5">
+                <div class="display-t">
+                    <div class="display-tc">
+                        <div class="container">
+                            <div class="col-md-10 col-md-offset-1">
+                                <div class="slider-content">
+                                    <div class="col-lg-12">
+                                        @if (isset($qs['u']))
+                                        <h5>Dear, {{$qs['u']}}</h5>
+                                        @endif
+                                        <h6><strong>You're Invited!</strong></h6>
+                                        <p>WE’RE GETTING MARRIED</p>
+                                        <h4>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</h4>
+                                    </div>
+                                </div>
+                                <p><button href="#" style="width: 350px; height:45px;" class="button center button4"><i
+                                            class="fa fa-heart"></i> Open
+                                        Invitation</button></p>
                             </div>
                         </div>
                     </div>
@@ -903,6 +936,32 @@ couple-area end
             </div>
         </div>
     </div>
+
+    <!-- slider-area start -->
+    <div class="qbootstrap-hero" data-section="home">
+        <div class="qbootstrap-overlay"></div>
+        @if($calon->fotoHeader->foto_header)
+        <div class="qbootstrap-cover text-center center-bg bg-cover" data-stellar-background-ratio="0.5"
+            style="background-image:url({{$calon->fotoHeader->foto_header}});">
+            @endif
+            <div class="display-t">
+                <div class="display-tc">
+                    <div class="container">
+                        <div class="col-md-10 col-md-offset-1">
+                            <div class="slider-content">
+                                <div class="col-lg-12">
+                                    <p>WE’RE GETTING MARRIED</p>
+                                    <h4>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</h4>
+                                    <p>{{date("l jS F Y", strtotime($calon->akadNikah->tgl))}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- slider-area end -->
     <!-- couple-area start -->
     <div id="cuple" class="couple-area ptb--100">
@@ -985,13 +1044,6 @@ couple-area end
                     <div class="col-12 col-md-8 ">
                         <div class="count-down-clock">
                             <div id="clock">
-                                <h1 id="demo"></h1>
-                                <p class="countdown" id="countdown">
-                                    <span id="days"></span>
-                                    <span id="hours"></span>
-                                    <span id="minutes"></span>
-                                    <span id="seconds"></span>
-                                </p>
                             </div>
                         </div>
                     </div>
@@ -1694,7 +1746,7 @@ couple-area end
             <i class="fa fa-music" aria-hidden="true"></i>
         </button>
         <div class="music-holder">
-            <iframe src="{{$calon->song->song}}"></iframe>
+            <iframe preload="auto" src="{{$calon->song->song}}"></iframe>
         </div>
     </div>
     <!-- end music box -->
@@ -1739,13 +1791,16 @@ couple-area end
     if ($("#clock").length) {
         $('#clock').countdown(new Date(calon.akad_nikah.tgl), function(event) {
             var $this = $(this).html(event.strftime('' +
-                '<div class="box"><div class="date">%D</div> <span>month</span> </div>' +
                 '<div class="box"><div class="date">%D</div> <span>Days</span> </div>' +
                 '<div class="box"><div class="date">%H</div> <span>Hours</span> </div>' +
                 '<div class="box"><div class="date">%M</div> <span>Mins</span> </div>' +
                 '<div class="box"><div class="date">%S</div> <span>Secs</span> </div>'));
         });
     }
+
+    $(".button").click(function() {
+        $(".gateway").slideUp("slow");
+    });
     </script>
 </body>
 

@@ -56,6 +56,35 @@
 	<![endif]-->
 
     <style>
+    .gateway {
+        background-image: url('{{$calon->fotoHeader->foto_header}}');
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        color: white;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 25px;
+
+    }
+
+    .gt-section {
+        z-index: 11;
+        position: relative;
+        height: 100vh;
+        position: fixed;
+        width: 100%;
+        top: 0px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .button4 {
+        background-color: #ffffff;
+        color: black;
+        border-radius: 12px;
+    }
+
     .commentText p {
         margin: 0px;
         margin-bottom: 0px;
@@ -116,6 +145,31 @@
 
         <!-- </div>
         </nav> -->
+
+        <div class="fh5co-cover centre-bg c-hero-banner gateway gt-section" role="banner">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 text-center">
+                        <div class="display-t">
+                            <div class="display-tc animate-box" data-animate-effect="fadeIn">
+                                @if (isset($qs['u']))
+                                <h1>Dear, {{$qs['u']}}</h1>
+                                @endif
+                                <p>You're Invited!</p>
+                                <p>We Are Getting Married</p>
+                                <h1>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</h1>
+                                <p><button href="#" style="width: 350px; height:50px;" class="button button4"><i
+                                            class="fa fa-heart"></i> Open
+                                        Invitation</button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         @if($calon->fotoHeader->foto_header)
         <header id="fh5co-header" class="fh5co-cover centre-bg c-hero-banner" role="banner"
             style="background-image:url({{$calon->fotoHeader->foto_header}});" data-stellar-background-ratio="0.5">
@@ -146,9 +200,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-                        @if (isset($qs['u']))
-                        <h2>Welcome, Dear {{$qs['u']}}!</h2>
-                        @endif
+                        <h2>Welcome, to Our Wedding!</h2>
                         <h3> {{date("l jS F Y", strtotime($calon->akadNikah->tgl))}}</h3>
                         <p>We invited you to celebrate our wedding</p>
                     </div>
@@ -156,7 +208,7 @@
                 <div class="couple-wrap animate-box">
                     <div class="couple-half">
                         <div class="groom">
-                            <img src="{{$calon->foto_pria}}" style="width:15px;height:150px;" alt="groom"
+                            <img src="{{$calon->foto_pria}}" style="width:150px;height:150px;" alt="groom"
                                 class="img-responsive">
                         </div>
                         <div class="desc-groom">
@@ -663,7 +715,7 @@
             <i class="fa fa-music" aria-hidden="true"></i>
         </button>
         <div class="music-holder">
-            <iframe src="{{$calon->song->song}}"></iframe>
+            <iframe preload="auto" src="{{$calon->song->song}}"></iframe>
         </div>
     </div>
     <!-- end music box -->
@@ -715,6 +767,10 @@
         month: d.getMonth() + 1,
         day: d.getDate(),
         enableUtc: false
+    });
+
+    $(".button").click(function() {
+        $(".gateway").slideUp("slow");
     });
     </script>
 

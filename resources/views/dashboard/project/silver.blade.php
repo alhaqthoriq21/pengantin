@@ -20,9 +20,9 @@
     <!-- Fonts -->
     <link rel="stylesheet" type="text/css"
         href="{{asset('assets/css/fonts/font-awesome-4.7.0\css\font-awesome.min.css')}}">
-    <link
+    <!-- <link
         href="https://fonts.googleapis.com/css?family=Playfair+Display%7COpen+Sans:300,400,600,700%7CSource+Serif+Pro%7CDosis"
-        rel="stylesheet">
+        rel="stylesheet"> -->
     <!-- <link rel="shortcut icon" type="image/png" href="/favicon.ico"> -->
     <!--[if lt IE 9]>
 			<script src="js/vendor/html5shiv.min.js"></script>
@@ -39,6 +39,24 @@
         color: white;
         font-family: "Courier New", Courier, monospace;
         font-size: 25px;
+
+    }
+
+    .gt-section {
+        z-index: 11;
+        position: relative;
+        height: 100vh;
+        position: fixed;
+        width: 100%;
+        top: 0px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .button4 {
+        background-color: #ffffff;
+        color: black;
+        border-radius: 12px;
     }
 
     .h4 {
@@ -313,6 +331,33 @@
         </div>
     </div>
 
+    <div class="qbootstrap-hero gateway gt-section" data-section="home">
+        <div class="qbootstrap-overlay"></div>
+        <div class="qbootstrap-cover text-center center-bg" data-stellar-background-ratio="0.5">
+            <div class="display-t">
+                <div class="display-tc">
+                    <div class="container">
+                        <div class="col-md-10 col-md-offset-1">
+                            <div class="animate-box svg-sm colored">
+                                <!-- <img src="assets/img/premium/flaticon/svg/004-nature.svg" class="svg" alt=""> -->
+                                @if (isset($qs['u']))
+                                <h3>Dear, {{$qs['u']}}</h3>
+                                @endif
+                                <p><strong>You're Invited!</strong></p>
+                                <span>Welcome The Wedding of</span>
+                                <h2>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</h2>
+                                <p><button href="#" style="width: 350px; height:50px;" class="button button4"><i
+                                            class="fa fa-heart"></i> Open
+                                        Invitation</button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="qbootstrap-hero" data-section="home">
         <div class="qbootstrap-overlay"></div>
         @if($calon->fotoHeader->foto_header)
@@ -510,21 +555,21 @@
                     </h3>
                 </div>
             </div>
-            <div id="qbootstrap-countdown" class="timer d-flex justify-content-center">
+            <div id="timer" class="timer d-flex justify-content-center">
                 <div class="timer-item">
-                    <span id="days" class="days timer__digit"></span>
+                    <span class="days timer__digit"></span>
                     <div class="timer__text">days</div>
                 </div>
                 <div class="timer-item">
-                    <span id="hours" class="hours timer__digit"></span>
+                    <span class="hours timer__digit"></span>
                     <div class="timer__text">hours</div>
                 </div>
                 <div class="timer-item">
-                    <span id="minutes" class="minutes timer__digit"></span>
+                    <span class="minutes timer__digit"></span>
                     <div class="timer__text">minutes</div>
                 </div>
                 <div class="timer-item">
-                    <span id="seconds" class="seconds timer__digit"></span>
+                    <span class="seconds timer__digit"></span>
                     <div class="timer__text">seconds</div>
                 </div>
             </div>
@@ -824,7 +869,7 @@
             <i class="fa fa-music" aria-hidden="true"></i>
         </button>
         <div class="music-holder">
-            <iframe src="{{$calon->song->song}}"></iframe>
+            <iframe preload="auto" src="{{$calon->song->song}}"></iframe>
         </div>
     </div>
     <!-- end music box -->
@@ -844,24 +889,87 @@
     const calon = @json($calon);
     console.log(calon);
 
-    var countdown = function() {
-        var countdown = document.querySelector('.countdown');
+    /* 7. Countdown
+    ====================*/
+    (function() {
+        var countdown = function() {
+            var countdown = document.querySelector('.countdown');
 
-        function getTimeRemaining(endtime) {
-            var t = Date.parse(endtime) - Date.parse(new Date(calon.akad_nikah.tgl));
-            var seconds = Math.floor((t / 1000) % 60);
-            var minutes = Math.floor((t / 1000 / 60) % 60);
-            var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
-            var days = Math.floor(t / (1000 * 60 * 60 * 24));
-            return {
-                'total': t,
-                'days': days,
-                'hours': hours,
-                'minutes': minutes,
-                'seconds': seconds
-            };
+            function getTimeRemaining(endtime) {
+                var t = Date.parse(endtime) - Date.parse(new Date());
+                var seconds = Math.floor((t / 1000) % 60);
+                var minutes = Math.floor((t / 1000 / 60) % 60);
+                var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+                var days = Math.floor(t / (1000 * 60 * 60 * 24));
+                return {
+                    'total': t,
+                    'days': days,
+                    'hours': hours,
+                    'minutes': minutes,
+                    'seconds': seconds
+                };
+            }
+
+            function initializeClock(id, endtime) {
+                var clock = document.getElementById(id);
+                var daysSpan = clock.querySelector('.days');
+                var hoursSpan = clock.querySelector('.hours');
+                var minutesSpan = clock.querySelector('.minutes');
+                var secondsSpan = clock.querySelector('.seconds');
+                var newChild;
+
+                function updateClock() {
+                    var t = getTimeRemaining(endtime);
+                    var daysArr = String(t.days).split('');
+                    daysSpan.innerHTML = '';
+                    for (var i = 0; i < daysArr.length; i++) {
+                        newChild = document.createElement('span');
+                        newChild.innerHTML = daysArr[i];
+                        daysSpan.appendChild(newChild);
+                    }
+                    var hoursArr = String(('0' + t.hours).slice(-2)).split('');
+                    hoursSpan.innerHTML = '';
+                    for (var i = 0; i < hoursArr.length; i++) {
+                        newChild = document.createElement('span');
+                        newChild.innerHTML = hoursArr[i];
+                        hoursSpan.appendChild(newChild);
+                    }
+                    var minuteArr = String(('0' + t.minutes).slice(-2)).split('');
+                    minutesSpan.innerHTML = '';
+                    for (var i = 0; i < minuteArr.length; i++) {
+                        newChild = document.createElement('span');
+                        newChild.innerHTML = minuteArr[i];
+                        minutesSpan.appendChild(newChild);
+                    }
+                    var secondArr = String(('0' + t.seconds).slice(-2)).split('');
+                    secondsSpan.innerHTML = '';
+                    for (var i = 0; i < secondArr.length; i++) {
+                        newChild = document.createElement('span');
+                        newChild.innerHTML = secondArr[i];
+                        secondsSpan.appendChild(newChild);
+                    }
+                    if (t.total <= 0) {
+                        clearInterval(timeinterval);
+                    }
+                }
+                updateClock();
+                var timeinterval = setInterval(updateClock, 1000);
+            }
+            // set your wedding date here
+            var deadline = calon.akad_nikah.tgl;
+            if (countdown) {
+                initializeClock('timer', deadline);
+            }
         }
-    }
+
+        $(function() {
+            countdown();
+        });
+    }());
+
+    $(".button").click(function() {
+        $(".gateway").slideUp("slow");
+    });
     </script>
 
 </body>

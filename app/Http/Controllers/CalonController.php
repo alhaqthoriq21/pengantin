@@ -120,7 +120,8 @@ class CalonController extends Controller
         ]);
 
         if ($validator->fails()) {
-            return $this->sendError('Validation Error.', $validator->errors());
+            throw new \Exception($validator->errors(), 1);
+            
         }
 
         try {
@@ -133,57 +134,44 @@ class CalonController extends Controller
                     $calon->{$key} = $value;
                 }
                 $calon->save();
+                // dd($calon);
             $this->uploadImage($request, $calon->id);
             }
 
             $akadNikah = $request->only(["calon_id","tgl","waktu","tempat","alamat","google_loc"]);
-            $akadNikah['calon_id'] = $calon->id;
-            $akadNikah = AkadNikah::create($akadNikah);
+            // $akadNikah['calon_id'] = $calon->id;
+            // dd($request->calonId);
+            $akadNikah = AkadNikah::where("calon_id",$request->calonId)->update($akadNikah);
 
-            if ($akadNikah) {
-                foreach ($akadNikah as $key => $value) {
-                    $akadNikah->{$key} = $value;
-                }
-                $akadNikah->save();
-            }
             
             $resepsi = $request->only(["calon_id","tgl_rsp","waktu_rsp","tempat_rsp","alamat_rsp","google_loc_rsp"]);
-            $resepsi['calon_id'] = $calon->id;
-            $resepsi = Resepsi::create($resepsi);
-            if ($akadNikah) {
-                foreach ($akadNikah as $key => $value) {
-                    $akadNikah->{$key} = $value;
-                }
-                $akadNikah->save();
-            }
+            // $resepsi['calon_id'] = $calon->id;
+            $resepsi = Resepsi::where("calon_id",$request->calonId)->update($resepsi);
+         
 
             $loveStory = $request->only(["calon_id","tgl_firstmeet","story_firstmeet","foto_firstmeet","tgl_firstdate",
             "story_firstdate","foto_firstdate","tgl_relationship","story_relationship","foto_relationship",
             "tgl_enganged","story_enganged","foto_enganged"]);
-            $loveStory['calon_id'] = $calon->id;
-            $loveStory = LoveStory::create($loveStory);
-            if ($loveStory) {
-                foreach ($loveStory as $key => $value) {
-                    $loveStory->{$key} = $value;
-                }
-                $loveStory->save();
+            // $loveStory['calon_id'] = $calon->id;
+            $loveStory = LoveStory::where("calon_id",$request->calonId)->update($loveStory);
+            // dd($loveStory);
+            $loveStory = LoveStory::where("calon_id",$request->calonId)->first();
             $this->uploadLove($request, $loveStory->id);
-            }
+            
 
             $quotes = $request->only(["calon_id","judul","isi"]);
-            $quotes['calon_id'] = $calon->id;
-            $quotes = Quotes::create($quotes);
-            if ($quotes) {
-                foreach ($quotes as $key => $value) {
-                    $quotes->{$key} = $value;
-                }
-                $quotes->save();
-            } 
-            dd($calon,$akadNikah,$resepsi,$quotes);
+            // $quotes['calon_id'] = $calon->id;
+            $quotes = Quotes::where("calon_id",$request->calonId)->update($quotes);
+            
+            $song = $request->only(["calon_id","judul","song"]);
+            // $song['calon_id'] = $calon->id;
+            $song = Song::where("calon_id",$request->calonId)->update($song);
+            
+            // dd($calon,$akadNikah,$resepsi,$quotes);
             return redirect(route("get.calon.data"))->with("success", "Calon Has Been Edited");
-            return $this->sendError("Tidak ditemukan");
+            throw new \Exception($validator->errors(), 1);
         } catch (\Exception $e) {
-            return $this->sendError("Terjadi Sebuah Keasalahn", $e->getMessage());
+            return redirect(route("get.calon.data"))->with("error", $e->getMessage());
         }
     }
 

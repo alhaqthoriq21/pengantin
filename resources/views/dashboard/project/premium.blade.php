@@ -90,7 +90,6 @@
         color: white;
         font-family: "Courier New", Courier, monospace;
         font-size: 25px;
-
     }
 
     .gt-section {
@@ -102,6 +101,12 @@
         top: 0px;
         display: flex;
         flex-direction: column;
+    }
+
+    .button4 {
+        background-color: #ffffff;
+        color: black;
+        border-radius: 12px;
     }
 
     .topleft {
@@ -212,12 +217,6 @@
         margin-right: auto;
         width: 50%;
     }
-
-    .button4 {
-        background-color: #ffffff;
-        color: black;
-        border-radius: 12px;
-    }
     </style>
 
 </head>
@@ -230,7 +229,7 @@
             <i class="fa fa-music" aria-hidden="true"></i>
         </button>
         <div class="music-holder">
-            <iframe src="{{$calon->song->song}}"></iframe>
+            <iframe preload="auto" src="{{$calon->song->song}}"></iframe>
         </div>
     </div>
     <!-- end music box -->
@@ -244,15 +243,14 @@
                         <div class="container">
                             <div class="col-md-10 col-md-offset-1">
                                 <div class="animate-box svg-sm colored">
-                                    <img src="assets/img/premium/flaticon/svg/004-nature.svg" class="svg" alt="">
                                     @if (isset($qs['u']))
                                     <h2>Dear, {{$qs['u']}}</h2>
                                     @endif
                                     <p><span>You're Invited!</span></p>
                                     <h1 class="holder"><span>Welcome to the Wedding of</span></h1>
                                     <h2>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</h2>
-                                    <p><button href="#" style="width: 350px; height:50px;"
-                                            class="button button4 w3-round-large"><i class="fa fa-heart"></i> Open
+                                    <p><button href="#" style="width: 350px; height:50px;" class="button button4"><i
+                                                class="fa fa-heart"></i> Open
                                             Invitation</button>
                                     </p>
                                 </div>
