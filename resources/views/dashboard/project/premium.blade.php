@@ -1113,7 +1113,8 @@
     <script src=" {{asset('assets/js/premium/main.js')}}"></script>
 
     <script>
-    var countDownDate = new Date("{{$calon->akadNikah->tgl}}").getTime();
+    const calon = @json($calon);
+    var countDownDate = new Date(calon.akad_nikah.tgl).getTime();
 
     // Update the count down every 1 second
     var x = setInterval(function() {

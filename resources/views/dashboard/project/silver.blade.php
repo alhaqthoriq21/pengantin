@@ -887,7 +887,7 @@
 
     <script>
     const calon = @json($calon);
-    console.log(calon);
+    // console.log(calon);
 
     /* 7. Countdown
     ====================*/

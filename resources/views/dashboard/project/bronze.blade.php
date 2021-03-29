@@ -1786,7 +1786,7 @@ couple-area end
 
     <script>
     const calon = @json($calon);
-    console.log(calon);
+    // console.log(calon);
 
     if ($("#clock").length) {
         $('#clock').countdown(new Date(calon.akad_nikah.tgl), function(event) {
