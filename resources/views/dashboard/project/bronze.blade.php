@@ -3,8 +3,22 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ToBeAbrideXCloudStudio</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ToBeABrideXCloudStudio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+
+    <meta property="og:title" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:image" content="" />
+    <meta name="twitter:url" content="" />
+    <meta name="twitter:card" content="" />
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/tobeabride.ico">
     <!-- Place favicon.ico in the root directory -->
     <!-- bootstrap.min.css -->
@@ -54,7 +68,7 @@
     .gt-section {
         z-index: 11;
         position: relative;
-        height: 100vh;
+        height: 100%;
         position: fixed;
         width: 100%;
         top: 0px;
@@ -976,7 +990,8 @@ couple-area end
                     <div class="col-lg-4 col-md-6 col-sm-6 couple-single">
                         <div class="couple-wrap2 couple-s-3">
                             <div class="couple-img3">
-                                <img class="center" src="{{$calon->foto_wanita}}" alt="">
+                                <img class="center" src="{{$calon->foto_wanita}}" style="max-width:100%;height:auto;"
+                                    alt="">
                             </div>
                             <div class="couple-text">
                                 <div class="couple-content">
@@ -989,9 +1004,6 @@ couple-area end
                                     <ol class="d-flex">
                                         <li><a href="https://www.instagram.com/{{$calon->sosmed_wanita}}/"><i
                                                     class="fa fa-instagram"></i></a></li>
-                                        <!-- <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li> -->
                                     </ol>
                                 </div>
                             </div>
@@ -1000,14 +1012,16 @@ couple-area end
                     <div class="col-lg-4 col-md-6 col-sm-6 couple-single">
                         @if($calon->fotoHeader->foto_countdown)
                         <div class="couple-img2">
-                            <img src="{{$calon->fotoHeader->foto_countdown}}" alt="">
+                            <img src="{{$calon->fotoHeader->foto_countdown}}" style="max-width:100%;height:auto;"
+                                alt="">
                         </div>
                         @endif
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-6 couple-single md-0">
                         <div class="couple-wrap2 couple-s-3">
                             <div class="couple-img3">
-                                <img class="center" src="{{$calon->foto_pria}}" alt="">
+                                <img class="center" src="{{$calon->foto_pria}}" style="max-width:100%;height:auto;"
+                                    alt="">
                             </div>
                             <div class="couple-text">
                                 <div class="couple-content">
@@ -1020,9 +1034,6 @@ couple-area end
                                     <ol class="d-flex">
                                         <li><a href="https://www.instagram.com/{{$calon->sosmed_pria}}/"><i
                                                     class="fa fa-instagram"></i></a></li>
-                                        <!-- <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li> -->
                                     </ol>
                                 </div>
                             </div>
@@ -1255,202 +1266,13 @@ couple-area end
                             </div>
                         </div>
                     </div>
-                    <!-- <div id="menu2" class="tab-pane fade">
-                        <div class="Ceremony-wrap">
-                            <div class="row">
-                                <div class="col-lg-5">
-                                    <div class="ceromony-img">
-                                        <img src="assets\img\bronze\service\3.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-lg-7">
-                                    <div class="ceromony-content">
-                                        <h3>Wedding Dinner</h3>
-                                        <span>Sunday, 25 July 18, 9.00 AM-5.00 PM</span>
-                                        <span>256 Apay Road,Califonia Bong, London</span>
-                                        <p>It is a long established fact that a reader will be distracted by the
-                                            readable content of a page when looking at its layout. The point of using
-                                            Lorem Ipsum is that it has a more-or-less normal </p>
-                                        <a class="popup-gmaps"
-                                            href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25211.21212385712!2d144.95275648773628!3d-37.82748510398018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0x5045675218ce7e0!2zTWVsYm91cm5lIFZJQyAzMDA0LCDgpoXgprjgp43gpp_gp43gprDgp4fgprLgpr_gpq_gprzgpr4!5e0!3m2!1sbn!2sbd!4v1503742051881">See
-                                            Location</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="menu3" class="tab-pane fade">
-                        <div class="Ceremony-wrap">
-                            <div class="row">
-                                <div class="col-lg-7">
-                                    <div class="ceromony-content ceromony-content2">
-                                        <h3>Reception Party</h3>
-                                        <span>Sunday, 25 July 18, 9.00 AM-5.00 PM</span>
-                                        <span>256 Apay Road,Califonia Bong, London</span>
-                                        <p>It is a long established fact that a reader will be distracted by the
-                                            readable content of a page when looking at its layout. The point of using
-                                            Lorem Ipsum is that it has a more-or-less normal </p>
-                                        <a class="popup-gmaps"
-                                            href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25211.21212385712!2d144.95275648773628!3d-37.82748510398018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0x5045675218ce7e0!2zTWVsYm91cm5lIFZJQyAzMDA0LCDgpoXgprjgp43gpp_gp43gprDgp4fgprLgpr_gpq_gprzgpr4!5e0!3m2!1sbn!2sbd!4v1503742051881">See
-                                            Location</a>
-                                    </div>
-                                </div>
-                                <div class="col-lg-5">
-                                    <div class="ceromony-img">
-                                        <img src="assets\img\bronze\service\2.jpg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
                 </div>
             </div>
         </div>
     </div>
     <!-- service-area end -->
-    <!--person-area start -->
-    <!-- <div id="people" class="person-area pt--100 pb--70 pb-40">
-        <div class="container">
-            <div class="col-l2">
-                <div class="section-title text-center">
-                    <h2>Important persons</h2>
-                </div>
-            </div>
-            <div class="person-item pu-0">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="person-title">
-                            <h3>Bridesman</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="person-wrap">
-                            <div class="person-img">
-                                <img src="assets\img\bronze\person\1.jpg" alt="">
-                                <div class="social-list">
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="person-content">
-                                <h3>Mr Abraham</h3>
-                                <span>Best Friend</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="person-wrap">
-                            <div class="person-img">
-                                <img src="assets\img\bronze\person\2.jpg" alt="">
-                                <div class="social-list">
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="person-content">
-                                <h3>Rohan Mithy</h3>
-                                <span>Brother</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="person-wrap">
-                            <div class="person-img">
-                                <img src="assets\img\bronze\person\3.jpg" alt="">
-                                <div class="social-list">
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="person-content">
-                                <h3>Lily Brown</h3>
-                                <span>Sister</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="person-item person-item2">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="person-title text-right">
-                            <h3>Bridesman</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="person-wrap">
-                            <div class="person-img">
-                                <img src="assets\img\bronze\person\5.jpg" alt="">
-                                <div class="social-list">
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="person-content">
-                                <h3>Mr Abraham</h3>
-                                <span>Best Friend</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="person-wrap">
-                            <div class="person-img">
-                                <img src="assets\img\bronze\person\6.jpg" alt="">
-                                <div class="social-list">
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="person-content">
-                                <h3>Rohan Mithy</h3>
-                                <span>Brother</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="person-wrap">
-                            <div class="person-img">
-                                <img src="assets\img\bronze\person\7.jpg" alt="">
-                                <div class="social-list">
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="person-content">
-                                <h3>Lily Brown</h3>
-                                <span>Sister</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!--person-area end -->
     <!-- Section Gallery -->
-    <section id="gallery" class="gallery section text-center">
+    <!-- <section id="gallery" class="gallery section text-center">
         <div class="container position-relative">
             <div class="row">
                 <div class="col-12">
@@ -1475,7 +1297,35 @@ couple-area end
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
+
+    <div id="gallery" class="gallery-area gallery pt--100 pb--70">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title text-center">
+                        <h2>Our Gallery</h2>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="row grid"> -->
+            <div class="gallery__slider">
+                <div class="slick-gallery slick mb-0 ">
+                    @foreach($calon->fotoFooter as $data)
+                    <div class="slider__item">
+                        <img src="{{$data->foto}}" alt="slider">
+                    </div>
+                    @endforeach
+                </div>
+                <div class="gallery__slider-num d-none d-lg-flex">
+                    <div class="gallery__slider-current pr-1"></div>
+                    <div class="pr-1">from</div>
+                    <div class="gallery__slider-all"></div>
+                </div>
+            </div>
+            <!-- </div> -->
+        </div>
+    </div>
     <!-- gallery area start -->
     <!-- <div id="gallery" class="gallery-area pt--100 pb--70">
         <div class="container">

@@ -1532,6 +1532,15 @@ footer:before {
     border-radius: 50%;
 }
 
+.social li a.social-circle-couple {
+    background: #585858;
+    color: #fff;
+    -webkit-border-radius: 70%;
+    -moz-border-radius: 70%;
+    -ms-border-radius: 70%;
+    border-radius: 70%;
+}
+
 .social li a:hover {
     background: #393e46 !important;
 }
@@ -1635,6 +1644,51 @@ g.pd {
     .qbootstrap-cover,
     .qbootstrap-hero {
         height: 700px;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .qbootstrap-cover,
+    .qbootstrap-hero {
+        height: 600px;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+    .qbootstrap-cover,
+    .qbootstrap-hero {
+        height: 600px;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+}
+
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+    .qbootstrap-cover,
+    .qbootstrap-hero {
+        height: 900px;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+    .qbootstrap-cover,
+    .qbootstrap-hero {
+        height: 1100px;
         background-position: center center;
         background-repeat: no-repeat;
     }

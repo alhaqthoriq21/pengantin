@@ -2,10 +2,23 @@
 <html lang="en">
 
 <head>
-    <title>ToBeABrideXCloudStudio</title>
     <meta charset="utf-8">
-    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ToBeABrideXCloudStudio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+
+    <meta property="og:title" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:image" content="" />
+    <meta name="twitter:url" content="" />
+    <meta name="twitter:card" content="" />
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/tobeabride.ico">
     <!-- Styles -->
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/silver/vendor/bootstrap.min.css')}}">
@@ -45,7 +58,7 @@
     .gt-section {
         z-index: 11;
         position: relative;
-        height: 100vh;
+        height: 100%;
         position: fixed;
         width: 100%;
         top: 0px;
@@ -475,6 +488,12 @@
                         <p class="mx-auto">Putra Dari</p>
                         <h5 class="mx-auto">Bpk. {{$calon->ayah_pria}}</h5>
                         <h5 class="mx-auto">Ibu {{$calon->ibu_pria}}</h5>
+                        <div class="col-md-12 text-center">
+                            <ol class="social social-circle-couple">
+                                <li><a href="https://www.instagram.com/{{$calon->sosmed_pria}}/"><i
+                                            class="fa fa-instagram"></i></a></li>
+                            </ol>
+                        </div>
                     </div>
                     <div class="slider__item">
                         <div class="wishes__person">
@@ -485,6 +504,12 @@
                         <p class="mx-auto">Putri Dari</p>
                         <h5>Bpk. {{$calon->ayah_pria}}</h5>
                         <h5>Ibu {{$calon->ibu_pria}}</h5>
+                        <div class="col-md-12 text-center">
+                            <ol class="social social-circle-couple">
+                                <li><a href="https://www.instagram.com/{{$calon->sosmed_wanita}}/"><i
+                                            class="fa fa-instagram"></i></a></li>
+                            </ol>
+                        </div>
                     </div>
                 </div>
             </div>

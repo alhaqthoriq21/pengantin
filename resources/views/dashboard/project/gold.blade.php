@@ -15,9 +15,6 @@
     <meta name="keywords" content="" />
     <meta name="author" content="" />
 
-
-
-    <!-- Facebook and Twitter integration -->
     <meta property="og:title" content="" />
     <meta property="og:image" content="" />
     <meta property="og:url" content="" />
@@ -71,7 +68,7 @@
     .gt-section {
         z-index: 11;
         position: relative;
-        height: 100vh;
+        height: 100%;
         position: fixed;
         width: 100%;
         top: 0px;
