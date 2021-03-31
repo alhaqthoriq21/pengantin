@@ -514,11 +514,11 @@ slider-area
     margin-bottom: 0px;
 }
 
-.slider-content span p {
+/* .slider-content span p {
     display: inline-block;
     margin: 0px;
     margin-bottom: 0px;
-}
+} */
 
 .slider-content h4 {
     font-family: 'Great Vibes', cursive;
@@ -534,11 +534,11 @@ slider-area
 .slider-content p {
     color: #f1fffc;
     font-size: 10px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
-    margin: 0px;
+    /* text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); */
+    /* margin: 0px; */
     margin-bottom: 0px;
     /* display: inline-block; */
-    /* font-family: 'Arial'; */
+    font-family: 'Arial';
 }
 
 .slider-content h5 {
@@ -2110,8 +2110,8 @@ footer:before {
 
 .footer__title {
     position: relative;
-    font-family: "Playfair Display", serif;
-    font-size: 2rem;
+    font-family: "Beth Ellen";
+    font-size: 30px;
     line-height: 2.5rem;
     margin-bottom: 40px;
 }
@@ -2375,9 +2375,10 @@ footer:before {
 .qbootstrap-cover .display-tc h2,
 .video-hero .display-tc h2 {
     color: #fff;
-    font-size: 80px;
-    margin-bottom: 20px;
-    font-weight: 300 !important;
+    font-size: 40px;
+    margin-bottom: 0px;
+    /* font-weight: 300 !important; */
+    font-family: "Beth Ellen";
 }
 
 .qbootstrap-cover .display-tc h2 strong,
@@ -2389,16 +2390,64 @@ footer:before {
 
     .qbootstrap-cover .display-tc h2,
     .video-hero .display-tc h2 {
-        font-size: 60px;
+        font-size: 40px;
     }
 }
+
+.qbootstrap-cover .display-tc h3,
+.video-hero .display-tc h3 {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 5px;
+    /* font-weight: 300 !important; */
+    font-family: "Arial";
+}
+
+.qbootstrap-cover .display-tc h3 strong,
+.video-hero .display-tc h3 strong {
+    font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+
+    .qbootstrap-cover .display-tc h3,
+    .video-hero .display-tc h3 {
+        font-size: 20px;
+    }
+}
+
+.qbootstrap-cover .display-tc h4,
+.video-hero .display-tc h4 {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 0px;
+    /* font-weight: 300 !important; */
+    font-family: "Arial";
+}
+
+.qbootstrap-cover .display-tc h4 strong,
+.video-hero .display-tc h4 strong {
+    font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+
+    .qbootstrap-cover .display-tc h4,
+    .video-hero .display-tc h4 {
+        font-size: 20px;
+    }
+}
+
+
 
 .qbootstrap-cover .display-tc p,
 .video-hero .display-tc p {
     color: #fff;
-    font-weight: 400;
+    /* font-weight: 400; */
     font-size: 20px;
-    letter-spacing: 10px;
+    /* letter-spacing: 10px; */
+    font-family: "Sofia";
+    margin-bottom: 0px;
 }
 
 .qbootstrap-cover .display-tc .svg-sm .svg,

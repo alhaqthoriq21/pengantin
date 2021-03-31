@@ -12,6 +12,7 @@ Table of Contents:
 ----------------------------------*/
 /*------------------------------------*        #UNIT
 \*------------------------------------*/
+
 @font-face {
     font-family: 'laug';
     src: url("../fonts/laug/laug.eot");
@@ -915,36 +916,7 @@ a:hover {
 }
 
 
-.wishes__slider {
-    margin-top: 80px;
-}
 
-.wishes__person {
-    margin-bottom: 20px;
-}
-
-.wishes__title {
-    font-family: "Playfair Display", serif;
-    font-size: 30px;
-    line-height: 40px;
-    margin-bottom: 40px;
-}
-
-.wishes__slider .slick-list {
-    margin-bottom: 30px;
-}
-
-@media only screen and (min-width: 768px) {
-    .wishes__slider p {
-        width: 75%;
-    }
-}
-
-@media only screen and (min-width: 992px) {
-    .wishes__slider p {
-        width: 50%;
-    }
-}
 
 
 
@@ -1187,7 +1159,7 @@ footer:before {
 
 .footer__title {
     position: relative;
-    font-family: "Playfair Display", serif;
+    font-family: "Sofia";
     font-size: 2rem;
     line-height: 2.5rem;
     margin-bottom: 40px;
@@ -1499,10 +1471,10 @@ footer:before {
 }
 
 .social li a {
-    font-size: 16px;
+    font-size: 20px;
     display: table;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     margin: 0 4px;
 }
 
@@ -1535,10 +1507,10 @@ footer:before {
 .social li a.social-circle-couple {
     background: #585858;
     color: #fff;
-    -webkit-border-radius: 70%;
-    -moz-border-radius: 70%;
-    -ms-border-radius: 70%;
-    border-radius: 70%;
+    -webkit-border-radius: 80%;
+    -moz-border-radius: 80%;
+    -ms-border-radius: 80%;
+    border-radius: 80%;
 }
 
 .social li a:hover {
@@ -1821,9 +1793,10 @@ g.pd {
 .qbootstrap-cover .display-tc h2,
 .video-hero .display-tc h2 {
     color: #fff;
-    font-size: 80px;
+    font-size: 50px;
     margin-bottom: 20px;
     font-weight: 300 !important;
+    font-family: "Sofia";
 }
 
 .qbootstrap-cover .display-tc h2 strong,
@@ -1835,16 +1808,50 @@ g.pd {
 
     .qbootstrap-cover .display-tc h2,
     .video-hero .display-tc h2 {
-        font-size: 60px;
+        font-size: 50px;
+    }
+}
+
+.qbootstrap-cover .display-tc h3,
+.video-hero .display-tc h3 {
+    color: #fff;
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-weight: 300 !important;
+    font-family: "Arial";
+}
+
+.qbootstrap-cover .display-tc h3 strong,
+.video-hero .display-tc h3 strong {
+    font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+
+    .qbootstrap-cover .display-tc h3,
+    .video-hero .display-tc h3 {
+        font-size: 30px;
     }
 }
 
 .qbootstrap-cover .display-tc p,
 .video-hero .display-tc p {
     color: #fff;
-    font-weight: 400;
+    /* font-weight: 400; */
+    font-size: 25px;
+    /* letter-spacing: 10px; */
+    font-family: "Sofia";
+    margin-bottom: 0px;
+}
+
+.qbootstrap-cover .display-tc span,
+.video-hero .display-tc span {
+    color: #fff;
+    /* font-weight: 400; */
     font-size: 20px;
-    letter-spacing: 10px;
+    /* letter-spacing: 10px; */
+    font-family: "Arial";
+    margin-bottom: 0px;
 }
 
 .qbootstrap-cover .display-tc .svg-sm .svg,

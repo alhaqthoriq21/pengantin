@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>ToBeABrideXCloudStudio</title>
+    <title>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}} | ToBeABrideXCloudStudio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -46,6 +46,8 @@
 
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/bronze/slick.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/bronze/slick-theme.css')}}">
+    <link href='https://fonts.googleapis.com/css?family=Beth+Ellen' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
     <style>
     body,
     html {
@@ -728,18 +730,19 @@ couple-area
     }
 
     .couple-content h4 {
-        font-size: 21px;
+        font-size: 25px;
         color: #5e9a8e;
     }
 
     .couple-content2 h4 {
-        font-size: 21px;
+        font-size: 25px;
         color: #9a8c40;
     }
 
 
     .couple-content p {
-        padding: 0;
+        margin-bottom: 0px;
+        font-family: "Arial";
     }
 
     .couple-content2 p {
@@ -933,11 +936,11 @@ couple-area end
                                 <div class="slider-content">
                                     <div class="col-lg-12">
                                         @if (isset($qs['u']))
-                                        <h5>Dear, {{$qs['u']}}</h5>
+                                        <h3>Dear {{$qs['u']}},</h3>
                                         @endif
                                         <h6><strong>You're Invited!</strong></h6>
-                                        <p>WE’RE GETTING MARRIED</p>
-                                        <h4>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</h4>
+                                        <h4>We're Getting Married</h4>
+                                        <h2>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</h2>
                                     </div>
                                 </div>
                                 <p><button href="#" style="width: 350px; height:45px;" class="button center button4"><i
@@ -964,8 +967,8 @@ couple-area end
                         <div class="col-md-10 col-md-offset-1">
                             <div class="slider-content">
                                 <div class="col-lg-12">
-                                    <p>WE’RE GETTING MARRIED</p>
-                                    <h4>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</h4>
+                                    <h4>We're Getting Married</h4>
+                                    <h2>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</h2>
                                     <p>{{date("l jS F Y", strtotime($calon->akadNikah->tgl))}}</p>
                                 </div>
                             </div>
@@ -996,7 +999,7 @@ couple-area end
                             <div class="couple-text">
                                 <div class="couple-content">
                                     <h4>{{$calon->calon_wanita}}</h4>
-                                    <p>Putri Dari</p>
+                                    <p><strong>Putri Dari</strong></p>
                                     <p>Bpk. {{$calon->ayah_wanita}}</p>
                                     <p>Ibu {{$calon->ibu_wanita}}</p>
                                 </div>
@@ -1026,7 +1029,7 @@ couple-area end
                             <div class="couple-text">
                                 <div class="couple-content">
                                     <h4>{{$calon->calon_pria}}</h4>
-                                    <p>Putra Dari</p>
+                                    <p><strong>Putra Dari</strong></p>
                                     <p>Bpk. {{$calon->ayah_pria}}</p>
                                     <p>Ibu {{$calon->ibu_pria}}</p>
                                 </div>

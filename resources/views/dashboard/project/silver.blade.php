@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>ToBeABrideXCloudStudio</title>
+    <title>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}} | ToBeABrideXCloudStudio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -33,6 +33,8 @@
     <!-- Fonts -->
     <link rel="stylesheet" type="text/css"
         href="{{asset('assets/css/fonts/font-awesome-4.7.0\css\font-awesome.min.css')}}">
+    <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+
     <!-- <link
         href="https://fonts.googleapis.com/css?family=Playfair+Display%7COpen+Sans:300,400,600,700%7CSource+Serif+Pro%7CDosis"
         rel="stylesheet"> -->
@@ -333,6 +335,44 @@
         display: inline-block;
         text-align: left;
     }
+
+    /* //couple  */
+    .wishes__slider {
+        margin-top: 80px;
+    }
+
+    .wishes__slider h5 {
+        font-family: "Source Sans Pro", Arial, sans-serif;
+        font-size: 25px;
+        margin-bottom: 0px;
+    }
+
+    .wishes__person {
+        margin-bottom: 20px;
+    }
+
+    .wishes__title {
+        font-family: "Sofia";
+        font-size: 30px;
+        line-height: 40px;
+        margin-bottom: 40px;
+    }
+
+    .wishes__slider .slick-list {
+        margin-bottom: 30px;
+    }
+
+    @media only screen and (min-width: 768px) {
+        .wishes__slider p {
+            width: 75%;
+        }
+    }
+
+    @media only screen and (min-width: 992px) {
+        .wishes__slider p {
+            width: 50%;
+        }
+    }
     </style>
 </head>
 
@@ -354,7 +394,7 @@
                             <div class="animate-box svg-sm colored">
                                 <!-- <img src="assets/img/premium/flaticon/svg/004-nature.svg" class="svg" alt=""> -->
                                 @if (isset($qs['u']))
-                                <h3>Dear, {{$qs['u']}}</h3>
+                                <h3>Dear {{$qs['u']}},</h3>
                                 @endif
                                 <p><strong>You're Invited!</strong></p>
                                 <span>Welcome The Wedding of</span>
@@ -485,7 +525,7 @@
                                 src="{{$calon->foto_pria}}" alt="slider">
                         </div>
                         <h4 class="wishes__title font-weight-bold">{{$calon->calon_pria}}</h4>
-                        <p class="mx-auto">Putra Dari</p>
+                        <p class="mx-auto"><strong>Putra Dari</strong></p>
                         <h5 class="mx-auto">Bpk. {{$calon->ayah_pria}}</h5>
                         <h5 class="mx-auto">Ibu {{$calon->ibu_pria}}</h5>
                         <div class="col-md-12 text-center">
@@ -501,7 +541,7 @@
                                 src="{{$calon->foto_wanita}}" alt="slider">
                         </div>
                         <h4 class="wishes__title font-weight-bold">{{$calon->calon_wanita}}</h4>
-                        <p class="mx-auto">Putri Dari</p>
+                        <p class="mx-auto"><strong>Putri Dari</strong></p>
                         <h5>Bpk. {{$calon->ayah_pria}}</h5>
                         <h5>Ibu {{$calon->ibu_pria}}</h5>
                         <div class="col-md-12 text-center">
