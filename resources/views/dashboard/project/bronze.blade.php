@@ -5,7 +5,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}} | ToBeABrideXCloudStudio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, 
+    user-scalable=no">
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta name="author" content="" />
@@ -89,98 +90,26 @@
         background-color: #ffffff;
         color: black;
         border-radius: 12px;
+        width: 350px;
+        height: 45px;
     }
 
-    .topleft {
-        position: absolute;
-        top: 0;
-        left: 16px;
-    }
 
-    .bottomleft {
-        position: absolute;
-        bottom: 0;
-        left: 16px;
-    }
+    @media screen and (min-width: 280px) {
 
-    .middle {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-    }
-
-    hr {
-        margin: auto;
-        width: 40%;
-    }
-
-    body {
-        margin-top: 20px;
-        background: #eee;
-    }
-
-    @media (min-width: 0) {
-        .g-mr-15 {
-            margin-right: 1.07143rem !important;
+        .qbootstrap-cover .display-t .display-tc .button4 {
+            width: 250px;
+            vertical-align: middle;
         }
     }
 
-    @media (min-width: 0) {
-        .g-mt-3 {
-            margin-top: 0.21429rem !important;
+    /* @media screen and (max-width: 360px) {
+
+        .qbootstrap-cover .display-t .display-tc .button4 {
+            width: 350px;
         }
-    }
+    } */
 
-    .g-height-50 {
-        height: 50px;
-    }
-
-    .g-width-50 {
-        width: 50px !important;
-    }
-
-    @media (min-width: 0) {
-        .g-pa-30 {
-            padding: 2.14286rem !important;
-        }
-    }
-
-    .g-bg-secondary {
-        background-color: #fafafa !important;
-    }
-
-    .u-shadow-v18 {
-        box-shadow: 0 5px 10px -6px rgba(0, 0, 0, 0.15);
-    }
-
-    .g-color-gray-dark-v4 {
-        color: #777 !important;
-    }
-
-    .g-font-size-12 {
-        font-size: 0.85714rem !important;
-    }
-
-    .media-comment {
-        margin-top: 20px
-    }
-
-    .p {
-        margin: 0;
-    }
-
-    .center {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 50%;
-    }
-
-    .commentText p {
-        margin: 0;
-    }
 
     /*===========================
  count-down
@@ -197,10 +126,15 @@
         width: 100%;
         height: 100%;
         position: absolute;
-        background: #5e9a8e;
+        background: <?=$calon->color ?>;
         opacity: .8;
         left: 0;
         top: 0;
+    }
+
+    .count-down-section #clock {
+        color: <?=$calon->color ?>;
+        overflow: hidden;
     }
 
     .count-down-section {
@@ -254,68 +188,14 @@
         }
     }
 
-
-    .count-down-section #clock {
-        color: #5e9a8e;
-        overflow: hidden;
-    }
-
-    .count-down-section #clock>div {
-        width: 18%;
-        float: left;
-        text-align: center;
-        border: 1px solid #fff;
-        color: #fff;
-        padding: 20px 0;
-    }
-
-    @media (max-width: 767px) {
-        .count-down-section #clock>div {
-            width: calc(50% - 5px);
-        }
-    }
-
-    .count-down-section #clock>div+div {
-        margin-left: 2%;
-    }
-
-    @media (max-width: 767px) {
-        .count-down-section #clock {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-
-        .count-down-section #clock>div {
-            flex-basis: calc(100% * (1/2) - 15px);
-            margin-bottom: 30px;
-        }
-    }
-
-    .count-down-section #clock .box>div {
-        font-size: 60px;
-        font-weight: 600;
-        line-height: 1em;
-        font-family: 'Great Vibes', cursive;
-    }
-
-    @media (max-width: 1199px) {
-        .count-down-section #clock .box>div {
-            font-size: 60px;
-        }
-    }
-
-    @media (max-width: 991px) {
-        .count-down-section #clock .box>div {
-            font-size: 40px;
-            line-height: 1.3em;
-        }
-    }
-
     .count-down-section #clock .box span {
         font-size: 14px;
         text-transform: uppercase;
     }
+
+
+
+
 
     /*===============================
 welcome-area
@@ -334,7 +214,7 @@ welcome-area
         left: 0;
         width: 100%;
         height: 100%;
-        background: #649e93;
+        background: <?=$calon->color ?>;
         opacity: .9;
     }
 
@@ -391,9 +271,38 @@ guest-area
         top: 0;
         width: 100%;
         height: 100%;
-        background: #649e93;
+        background: <?=$calon->color ?>;
         opacity: .5;
         z-index: -1;
+    }
+
+    .section-title-guest h2 {
+        position: relative;
+        font-size: 50px;
+        font-family: 'Great Vibes', cursive;
+        margin-bottom: 50px;
+        color: #fff;
+        ;
+    }
+
+    .section-title-guest h2:before {
+        position: absolute;
+        content: "";
+        background: url(assets/img/bronze/section/2.png) no-repeat center center / cover;
+        width: 26%;
+        height: 22%;
+        top: -13px;
+        left: 37%;
+    }
+
+    .section-title-guest h2:after {
+        position: absolute;
+        content: "";
+        background: url(assets/img/bronze/section/1.png) no-repeat center center / cover;
+        width: 26%;
+        height: 22%;
+        bottom: -13px;
+        left: 37%;
     }
 
     .guest-area.guest-2:before {
@@ -465,7 +374,7 @@ guest-area
         background: none;
         border: none;
         padding: 5px 15px 8px;
-        background: #649e93;
+        background: <?=$calon->color ?>;
         color: #fff;
         border-radius: 5px;
         margin-top: 20px;
@@ -473,7 +382,7 @@ guest-area
     }
 
     .guest-2 button#submit {
-        background: #9a8c40;
+        background: <?=$calon->color ?>;
     }
 
     .contact-form button:hover {
@@ -513,6 +422,10 @@ guest-area
 comment-area
 ===============================*/
 
+    h1 {
+        color: <?=$calon->color ?>;
+    }
+
     .comment-area {
         background: url("{{$calon->fotoBody->foto_pertama}}") no-repeat center center / cover;
         padding: 100px 0;
@@ -528,9 +441,38 @@ comment-area
         top: 0;
         width: 100%;
         height: 100%;
-        background: #649e93;
+        background: <?=$calon->color ?>;
         opacity: .5;
         z-index: -1;
+    }
+
+    .section-title-comment h2 {
+        position: relative;
+        font-size: 50px;
+        font-family: 'Great Vibes', cursive;
+        margin-bottom: 50px;
+        color: #fff;
+        ;
+    }
+
+    .section-title-comment h2:before {
+        position: absolute;
+        content: "";
+        background: url(assets/img/bronze/section/2.png) no-repeat center center / cover;
+        width: 26%;
+        height: 22%;
+        top: -13px;
+        left: 37%;
+    }
+
+    .section-title-comment h2:after {
+        position: absolute;
+        content: "";
+        background: url(assets/img/bronze/section/1.png) no-repeat center center / cover;
+        width: 26%;
+        height: 22%;
+        bottom: -13px;
+        left: 37%;
     }
 
     .comment-area.guest-2:before {
@@ -602,7 +544,7 @@ comment-area
         background: none;
         border: none;
         padding: 5px 15px 8px;
-        background: #649e93;
+        background: <?=$calon->color ?>;
         color: #fff;
         border-radius: 5px;
         margin-top: 20px;
@@ -610,7 +552,7 @@ comment-area
     }
 
     .comment-2 button#submit {
-        background: #9a8c40;
+        background: <?=$calon->color ?>;
     }
 
     .contact-form button:hover {
@@ -654,7 +596,7 @@ couple-area
         font-size: 50px;
         font-family: 'Great Vibes', cursive;
         margin-bottom: 50px;
-        color: #649e93;
+        color: <?=$calon->color ?>;
     }
 
     .section-title h2:before {
@@ -689,6 +631,25 @@ couple-area
         height: 22%;
         bottom: -13px;
         left: 26%;
+    }
+
+    .section-title2 h2 {
+        position: relative;
+        font-size: 50px;
+        font-family: 'Great Vibes', cursive;
+        margin-bottom: 50px;
+        padding-bottom: 20px;
+        color: #9a8c40;
+    }
+
+    .section-title2 h2:before {
+        position: absolute;
+        content: "";
+        background: url(assets/img/bronze/section/3.png) no-repeat center center / cover;
+        width: 18%;
+        height: 63%;
+        bottom: -9px;
+        left: 41%;
     }
 
 
@@ -731,12 +692,12 @@ couple-area
 
     .couple-content h4 {
         font-size: 25px;
-        color: #5e9a8e;
+        color: <?=$calon->color ?>;
     }
 
     .couple-content2 h4 {
         font-size: 25px;
-        color: #9a8c40;
+        color: <?=$calon->color ?>;
     }
 
 
@@ -835,19 +796,50 @@ couple-area end
 
     .gallery {
         position: relative;
-        /* background: url("{{$calon->fotoBody->foto_kedua}}"); */
+        background: url("{{$calon->fotoBody->foto_pertama}}");
         background-size: cover;
         background-position: center;
+        background-attachment: fixed;
     }
 
     .gallery:before {
-        content: '';
-        background: rgba(94, 154, 142, .5);
-        display: block;
+        content: "";
         width: 100%;
         height: 100%;
         position: absolute;
+        background: <?=$calon->color ?>;
+        opacity: .8;
+        left: 0;
         top: 0;
+    }
+
+    .section-title-gallery h2 {
+        position: relative;
+        font-size: 50px;
+        font-family: 'Great Vibes', cursive;
+        margin-bottom: 50px;
+        color: #fff;
+        ;
+    }
+
+    .section-title-gallery h2:before {
+        position: absolute;
+        content: "";
+        background: url(assets/img/bronze/section/2.png) no-repeat center center / cover;
+        width: 26%;
+        height: 22%;
+        top: -13px;
+        left: 37%;
+    }
+
+    .section-title-gallery h2:after {
+        position: absolute;
+        content: "";
+        background: url(assets/img/bronze/section/1.png) no-repeat center center / cover;
+        width: 26%;
+        height: 22%;
+        bottom: -13px;
+        left: 37%;
     }
 
     .gallery__slider {
@@ -894,10 +886,137 @@ couple-area end
         display: inline-block;
         text-align: left;
     }
+
+    /* //header area logo  */
+    .sticky-header.sticky .header-area-3 .logo h1 a {
+        color: <?=$calon->color ?>;
+    }
+
+    .sticky-header.sticky .header-area-3 .logo h1 a span {
+        color: <?=$calon->color ?>;
+    }
+
+    /* //Footer  */
+    /* Footer */
+    footer {
+        background: url(assets/img/bronze/footer.jpg) no-repeat;
+        background-size: cover;
+        background-position: bottom;
+        background-attachment: fixed;
+        position: relative;
+    }
+
+    footer .nav-link:hover:before {
+        background: none;
+    }
+
+    footer .nav-link::after {
+        display: none !important;
+    }
+
+    footer:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: <?=$calon->color ?>;
+        opacity: .8;
+        left: 0;
+        top: 0;
+    }
+
+    .footer__title {
+        position: relative;
+        font-family: "Beth Ellen";
+        font-size: 30px;
+        line-height: 2.5rem;
+        margin-bottom: 40px;
+    }
+
+    @media only screen and (min-width: 768px) {
+        .footer__title {
+            font-size: 2.75rem;
+            line-height: 3.25rem;
+        }
+    }
+
+    .copyright {
+        padding-right: 20px;
+    }
+
+    /* //auto resize  */
+    /* .resize {
+        overflow: auto;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    } */
+
+    /* //story area  */
+    .story-top:before,
+    .story-bottom:before {
+        content: '\f10a';
+        font-family: "Flaticon";
+        position: absolute;
+        top: -28px;
+        left: 50%;
+        z-index: 20;
+        display: block;
+        font-size: 50px;
+        color: <?=$calon->color ?>;
+    }
+
+    .story a.story-btn {
+        font-weight: 500;
+        color: <?=$calon->color ?>;
+        text-transform: uppercase;
+        font-size: 17px;
+    }
+
+    .story .story-content h2 {
+        margin-bottom: 2px;
+        font-family: 'Great Vibes', cursive;
+        font-size: 40px;
+        color: <?=$calon->color ?>;
+    }
+
+    .story-icon span:before {
+        font-size: 30px;
+        line-height: 30px;
+        color: <?=$calon->color ?>;
+    }
+
+    .story-area a.theme-btn:hover {
+        color: <?=$calon->color ?>;
+    }
+
+    /* // service area alias when n where  */
+    .service-area-menu li a.active,
+    .service-area-menu li a:hover {
+        background: <?=$calon->color ?>;
+        color: #fff;
+    }
+
+    .service-area-menu ul {
+        margin-top: 50px;
+        background: <?=$calon->color ?>;
+    }
+
+    .ceromony-content h3 {
+        font-size: 30px;
+        color: <?=$calon->color ?>;
+        margin-bottom: 16px;
+    }
+
+    .ceromony-content a {
+        color: <?=$calon->color ?>;
+        font-weight: 600;
+    }
     </style>
+
+
 </head>
 
-<body id="home">
+<body id="home" style="overflow-x: hidden;">
     <!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
@@ -925,7 +1044,7 @@ couple-area end
     </header>
     <!-- header-area end -->
     <!-- //Gateway  -->
-    <div class="gateway gt-section" id="gt">
+    <div class="gateway gt-section" id="gt" style="overflow-y: hidden;">
         <div class="qbootstrap-hero" data-section="home">
             <div class="qbootstrap-overlay"></div>
             <div class="qbootstrap-cover text-center center-bg" data-stellar-background-ratio="0.5">
@@ -943,8 +1062,7 @@ couple-area end
                                         <h2>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</h2>
                                     </div>
                                 </div>
-                                <p><button href="#" style="width: 350px; height:45px;" class="button center button4"><i
-                                            class="fa fa-heart"></i> Open
+                                <p><button href="#" class="button center button4"><i class="fa fa-heart"></i> Open
                                         Invitation</button></p>
                             </div>
                         </div>
@@ -955,8 +1073,8 @@ couple-area end
     </div>
 
     <!-- slider-area start -->
-    <div class="qbootstrap-hero" data-section="home">
-        <div class="qbootstrap-overlay"></div>
+    <div class="qbootstrap-hero" data-section="home" style="overflow-x: hidden;">
+        <div class=" qbootstrap-overlay"></div>
         @if($calon->fotoHeader->foto_header)
         <div class="qbootstrap-cover text-center center-bg bg-cover" data-stellar-background-ratio="0.5"
             style="background-image:url({{$calon->fotoHeader->foto_header}});">
@@ -1275,38 +1393,12 @@ couple-area end
     </div>
     <!-- service-area end -->
     <!-- Section Gallery -->
-    <!-- <section id="gallery" class="gallery section text-center">
-        <div class="container position-relative">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-title text-center">
-                        <h2>Our Gallery</h2>
-                    </div>
-                    <div class="gallery__slider">
-                        <div class="slick-gallery slick mb-0 ">
-                            @foreach($calon->fotoFooter as $data)
-                            <div class="slider__item">
-                                <img src="{{$data->foto}}" alt="slider">
-                            </div>
-                            @endforeach
-                        </div>
-
-                        <div class="gallery__slider-num d-none d-lg-flex">
-                            <div class="gallery__slider-current pr-1"></div>
-                            <div class="pr-1">from</div>
-                            <div class="gallery__slider-all"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
 
     <div id="gallery" class="gallery-area gallery pt--100 pb--70">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="section-title text-center">
+                    <div class="section-title-gallery text-center">
                         <h2>Our Gallery</h2>
                     </div>
                 </div>
@@ -1424,14 +1516,14 @@ couple-area end
     </div> -->
     <!-- gallery area end -->
     <!-- guest-area strat -->
-    <div id="Contact" class="guest-area">
+    <div id="Contact" class="guest-area horizontal-line">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 offset-lg-2">
                     <div class="guest-wrap">
                         <div class="col-12">
-                            <div class="section-title section-title4 text-center">
-                                <h2>Be Our Guest</h2>
+                            <div class="section-title-guest section-title4 text-center">
+                                <h2>RSVP</h2>
                                 <p>Tell the Couple you'll be attending.</p>
                             </div>
                         </div>
@@ -1481,7 +1573,7 @@ couple-area end
                 <div class="col-lg-8 offset-lg-2">
                     <div class="comment-wrap">
                         <div class="col-12">
-                            <div class="section-title section-title4 text-center">
+                            <div class="section-title-comment section-title4 text-center">
                                 <h2>Comment</h2>
                                 <p>Send your Wish or your comment!</p>
                             </div>
@@ -1644,6 +1736,7 @@ couple-area end
     if ($("#clock").length) {
         $('#clock').countdown(new Date(calon.akad_nikah.tgl), function(event) {
             var $this = $(this).html(event.strftime('' +
+                // '<div class="box"><div class="date">%D</div> <span>month</span> </div>' +
                 '<div class="box"><div class="date">%D</div> <span>Days</span> </div>' +
                 '<div class="box"><div class="date">%H</div> <span>Hours</span> </div>' +
                 '<div class="box"><div class="date">%M</div> <span>Mins</span> </div>' +

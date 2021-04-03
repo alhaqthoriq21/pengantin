@@ -1607,7 +1607,7 @@ g.pd {
 .qbootstrap-cover,
 .qbootstrap-hero {
     position: relative;
-    height: 800px;
+    height: 100% !important;
     width: 100%;
 }
 

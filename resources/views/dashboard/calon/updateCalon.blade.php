@@ -728,6 +728,7 @@
     media="screen">
 <link href="{{asset('assets/plugins/bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.min.css')}}"
     rel="stylesheet" media="screen">
+<link rel="stylesheet" href="{{asset('assets/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css')}}">
 
 @endpush
 
@@ -745,6 +746,7 @@
     charset="UTF-8"></script>
 <script src="{{asset('assets/plugins/daterangepicker/daterangepicker.js')}}"></script>
 <script src="{{asset('assets/plugins/datatables/jquery.dataTables.min.js')}}"></script>
+<script src="{{asset('assets/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js')}}"></script>
 
 
 <script>
@@ -780,6 +782,13 @@ $(document).ready(function() {
         startView: 2,
         forceParse: 0,
         showMeridian: 1
+    });
+
+
+    $('#color').colorpicker({
+        popover: false,
+        inline: true,
+        container: '#color'
     });
 
 })

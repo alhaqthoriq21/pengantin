@@ -125,7 +125,7 @@ class CalonController extends Controller
         }
 
         try {
-            $calon = $request->only(["slug","template","nick_pria","nick_wanita","calon_pria","calon_wanita","sosmed_pria",
+            $calon = $request->only(["slug","template","color","nick_pria","nick_wanita","calon_pria","calon_wanita","sosmed_pria",
             "sosmed_wanita","foto_pria","foto_wanita","ayah_pria","ibu_pria","ayah_wanita","ibu_wanita","undang"]);
             $calon = Calon::find($calonId);
             // dd($request);
@@ -148,7 +148,6 @@ class CalonController extends Controller
             // $resepsi['calon_id'] = $calon->id;
             $resepsi = Resepsi::where("calon_id",$request->calonId)->update($resepsi);
          
-
             $loveStory = $request->only(["calon_id","tgl_firstmeet","story_firstmeet","foto_firstmeet","tgl_firstdate",
             "story_firstdate","foto_firstdate","tgl_relationship","story_relationship","foto_relationship",
             "tgl_enganged","story_enganged","foto_enganged"]);
