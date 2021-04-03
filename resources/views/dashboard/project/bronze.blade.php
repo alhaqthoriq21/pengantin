@@ -1011,6 +1011,11 @@ couple-area end
         color: <?=$calon->color ?>;
         font-weight: 600;
     }
+
+    /* //music box  */
+    .music-box.music-box-2 button {
+        color: <?=$calon->color ?>;
+    }
     </style>
 
 
