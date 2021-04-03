@@ -240,7 +240,7 @@ welcome-area
     .btn a {
         display: inline-block;
         background: #fff;
-        color: #649e93;
+        color: <?=$calon->color ?>;
         padding: 10px 38px;
         font-size: 18px;
         transition: all .3s;
