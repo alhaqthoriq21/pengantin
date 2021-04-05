@@ -57,7 +57,7 @@
     }
 
     .gateway {
-        background-image: url('{{$calon->fotoHeader->foto_header}}');
+        background-image: url('{{$calon->foto_gateway}}');
         height: 100%;
         background-position: center;
         background-size: cover;
@@ -90,7 +90,7 @@
         background-color: #ffffff;
         color: black;
         border-radius: 12px;
-        width: 350px;
+        width: 300px;
         height: 45px;
     }
 
@@ -234,7 +234,7 @@ welcome-area
         padding: 20px 50px 30px;
         color: #fff;
         max-width: 700px;
-        margin: auto;
+        margin-bottom: 0px;
     }
 
     .btn a {
@@ -929,7 +929,8 @@ couple-area end
         position: relative;
         font-family: "Beth Ellen";
         font-size: 30px;
-        line-height: 2.5rem;
+        line-height: 40px;
+        /* line-height: 2.5rem; */
         margin-bottom: 40px;
     }
 
@@ -1015,6 +1016,18 @@ couple-area end
     /* //music box  */
     .music-box.music-box-2 button {
         color: <?=$calon->color ?>;
+    }
+
+    /* //loader preloader  */
+    .heart,
+    .heart:before,
+    .heart:after {
+        display: block;
+        width: 50px;
+        height: 50px;
+        background-color: <?=$calon->color ?>;
+        -webkit-transform: rotateZ(45deg);
+        transform: rotateZ(45deg);
     }
     </style>
 
@@ -1307,10 +1320,10 @@ couple-area end
                 <div class="col-lg-12">
                     <div class="welcome-content">
                         <h2>Welcome to our big day</h2>
-                        <p>{{$calon->quotes->isi}}</p>
-                        <p>{{$calon->quotes->judul}}</p>
+                        <p>&ldquo;{{$calon->quotes->isi}}&rdquo;</p>
+                        <p>&ldquo;{{$calon->quotes->judul}}&rdquo;</p>
                         <div class="btn"><a href="#Contact">RSVP</a></div>
-                        <div class="btn"><a href="#Comment">COMMENT SECTION</a></div>
+                        <div class="btn"><a href="#Comment">COMMENT</a></div>
                         <!-- <div class="btn"><a class="popup-gmaps"
                                 href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25211.21212385712!2d144.95275648773628!3d-37.82748510398018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0x5045675218ce7e0!2zTWVsYm91cm5lIFZJQyAzMDA0LCDgpoXgprjgp43gpp_gp43gprDgp4fgprLgpr_gpq_gprzgpr4!5e0!3m2!1sbn!2sbd!4v1503742051881">Location</a>
                         </div> -->
@@ -1677,7 +1690,7 @@ couple-area end
                     </ul>
                 </div>
             </div>
-            <div class="copyright text-center">&copy;2021. ToBeABrideXCloudStudio.</div>
+            <div class="copyright text-center">&copy;2021 ToBeABrideXCloudStudio.</div>
             <p><img class="center" style="width:200px;height:200px;" src="assets/img/logo/tobeabride.png" alt=""></p>
             <div class="row">
                 <div class="col-md-12 text-center">

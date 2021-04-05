@@ -26,6 +26,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/silver/vendor/slick.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/silver/vendor/slick-theme.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/silver/vendor/lightbox.min.css')}}">
+    <!-- <link rel="stylesheet" type="text/css" href="{{asset('assets/css/silver/magnific-popup.css')}}"> -->
 
     <link rel="stylesheet" href="{{asset('assets/css/premium/icomoon.css')}}">
 
@@ -47,7 +48,7 @@
 
     <style>
     .gateway {
-        background-image: url('{{$calon->fotoHeader->foto_header}}');
+        background-image: url('{{$calon->foto_gateway}}');
         height: 100%;
         background-position: center;
         background-size: cover;
@@ -55,7 +56,6 @@
         color: white;
         font-family: "Courier New", Courier, monospace;
         font-size: 25px;
-
     }
 
     .gt-section {
@@ -73,6 +73,17 @@
         background-color: #ffffff;
         color: black;
         border-radius: 12px;
+        width: 300px;
+        height: 45px;
+    }
+
+
+    @media screen and (min-width: 280px) {
+
+        .qbootstrap-cover .display-t .display-tc .button4 {
+            width: 250px;
+            vertical-align: middle;
+        }
     }
 
     .h4 {
@@ -188,11 +199,11 @@
 
     .gallery:before {
         content: '';
-        background: rgba(245, 226, 228, 0.5);
-        display: block;
+        background: <?=$calon->color ?>;
+        /* display: block; */
         width: 100%;
         height: 100%;
-        position: absolute;
+        /* position: absolute; */
         top: 0;
     }
 
@@ -295,7 +306,7 @@
         height: 40px;
         line-height: 35px;
         font-size: 18px;
-        color: #9a8c40;
+        color: <?=$calon->color ?>;
         border: 1px solid #e6e6e6;
         outline: 0;
         padding: 0;
@@ -311,7 +322,7 @@
     }
 
     .music-box.music-box-2 button {
-        color: #4b4e4e;
+        color: <?=$calon->color ?>;
     }
 
     @media (max-width: 991px) {
@@ -337,42 +348,54 @@
         text-align: left;
     }
 
-    /* //couple  */
-    .wishes__slider {
-        margin-top: 80px;
+    /* // background  */
+    .section {
+        padding: 6.25rem 0;
     }
 
-    .wishes__slider h5 {
-        font-family: "Source Sans Pro", Arial, sans-serif;
-        font-size: 25px;
-        margin-bottom: 0px;
+    .section--bg {
+        background: <?=$calon->color ?>;
     }
 
-    .wishes__person {
-        margin-bottom: 20px;
+    /* //popup gmaps  */
+    /**
+       * Simple fade transition,
+       */
+    .mfp-fade.mfp-bg {
+        opacity: 0;
+        -webkit-transition: all 0.15s ease-out;
+        -moz-transition: all 0.15s ease-out;
+        transition: all 0.15s ease-out;
     }
 
-    .wishes__title {
-        font-family: "Sofia";
-        font-size: 30px;
-        line-height: 40px;
-        margin-bottom: 40px;
+    .mfp-fade.mfp-bg.mfp-ready {
+        opacity: 0.8;
     }
 
-    .wishes__slider .slick-list {
-        margin-bottom: 30px;
+    .mfp-fade.mfp-bg.mfp-removing {
+        opacity: 0;
     }
 
-    @media only screen and (min-width: 768px) {
-        .wishes__slider p {
-            width: 75%;
-        }
+    .mfp-fade.mfp-wrap .mfp-content {
+        opacity: 0;
+        -webkit-transition: all 0.15s ease-out;
+        -moz-transition: all 0.15s ease-out;
+        transition: all 0.15s ease-out;
     }
 
-    @media only screen and (min-width: 992px) {
-        .wishes__slider p {
-            width: 50%;
-        }
+    .mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+        opacity: 1;
+    }
+
+    .mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+        opacity: 0;
+    }
+
+    .icon {
+        margin: 5px auto;
+        width: 90px;
+
+        /*background-color: red;*/
     }
     </style>
 </head>
@@ -385,23 +408,24 @@
         </div>
     </div>
 
-    <div class="qbootstrap-hero gateway gt-section" data-section="home">
-        <div class="qbootstrap-overlay"></div>
-        <div class="qbootstrap-cover text-center center-bg" data-stellar-background-ratio="0.5">
-            <div class="display-t">
-                <div class="display-tc">
-                    <div class="container">
-                        <div class="col-md-10 col-md-offset-1">
-                            <div class="animate-box svg-sm colored">
-                                <!-- <img src="assets/img/premium/flaticon/svg/004-nature.svg" class="svg" alt=""> -->
-                                @if (isset($qs['u']))
-                                <h3>Dear {{$qs['u']}},</h3>
-                                @endif
-                                <p><strong>You're Invited!</strong></p>
-                                <span>Welcome The Wedding of</span>
-                                <h2>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</h2>
-                                <p><button href="#" style="width: 350px; height:50px;" class="button button4"><i
-                                            class="fa fa-heart"></i> Open
+    <div class="gateway gt-section" id="gt" style="overflow-y: hidden;">
+        <div class="qbootstrap-hero" data-section="home">
+            <div class="qbootstrap-overlay"></div>
+            <div class="qbootstrap-cover text-center center-bg" data-stellar-background-ratio="0.5">
+                <div class="display-t">
+                    <div class="display-tc">
+                        <div class="container">
+                            <div class="col-md-10 col-md-offset-1">
+                                <div class="animate-box svg-sm colored">
+                                    <!-- <img src="assets/img/premium/flaticon/svg/004-nature.svg" class="svg" alt=""> -->
+                                    @if (isset($qs['u']))
+                                    <h3>Dear {{$qs['u']}},</h3>
+                                    @endif
+                                    <p><strong>You're Invited!</strong></p>
+                                    <h1 class="holder"><span>The Wedding of</span></h1>
+                                    <h2>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</h2>
+                                </div>
+                                <p><button href="#" class="button button4"><i class="fa fa-heart"></i> Open
                                         Invitation</button>
                                 </p>
                             </div>
@@ -511,7 +535,7 @@
         </div>
     </div> -->
     <!-- Section Wishes -->
-    <section class="wishes section section--blue text-center">
+    <section class="wishes section section--bg text-center">
         <div class="container">
             <div class="date-section__flowers m-auto">
                 <img src="assets\img\silver\date-flowers.png" alt="flowers">
@@ -607,7 +631,7 @@
         </div>
     </section>
     <!-- Section Date -->
-    <section class="date-section section section--blue countdown text-center">
+    <section class="date-section section section--bg countdown text-center">
         <div class="container">
             <div class="date-section__flowers m-auto">
                 <img src="assets\img\silver\date-flowers.png" alt="flowers">
@@ -677,8 +701,8 @@
                                     WIB, {{date("l jS F Y", strtotime($calon->akadNikah->tgl))}}
                                 </p>
                                 <!-- <p class="font-weight-bold">Keep it classy</p> -->
-                                <a href="https://maps.google.com/?q={{$calon->akadNikah->google_loc}}"
-                                    class="btn btn-outline-dark rounded-0 px-2 py-1">View on map</a>
+                                <a class="btn btn-outline-dark rounded-0 px-2 py-1 popup-gmaps"
+                                    href="https://maps.google.com/?q={{$calon->akadNikah->google_loc}}">View on map</a>
                             </div>
                         </div>
                     </div>
@@ -700,8 +724,9 @@
                                     WIB, {{date("l jS F Y", strtotime($calon->resepsi->tgl_rsp))}}
                                 </p>
                                 <!-- <p class="font-weight-bold">Keep it classy</p> -->
-                                <a href="https://maps.google.com/?q={{$calon->akadNikah->google_loc_rsp}}"
-                                    class="btn btn-outline-dark rounded-0 px-2 py-1">View on map</a>
+                                <a class="btn btn-outline-dark rounded-0 px-2 py-1 popup-gmaps"
+                                    href="https://maps.google.com/?q={{$calon->akadNikah->google_loc_rsp}}">View on
+                                    map</a>
                             </div>
                         </div>
                     </div>
@@ -754,7 +779,7 @@
         </div>
     </section>
     <!-- Section Gallery -->
-    <section id="gallery" class="gallery section text-center">
+    <section id="gallery" class="gallery section section--bg text-center">
         <div class="d-none d-lg-block gallery__flower-prlx-l position-absolute parallax">
             <img src="assets\img\silver\gallery-prlx-l.png" alt="flower">
         </div>
@@ -783,7 +808,7 @@
     </section>
 
     <!-- RSVP -->
-    <section id="rsvp" class="rsvp section">
+    <section id="rsvp" class="rsvp section ">
         <div class="container">
             <div class="row">
                 <div class="d-none d-md-block col-sm-12 col-md-4">
@@ -836,7 +861,7 @@
         </div>
     </section>
 
-    <section id="comment" class="comment section">
+    <section id="comment" class="comment section section--bg">
         <div class="container">
             <div class="row">
                 <div class="d-none d-md-block col-sm-12 col-md-4">
@@ -898,7 +923,7 @@
         <!-- </div> -->
     </section>
     <!-- Footer -->
-    <footer class="section">
+    <footer class="section section--bg">
         <div class="container text-white position-relative">
             <div class="footer__title">
                 <div class="text-center">Thank You</div>
@@ -917,8 +942,9 @@
                     </ul>
                 </div>
             </div>
-            <div class="copyright text-center">&copy;2021. ToBeABrideXCloudStudio.</div>
-            <p><img class="center" style="width:200px;height:200px;" src="assets/img/logo/tobeabride.png" alt=""></p>
+            <div class="copyright text-center">&copy;2021 ToBeABrideXCloudStudio.</div>
+            <p><img class="center" style="width:200px;height:200px;" src="assets/img/logo/tobeabride.png" alt="">
+            </p>
             <div class="row">
                 <div class="col-md-12 text-center">
                     <ol class="social social-circle">
@@ -949,6 +975,8 @@
     <script src="{{asset('assets/js/silver/vendor/masonry.pkgd.min.js')}}"></script>
     <script src="{{asset('assets/js/silver/vendor/lightbox.min.js')}}"></script>
     <script src="{{asset('assets/js/silver/main.js')}}"></script>
+    <script src="{{asset('assets/js/silver/jquery.magnific-popup.min.js')}}"></script>
+    <script src="{{asset('assets/js/silver/magnific-popup-options.js')}}"></script>
 
 
     <script>
@@ -1036,6 +1064,15 @@
     $(".button").click(function() {
         $(".gateway").slideUp("slow");
     });
+
+    // $('.popup-gmaps').magnificPopup({
+    //     disableOn: 700,
+    //     type: 'iframe',
+    //     mainClass: 'mfp-fade',
+    //     removalDelay: 160,
+    //     preloader: false,
+    //     fixedContentPos: false
+    // });
     </script>
 
 </body>

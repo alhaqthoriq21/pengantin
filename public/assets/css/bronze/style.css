@@ -1241,6 +1241,10 @@ home-page2
     opacity: .5;
 }
 
+/* .welcome-area .welcome-content p {
+    margin-bottom: 0px;
+} */
+
 .btn2 a {
     background: #9a8c40;
     color: #fff;
@@ -1974,6 +1978,18 @@ h4.comment-title {
     width: 100%;
 }
 
+/* .qbootstrap-overlay {
+    position: absolute !important;
+    width: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.4);
+
+} */
+
 @media screen and (max-width: 768px) {
 
     .qbootstrap-cover,
@@ -2156,7 +2172,7 @@ h4.comment-title {
 .qbootstrap-cover .display-tc h2,
 .video-hero .display-tc h2 {
     color: #fff;
-    font-size: 40px;
+    font-size: 30px;
     margin-bottom: 0px;
     /* font-weight: 300 !important; */
     font-family: "Beth Ellen";
@@ -2171,7 +2187,7 @@ h4.comment-title {
 
     .qbootstrap-cover .display-tc h2,
     .video-hero .display-tc h2 {
-        font-size: 40px;
+        font-size: 30px;
     }
 }
 

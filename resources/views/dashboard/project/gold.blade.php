@@ -10,7 +10,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}} | ToBeABrideXCloudStudio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, 
+    user-scalable=no">
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta name="author" content="" />
@@ -47,6 +48,8 @@
     <script src="{{asset('assets/js/gold/modernizr-2.6.2.min.js')}}"></script>
 
     <link rel="stylesheet" href="{{asset('assets/css/premium/icomoon.css')}}">
+
+    <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
     <!-- FOR IE9 below -->
     <!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
@@ -76,11 +79,6 @@
         flex-direction: column;
     }
 
-    .button4 {
-        background-color: #ffffff;
-        color: black;
-        border-radius: 12px;
-    }
 
     .commentText p {
         margin: 0px;
@@ -96,53 +94,140 @@
         display: inline-block;
         text-align: left;
     }
+
+    /* //countdown color  */
+    .simply-countdown>.simply-section {
+        /* coutndown blocks */
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        background: <?=$calon->color ?>;
+        margin: 0 4px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        border-radius: 50%;
+        position: relative;
+        animation: pulse 1s ease infinite;
+    }
+
+    .heart i {
+        font-size: 20px;
+        background: #fff;
+        padding: 20px;
+        color: <?=$calon->color ?>;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        border-radius: 50%;
+    }
+
+    .fh5co-heading h2 {
+        font-size: 40px;
+        margin-bottom: 10px;
+        line-height: 1.5;
+        font-weight: bold;
+        color: <?=$calon->color ?>;
+        font-family: "Sacramento", Arial, serif;
+    }
+
+    .couple-half h3 {
+        font-family: "Sacramento", Arial, serif;
+        color: <?=$calon->color ?>;
+        font-size: 30px;
+        margin-bottom: 0px;
+        /* margin-top: 10px; */
+
+    }
+
+    .couple-half h3 strong {
+        font-family: "Sacramento", Arial, serif;
+        color: <?=$calon->color ?>;
+        font-size: 30px;
+        margin-bottom: 0px;
+        /* margin-top: 10px; */
+    }
+
+    /* //btn loc  */
+    a {
+        color: <?=$calon->color ?>;
+        -webkit-transition: 0.5s;
+        -o-transition: 0.5s;
+        transition: 0.5s;
+    }
+
+    /* //musixbox  */
+    .music-box.music-box-2 button {
+        color: <?=$calon->color ?>;
+    }
+
+    /* //btn comment  */
+    #fh5co-started .btn {
+        height: 54px;
+        border: none !important;
+        background: <?=$calon->color ?>;
+        color: #fff;
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: 400;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    /* .comment-area {
+        background: url("{{$calon->fotoBody->foto_kedua}}") no-repeat center center / cover;
+        padding: 100px 0;
+        position: absolute;
+        background-attachment: fixed;
+        z-index: 1;
+    } */
+    /* //footer  */
+
+    footer:before {
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        color: white;
+        /* font-family: "Courier New", Courier, monospace; */
+        /* font-size: 25px; */
+    }
+
+    /* // background  */
+    .section {
+        padding: 6.25rem 0;
+    }
+
+    .section--bg {
+        background: <?=$calon->color ?>;
+    }
+
+    /* //button  */
+    .button4 {
+        background-color: #ffffff;
+        color: black;
+        border-radius: 12px;
+        width: 300px;
+        height: 45px;
+    }
+
+
+    @media screen and (min-width: 280px) {
+
+        .qbootstrap-cover .display-t .display-tc .button4 {
+            width: 250px;
+            vertical-align: middle;
+        }
+    }
     </style>
 
 </head>
 
 <body>
 
-
-
-    <div class="fh5co-loader"></div>
+    <!-- <div class="fh5co-loader"></div> -->
 
     <div id="page">
-        <!-- <nav class="fh5co-nav" role="navigation">
-            <div class="container"> -->
-        <!-- <div class="row">
-                    <div class="col-xs-2">
-                        <div id="fh5co-logo"><a href="index.html">Wedding<strong>.</strong></a></div>
-                    </div>
-                    <div class="col-xs-10 text-right menu-1">
-                        <ul>
-                            <li class="active"><a href="index.html">Home</a></li>
-                            <li><a href="about.html">Story</a></li>
-                            <li class="has-dropdown">
-                                <a href="services.html">Services</a>
-                                <ul class="dropdown">
-                                    <li><a href="#">Web Design</a></li>
-                                    <li><a href="#">eCommerce</a></li>
-                                    <li><a href="#">Branding</a></li>
-                                    <li><a href="#">API</a></li>
-                                </ul>
-                            </li>
-                            <li class="has-dropdown">
-                                <a href="gallery.html">Gallery</a>
-                                <ul class="dropdown">
-                                    <li><a href="#">HTML5</a></li>
-                                    <li><a href="#">CSS3</a></li>
-                                    <li><a href="#">Sass</a></li>
-                                    <li><a href="#">jQuery</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                    </div>
-                </div> -->
-
-        <!-- </div>
-        </nav> -->
-
         <div class="fh5co-cover centre-bg c-hero-banner gateway gt-section" role="banner">
             <div class="overlay"></div>
             <div class="container">
@@ -151,13 +236,12 @@
                         <div class="display-t">
                             <div class="display-tc animate-box" data-animate-effect="fadeIn">
                                 @if (isset($qs['u']))
-                                <h1>Dear, {{$qs['u']}}</h1>
+                                <h6>Dear, {{$qs['u']}}</h6>
                                 @endif
-                                <p>You're Invited!</p>
-                                <p>We Are Getting Married</p>
+                                <p><strong>You're Invited!</strong></p>
+                                <h3>We Are Getting Married</h3>
                                 <h1>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</h1>
-                                <p><button href="#" style="width: 350px; height:50px;" class="button button4"><i
-                                            class="fa fa-heart"></i> Open
+                                <p><button href="#" class="button button4"><i class="fa fa-heart"></i> Open
                                         Invitation</button>
                                 </p>
                             </div>
@@ -197,7 +281,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-                        <h2>Welcome, to Our Wedding!</h2>
+                        <h2>Welcome!</h2>
                         <h3> {{date("l jS F Y", strtotime($calon->akadNikah->tgl))}}</h3>
                         <p>We invited you to celebrate our wedding</p>
                     </div>
@@ -605,11 +689,12 @@
 
 
 
-
-        <div id="fh5co-started" class="fh5co-bg">
+        @if($calon->fotoBody->foto_kedua)
+        <div id="fh5co-started" class="fh5co-bg comment-area"
+            style="background-image:url({{$calon->fotoBody->foto_kedua}});">
+            @endif
             <!-- style="background-image:url(assets/img/gold/img_bg_4.jpg);" -->
-
-            <div class="overlay"></div>
+            <!-- <div class="overlay"></div> -->
             <div class="container">
                 <div class="row animate-box">
                     <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
@@ -642,25 +727,29 @@
                         </form>
                     </div>
                 </div>
-                <div class="row horizontal-line">
-                    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-                        rel="stylesheet"
-                        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-                        crossorigin="anonymous">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="media g-mb-30 media-comment">
-                                    <h7><strong>Comment Section</strong></h7>
-                                    <!-- <img class="d-flex g-width-50 g-height-50 rounded-circle g-mt-3 g-mr-15"> -->
-                                    <div class="media-body u-shadow-v18 g-bg-secondary g-pa-30">
-                                        @foreach($calon->comment as $data)
-                                        <div class="commentText">
-                                            <p><strong>{{ $data->nama }}</strong></p>
-                                            <p class="">{{ $data->comment }}</p>
-                                        </div>
-                                        @endforeach
+            </div>
+        </div>
+
+        <div id="fh5co-started" class="">
+            <!-- style="background-image:url(assets/img/gold/img_bg_4.jpg);" -->
+            <!-- <div class="overlay"></div> -->
+            <div class="row horizontal-line">
+                <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+                    rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+                    crossorigin="anonymous">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="media g-mb-30 media-comment">
+                                <h7><strong>Comment Section</strong></h7>
+                                <!-- <img class="d-flex g-width-50 g-height-50 rounded-circle g-mt-3 g-mr-15"> -->
+                                <div class="media-body u-shadow-v18 g-bg-secondary g-pa-30">
+                                    @foreach($calon->comment as $data)
+                                    <div class="commentText">
+                                        <p><strong>{{ $data->nama }}</strong></p>
+                                        <p class="">{{ $data->comment }}</p>
                                     </div>
+                                    @endforeach
                                 </div>
                             </div>
                         </div>
@@ -671,17 +760,17 @@
     </div>
     <!-- </div> -->
 
-    <footer class="section">
+    <footer class="section section--bg">
         <div class="container text-white position-relative">
-            <div class="footer__title">
+            <div class="footer__title color-wht">
                 <div class="text-center">Thank You</div>
                 <div class="text-center"><strong>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</strong></div>
             </div>
             <div class="row pb-4">
-                <div class="col-md-12 text-center">
+                <div class="col-md-12 text-center color-wht">
                     <p>Turut Mengundang :</p>
                 </div>
-                <div class="col-md-12 text-center">
+                <div class="col-md-12 text-center color-wht">
                     <?php 
                     $undang = explode("|",$calon->undang);
                     ?>
@@ -693,7 +782,7 @@
 
                 </div>
             </div>
-            <div class="copyright text-center">&copy;2021. ToBeABrideXCloudStudio.</div>
+            <div class="copyright text-center color-wht">&copy;2021 ToBeABrideXCloudStudio.</div>
             <p><img class="center" style="width:200px;height:200px;" src="assets/img/logo/tobeabride.png" alt=""></p>
             <div class="row">
                 <div class="col-md-12 text-center">
@@ -749,22 +838,25 @@
     // var d = new Date(new Date("{{$calon->akadNikah->tgl}}").getTime());
 
     var d = new Date(new Date(calon.akad_nikah.tgl).getTime());
-    console.log(new Date());
+    // console.log(new Date());
 
     // default example
     simplyCountdown('.simply-countdown-one', {
         year: d.getFullYear(),
         month: d.getMonth() + 1,
-        day: d.getDate()
+        day: d.getDate(),
+        hour: d.getHours(),
+        minute: d.getMinutes(),
+        second: d.getSeconds()
     });
 
     //jQuery example
-    $('#simply-countdown-losange').simplyCountdown({
-        year: d.getFullYear(),
-        month: d.getMonth() + 1,
-        day: d.getDate(),
-        enableUtc: false
-    });
+    // $('#simply-countdown-losange').simplyCountdown({
+    //     year: d.getFullYear(),
+    //     month: d.getMonth() + 1,
+    //     day: d.getDate(),
+    //     enableUtc: false
+    // });
 
     $(".button").click(function() {
         $(".gateway").slideUp("slow");

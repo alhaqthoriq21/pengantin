@@ -2,9 +2,9 @@
 
 @section('title', "Pengantin")
 
-<!-- <head>
+<head>
     <style>
-    div.mid {
+    /* div.mid {
         position: absolute;
         top: 200px;
         left: 300px;
@@ -17,9 +17,17 @@
         position: relative;
         display: block;
         margin: 0 auto;
-    }
+    } */
+
+    /* input[type="color"].custom {
+        padding: 0;
+        border: none;
+        height: 50px;
+        width: 50px;
+        vertical-align: middle;
+    } */
     </style>
-</head> -->
+</head>
 
 @section('breadcumb')
 <div class="content-header">
@@ -224,12 +232,53 @@
                                                                 <label for="" class="col-form-label">Pick Background
                                                                     Color</label>
                                                             </div>
-                                                            <div id="color" class="input-group colorpicker-component">
-                                                                <input type="text" name="color" id="color"
-                                                                    value="#00AABB" class="form-control" />
-                                                                <span class="input-group-addon"><i></i></span>
+                                                            <!-- <div id="cp3a" class="input-group"
+                                                                data-color="rgb(241, 138, 49)"
+                                                                title="Using data-color attribute in the colorpicker element">
+                                                                <input type="text" name="cp3a" id="cp3a"
+                                                                    class="form-control input-lg" />
+                                                                <span class="input-group-append">
+                                                                    <span
+                                                                        class="input-group-text colorpicker-input-addon"><i></i></span>
+                                                                </span>
+                                                            </div> -->
+                                                            <div id="color" class="input-group color">
+                                                                <input type="text" name="color" id="color" value=""
+                                                                    class="form-control" />
+                                                                <div class="input-group-append">
+                                                                    <span
+                                                                        class="input-group-text colorpicker-component"><i
+                                                                            class="fas fa-square"></i></span>
+                                                                </div>
                                                             </div>
                                                         </div>
+                                                        <div class="row form-group">
+                                                            <div class="col-sm-4">
+                                                                <label for="" class="col-form-label">Foto
+                                                                    Gateway</label>
+                                                            </div>
+                                                            <div class="col-sm-8">
+                                                                <div class="d-flex flex-row">
+                                                                    <input type="file" name="foto_gateway"
+                                                                        id="foto_gateway" class="form-control"
+                                                                        accept="image/*">
+                                                                    <div id="uploadProgress"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- <div class="form-group">
+                                                        <label>Color picker with addon:</label>
+
+                                                        <div class="input-group my-colorpicker2">
+                                                            <input type="text" class="form-control">
+
+                                                            <div class="input-group-append">
+                                                                <span class="input-group-text"><i
+                                                                        class="fas fa-square"></i></span>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                    </div> -->
                                                     </div>
                                                     <div class="col-12 card--shadow">
                                                         <h5>Calon Pengantin Pria</h5>
@@ -392,7 +441,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="col-12 card--shadow">
-                                                        <h5>Turut Mengundang</h5>
+                                                        <h5>Turut Mengundang (Tanda "," Sebagai Pemisah)</h5>
                                                         <div class="row form-group">
                                                             <div class="col-sm-4">
                                                                 <label for="" class="col-form-label">Undang</label>
@@ -596,8 +645,9 @@
                                                             </div>
                                                             <div class="col-sm-8">
                                                                 <div class="d-flex flex-row">
-                                                                    <input name="judul" id="judul" placeholder=""
-                                                                        type="text" class="form-control" value="">
+                                                                    <input name="judul_song" id="judul_song"
+                                                                        placeholder="" type="text" class="form-control"
+                                                                        value="">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -881,14 +931,25 @@ $(document).ready(function() {
         showMeridian: 1
     });
 
-    // $('#color').colorpicker();
+    // $('#cp3a').colorpicker();
 
 
     $('#color').colorpicker({
         popover: false,
-        inline: true,
+        inline: false,
+        format: "RGB",
         container: '#color'
     });
+
+    // $('.my-colorpicker2').colorpicker()
+
+    $('#color').on('colorpickerChange', function(event) {
+        $('#color .fa-square').css('color', event.color.toString());
+    });
+
+    // $("input[data-bootstrap-switch]").each(function() {
+    //     $(this).bootstrapSwitch('state', $(this).prop('checked'));
+    // });
 
     // $('#color').on('colorpickerChange', function(event) {
     //     $('#color .fa-square').css('color', event.color.toString());

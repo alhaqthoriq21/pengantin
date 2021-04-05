@@ -72,7 +72,7 @@ class CalonController extends Controller
         }
 
         try {
-            $input = $request->only(["slug","template","color","nick_pria","nick_wanita","calon_pria","calon_wanita","sosmed_pria",
+            $input = $request->only(["slug","template","color","foto_gateway","nick_pria","nick_wanita","calon_pria","calon_wanita","sosmed_pria",
             "sosmed_wanita","foto_pria","foto_wanita","ayah_pria","ibu_pria","ayah_wanita","ibu_wanita","undang"]);
             if ($request->undang != null) {
                 $undang = str_replace(",","|",$request->undang);
@@ -100,7 +100,7 @@ class CalonController extends Controller
             $quotes['calon_id'] = $calon->id;
             $quotes = Quotes::create($quotes);
 
-            $song = $request->only(["calon_id","judul","song"]);
+            $song = $request->only(["calon_id","judul_song","song"]);
             $song['calon_id'] = $calon->id;
             $song = Song::create($song);
 
@@ -125,7 +125,7 @@ class CalonController extends Controller
         }
 
         try {
-            $calon = $request->only(["slug","template","color","nick_pria","nick_wanita","calon_pria","calon_wanita","sosmed_pria",
+            $calon = $request->only(["slug","template","color","foto_gateway","nick_pria","nick_wanita","calon_pria","calon_wanita","sosmed_pria",
             "sosmed_wanita","foto_pria","foto_wanita","ayah_pria","ibu_pria","ayah_wanita","ibu_wanita","undang"]);
             $calon = Calon::find($calonId);
             // dd($request);

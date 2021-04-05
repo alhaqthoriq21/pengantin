@@ -74,18 +74,31 @@ a:focus {
 
 p {
     margin-bottom: 0;
+    font-size: 12px;
 }
 
 h1,
 h2,
 h3,
-h4,
 h5,
 h6 {
     color: #000;
     font-family: "Clicker Script", cursive;
     font-weight: 400;
     margin: 0;
+}
+
+h7 {
+    font-size: 20px;
+    color: black;
+}
+
+h1 strong {
+    color: rgb(255, 255, 255);
+}
+
+h4 {
+    color: rgb(255, 255, 255);
 }
 
 ::-webkit-selection {
@@ -308,39 +321,23 @@ h6 {
 }
 
 .section-heading.svg-sm-2 .svg {
-    height: 150px;
+    height: 60px;
     margin-bottom: 0;
     padding: 0;
 }
 
 .section-heading.svg-sm .svg {
-    height: 180px;
-    margin-bottom: -80px;
+    height: 160px;
+    margin-bottom: -70px;
     padding: 0;
 }
 
-.section-heading.colored .svg {
-    fill: #FF847C;
-}
 
-.section-heading h2 {
-    font-size: 80px;
-    color: #FF847C;
-    display: block;
-    padding-bottom: 20px;
-    line-height: 1.5;
-}
-
-@media screen and (max-width: 768px) {
-    .section-heading h2 {
-        font-size: 50px;
-    }
-}
 
 .section-heading h3 {
     font-weight: 300;
     line-height: 1.5;
-    color: #929292;
+    color: #000000;
 }
 
 @media screen and (max-width: 768px) {
@@ -395,7 +392,7 @@ h6 {
 .qbootstrap-cover,
 .qbootstrap-hero {
     position: relative;
-    height: 800px;
+    height: 100% !important;
     width: 100%;
 
 
@@ -413,13 +410,11 @@ h6 {
 
 .qbootstrap-overlay {
     position: absolute !important;
-    width: 100%;
     top: 0;
     left: 0;
-    bottom: 0;
     right: 0;
-    z-index: 1;
-    /* background: rgba(0, 0, 0, 0.4); */
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
 
 }
 
@@ -561,9 +556,9 @@ h6 {
 .qbootstrap-cover .display-tc h2,
 .video-hero .display-tc h2 {
     color: #fff;
-    font-size: 80px;
-    margin-bottom: 20px;
-    font-weight: 300 !important;
+    font-size: 30px;
+    margin-bottom: 5px;
+    /* font-weight: 300 !important; */
 }
 
 .qbootstrap-cover .display-tc h2 strong,
@@ -575,21 +570,32 @@ h6 {
 
     .qbootstrap-cover .display-tc h2,
     .video-hero .display-tc h2 {
-        font-size: 60px;
+        font-size: 30px;
     }
 }
 
 .qbootstrap-cover .display-tc p,
 .video-hero .display-tc p {
     color: #fff;
-    font-weight: 400;
+    /* font-weight: 400; */
     font-size: 20px;
-    letter-spacing: 10px;
+    /* letter-spacing: 10px; */
+    font-family: "Sofia";
+    margin-bottom: 0px;
+}
+
+.qbootstrap-cover .display-tc h6,
+.video-hero .display-tc h6 {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 0px;
+    /* font-weight: 300 !important; */
+    font-family: "Arial";
 }
 
 .qbootstrap-cover .display-tc .svg-sm .svg,
 .video-hero .display-tc .svg-sm .svg {
-    height: 180px;
+    height: 120px;
     margin-bottom: 0;
 }
 
@@ -793,21 +799,6 @@ h6 {
     border-radius: 50%;
 }
 
-#qbootstrap-couple h3 {
-    font-size: 34px;
-    font-family: "Clicker Script", cursive;
-    color: #FF847C;
-    margin-bottom: 10px;
-    margin: 10px;
-}
-
-@media screen and (max-width: 768px) {
-    #qbootstrap-couple h3 {
-        font-size: 25px;
-        margin-bottom: 10px;
-        margin: 10px;
-    }
-}
 
 #qbootstrap-couple span {
     color: #FF847C;
@@ -819,6 +810,7 @@ h6 {
 }
 
 #qbootstrap-couple .amp-center {
+    /* height: 20px; */
     font-size: 60px;
     margin-top: 100%;
     color: #ff847c;
@@ -836,8 +828,9 @@ h6 {
 
 .qbootstrap-bg {
     background-size: cover;
-    position: relative;
+    background-position: top center !important;
     background-repeat: no-repeat;
+    position: relative;
 }
 
 #qbootstrap-countdown {
@@ -865,12 +858,12 @@ h6 {
 }
 
 #qbootstrap-countdown .section-heading .datewed {
-    font-size: 40px;
-    color: rgba(255, 255, 255, 0.7);
+    font-size: 20px;
+    color: rgba(255, 255, 255);
 }
 
 #qbootstrap-countdown .section-heading.svg-sm .svg {
-    height: 180px;
+    height: 150px;
     margin-bottom: -50px;
     padding: 0;
 }
@@ -892,7 +885,7 @@ h6 {
 
 #qbootstrap-countdown .countdown {
     margin-bottom: 0;
-    font-size: 80px;
+    font-size: 50px;
     color: #fff;
 }
 
@@ -1331,12 +1324,7 @@ g.pd {
     right: auto;
 }
 
-.timeline-title {
-    margin-top: 0;
-    font-size: 34px;
-    color: #FF847C;
-    margin-bottom: 30px;
-}
+
 
 .date {
     display: block;
@@ -1606,6 +1594,10 @@ g.pd {
     height: 400px;
 }
 
+.wedding-events .desc .p {
+    font-size: 15px;
+}
+
 .wedding-events .desc {
     padding: 2em;
     border: 1px solid rgba(0, 0, 0, 0.05);
@@ -1624,12 +1616,7 @@ g.pd {
     z-index: -1;
 }
 
-.wedding-events .desc h3 {
-    font-size: 40px;
-    color: #FF847C;
-    display: block;
-    margin-bottom: 40px;
-}
+
 
 .wedding-events .desc .date {
     display: block;
@@ -1655,15 +1642,7 @@ g.pd {
     margin-top: 60%;
 }
 
-.wedding-events .desc .icon i {
-    color: #fff;
-    padding: 15px;
-    background: #FF847C;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    border-radius: 50%;
-}
+
 
 @media screen and (max-width: 768px) {
     .wedding-events .desc .icon {
@@ -1890,17 +1869,7 @@ h2.komentar {
     background: rgba(255, 255, 255, 0.3);
 }
 
-#qbootstrap-comment .btn {
-    height: 54px;
-    border: none !important;
-    background: #FF847C;
-    color: #fff;
-    font-size: 16px;
-    text-transform: uppercase;
-    font-weight: 400;
-    padding-left: 50px;
-    padding-right: 50px;
-}
+
 
 #qbootstrap-comment .form-inline .form-group {
     width: 100% !important;
@@ -2173,7 +2142,7 @@ h2.komentar {
 
 #footer {
     padding: 50px 0;
-    color: #7f7f7f;
+    color: #ffffff;
 }
 
 #footer .copyright {

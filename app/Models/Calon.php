@@ -11,7 +11,7 @@ class Calon extends Model
     protected $table = 'calon';
 
     protected $fillable = [
-        "slug","template","nick_pria","color","nick_wanita","calon_pria", "calon_wanita", 
+        "slug","template","nick_pria","color","foto_gateway","nick_wanita","calon_pria", "calon_wanita", 
         "sosmed_pria","sosmed_wanita","foto_pria","foto_wanita","ayah_pria","ibu_pria",
         "ayah_wanita","ibu_wanita","undang","status"
     ];

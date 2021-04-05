@@ -83,7 +83,7 @@ class SongController extends Controller
         }
 
         try {
-            $input = $request->only(["calon_id","judul","song"]);
+            $input = $request->only(["calon_id","judul_song","song"]);
             $song = Song::find($songId);
         
             if ($song) {

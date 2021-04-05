@@ -10,7 +10,7 @@ class Song extends Model
     use HasFactory;
     protected $table = 'song';
     protected $fillable = [
-        "calon_id","judul","song","status"
+        "calon_id","judul_song","song","status"
     ];
 
     public $timestamps = false;

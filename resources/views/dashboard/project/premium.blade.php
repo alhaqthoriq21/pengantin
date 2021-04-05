@@ -11,7 +11,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}} | ToBeABrideXCloudStudio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, 
+    user-scalable=no">
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta name="author" content="" />
@@ -58,6 +59,8 @@
 
     <!-- //font awesome -->
     <link rel="stylesheet" href="{{asset('assets/plugins/fontawesome-free-5.15.2/css/all.css')}}">
+
+    <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
     <!-- // datetimepicker -->
     <!-- <link rel="stylesheet" type="text/css" href="{{asset('assets/css/premium/jquery.datetimepicker.css')}}" /> -->
 
@@ -103,10 +106,22 @@
         flex-direction: column;
     }
 
+    /* //button  */
     .button4 {
         background-color: #ffffff;
         color: black;
         border-radius: 12px;
+        width: 300px;
+        height: 45px;
+    }
+
+
+    @media screen and (min-width: 280px) {
+
+        .qbootstrap-cover .display-t .display-tc .button4 {
+            width: 250px;
+            vertical-align: middle;
+        }
     }
 
     .topleft {
@@ -217,22 +232,97 @@
         margin-right: auto;
         width: 50%;
     }
+
+    /* //bg  */
+    .section--bg {
+        background: <?=$calon->color ?>;
+    }
+
+    /* //heading colored  */
+    .section-heading.colored .svg {
+        fill: <?=$calon->color ?>;
+    }
+
+    .section-heading h2 {
+        font-size: 80px;
+        color: <?=$calon->color ?>;
+        display: block;
+        padding-bottom: 20px;
+        line-height: 1.5;
+    }
+
+
+
+    @media screen and (max-width: 768px) {
+        .section-heading h2 {
+            font-size: 40px;
+        }
+    }
+
+
+    #qbootstrap-couple h3 {
+        font-size: 34px;
+        font-family: "Clicker Script", cursive;
+        color: <?=$calon->color ?>;
+        margin-bottom: 0px;
+        margin: 10px;
+    }
+
+    @media screen and (max-width: 768px) {
+        #qbootstrap-couple h3 {
+            font-size: 17px;
+            margin-bottom: 0px;
+            margin: 10px;
+        }
+    }
+
+    a {
+        color: <?=$calon->color ?>;
+        -webkit-transition: 0.5s;
+        -o-transition: 0.5s;
+        transition: 0.5s;
+    }
+
+    #qbootstrap-comment .btn {
+        height: 54px;
+        border: none !important;
+        background: <?=$calon->color ?>;
+        color: #fff;
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: 400;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .timeline-title {
+        margin-top: 0;
+        font-size: 20px;
+        color: <?=$calon->color ?>;
+        margin-bottom: 30px;
+    }
+
+    .wedding-events .desc h3 {
+        font-size: 40px;
+        color: <?=$calon->color ?>;
+        display: block;
+        margin-bottom: 40px;
+    }
+
+    .wedding-events .desc .icon i {
+        color: #fff;
+        padding: 15px;
+        background: <?=$calon->color ?>;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        border-radius: 50%;
+    }
     </style>
 
 </head>
 
 <body>
-
-    <!-- strat music-box -->
-    <div class="music-box music-box-2">
-        <button class="music-box-toggle-btn">
-            <i class="fa fa-music" aria-hidden="true"></i>
-        </button>
-        <div class="music-holder">
-            <iframe preload="auto" src="{{$calon->song->song}}"></iframe>
-        </div>
-    </div>
-    <!-- end music box -->
 
     <div class="gateway gt-section" id="gt">
         <div class="qbootstrap-hero" data-section="home">
@@ -244,13 +334,12 @@
                             <div class="col-md-10 col-md-offset-1">
                                 <div class="animate-box svg-sm colored">
                                     @if (isset($qs['u']))
-                                    <h2>Dear, {{$qs['u']}}</h2>
+                                    <h6>Dear, {{$qs['u']}}</h6>
                                     @endif
                                     <p><span>You're Invited!</span></p>
-                                    <h1 class="holder"><span>Welcome to the Wedding of</span></h1>
-                                    <h2>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</h2>
-                                    <p><button href="#" style="width: 350px; height:50px;" class="button button4"><i
-                                                class="fa fa-heart"></i> Open
+                                    <h3 class="holder"><span>Welcome to the Wedding of</span></h3>
+                                    <h2><strong>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</strong></h2>
+                                    <p><button href="#" class="button button4"><i class="fa fa-heart"></i> Open
                                             Invitation</button>
                                     </p>
                                 </div>
@@ -283,7 +372,7 @@
                             <div class="animate-box svg-sm colored">
                                 <img src="assets/img/premium/flaticon/svg/004-nature.svg" class="svg" alt="">
                                 <h1 class="holder"><span>The Wedding of</span></h1>
-                                <h2>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</h2>
+                                <h2><strong>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</strong></h2>
                                 <p>{{date("l jS F Y", strtotime($calon->akadNikah->tgl))}}</p>
                             </div>
                         </div>
@@ -299,9 +388,9 @@
                 <div class="col-md-8 col-md-offset-2 animate-box">
                     <div class="col-md-12 text-center section-heading svg-sm colored">
                         <img src="assets/img/premium/flaticon/svg/005-two.svg" class="svg" alt="">
-                        <h2>Are Getting Married</h2>
+                        <h2>Welcome to Our Wedding!</h2>
                         <p>{{$calon->quotes->isi}}</p>
-                        <h1> <strong>&ldquo; {{$calon->quotes->judul}}&rdquo;</strong></h1>
+                        <p> <strong>&ldquo; {{$calon->quotes->judul}}&rdquo;</strong></p>
                         <!-- <h3></h3> -->
                         <!-- <p><strong>on {{$calon->akadNikah->tgl}} &mdash; {{$calon->akadNikah->alamat}}</strong></p> -->
                     </div>
@@ -310,24 +399,24 @@
             <div class="row animate-box">
                 <div class="col-md-8 col-md-offset-2 text-center">
                     <div class="col-md-5 col-sm-5 col-xs-5 nopadding">
-                        <img class="center" src="{{$calon->foto_pria}}" style="width:150px;height:150px;"
+                        <img class="center" src="{{$calon->foto_pria}}" style="width:110px;height:110px;"
                             class="img-responsive" alt="">
                         <h3>{{$calon->calon_pria}}</h3>
-                        <p>Putra Dari</p>
+                        <p><strong>Putra Dari</strong></p>
                         <p>Bpk. {{$calon->ayah_pria}}</p>
                         <p>& Ibu {{$calon->ibu_pria}}</p>
                         <h2><a href="https://www.instagram.com/{{$calon->sosmed_pria}}/"><i
                                     class="icon-instagram"></i></a></h2>
                     </div>
                     <div class="col-md-2 col-sm-2 col-xs-2 nopadding">
-                        <h2 class="amp-center"><img src="assets/img/premium/flaticon/svg/003-luxury.svg"
-                                class="svg img-responsive" alt=""></h2>
+                        <h2 class="amp-center"><img src="assets/img/premium/flaticon/svg/003-luxury.svg" class="svg"
+                                alt=""></h2>
                     </div>
                     <div class="col-md-5 col-sm-5 col-xs-5 nopadding">
-                        <img class="center" src="{{$calon->foto_wanita}}" style="width:150px;height:150px;"
+                        <img class="center" src="{{$calon->foto_wanita}}" style="width:110px;height:110px;"
                             class="img-responsive" alt="">
                         <h3>{{$calon->calon_wanita}}</h3>
-                        <p>Putri Dari</p>
+                        <p><strong>Putri Dari</strong></p>
                         <p>Bpk. {{$calon->ayah_wanita}}</p>
                         <p>& Ibu {{$calon->ibu_wanita}}</p>
                         <h2><a href="https://www.instagram.com/{{$calon->sosmed_wanita}}/"><i
@@ -503,148 +592,6 @@
         </div>
     </div>
 
-
-    <!-- <div id="qbootstrap-testimonials" class="qbootstrap-greetings" data-section="greetings"
-        data-stellar-background-ratio="0.5" style="background-image: url(assets/img/cover_bg_1.jpg);">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row animate-box">
-                <div class="col-md-12 section-heading text-center svg-sm colored">
-                    <img src="assets/img/flaticon/svg/006-flower-bell-outline-design-variant-with-vines-and-leaves.svg"
-                        class="svg" alt="">
-                    <h2 class="">Sweet Messages</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 animate-box">
-                    <div class="box-testimony ">
-                        <blockquote>
-                            <span class="quote"><span><i class="icon-quote-left"></i></span></span>
-                            <p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and
-                                Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at
-                                the coast of the Semantics, a large language ocean.&rdquo;</p>
-                        </blockquote>
-                        <p class="author">John Doe</p>
-                    </div>
-
-                </div>
-                <div class="col-md-4 animate-box">
-                    <div class="box-testimony ">
-                        <blockquote>
-                            <span class="quote"><span><i class="icon-quote-left"></i></span></span>
-                            <p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and
-                                Consonantia, there live the blind texts.&rdquo;</p>
-                        </blockquote>
-                        <p class="author">John Doe</p>
-                    </div>
-
-
-                </div>
-                <div class="col-md-4 animate-box">
-                    <div class="box-testimony ">
-                        <blockquote>
-                            <span class="quote"><span><i class="icon-quote-left"></i></span></span>
-                            <p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and
-                                Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at
-                                the coast of the Semantics, a large language ocean.&rdquo;</p>
-                        </blockquote>
-                        <p class="author">John Doe</p>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div> -->
-
-    <!-- <div id="qbootstrap-people" data-section="people">
-        <div class="container">
-            <div class="row animate-box">
-                <div class="col-md-8 col-md-offset-2">
-                    <div class="col-md-12 text-center section-heading svg-sm colored">
-                        <img src="assets/img/flaticon/svg/005-two.svg" class="svg"
-                            alt="">
-                        <h2>The Groomsmen</h2>
-                        <div class="row">
-                            <div class="col-md-10 col-md-offset-1 subtext  ">
-                                <h3>Far far away, behind the word mountains, far from the countries Vokalia and
-                                    Consonantia, there live the blind texts.</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row row-bottom-padded-lg">
-                <div class="col-md-3 text-center animate-box">
-                    <div class="groom-men">
-                        <img src="assets/img/groom-men-1.jpg" class="img-responsive"
-                            alt="">
-                        <h3>Ian Bill</h3>
-                    </div>
-                </div>
-                <div class="col-md-3 text-center animate-box">
-                    <div class="groom-men">
-                        <img src="assets/img/groom-men-2.jpg" class="img-responsive"
-                            alt="">
-                        <h3>George Smith</h3>
-                    </div>
-                </div>
-                <div class="col-md-3 text-center animate-box">
-                    <div class="groom-men">
-                        <img src="assets/img/groom-men-3.jpg" class="img-responsive"
-                            alt="">
-                        <h3>Brian Thompson</h3>
-                    </div>
-                </div>
-                <div class="col-md-3 text-center animate-box">
-                    <div class="groom-men">
-                        <img src="assets/img/groom-men-4.jpg" class="img-responsive"
-                            alt="">
-                        <h3>David Howard</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="row animate-box">
-                <div class="col-md-8 col-md-offset-2">
-                    <div class="col-md-12 text-center section-heading svg-sm colored">
-                        <img src="assets/img/flaticon/svg/005-two.svg" class="svg"
-                            alt="">
-                        <h2>The Bridesmaid</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-3 text-center animate-box">
-                    <div class="groom-men">
-                        <img src="assets/img/bridesmaid-1.jpg" class="img-responsive"
-                            alt="">
-                        <h3>Angel Thomas</h3>
-                    </div>
-                </div>
-                <div class="col-md-3 text-center animate-box">
-                    <div class="groom-men">
-                        <img src="assets/img/bridesmaid-2.jpg" class="img-responsive"
-                            alt="">
-                        <h3>Kathy Shol</h3>
-                    </div>
-                </div>
-                <div class="col-md-3 text-center animate-box">
-                    <div class="groom-men">
-                        <img src="assets/img/bridesmaid-3.jpg" class="img-responsive"
-                            alt="">
-                        <h3>Rose Mel</h3>
-                    </div>
-                </div>
-                <div class="col-md-3 text-center animate-box">
-                    <div class="groom-men">
-                        <img src="assets/img/bridesmaid-4.jpg" class="img-responsive"
-                            alt="">
-                        <h3>Ann Hathway</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
     <div id="qbootstrap-when-where" data-section="when-where">
         <div class="container">
             <div class="row animate-box">
@@ -654,7 +601,7 @@
                         <h2>Akad Nikah &amp; Resepsi</h2>
                         <div class="row">
                             <div class="col-md-10 col-md-offset-1 subtext">
-                                <h1>our journey will finally begin....</h1>
+                                <h3><strong>our journey will finally begin....</strong></h3>
                             </div>
                         </div>
                     </div>
@@ -686,14 +633,14 @@
                                     <div class="date">
                                         <i class="icon-clock2"></i>
                                         <span>{{$calon->akadNikah->waktu}}</span>
-                                        <span>WIB</span>
+                                        <!-- <span>WIB</span> -->
                                         <!-- <span>10:00 AM</span>
                                         <span>11:00 AM</span> -->
                                     </div>
                                 </div>
                             </div>
-                            <p>{{$calon->akadNikah->tempat}}</p>
-                            <p>{{$calon->akadNikah->alamat}}</p>
+                            <p><strong>{{$calon->akadNikah->tempat}}</strong></p>
+                            <p><strong>{{$calon->akadNikah->alamat}}</strong></p>
                             <p><a href="https://maps.google.com/?q={{$calon->akadNikah->google_loc}}"><i
                                         class="fas fa-map-marker-alt"></i> Location</a></p>
                         </div>
@@ -724,12 +671,12 @@
                                         <i class="icon-clock2"></i>
                                         <!-- <span>10:00 AM</span> -->
                                         <span>{{$calon->resepsi->waktu_rsp}}</span>
-                                        <span>WIB</span>
+                                        <!-- <span>WIB</span> -->
                                     </div>
                                 </div>
                             </div>
-                            <p>{{$calon->resepsi->tempat_rsp}}</p>
-                            <p> {{$calon->resepsi->alamat_rsp}}</p>
+                            <p><strong>{{$calon->resepsi->tempat_rsp}}</strong></p>
+                            <p><strong>{{$calon->resepsi->alamat_rsp}}</strong></p>
                             <p><a href="https://maps.google.com/?q={{$calon->resepsi->google_loc_rsp}}"><i
                                         class="fas fa-map-marker-alt"></i> Location</a></p>
 
@@ -755,7 +702,7 @@
                     <h2>Our Galleries</h2>
                     <div class="row">
                         <div class="col-md-10 col-md-offset-1 subtext">
-                            <h1>Our memories in photograph.</h1>
+                            <h3><strong>Our memories in photograph.</strong></h3>
                         </div>
                     </div>
                 </div>
@@ -827,8 +774,7 @@
         </div>
     </div> -->
 
-    <div id="qbootstrap-started" class="qbootstrap-bg" data-section="rsvp" data-stellar-background-ratio="0.5">
-        <!-- style="background-image: url(assets/img/cover_bg_1.jpg);"  -->
+    <!-- <div id="qbootstrap-started" class="qbootstrap-bg" data-section="rsvp" data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
         <div class="container">
             <div class="row animate-box">
@@ -864,9 +810,9 @@
                         </div>
                         <div class="col-md-4 col-sm-4">
                             <div class="form-group">
-                                <!-- <label for="ket" class="sr-only">Apakah Anda Akan Datang?</label> -->
+                               
                                 <select name="ket" id="ket" placeholder="Apakah anda Datang?" class="form-control">
-                                    <!-- <option value=""></option> -->
+                                 
                                     <option value="Leave a message!">Leave a message!</option>
                                     <option value="Ya, tentu saja!">Ya, tentu saja!</option>
                                     <option value="Maaf, saya tidak bisa.">Maaf, saya tidak bisa.</option>
@@ -878,23 +824,16 @@
                         </div>
                     </form>
                 </div>
-                <!-- <div class="col-md-4 col-sm-4">
-                    <div class="form-group">
-                        @foreach($calon->reservasi as $data)
-                        <p>&ldquo;{{ $data->nama }}&rdquo;</p>
-                        <p>&ldquo;{{ $data->alamat }}&rdquo;</p>
-                        <p>&ldquo;{{ $data->ket }}&rdquo;</p>
-                        @endforeach
-                    </div>
-                </div> -->
             </div>
         </div>
-    </div>
+    </div> -->
     <div class="container bg-white">
     </div>
 
-    <div id="qbootstrap-comment" class="qbootstrap-bg" data-section="comment" data-stellar-background-ratio="0.5">
-        <!-- style="background-image: url(assets/img/cover_bg_1.jpg);"  -->
+    @if($calon->fotoBody->foto_kedua)
+    <div id="qbootstrap-comment" class="qbootstrap-bg" data-section="comment" data-stellar-background-ratio="0.5"
+        style="background-image:url({{$calon->fotoBody->foto_kedua}});">
+        @endif
         <div class="overlay"></div>
         <div class="container">
             <div class="row animate-box">
@@ -904,7 +843,7 @@
                         <h2>Guest Book</h2>
                         <div class="row">
                             <div class="col-md-10 col-md-offset-1 subtext">
-                                <h1>Leave a message or send wishes for the Couple!</h1>
+                                <h4>Leave a message or send wishes for the Couple!</h4>
                             </div>
                         </div>
                     </div>
@@ -935,24 +874,28 @@
                     </form>
                 </div>
             </div>
-            <div class="row horizontal-line">
-                <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-                    rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-                    crossorigin="anonymous">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h3><strong>Comment Section</strong></h3>
-                            <div class="media g-mb-30 media-comment">
-                                <!-- <img class="d-flex g-width-50 g-height-50 rounded-circle g-mt-3 g-mr-15"> -->
-                                <div class="media-body u-shadow-v18 g-bg-secondary g-pa-30">
-                                    @foreach($calon->comment as $data)
-                                    <div class="commentText">
-                                        <hp><strong>{{ $data->nama }}</strong></hp>
-                                        <p class="">{{ $data->comment }}</p>
-                                    </div>
-                                    @endforeach
+
+        </div>
+    </div>
+
+    <div class="qbootstrap-comment" data-section="comment" data-stellar-background-ratio="0.5">
+        <div class="row horizontal-line">
+            <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+                integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+                crossorigin="anonymous">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h7><strong>Comment Section</strong></h7>
+                        <div class="media g-mb-30 media-comment">
+                            <!-- <img class="d-flex g-width-50 g-height-50 rounded-circle g-mt-3 g-mr-15"> -->
+                            <div class="media-body u-shadow-v18 g-bg-secondary g-pa-30">
+                                @foreach($calon->comment as $data)
+                                <div class="commentText">
+                                    <hp><strong>{{ $data->nama }}</strong></hp>
+                                    <p class="">{{ $data->comment }}</p>
                                 </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>
@@ -1050,15 +993,15 @@
         </div>
     </div> -->
 
-    <footer id="footer" role="contentinfo">
-        <div class="container">
+    <footer id="footer" role="contentinfo" class="section--bg">
+        <div class="container overlay">
             <div class="col-md-12 text-center">
-                <p>Thank You</p>
+                <h8>Thank You</h8>
                 <h1><strong>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</strong></h1>
             </div>
             <div class="row pb-4">
                 <div class="col-md-12 text-center">
-                    <p>Turut Mengundang :</p>
+                    <h8>Turut Mengundang :</h8>
                 </div>
                 <div class="col-md-12 text-center parent">
                     <?php 
@@ -1088,6 +1031,17 @@
             </div>
         </div>
     </footer>
+
+    <!-- strat music-box -->
+    <div class="music-box music-box-2">
+        <button class="music-box-toggle-btn">
+            <i class="fa fa-music" aria-hidden="true"></i>
+        </button>
+        <div class="music-holder">
+            <iframe preload="auto" src="{{$calon->song->song}}"></iframe>
+        </div>
+    </div>
+    <!-- end music box -->
 
 
     <!-- jQuery -->

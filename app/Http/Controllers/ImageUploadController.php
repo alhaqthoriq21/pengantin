@@ -108,6 +108,40 @@ class ImageUploadController extends Controller
                 return $this->sendError("Terjadi Kesalahan dalam Upload Gambar", $e->getMessage());
             }
         }
+
+        if ($files = $request->file('foto_gateway')) {
+            try {
+                    $image = $files;
+                    $input['foto_gateway'] = md5(time() . $files->getClientOriginalName()) . '.' . $image->getClientOriginalExtension();
+                    $destinationPath = public_path('/uploads/');
+                    $image->move($destinationPath, $input['foto_gateway']);
+                    // $img = Image::make($image->getRealPath());
+                    $img = Image::make($destinationPath . $input['foto_gateway']);
+                    $width = $img->width() > 1280 ? 1280 : round($img->width() * 0.8);
+                    $img->resize($width, null, function ($constraint) {
+                        $constraint->aspectRatio();
+                    })->save($destinationPath . '/' . $input['foto_gateway']);
+
+                    $year = date("Y");
+                    $month = date("m");
+                    $date = date("d");
+                    $fixPath = public_path("uploads/images/$year/$month/$date/");
+                    if (!File::isDirectory($fixPath)) {
+                        File::makeDirectory($fixPath, 0777, true, true);
+                    }
+                    $this->compress_image(public_path('uploads/' . $input['foto_gateway']), $fixPath . $input['foto_gateway'], 80);
+                    unlink(public_path('uploads/' . $input['foto_gateway']));
+
+                    $calon = Calon::where('id',$data['uniq_id'])
+                ->update([
+                        "foto_gateway" => "uploads/images/$year/$month/$date/" . $input['foto_gateway']
+                    ]);
+
+                    $images[] = $image;
+            } catch (\Exception $e) {
+                return $this->sendError("Terjadi Kesalahan dalam Upload Gambar", $e->getMessage());
+            }
+        }
     }
 
     // public function uploadSong(Request $request, $data)

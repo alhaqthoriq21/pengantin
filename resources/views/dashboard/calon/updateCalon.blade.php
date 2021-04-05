@@ -123,10 +123,33 @@
                                                                 <label for="" class="col-form-label">Pick Background
                                                                     Color</label>
                                                             </div>
-                                                            <div id="color" class="input-group colorpicker-component">
-                                                                <input type="text" name="color" id="color"
-                                                                    value="#00AABB" class="form-control" />
-                                                                <span class="input-group-addon"><i></i></span>
+                                                            <div id="color" class="input-group color">
+                                                                <input type="text" name="color" id="color" value=""
+                                                                    class="form-control" />
+                                                                <div class="input-group-append">
+                                                                    <span
+                                                                        class="input-group-text colorpicker-component"><i
+                                                                            class="fas fa-square"></i></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row form-group">
+                                                            <div class="col-sm-4">
+                                                                <label for="" class="col-form-label">Foto
+                                                                    Gateway</label>
+                                                            </div>
+                                                            <div class="col-sm-8">
+                                                                <div class="d-flex flex-row">
+                                                                    @if($calon->foto_gateway)
+                                                                    <img width="100px"
+                                                                        src="{{url($calon->foto_gateway)}}" alt=""
+                                                                        srcset="">
+                                                                    @endif
+                                                                    <input type="file" name="foto_gateway"
+                                                                        id="foto_gateway" class="form-control"
+                                                                        accept="image/*">
+                                                                    <div id="uploadProgress"></div>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
