@@ -415,8 +415,8 @@ h4 {
     right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.4);
-
 }
+
 
 .qbootstrap-cover,
 .video-hero {
@@ -556,7 +556,7 @@ h4 {
 .qbootstrap-cover .display-tc h2,
 .video-hero .display-tc h2 {
     color: #fff;
-    font-size: 30px;
+    font-size: 35px;
     margin-bottom: 5px;
     /* font-weight: 300 !important; */
 }

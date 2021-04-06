@@ -364,11 +364,11 @@
 
 
     <div class="qbootstrap-hero" data-section="home">
-        <div class="qbootstrap-overlay"></div>
         @if($calon->fotoHeader->foto_header)
         <div class="qbootstrap-cover text-center center-bg" data-stellar-background-ratio="0.5"
             style="background-image: url({{$calon->fotoHeader->foto_header}});">
             @endif
+            <div class="qbootstrap-overlay"></div>
             <div class="display-t">
                 <div class="display-tc">
                     <div class="container">
