@@ -1944,7 +1944,7 @@ g.pd {
 
 .wishes__slider h5 {
     font-family: "Source Sans Pro", Arial, sans-serif;
-    font-size: 25px;
+    font-size: 18px;
     margin-bottom: 0px;
 }
 
@@ -1954,9 +1954,9 @@ g.pd {
 
 .wishes__title {
     font-family: "Sofia";
-    font-size: 30px;
+    font-size: 20px;
     line-height: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 0px;
 }
 
 .wishes__slider .slick-list {

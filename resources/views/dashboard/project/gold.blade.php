@@ -336,7 +336,7 @@
                                         <h3>Akad Nikah</h3>
                                         <div class="event-col">
                                             <i class="icon-clock"></i>
-                                            <span>{{$calon->akadNikah->waktu}} WIB</span>
+                                            <span>{{$calon->akadNikah->waktu}}</span>
                                             <!-- <span>4:00 PM</span>
                                             <span>6:00 PM</span> -->
                                         </div>
@@ -361,7 +361,7 @@
                                         <h3>Resepsi</h3>
                                         <div class="event-col">
                                             <i class="icon-clock"></i>
-                                            <span>{{$calon->resepsi->waktu_rsp}} WIB</span>
+                                            <span>{{$calon->resepsi->waktu_rsp}}</span>
                                             <!-- <span>7:00 PM</span>
                                             <span>12:00 AM</span> -->
                                         </div>
@@ -782,13 +782,13 @@
 
                 </div>
             </div>
-            <div class="copyright text-center color-wht">ToBeABrideXCloudStudio.</div>
+            <div class="copyright text-center color-wht">ToBeABrideXCloudStudio</div>
             <p><img class="center" style="width:200px;height:200px;" src="assets/img/logo/tobeabride.png" alt=""></p>
             <div class="row">
                 <div class="col-md-12 text-center">
                     <ol class="social social-circle">
-                        <li><a href="https://www.instagram.com/tobeabride/"><i class="icon-instagram"></i></a></li>
-                        <li><a href="https://www.instagram.com/cloudstudio/"><i class="icon-instagram"></i></a></li>
+                        <li><a href="https://www.instagram.com/tobeabride_/"><i class="icon-instagram"></i></a></li>
+                        <li><a href="https://www.instagram.com/cloudphoto.id/"><i class="icon-instagram"></i></a></li>
                     </ol>
                 </div>
             </div>

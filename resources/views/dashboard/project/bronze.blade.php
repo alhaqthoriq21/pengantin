@@ -1389,7 +1389,7 @@ couple-area end
                                     <div class="ceromony-content">
                                         <h3>Akad Nikah</h3>
                                         <span>{{date("l jS F Y", strtotime($calon->akadNikah->tgl))}},
-                                            {{$calon->akadNikah->waktu}} WIB</span>
+                                            {{$calon->akadNikah->waktu}}</span>
                                         <span>{{$calon->akadNikah->tempat}}</span>
                                         <span>{{$calon->akadNikah->alamat}}</span>
                                         <!-- <p>It is a long established fact that a reader will be distracted by the
@@ -1410,7 +1410,7 @@ couple-area end
                                     <div class="ceromony-content ceromony-content2">
                                         <h3>Resepsi</h3>
                                         <span>{{date("l jS F Y", strtotime($calon->resepsi->tgl_rsp))}},
-                                            {{$calon->resepsi->waktu_rsp}} WIB</span>
+                                            {{$calon->resepsi->waktu_rsp}}</span>
                                         <span>{{$calon->resepsi->tempat_rsp}}</span>
                                         <span>{{$calon->resepsi->alamat_rsp}}</span>
                                         <!-- <p>It is a long established fact that a reader will be distracted by the
@@ -1716,13 +1716,13 @@ couple-area end
                     </ul>
                 </div>
             </div>
-            <div class="copyright text-center">ToBeABrideXCloudStudio.</div>
+            <div class="copyright text-center">ToBeABrideXCloudStudio</div>
             <p><img class="center" style="width:200px;height:200px;" src="assets/img/logo/tobeabride.png" alt=""></p>
             <div class="row">
                 <div class="col-md-12 text-center">
                     <ol class="social social-circle">
-                        <li><a href="https://www.instagram.com/tobeabride/"><i class="icon-instagram"></i></a></li>
-                        <li><a href="https://www.instagram.com/cloudstudio/"><i class="icon-instagram"></i></a></li>
+                        <li><a href="https://www.instagram.com/tobeabride_/"><i class="icon-instagram"></i></a></li>
+                        <li><a href="https://www.instagram.com/cloudphoto.id/"><i class="icon-instagram"></i></a></li>
                     </ol>
                 </div>
             </div>

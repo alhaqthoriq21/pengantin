@@ -699,8 +699,8 @@
                                         class="fa fa-2x fa-map-marker align-middle pr-1"></i>{{$calon->akadNikah->alamat}}
                                 </p>
                                 <p class="d-flex align-items-center"><i
-                                        class="fa fa-2x fa-clock-o align-middle pr-1"></i>{{$calon->akadNikah->waktu}}
-                                    WIB, {{date("l jS F Y", strtotime($calon->akadNikah->tgl))}}
+                                        class="fa fa-2x fa-clock-o align-middle pr-1"></i>{{$calon->akadNikah->waktu}},
+                                    {{date("l jS F Y", strtotime($calon->akadNikah->tgl))}}
                                 </p>
                                 <!-- <p class="font-weight-bold">Keep it classy</p> -->
                                 <a class="btn btn-outline-dark rounded-0 px-2 py-1 popup-gmaps"
@@ -722,8 +722,8 @@
                                         class="fa fa-2x fa-map-marker align-middle pr-1"></i>{{$calon->resepsi->alamat_rsp}}
                                 </p>
                                 <p class="d-flex align-items-center"><i
-                                        class="fa fa-2x fa-clock-o align-middle pr-1"></i>{{$calon->resepsi->waktu_rsp}}
-                                    WIB, {{date("l jS F Y", strtotime($calon->resepsi->tgl_rsp))}}
+                                        class="fa fa-2x fa-clock-o align-middle pr-1"></i>{{$calon->resepsi->waktu_rsp}},
+                                    {{date("l jS F Y", strtotime($calon->resepsi->tgl_rsp))}}
                                 </p>
                                 <!-- <p class="font-weight-bold">Keep it classy</p> -->
                                 <a class="btn btn-outline-dark rounded-0 px-2 py-1 popup-gmaps"
@@ -944,14 +944,14 @@
                     </ul>
                 </div>
             </div>
-            <div class="copyright text-center">ToBeABrideXCloudStudio.</div>
+            <div class="copyright text-center">ToBeABrideXCloudStudio</div>
             <p><img class="center" style="width:200px;height:200px;" src="assets/img/logo/tobeabride.png" alt="">
             </p>
             <div class="row">
                 <div class="col-md-12 text-center">
                     <ol class="social social-circle">
-                        <li><a href="https://www.instagram.com/tobeabride/"><i class="icon-instagram"></i></a></li>
-                        <li><a href="https://www.instagram.com/cloudstudio/"><i class="icon-instagram"></i></a></li>
+                        <li><a href="https://www.instagram.com/tobeabride_/"><i class="icon-instagram"></i></a></li>
+                        <li><a href="https://www.instagram.com/cloudphoto.id/"><i class="icon-instagram"></i></a></li>
                     </ol>
                 </div>
             </div>

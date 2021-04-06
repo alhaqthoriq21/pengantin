@@ -224,7 +224,7 @@ dfn {
 
 b,
 strong {
-    font-weight: bolder;
+    /* font-weight: bolder; */
 }
 
 small {
