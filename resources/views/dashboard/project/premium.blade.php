@@ -341,7 +341,7 @@
                                     <h6>Dear, {{$qs['u']}}</h6>
                                     @endif
                                     <p><span>You're Invited!</span></p>
-                                    <h3 class="holder"><span>Welcome to the Wedding of</span></h3>
+                                    <h3 class="holder"><span>The Wedding of</span></h3>
                                     <h2><strong>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</strong></h2>
                                     <p><button href="#" class="button button4"><i class="fa fa-heart"></i> Open
                                             Invitation</button>

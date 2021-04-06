@@ -483,7 +483,7 @@ h4 {
 .qbootstrap-cover .display-tc,
 .video-hero .display-tc {
     display: table-cell;
-    vertical-align: middle;
+    vertical-align: top;
 }
 
 .qbootstrap-cover .display-tc .holder,
