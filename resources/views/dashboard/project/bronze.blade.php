@@ -80,13 +80,11 @@
     }
 
     .centered {
-        position: absolute;
-        top: 25%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        justify-content: center;
     }
 
     .button4 {
+        margin-top: 10px;
         background-color: #ffffff;
         color: black;
         border-radius: 12px;
@@ -95,11 +93,21 @@
     }
 
 
-    @media screen and (min-width: 280px) {
+    @media screen and (max-width: 768px) {
 
         .qbootstrap-cover .display-t .display-tc .button4 {
-            width: 250px;
+            width: 260px;
+            display: table-cell;
             vertical-align: middle;
+        }
+    }
+
+    @media screen and (max-width: 360px) {
+
+        .qbootstrap-cover .display-t .display-tc .button4 {
+            width: 230px;
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 
@@ -224,14 +232,14 @@ welcome-area
     }
 
     .welcome-content h2 {
-        font-size: 55px;
+        font-size: 45px;
         color: #fff;
         font-family: 'Great Vibes', cursive;
     }
 
     .welcome-content p {
         font-size: 18px;
-        padding: 20px 50px 30px;
+        padding: 10px 0px 20px;
         color: #fff;
         max-width: 700px;
         margin-bottom: 0px;
@@ -278,7 +286,7 @@ guest-area
 
     .section-title-guest h2 {
         position: relative;
-        font-size: 50px;
+        font-size: 35px;
         font-family: 'Great Vibes', cursive;
         margin-bottom: 50px;
         color: #fff;
@@ -288,7 +296,7 @@ guest-area
     .section-title-guest h2:before {
         position: absolute;
         content: "";
-        background: url(assets/img/bronze/section/2.png) no-repeat center center / cover;
+        /* background: url(assets/img/bronze/section/4.png) no-repeat center center / cover; */
         width: 26%;
         height: 22%;
         top: -13px;
@@ -298,7 +306,7 @@ guest-area
     .section-title-guest h2:after {
         position: absolute;
         content: "";
-        background: url(assets/img/bronze/section/1.png) no-repeat center center / cover;
+        /* background: url(assets/img/bronze/section/4.png) no-repeat center center / cover; */
         width: 26%;
         height: 22%;
         bottom: -13px;
@@ -317,7 +325,7 @@ guest-area
     .section-title2.section-title3 h2:before {
         position: absolute;
         content: "";
-        background: url(assets/img/bronze/section/3.png) no-repeat center center / cover;
+        /* background: url(assets/img/bronze/section/3.png) no-repeat center center / cover; */
         width: 40%;
         height: 53%;
         bottom: -9px;
@@ -448,7 +456,7 @@ comment-area
 
     .section-title-comment h2 {
         position: relative;
-        font-size: 50px;
+        font-size: 35px;
         font-family: 'Great Vibes', cursive;
         margin-bottom: 50px;
         color: #fff;
@@ -458,7 +466,7 @@ comment-area
     .section-title-comment h2:before {
         position: absolute;
         content: "";
-        background: url(assets/img/bronze/section/2.png) no-repeat center center / cover;
+        /* background: url(assets/img/bronze/section/4.png) no-repeat center center / cover; */
         width: 26%;
         height: 22%;
         top: -13px;
@@ -468,7 +476,7 @@ comment-area
     .section-title-comment h2:after {
         position: absolute;
         content: "";
-        background: url(assets/img/bronze/section/1.png) no-repeat center center / cover;
+        /* background: url(assets/img/bronze/section/4.png) no-repeat center center / cover; */
         width: 26%;
         height: 22%;
         bottom: -13px;
@@ -487,7 +495,7 @@ comment-area
     .section-title2.section-title3 h2:before {
         position: absolute;
         content: "";
-        background: url(assets/img/bronze/section/3.png) no-repeat center center / cover;
+        /* background: url(assets/img/bronze/section/3.png) no-repeat center center / cover; */
         width: 40%;
         height: 53%;
         bottom: -9px;
@@ -591,9 +599,19 @@ comment-area
 couple-area
 =====================================*/
 
+
+    .section-title .svg-sm .svg {
+        height: -50px;
+        margin-bottom: 0;
+    }
+
+    .section-title .colored .svg {
+        fill: <?=$calon->color ?>;
+    }
+
     .section-title h2 {
         position: relative;
-        font-size: 50px;
+        font-size: 35px;
         font-family: 'Great Vibes', cursive;
         margin-bottom: 50px;
         color: <?=$calon->color ?>;
@@ -602,7 +620,7 @@ couple-area
     .section-title h2:before {
         position: absolute;
         content: "";
-        background: url(assets/img/bronze/section/2.png) no-repeat center center / cover;
+        /* background: url(assets/img/bronze/svg/1.svg) no-repeat center center / cover; */
         width: 26%;
         height: 22%;
         top: -13px;
@@ -612,7 +630,7 @@ couple-area
     .section-title h2:after {
         position: absolute;
         content: "";
-        background: url(assets/img/bronze/section/1.png) no-repeat center center / cover;
+        /* background: url(assets/img/bronze/svg/2.svg) no-repeat center center / cover; */
         width: 26%;
         height: 22%;
         bottom: -13px;
@@ -645,7 +663,7 @@ couple-area
     .section-title2 h2:before {
         position: absolute;
         content: "";
-        background: url(assets/img/bronze/section/3.png) no-repeat center center / cover;
+        /* background: url(assets/img/bronze/section/3.png) no-repeat center center / cover; */
         width: 18%;
         height: 63%;
         bottom: -9px;
@@ -815,7 +833,7 @@ couple-area end
 
     .section-title-gallery h2 {
         position: relative;
-        font-size: 50px;
+        font-size: 35px;
         font-family: 'Great Vibes', cursive;
         margin-bottom: 50px;
         color: #fff;
@@ -825,7 +843,7 @@ couple-area end
     .section-title-gallery h2:before {
         position: absolute;
         content: "";
-        background: url(assets/img/bronze/section/2.png) no-repeat center center / cover;
+        /* background: url(assets/img/bronze/section/2.png) no-repeat center center / cover; */
         width: 26%;
         height: 22%;
         top: -13px;
@@ -835,7 +853,7 @@ couple-area end
     .section-title-gallery h2:after {
         position: absolute;
         content: "";
-        background: url(assets/img/bronze/section/1.png) no-repeat center center / cover;
+        /* background: url(assets/img/bronze/section/1.png) no-repeat center center / cover; */
         width: 26%;
         height: 22%;
         bottom: -13px;
@@ -976,7 +994,7 @@ couple-area end
     .story .story-content h2 {
         margin-bottom: 2px;
         font-family: 'Great Vibes', cursive;
-        font-size: 40px;
+        font-size: 25px;
         color: <?=$calon->color ?>;
     }
 
@@ -1029,12 +1047,16 @@ couple-area end
         -webkit-transform: rotateZ(45deg);
         transform: rotateZ(45deg);
     }
+
+    .text-center {
+        text-align: center !important;
+    }
     </style>
 
 
 </head>
 
-<body id="home" style="overflow-x: hidden;">
+<body id="home">
     <!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
@@ -1046,7 +1068,7 @@ couple-area end
     </div>
     <!-- prealoader area end -->
     <!-- header-area start -->
-    <header class="sticky-header">
+    <header id="sticky-header" class="sticky-header">
         <div class="header-area header-area-3">
             <div class="container">
                 <div class="row">
@@ -1062,7 +1084,7 @@ couple-area end
     </header>
     <!-- header-area end -->
     <!-- //Gateway  -->
-    <div class="gateway gt-section" id="gt" style="overflow-y: hidden;">
+    <div class="gateway gt-section" id="gt">
         <div class="qbootstrap-hero" data-section="home">
             <div class="qbootstrap-overlay"></div>
             <div class="qbootstrap-cover text-center center-bg" data-stellar-background-ratio="0.5">
@@ -1078,9 +1100,11 @@ couple-area end
                                         <h6><strong>You're Invited!</strong></h6>
                                         <h4>We're Getting Married</h4>
                                         <h2>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</h2>
+
                                     </div>
                                 </div>
-                                <p><button href="#" class="button center button4"><i class="fa fa-heart"></i> Open
+                                <p><button href="#" class="button text-center button4"><i class="fa fa-heart"></i>
+                                        Open
                                         Invitation</button></p>
                             </div>
                         </div>
@@ -1091,7 +1115,7 @@ couple-area end
     </div>
 
     <!-- slider-area start -->
-    <div class="qbootstrap-hero" data-section="home" style="overflow-x: hidden;">
+    <div class="qbootstrap-hero" data-section="home">
         <div class=" qbootstrap-overlay"></div>
         @if($calon->fotoHeader->foto_header)
         <div class="qbootstrap-cover text-center center-bg bg-cover" data-stellar-background-ratio="0.5"
@@ -1120,8 +1144,10 @@ couple-area end
     <div id="cuple" class="couple-area ptb--100">
         <div class="container">
             <div class="col-l2">
-                <div class="section-title text-center">
+                <div class="section-title text-center svg-sm colored">
+                    <!-- <img src="assets/img/premium/flaticon/svg/004-nature.svg" class="svg" alt=""> -->
                     <h2>Happy Couple</h2>
+                    <!-- <img src="assets/img/bronze/svg/2.svg" class="svg" alt=""> -->
                 </div>
             </div>
             <div class="couple-wrap">
@@ -1184,7 +1210,7 @@ couple-area end
     </div>
     <!-- couple-area end -->
     <!-- start count-down-section -->
-    <div class="count-down-area count-down-area-sub">
+    <div id="countdown" class="count-down-area count-down-area-sub">
         <section class="count-down-section section-padding parallax" data-speed="7">
             <div class="container">
                 <div class="row">
@@ -1534,7 +1560,7 @@ couple-area end
     </div> -->
     <!-- gallery area end -->
     <!-- guest-area strat -->
-    <div id="Contact" class="guest-area horizontal-line">
+    <div id="rsvp" class="guest-area horizontal-line">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 offset-lg-2">
@@ -1585,7 +1611,7 @@ couple-area end
     <!-- //guest area end -->
 
     <!-- //comment  -->
-    <div id="Comment" class="comment-area horizontal-line">
+    <div id="comment" class="comment-area horizontal-line">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 offset-lg-2">
@@ -1690,7 +1716,7 @@ couple-area end
                     </ul>
                 </div>
             </div>
-            <div class="copyright text-center">&copy;2021 ToBeABrideXCloudStudio.</div>
+            <div class="copyright text-center">ToBeABrideXCloudStudio.</div>
             <p><img class="center" style="width:200px;height:200px;" src="assets/img/logo/tobeabride.png" alt=""></p>
             <div class="row">
                 <div class="col-md-12 text-center">

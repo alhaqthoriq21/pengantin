@@ -70,6 +70,7 @@
     }
 
     .button4 {
+        /* margin-top: 10px; */
         background-color: #ffffff;
         color: black;
         border-radius: 12px;
@@ -408,7 +409,7 @@
         </div>
     </div>
 
-    <div class="gateway gt-section" id="gt" style="overflow-y: hidden;">
+    <div class="gateway gt-section" id="gt">
         <div class="qbootstrap-hero" data-section="home">
             <div class="qbootstrap-overlay"></div>
             <div class="qbootstrap-cover text-center center-bg" data-stellar-background-ratio="0.5">
@@ -424,11 +425,12 @@
                                     <p><strong>You're Invited!</strong></p>
                                     <h1 class="holder"><span>The Wedding of</span></h1>
                                     <h2>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</h2>
+
                                 </div>
-                                <p><button href="#" class="button button4"><i class="fa fa-heart"></i> Open
-                                        Invitation</button>
-                                </p>
                             </div>
+                            <p><button href="#" class="button button4"><i class="fa fa-heart"></i> Open
+                                    Invitation</button>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -942,7 +944,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="copyright text-center">&copy;2021 ToBeABrideXCloudStudio.</div>
+            <div class="copyright text-center">ToBeABrideXCloudStudio.</div>
             <p><img class="center" style="width:200px;height:200px;" src="assets/img/logo/tobeabride.png" alt="">
             </p>
             <div class="row">

@@ -318,6 +318,10 @@
         -ms-border-radius: 50%;
         border-radius: 50%;
     }
+
+    .music-box.music-box-2 button {
+        color: <?=$calon->color ?>;
+    }
     </style>
 
 </head>

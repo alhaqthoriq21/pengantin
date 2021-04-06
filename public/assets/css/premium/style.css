@@ -2381,9 +2381,6 @@ h2.komentar {
     border-radius: 50%;
 }
 
-.music-box.music-box-2 button {
-    color: #b16f90;
-}
 
 @media (max-width: 991px) {
     .music-box button {

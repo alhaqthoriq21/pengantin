@@ -36,6 +36,71 @@ Theme Default CSS
 @import url('../../../../../css.css');
 
 
+/* media  */
+/* @media screen and (max-width: 768px) {
+    #sticky-header {
+        margin-top: 0;
+        background: #fff;
+        -webkit-box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
+        -moz-box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
+        -ms-box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
+    } */
+
+#cuple,
+#countdown,
+#story,
+#event,
+#rsvp,
+#comment,
+#gallery {
+    padding: 7em 0;
+}
+
+@media screen and (max-width: 480px) {
+
+    #cuple,
+    #countdown,
+    #story,
+    #event,
+    #rsvp,
+    #comment,
+    #gallery {
+        padding: 5em 0;
+    }
+
+}
+
+/* @media screen and (max-width: 768px) {
+
+        .qbootstrap-cover,
+        .qbootstrap-hero {
+            height: 700px;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+
+        .qbootstrap-cover,
+        .video-hero {
+            height: inherit;
+            padding: 3em 0;
+        }
+
+        @media screen and (max-width: 768px) {
+
+            .qbootstrap-cover .display-t,
+            .video-hero .display-t {
+                height: 600px;
+            }
+        } */
+
+.js .animate-box {
+    opacity: 0;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -492,7 +557,7 @@ slider-area
 
 .slider-content {
     background: url(assets/img/bronze/slider/1.png) no-repeat center center / cover;
-    width: 570px;
+    width: 650px;
     height: 500px;
     margin: auto;
     display: flex;
@@ -522,7 +587,7 @@ slider-area
     margin-top: 0px;
     margin: 0px;
     margin-bottom: 0px;
-    display: inline-block;
+    /* display: inline-block; */
 }
 
 .slider-content p {
@@ -1978,17 +2043,17 @@ h4.comment-title {
     width: 100%;
 }
 
-/* .qbootstrap-overlay {
+.qbootstrap-overlay {
     position: absolute !important;
     width: 100%;
+    height: 100%;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
     z-index: 1;
     background: rgba(0, 0, 0, 0.4);
-
-} */
+}
 
 @media screen and (max-width: 768px) {
 
@@ -2009,52 +2074,6 @@ h4.comment-title {
         background-repeat: no-repeat;
     }
 }
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-
-    .qbootstrap-cover,
-    .qbootstrap-hero {
-        height: 600px;
-        background-position: center center;
-        background-repeat: no-repeat;
-    }
-
-    .button4 {
-        width: 200px;
-        height: 25px;
-        vertical-align: middle;
-    }
-
-    .qbootstrap-cover .display-tc,
-    .video-hero .display-tc {
-        display: table-cell;
-        vertical-align: middle;
-    }
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-
-    .qbootstrap-cover,
-    .qbootstrap-hero {
-        height: 900px;
-        background-position: center center;
-        background-repeat: no-repeat;
-    }
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-
-    .qbootstrap-cover,
-    .qbootstrap-hero {
-        height: 1100px;
-        background-position: center center;
-        background-repeat: no-repeat;
-    }
-}
-
 
 .qbootstrap-cover,
 .video-hero {
@@ -2099,7 +2118,7 @@ h4.comment-title {
 .qbootstrap-cover .display-tc,
 .video-hero .display-tc {
     display: table-cell;
-    vertical-align: middle;
+    vertical-align: top;
 }
 
 .qbootstrap-cover .display-tc .holder,
@@ -2173,7 +2192,7 @@ h4.comment-title {
 .video-hero .display-tc h2 {
     color: #fff;
     font-size: 30px;
-    margin-bottom: 0px;
+    /* margin-bottom: 0px; */
     /* font-weight: 300 !important; */
     font-family: "Beth Ellen";
 }
@@ -2235,8 +2254,6 @@ h4.comment-title {
     }
 }
 
-
-
 .qbootstrap-cover .display-tc p,
 .video-hero .display-tc p {
     color: #fff;
@@ -2247,16 +2264,6 @@ h4.comment-title {
     margin-bottom: 0px;
 }
 
-.qbootstrap-cover .display-tc .svg-sm .svg,
-.video-hero .display-tc .svg-sm .svg {
-    height: 180px;
-    margin-bottom: 0;
-}
-
-.qbootstrap-cover .display-tc .colored .svg,
-.video-hero .display-tc .colored .svg {
-    fill: #fff;
-}
 
 /* //gallery slider 
 .gallery {

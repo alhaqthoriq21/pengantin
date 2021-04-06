@@ -782,7 +782,7 @@
 
                 </div>
             </div>
-            <div class="copyright text-center color-wht">&copy;2021 ToBeABrideXCloudStudio.</div>
+            <div class="copyright text-center color-wht">ToBeABrideXCloudStudio.</div>
             <p><img class="center" style="width:200px;height:200px;" src="assets/img/logo/tobeabride.png" alt=""></p>
             <div class="row">
                 <div class="col-md-12 text-center">
