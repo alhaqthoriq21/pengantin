@@ -2202,7 +2202,7 @@ h4.comment-title {
     font-weight: 700;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 836px) {
 
     .qbootstrap-cover .display-tc h2,
     .video-hero .display-tc h2 {
