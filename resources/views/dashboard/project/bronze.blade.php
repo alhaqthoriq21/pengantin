@@ -1097,7 +1097,7 @@ couple-area end
                                         @if (isset($qs['u']))
                                         <h3>Dear {{$qs['u']}},</h3>
                                         @endif
-                                        <h6><strong>You're Invited!</strong></h6>
+                                        <p><strong>You're Invited!</strong></h6>
                                         <h4>We're Getting Married</h4>
                                         <h2>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</h2>
 
