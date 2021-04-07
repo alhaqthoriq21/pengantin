@@ -355,14 +355,6 @@
         </div>
     </div>
 
-
-
-
-    <!-- <audio controls autoplay loop style="display:none;">
-        <source src="https://media.vocaroo.com/mp3/6JEBAPEMA6A" type="audio/mpeg">
-    </audio> -->
-
-
     <div class="qbootstrap-hero" data-section="home">
         @if($calon->fotoHeader->foto_header)
         <div class="qbootstrap-cover text-center center-bg" data-stellar-background-ratio="0.5"
@@ -409,8 +401,8 @@
                         <p><strong>Putra Dari</strong></p>
                         <p>Bpk. {{$calon->ayah_pria}}</p>
                         <p>& Ibu {{$calon->ibu_pria}}</p>
-                        <h2><a href="https://www.instagram.com/{{$calon->sosmed_pria}}/"><i
-                                    class="icon-instagram"></i></a></h2>
+                        <p><a href="https://www.instagram.com/{{$calon->sosmed_pria}}/"><i
+                                    class="icon-instagram"></i></a></p>
                     </div>
                     <div class="col-md-2 col-sm-2 col-xs-2 nopadding">
                         <h2 class="amp-center"><img src="assets/img/premium/flaticon/svg/003-luxury.svg" class="svg"
@@ -423,8 +415,8 @@
                         <p><strong>Putri Dari</strong></p>
                         <p>Bpk. {{$calon->ayah_wanita}}</p>
                         <p>& Ibu {{$calon->ibu_wanita}}</p>
-                        <h2><a href="https://www.instagram.com/{{$calon->sosmed_wanita}}/"><i
-                                    class="icon-instagram"></i></a></h2>
+                        <p><a href="https://www.instagram.com/{{$calon->sosmed_wanita}}/"><i
+                                    class="icon-instagram"></i></a></p>
                     </div>
                 </div>
             </div>
@@ -834,8 +826,9 @@
     <div class="container bg-white">
     </div>
 
+
     @if($calon->fotoBody->foto_kedua)
-    <div id="qbootstrap-comment" class="qbootstrap-bg" data-section="comment" data-stellar-background-ratio="0.5"
+    <div id="qbootstrap-comment" class="" data-section="comment" data-stellar-background-ratio="0.5"
         style="background-image:url({{$calon->fotoBody->foto_kedua}});">
         @endif
         <div class="overlay"></div>

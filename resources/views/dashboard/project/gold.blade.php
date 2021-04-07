@@ -297,6 +297,8 @@
                             <p><strong>Putra Dari</strong></p>
                             <p>Bpk. {{$calon->ayah_pria}} </p>
                             <p>& Ibu {{$calon->ibu_pria}} </p>
+                            <p><a href="https://www.instagram.com/{{$calon->sosmed_pria}}/"><i
+                                        class="icon-instagram"></i></a></p>
                         </div>
                     </div>
                     <p class="heart text-center"><i class="icon-heart2"></i></p>
@@ -310,6 +312,8 @@
                             <p><strong>Putri Dari</strong></p>
                             <p>Bpk. {{$calon->ayah_wanita}} </p>
                             <p>& Ibu {{$calon->ibu_wanita}} </p>
+                            <p><a href="https://www.instagram.com/{{$calon->sosmed_wanita}}/"><i
+                                        class="icon-instagram"></i></a></p>
                         </div>
                     </div>
                 </div>
