@@ -219,6 +219,21 @@
             vertical-align: middle;
         }
     }
+
+    .hide {
+        padding: 0.5% 0%;
+        width: 18%;
+        color: white;
+        border-radius: 3px;
+        transition: 0.5s opacity;
+        background: rgba(1, 1, 1, 1);
+        border: 2px solid rgba(1, 1, 1, 0.7);
+    }
+
+    .hide:hover {
+        cursor: pointer;
+        opacity: 0.5;
+    }
     </style>
 
 </head>
@@ -241,10 +256,11 @@
                                 <p><strong>You're Invited!</strong></p>
                                 <h3>We Are Getting Married</h3>
                                 <h1>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</h1>
-                                <p><button href="#" class="button button4"><i class="fa fa-heart"></i>
+                                <p><button href="#" id="play-music" class="button button4"><i class="fa fa-heart"></i>
                                         Open
                                         Invitation</button>
                                 </p>
+                                <!-- <div class="hide" onclick="play()">Open Invitation</div> -->
                             </div>
                         </div>
                     </div>
@@ -806,10 +822,11 @@
             <i class="fa fa-music" aria-hidden="true"></i>
         </button>
         <div class="music-holder">
-            <iframe display: block type="text/html" id="music" src="{{$calon->song->song}}"></iframe>
+            <iframe type="text/html" id="music" src="{{$calon->song->song}}"></iframe>
         </div>
     </div>
-    <!-- <audio id="audio" src="{{$calon->song->song}}" preload="auto"></audio> -->
+    <!-- <audio controls autoplay muted id="audio" src="{{$calon->song->song}}" preload="auto"></audio> -->
+
 
     <!-- end music box -->
 
