@@ -241,7 +241,7 @@
                                 <p><strong>You're Invited!</strong></p>
                                 <h3>We Are Getting Married</h3>
                                 <h1>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</h1>
-                                <p><button href="#" onclick="play()" class="button button4"><i class="fa fa-heart"></i>
+                                <p><button href="#" class="button button4"><i class="fa fa-heart"></i>
                                         Open
                                         Invitation</button>
                                 </p>
@@ -801,15 +801,15 @@
     </footer>
 
     <!-- strat music-box -->
-    <!-- <div class="music-box music-box-2">
+    <div class="music-box music-box-2">
         <button class="music-box-toggle-btn">
             <i class="fa fa-music" aria-hidden="true"></i>
         </button>
         <div class="music-holder">
             <iframe display: block type="text/html" id="music" src="{{$calon->song->song}}"></iframe>
         </div>
-    </div> -->
-    <audio id="audio" src="{{$calon->song->song}}" preload="auto"></audio>
+    </div>
+    <!-- <audio id="audio" src="{{$calon->song->song}}" preload="auto"></audio> -->
 
     <!-- end music box -->
 
@@ -869,29 +869,29 @@
         $(".gateway").slideUp("slow");
     });
 
-    // $(document).ready(function() {
-    //     $('#play-music').on('click', function(ev) {
+    $(document).ready(function() {
+        $('#play-music').on('click', function(ev) {
 
-    //         $("#music")[0].src += "&autoplay=1";
-    //         ev.preventDefault();
+            $("#music")[0].src += "&autoplay=1";
+            ev.preventDefault();
 
-    //     });
-    // });
+        });
+    });
 
-    function play() {
-        var audio = document.getElementById('audio');
-        if (audio.paused) {
-            audio.play();
-        } else {
-            audio.pause();
-        }
-        var audios = document.getElementById('audios');
-        if (audios.paused) {
-            audios.play();
-        } else {
-            audios.pause();
-        }
-    }
+    // function play() {
+    //     var audio = document.getElementById('audio');
+    //     if (audio.paused) {
+    //         audio.play();
+    //     } else {
+    //         audio.pause();
+    //     }
+    //     var audios = document.getElementById('audios');
+    //     if (audios.paused) {
+    //         audios.play();
+    //     } else {
+    //         audios.pause();
+    //     }
+    // }
     </script>
 
 
