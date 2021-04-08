@@ -806,7 +806,7 @@
             <i class="fa fa-music" aria-hidden="true"></i>
         </button>
         <div class="music-holder">
-            <iframe display: block id="music" src="{{$calon->song->song}}"></iframe>
+            <iframe display: block type="text/html" id="music" src="{{$calon->song->song}}"></iframe>
         </div>
     </div>
     <!-- end music box -->
