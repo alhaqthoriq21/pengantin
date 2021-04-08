@@ -1067,6 +1067,7 @@ couple-area end
         </div>
     </div>
     <!-- prealoader area end -->
+
     <!-- header-area start -->
     <header id="sticky-header" class="sticky-header">
         <div class="header-area header-area-3">
@@ -1074,7 +1075,7 @@ couple-area end
                 <div class="row">
                     <div class="col-lg-3 col-md-11 col-sm-11 col-10">
                         <div class="logo">
-                            <h1><a href="index.html">{{$calon->nick_pria}}<span><i class="fa fa-heart"
+                            <h1><a href="#">{{$calon->nick_pria}}<span><i class="fa fa-heart"
                                             aria-hidden="true"></i></span>{{$calon->nick_wanita}}</a></h1>
                         </div>
                     </div>
@@ -1100,12 +1101,13 @@ couple-area end
                                         <p><strong>You're Invited!</strong></h6>
                                         <h4>We're Getting Married</h4>
                                         <h2>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</h2>
-
+                                        <p><button href="#" id="play-music" class="button text-center button4"><i
+                                                    class="fa fa-heart"></i>
+                                                Open
+                                                Invitation</button></p>
                                     </div>
                                 </div>
-                                <p><button href="#" class="button text-center button4"><i class="fa fa-heart"></i>
-                                        Open
-                                        Invitation</button></p>
+
                             </div>
                         </div>
                     </div>
@@ -1465,100 +1467,7 @@ couple-area end
             <!-- </div> -->
         </div>
     </div>
-    <!-- gallery area start -->
-    <!-- <div id="gallery" class="gallery-area pt--100 pb--70">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-title text-center">
-                        <h2>Our Gallery</h2>
-                    </div>
-                </div> -->
-    <!-- <div class="col-12">
-                    <div class="gallery-menu text-center">
-                        <button class="active" data-filter="*">All</button>
-                        <button data-filter=".Pre-Wedding">Pre Wedding</button>
-                        <button data-filter=".Enagagement">Enagagement</button>
-                        <button data-filter=".Parties">Parties</button>
-                    </div>
-                </div> -->
-    <!-- </div> -->
-    <!-- <div class="row grid">
-                <div class="col-lg-4 col-md-6 col-sm-6 col-12 grid-item Pre-Wedding">
-                    <div class="gallery-single">
-                        @foreach($calon->fotoFooter as $data)
-                        <img src="{{$data->foto}}" alt="">
-                        <div class="social-1st">
-                            <ul>
-                                <li><a href="{{$data->foto}}" class="expand-img"><i class="fa fa-search"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    @endforeach
-                </div> -->
-    <!-- <div class="col-lg-4 col-md-6 col-sm-6 col-12 grid-item Enagagement">
-                    <div class="gallery-single">
-                        <img src="assets\img\bronze\gallery\4.jpg" alt="">
-                        <div class="social-1st">
-                            <ul>
-                                <li><a href="assets\img\bronze\gallery\4.jpg" class="expand-img"><i
-                                            class="fa fa-search"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12 col-sm-6 grid-item Pre-Wedding">
-                    <div class="gallery-single">
-                        <img src="assets\img\bronze\gallery\2.jpg" alt="">
-                        <div class="social-1st">
-                            <ul>
-                                <li><a href="assets\img\bronze\gallery\2.jpg" class="expand-img"><i
-                                            class="fa fa-search"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12 col-sm-6 grid-item Parties">
-                    <div class="gallery-single">
-                        <img src="assets\img\bronze\gallery\3.jpg" alt="">
-                        <div class="social-1st">
-                            <ul>
-                                <li> <a href="https://https://www.youtube.com/watch?v=Wxy80QvnMwA" data-type="iframe"
-                                        class="expand-video">
-                                        <i class="fa fa-play"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12 col-sm-6 grid-item Enagagement Parties">
-                    <div class="gallery-single">
-                        <img src="assets\img\bronze\gallery\5.jpg" alt="">
-                        <div class="social-1st">
-                            <ul>
-                                <li><a href="assets\img\bronze\gallery\5.jpg" class="expand-img"><i
-                                            class="fa fa-search"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12 col-sm-6 grid-item Enagagement Parties">
-                    <div class="gallery-single">
-                        <img src="assets\img\bronze\gallery\6.jpg" alt="">
-                        <div class="social-1st">
-                            <ul>
-                                <li><a href="assets\img\bronze\gallery\6.jpg" class="expand-img"><i
-                                            class="fa fa-search"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div> -->
-    <!-- </div> -->
-    <!-- </div>
-    </div> -->
-    <!-- gallery area end -->
+
     <!-- guest-area strat -->
     <div id="rsvp" class="guest-area horizontal-line">
         <div class="container">
@@ -1675,27 +1584,6 @@ couple-area end
     </div>
     </div>
     <!-- Comment-area end -->
-    <!-- Gift Registration start -->
-    <!-- <div class="Gift-area pt--100 pb--30">
-        <div class="container">
-            <div class="col-12">
-                <div class="section-title text-center">
-                    <h2>Gift Registration</h2>
-                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered
-                        alteration in some form, by injected humour, or randomised.</p>
-                </div>
-            </div>
-            <div class="gift-item">
-                <div class="Gift-carousel owl-carousel">
-                    <img src="assets\img\bronze\gift\3.png" alt="clinet">
-                    <img src="assets\img\bronze\gift\2.png" alt="clinet">
-                    <img src="assets\img\bronze\gift\3.png" alt="clinet">
-                    <img src="assets\img\bronze\gift\4.png" alt="clinet">
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- Gift Registration end -->
     <!-- .footer-area start -->
     <footer class="section horizontal-line ">
         <div class="container text-white position-relative">
@@ -1735,7 +1623,7 @@ couple-area end
             <i class="fa fa-music" aria-hidden="true"></i>
         </button>
         <div class="music-holder">
-            <iframe preload="auto" src="{{$calon->song->song}}"></iframe>
+            <iframe id="music" src="{{$calon->song->song}}"></iframe>
         </div>
     </div>
     <!-- end music box -->
@@ -1774,6 +1662,15 @@ couple-area end
     <script src="{{asset('assets/js/bronze/slick.min.js')}}"></script>
 
     <script>
+    $(document).ready(function() {
+        $('#play-music').on('click', function(ev) {
+
+            $("#music")[0].src += "&autoplay=1";
+            ev.preventDefault();
+
+        });
+    });
+
     const calon = @json($calon);
     // console.log(calon);
 

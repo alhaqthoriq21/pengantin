@@ -343,7 +343,8 @@
                                     <p><span>You're Invited!</span></p>
                                     <h3 class="holder"><span>The Wedding of</span></h3>
                                     <h2><strong>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</strong></h2>
-                                    <p><button href="#" class="button button4"><i class="fa fa-heart"></i> Open
+                                    <p><button href="#" id="play-music" class="button button4"><i
+                                                class="fa fa-heart"></i> Open
                                             Invitation</button>
                                     </p>
                                 </div>
@@ -1035,7 +1036,7 @@
             <i class="fa fa-music" aria-hidden="true"></i>
         </button>
         <div class="music-holder">
-            <iframe preload="auto" src="{{$calon->song->song}}"></iframe>
+            <iframe id="music" src="{{$calon->song->song}}"></iframe>
         </div>
     </div>
     <!-- end music box -->
@@ -1104,12 +1105,17 @@
         }
     }, 1000);
 
-    // $('.nothanks').click(function() {
-    //     $('#gt').addClass('move-gate');
-    // });
-
     $(".button").click(function() {
         $(".gateway").slideUp("slow");
+    });
+
+    $(document).ready(function() {
+        $('#play-music').on('click', function(ev) {
+
+            $("#music")[0].src += "&autoplay=1";
+            ev.preventDefault();
+
+        });
     });
     </script>
 

@@ -428,7 +428,8 @@
 
                                 </div>
                             </div>
-                            <p><button href="#" class="button button4"><i class="fa fa-heart"></i> Open
+                            <p><button href="#" class="button button4" id="play-music"><i class="fa fa-heart"></i>
+                                    Open
                                     Invitation</button>
                             </p>
                         </div>
@@ -884,7 +885,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label" for="inputNumber">Comment</label>
-                                    <input type="tel" class="form-control" id="comment" name="comment" required="">
+                                    <input type="text" class="form-control" id="comment" name="comment" required="">
                                 </div>
                             </div>
                             <div class="col-md-4 align-self-end">
@@ -962,8 +963,8 @@
         <button class="music-box-toggle-btn">
             <i class="fa fa-music" aria-hidden="true"></i>
         </button>
-        <div class="music-holder">
-            <iframe preload="auto" src="{{$calon->song->song}}"></iframe>
+        <div class="music-holder lagu">
+            <iframe id="music" src="{{$calon->song->song}}"></iframe>
         </div>
     </div>
     <!-- end music box -->
@@ -1065,6 +1066,15 @@
 
     $(".button").click(function() {
         $(".gateway").slideUp("slow");
+    });
+
+    $(document).ready(function() {
+        $('#play-music').on('click', function(ev) {
+
+            $("#music")[0].src += "&autoplay=1";
+            ev.preventDefault();
+
+        });
     });
 
     // $('.popup-gmaps').magnificPopup({

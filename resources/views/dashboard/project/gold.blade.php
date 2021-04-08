@@ -241,7 +241,8 @@
                                 <p><strong>You're Invited!</strong></p>
                                 <h3>We Are Getting Married</h3>
                                 <h1>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</h1>
-                                <p><button href="#" class="button button4"><i class="fa fa-heart"></i> Open
+                                <p><button href="#" id="play-music" class="button button4"><i class="fa fa-heart"></i>
+                                        Open
                                         Invitation</button>
                                 </p>
                             </div>
@@ -805,7 +806,7 @@
             <i class="fa fa-music" aria-hidden="true"></i>
         </button>
         <div class="music-holder">
-            <iframe preload="auto" src="{{$calon->song->song}}"></iframe>
+            <iframe id="music" src="{{$calon->song->song}}"></iframe>
         </div>
     </div>
     <!-- end music box -->
@@ -864,6 +865,15 @@
 
     $(".button").click(function() {
         $(".gateway").slideUp("slow");
+    });
+
+    $(document).ready(function() {
+        $('#play-music').on('click', function(ev) {
+
+            $("#music")[0].src += "&autoplay=1";
+            ev.preventDefault();
+
+        });
     });
     </script>
 
