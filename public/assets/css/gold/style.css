@@ -420,7 +420,7 @@ figure {
 
 .fh5co-cover .display-t,
 .fh5co-cover .display-tc {
-    height: 900px;
+    height: 100% i !important;
     display: table;
     width: 100%;
 }

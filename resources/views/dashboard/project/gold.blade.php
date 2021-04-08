@@ -143,7 +143,7 @@
     .couple-half h3 strong {
         font-family: "Sacramento", Arial, serif;
         color: <?=$calon->color ?>;
-        font-size: 30px;
+        font-size: 25px;
         margin-bottom: 0px;
         /* margin-top: 10px; */
     }
@@ -806,7 +806,7 @@
             <i class="fa fa-music" aria-hidden="true"></i>
         </button>
         <div class="music-holder">
-            <iframe id="music" src="{{$calon->song->song}}"></iframe>
+            <iframe display: block id="music" src="{{$calon->song->song}}"></iframe>
         </div>
     </div>
     <!-- end music box -->
