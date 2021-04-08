@@ -1622,9 +1622,8 @@ couple-area end
         <button class="music-box-toggle-btn">
             <i class="fa fa-music" aria-hidden="true"></i>
         </button>
-        <div class="music-holder">
-            <iframe id="music" src="{{$calon->song->song}}"></iframe>
-        </div>
+        <iframe id="music" src="{{$calon->song->song}}" frameborder="0" allow="autoplay; encrypted-media"
+            allowfullscreen></iframe>
     </div>
     <!-- end music box -->
     <!-- all js here -->
@@ -1662,13 +1661,15 @@ couple-area end
     <script src="{{asset('assets/js/bronze/slick.min.js')}}"></script>
 
     <script>
-    $(document).ready(function() {
-        $('#play-music').on('click', function(ev) {
-
-            $("#music")[0].src += "&autoplay=1";
-            ev.preventDefault();
-
-        });
+    const Player = document.getElementById('music');
+    const PlayBtn = document.getElementById('play-music');
+    let times = 0,
+        playY;
+    const playVideo = PlayBtn.addEventListener('click', () => {
+        if (times == 0) {
+            playY = Player.src += '?autoplay=1';
+            times = 1;
+        }
     });
 
     const calon = @json($calon);

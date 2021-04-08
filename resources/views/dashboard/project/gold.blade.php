@@ -817,20 +817,15 @@
     </footer>
 
     <!-- strat music-box -->
-    <!-- <div class="music-box music-box-2">
+    <div class="music-box music-box-2">
         <button class="music-box-toggle-btn">
             <i class="fa fa-music" aria-hidden="true"></i>
         </button>
         <div class="music-holder">
-            <iframe type="text/html" id="music" src="{{$calon->song->song}}"></iframe>
+            <iframe id="music" src="{{$calon->song->song}}" frameborder="0" allow="autoplay; encrypted-media"
+                allowfullscreen></iframe>
         </div>
-    </div> -->
-    <div class="music-holder">
-        <iframe id="music" src="{{$calon->song->song}}" frameborder="0" allow="autoplay; encrypted-media"
-            allowfullscreen></iframe>
     </div>
-    <!-- <audio controls autoplay muted id="audio" src="{{$calon->song->song}}" preload="auto"></audio> -->
-
 
     <!-- end music box -->
 

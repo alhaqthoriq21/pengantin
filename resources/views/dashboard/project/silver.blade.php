@@ -428,7 +428,7 @@
 
                                 </div>
                             </div>
-                            <p><button href="#" class="button button4" id="play-music"><i class="fa fa-heart"></i>
+                            <p><button href="#" id="play-music" class="button button4"><i class="fa fa-heart"></i>
                                     Open
                                     Invitation</button>
                             </p>
@@ -963,9 +963,8 @@
         <button class="music-box-toggle-btn">
             <i class="fa fa-music" aria-hidden="true"></i>
         </button>
-        <div class="music-holder lagu">
-            <iframe id="music" src="{{$calon->song->song}}"></iframe>
-        </div>
+        <iframe id="music" src="{{$calon->song->song}}" frameborder="0" allow="autoplay; encrypted-media"
+            allowfullscreen></iframe>
     </div>
     <!-- end music box -->
     <script src="{{asset('assets/js/silver/vendor/jquery.min.js')}}"></script>
@@ -983,6 +982,16 @@
 
 
     <script>
+    const Player = document.getElementById('music');
+    const PlayBtn = document.getElementById('play-music');
+    let times = 0,
+        playY;
+    const playVideo = PlayBtn.addEventListener('click', () => {
+        if (times == 0) {
+            playY = Player.src += '?autoplay=1';
+            times = 1;
+        }
+    });
     const calon = @json($calon);
     // console.log(calon);
 
@@ -1068,14 +1077,6 @@
         $(".gateway").slideUp("slow");
     });
 
-    $(document).ready(function() {
-        $('#play-music').on('click', function(ev) {
-
-            $("#music")[0].src += "&autoplay=1";
-            ev.preventDefault();
-
-        });
-    });
 
     // $('.popup-gmaps').magnificPopup({
     //     disableOn: 700,
