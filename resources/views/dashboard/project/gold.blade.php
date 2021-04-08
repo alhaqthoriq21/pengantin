@@ -817,13 +817,17 @@
     </footer>
 
     <!-- strat music-box -->
-    <div class="music-box music-box-2">
+    <!-- <div class="music-box music-box-2">
         <button class="music-box-toggle-btn">
             <i class="fa fa-music" aria-hidden="true"></i>
         </button>
         <div class="music-holder">
             <iframe type="text/html" id="music" src="{{$calon->song->song}}"></iframe>
         </div>
+    </div> -->
+    <div class="music-holder">
+        <iframe id="music" width="560" height="315" src="{{$calon->song->song}}" frameborder="0"
+            allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
     <!-- <audio controls autoplay muted id="audio" src="{{$calon->song->song}}" preload="auto"></audio> -->
 
@@ -886,14 +890,26 @@
         $(".gateway").slideUp("slow");
     });
 
-    $(document).ready(function() {
-        $('#play-music').on('click', function(ev) {
-
-            $("#music")[0].src += "&autoplay=1";
-            ev.preventDefault();
-
-        });
+    const Player = document.getElementById('music');
+    const PlayBtn = document.getElementById('play-music');
+    let times = 0,
+        playY;
+    const playVideo = PlayBtn.addEventListener('click', () => {
+        if (times == 0) {
+            playY = Player.src += '?autoplay=1';
+            times = 1;
+        }
     });
+
+
+    // $(document).ready(function() {
+    //     $('#play-music').on('click', function(ev) {
+
+    //         $("#music")[0].src += "&autoplay=1";
+    //         ev.preventDefault();
+
+    //     });
+    // });
 
     // function play() {
     //     var audio = document.getElementById('audio');
