@@ -826,8 +826,8 @@
         </div>
     </div> -->
     <div class="music-holder">
-        <iframe id="music" width="560" height="315" src="{{$calon->song->song}}" frameborder="0"
-            allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <iframe id="music" src="{{$calon->song->song}}" frameborder="0" allow="autoplay; encrypted-media"
+            allowfullscreen></iframe>
     </div>
     <!-- <audio controls autoplay muted id="audio" src="{{$calon->song->song}}" preload="auto"></audio> -->
 
