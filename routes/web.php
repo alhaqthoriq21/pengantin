@@ -41,7 +41,8 @@ Route::get('/', function () {
     // Route::get('/reservasi/list', [ProjectController::class, 'getDataComment'])->name("get.comment.data");
     Route::post("/reservasi/save", [ProjectController::class, "saveReservasi"])->name("reservasi.save");
 
-    Route::get('/calon/list', [CalonController::class, 'getData'])->name("get.calon.data");
+    Route::middleware(['auth'])->group(function () {
+        Route::get('/calon/list', [CalonController::class, 'getData'])->name("get.calon.data");
     Route::get('/calon/setStatus/{id}', 'App\Http\Controllers\CalonController@acceptedCalon')->name("update.status.calon");
     Route::post("/calon/updateStatus", [CalonController::class, "updateStatus"])->name("calon.updateStatus");
     Route::post("/calon/save/", [CalonController::class, "save"])->name("calon.save");
@@ -108,6 +109,7 @@ Route::get('/', function () {
     Route::post("/fotoFooter/save/", [FotoFooterController::class, "save"])->name("fotoFooter.save");
     Route::get("/fotoFooter/detail/{fotoFooterId}", [FotoFooterController::class, "detail"])->name("fotoFooter.detail");
     Route::post("/fotoFooter/update/{fotoFooterId}", [FotoFooterController::class, "update"])->name("fotoFooter.update");
+    });
 
 
 
@@ -116,6 +118,9 @@ Route::get('/', function () {
 
     Route::get('/reservasi/list', [ReservasiController::class, 'getData'])->name("get.reservasi.data");
     Route::get("/reservasi/show/{reservasiId}", [ReservasiController::class, "show"])->name("reservasi.show");
+    Route::post("/reservasi/cetak/", [ReservasiController::class, "cetak"])->name("reservasi.cetak");
+    // Route::get('/reservasi/cetak/{calon_id}', 'App\Http\Controllers\ReservasiController@cetak')->name("reservasi.cetak");
+    
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

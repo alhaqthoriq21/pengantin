@@ -1350,8 +1350,8 @@ couple-area end
                         <h2>Welcome to our big day</h2>
                         <p>&ldquo;{{$calon->quotes->isi}}&rdquo;</p>
                         <p>&ldquo;{{$calon->quotes->judul}}&rdquo;</p>
-                        <div class="btn"><a href="#Contact">RSVP</a></div>
-                        <div class="btn"><a href="#Comment">COMMENT</a></div>
+                        <div class="btn"><a href="#rsvp">RSVP</a></div>
+                        <div class="btn"><a href="#comment">COMMENT</a></div>
                         <!-- <div class="btn"><a class="popup-gmaps"
                                 href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25211.21212385712!2d144.95275648773628!3d-37.82748510398018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0x5045675218ce7e0!2zTWVsYm91cm5lIFZJQyAzMDA0LCDgpoXgprjgp43gpp_gp43gprDgp4fgprLgpr_gpq_gprzgpr4!5e0!3m2!1sbn!2sbd!4v1503742051881">Location</a>
                         </div> -->
@@ -1490,7 +1490,7 @@ couple-area end
                                         <input type="text" placeholder="Your Name*" id="nama" name="nama">
                                     </div>
                                     <div class="col-12  col-sm-6">
-                                        <select class="form-control" name="events">
+                                        <select class="form-control" name="ket" id="ket">
                                             <option disabled="" selected="">I Am Attending*</option>
                                             <option value="Ya, tentu saja!">Ya, tentu saja!</option>
                                             <option value="Maaf, saya tidak bisa.">Maaf, saya tidak bisa.</option>
