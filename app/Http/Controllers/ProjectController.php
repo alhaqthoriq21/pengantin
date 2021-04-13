@@ -70,7 +70,11 @@ class ProjectController extends Controller
 
     public function saveReservasi(Request $request)
     {
-        $validator = Validator::make($request->all(), [
+        
+            $slug = $request->only(["slug"]);
+
+        try {
+            $validator = Validator::make($request->all(), [
             'nama' => 'required',
             'alamat' => 'required',
             'ket' => 'required',
@@ -78,12 +82,10 @@ class ProjectController extends Controller
         ]);
 
         if ($validator->fails()) {
-            return redirect(route("get.project.data"))->with('Validation Error.', $validator->errors());
+            return redirect(route("get.project.data",$slug))->with('Validation Error.', $validator->errors());
         }
-
-        try {
+        
             $input = $request->only(["calon_id","nama","alamat","ket"]);
-            $slug = $request->only(["slug"]);
             $reservasi = Reservasi::create($input);
             // dd($input);
             return redirect(route("get.project.data",$slug))->with("success", "Calon Has Been Added");

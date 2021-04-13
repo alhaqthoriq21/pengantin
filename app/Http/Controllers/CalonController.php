@@ -125,12 +125,12 @@ class CalonController extends Controller
         }
 
         try {
-            $calon = $request->only(["slug","template","color","foto_gateway","nick_pria","nick_wanita","calon_pria","calon_wanita","sosmed_pria",
+            $input = $request->only(["slug","template","color","foto_gateway","nick_pria","nick_wanita","calon_pria","calon_wanita","sosmed_pria",
             "sosmed_wanita","foto_pria","foto_wanita","ayah_pria","ibu_pria","ayah_wanita","ibu_wanita","undang"]);
             $calon = Calon::find($calonId);
             // dd($request);
             if ($calon) {
-                foreach ($calon as $key => $value) {
+                foreach ($input as $key => $value) {
                     $calon->{$key} = $value;
                 }
                 $calon->save();
@@ -162,7 +162,7 @@ class CalonController extends Controller
             // $quotes['calon_id'] = $calon->id;
             $quotes = Quotes::where("calon_id",$request->calonId)->update($quotes);
             
-            $song = $request->only(["calon_id","judul","song"]);
+            $song = $request->only(["calon_id","judul_song","song"]);
             // $song['calon_id'] = $calon->id;
             $song = Song::where("calon_id",$request->calonId)->update($song);
             

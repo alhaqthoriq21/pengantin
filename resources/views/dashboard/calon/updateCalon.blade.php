@@ -125,7 +125,7 @@
                                                             </div>
                                                             <div id="color" class="input-group color">
                                                                 <input type="text" name="color" id="color" value=""
-                                                                    class="form-control" />
+                                                                    class="form-control" value="{{$calon->color}}">
                                                                 <div class="input-group-append">
                                                                     <span
                                                                         class="input-group-text colorpicker-component"><i
@@ -810,8 +810,15 @@ $(document).ready(function() {
 
     $('#color').colorpicker({
         popover: false,
-        inline: true,
+        inline: false,
+        format: "RGB",
         container: '#color'
+    });
+
+    // $('.my-colorpicker2').colorpicker()
+
+    $('#color').on('colorpickerChange', function(event) {
+        $('#color .fa-square').css('color', event.color.toString());
     });
 
 })

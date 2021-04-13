@@ -171,38 +171,38 @@ Table of Contents:
         }
     }
 
-    function submitForm() {
-        var $form = $('#rsvp-form');
-        $form.submit(function (e) {
-            $form.find('.error-msg').remove();
-            $form.find('input').removeClass('error');
-            var formData = {
-                'name': $form.find('input#inputName').val(),
-                'number': $form.find('input#inputNumber').val()
-            };
+    // function submitForm() {
+    //     var $form = $('#rsvp-form');
+    //     $form.submit(function (e) {
+    //         $form.find('.error-msg').remove();
+    //         $form.find('input').removeClass('error');
+    //         var formData = {
+    //             'name': $form.find('input#inputName').val(),
+    //             'number': $form.find('input#inputNumber').val()
+    //         };
 
-            $.ajax({
-                type: 'POST',
-                url: 'form.php',
-                data: formData,
-                dataType: 'json',
-                encode: true,
-            }).done(function (data) {
-                console.log(data);
-                if (data.success) {
-                    $('.success-msg').html('');
-                    $('.success-msg').html(data.message);
-                } else {
-                    if (data.errors.name) {
-                        $('#inputName').addClass('error').after('<span class="error-msg">' + data.errors.name + '</span>');
-                    } else if (data.errors.number) {
-                        $('#inputNumber').addClass('error').after('<span class="error-msg">' + data.errors.number + '</span>');
-                    }
-                }
-            });
-            e.preventDefault();
-        });
-    };
+    //         $.ajax({
+    //             type: 'POST',
+    //             url: 'form.php',
+    //             data: formData,
+    //             dataType: 'json',
+    //             encode: true,
+    //         }).done(function (data) {
+    //             console.log(data);
+    //             if (data.success) {
+    //                 $('.success-msg').html('');
+    //                 $('.success-msg').html(data.message);
+    //             } else {
+    //                 if (data.errors.name) {
+    //                     $('#inputName').addClass('error').after('<span class="error-msg">' + data.errors.name + '</span>');
+    //                 } else if (data.errors.number) {
+    //                     $('#inputNumber').addClass('error').after('<span class="error-msg">' + data.errors.number + '</span>');
+    //                 }
+    //             }
+    //         });
+    //         e.preventDefault();
+    //     });
+    // };
     /* 9. Page scroll
     ====================*/
     var pageScroll = function () {
