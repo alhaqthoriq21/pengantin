@@ -20,7 +20,7 @@
     <meta name="twitter:image" content="" />
     <meta name="twitter:url" content="" />
     <meta name="twitter:card" content="" />
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/tobeabride.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/tobeabride.ico">
     <!-- Place favicon.ico in the root directory -->
     <!-- bootstrap.min.css -->
     <link rel="stylesheet" href="{{asset('assets/css/bronze/bootstrap.min.css')}}">
@@ -1605,7 +1605,7 @@ couple-area end
                 </div>
             </div>
             <div class="copyright text-center">ToBeABrideXCloudStudio</div>
-            <p><img class="center" style="width:200px;height:200px;" src="assets/img/logo/tobeabride.png" alt=""></p>
+            <p><img class="center" style="width:300px;height:300px;" src="assets/img/logo/tobeabride.png" alt=""></p>
             <div class="row">
                 <div class="col-md-12 text-center">
                     <ol class="social social-circle">

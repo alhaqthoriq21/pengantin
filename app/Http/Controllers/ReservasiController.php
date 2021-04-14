@@ -13,7 +13,7 @@ class ReservasiController extends Controller
 {
     public function getData(){
         $calon = Calon::get();
-        $reservasi = Reservasi::paginate(10);
+        $reservasi = Reservasi::with('calon')->paginate(10);
         return view('dashboard.reservasi.reservasi', compact('reservasi','calon'));
     }
 
@@ -26,10 +26,18 @@ class ReservasiController extends Controller
 
     public function cetak(Request $request)
     {
+    $calon = Calon::first();
     $r =$request->only(["calon_id"]);
 	$reservasi = Reservasi::where('calon_id', $r)->get();
-    // dd($reservasi);
-	$pdf = PDF::loadview('dashboard.reservasi.reservasiPdf', compact('reservasi'));
+	$pdf = PDF::loadview('dashboard.reservasi.reservasiPdf', compact('reservasi','calon'));
+    // dd($calon);
 	return $pdf->stream();
     }
+
+    // public function dataPush(){
+    //     $calon = Calon::get();
+    //     $reservasi = Reservasi::get();
+    //     return view('dashboard.reservasi.reservasiPdf', compact('reservasi','calon'));
+    // }
+
 }

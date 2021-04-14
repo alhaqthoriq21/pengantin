@@ -20,7 +20,7 @@
     <meta name="twitter:image" content="" />
     <meta name="twitter:url" content="" />
     <meta name="twitter:card" content="" />
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/tobeabride.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/tobeabride.ico">
     <!-- Styles -->
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/silver/vendor/bootstrap.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/silver/vendor/slick.css')}}">
@@ -946,7 +946,7 @@
                 </div>
             </div>
             <div class="copyright text-center">ToBeABrideXCloudStudio</div>
-            <p><img class="center" style="width:200px;height:200px;" src="assets/img/logo/tobeabride.png" alt="">
+            <p><img class="center" style="width:300px;height:300px;" src="assets/img/logo/tobeabride.png" alt="">
             </p>
             <div class="row">
                 <div class="col-md-12 text-center">

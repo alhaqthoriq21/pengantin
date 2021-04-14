@@ -16,7 +16,7 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta name="author" content="" />
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/tobeabride.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/tobeabride.ico">
 
     <!-- Facebook and Twitter integration -->
     <meta property="og:title" content="" />
@@ -1016,7 +1016,7 @@
             <div class="row row-bottom-padded-sm">
                 <div class="col-md-12">
                     <p class="copyright text-center">ToBeABrideXCloudStudio</p>
-                    <img class="center" style="width:200px;height:200px;" src="assets/img/logo/tobeabride.png" alt="">
+                    <img class="center" style="width:300px;height:300px;" src="assets/img/logo/tobeabride.png" alt="">
                 </div>
             </div>
             <div class="row">

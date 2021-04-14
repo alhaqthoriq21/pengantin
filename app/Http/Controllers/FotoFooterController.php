@@ -10,7 +10,7 @@ use Validator;
 class FotoFooterController extends Controller
 {
     public function getData(){
-         $calon = Calon::get();
+        $calon = Calon::get();
         $fotoFooter = FotoFooter::with('calon')->paginate(10);
         return view('dashboard.fotoFooter.fotoFooter', compact('fotoFooter','calon'));
     }

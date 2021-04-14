@@ -15,7 +15,8 @@
     }
     </style>
     <center>
-        <h5>Reservasi Data</h4>
+        <h5>Reservasi Data</h5>
+        <h5>{{$calon->nick_pria}} & {{$calon->nick_wanita}}</h5>
     </center>
 
     <table class='table table-bordered'>
@@ -33,7 +34,7 @@
             @foreach($reservasi as $r)
             <tr>
                 <td>{{ $i++ }}</td>
-                <td>{{$r->calon_id}}</td>
+                <td>{{$r->calon->nick_pria}} & {{$r->calon->nick_wanita}}</td>
                 <td>{{$r->nama}}</td>
                 <td>{{$r->alamat}}</td>
                 <td>{{$r->ket}}</td>

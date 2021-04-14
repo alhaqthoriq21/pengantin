@@ -815,11 +815,19 @@ $(document).ready(function() {
         container: '#color'
     });
 
+    var codeRGB = $(this).data('RGB');
+
+    $('#color').css('background-color', codeRGB);
+    $('#color').val(codeRGB);
+
+
+    // document.getElementById("#color").value;
+
     // $('.my-colorpicker2').colorpicker()
 
-    $('#color').on('colorpickerChange', function(event) {
-        $('#color .fa-square').css('color', event.color.toString());
-    });
+    // $('#color').on('colorpickerChange', function(event) {
+    //     $('#color .fa-square').css('color', event.color.toString());
+    // });
 
 })
 </script>
