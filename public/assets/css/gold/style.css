@@ -2394,7 +2394,7 @@ footer .nav-link::after {
 }
 
 .color-wht {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgb(255, 255, 255);
 }
 
 @media only screen and (min-width: 768px) {
@@ -2469,14 +2469,7 @@ footer .nav-link::after {
     color: #fff;
 }
 
-.social.social-circle a {
-    background: #FF847C;
-    color: #fff;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    border-radius: 50%;
-}
+
 
 
 /*# sourceMappingURL=style.css.map */

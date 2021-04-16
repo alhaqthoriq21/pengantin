@@ -17,7 +17,7 @@ class Reservasi extends Model
 
     public function calon()
     {
-        return $this->hasMany("App\Models\Calon", "id", "calon_id");
+        return $this->hasOne("App\Models\Calon", "id", "calon_id");
     }
     
     protected $primarykey = 'id';

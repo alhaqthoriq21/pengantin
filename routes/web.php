@@ -111,8 +111,6 @@ Route::get('/', function () {
     Route::post("/fotoFooter/update/{fotoFooterId}", [FotoFooterController::class, "update"])->name("fotoFooter.update");
     });
 
-
-
     Route::get('/comment/list', [CommentController::class, 'getData'])->name("get.comment.data");
     Route::get("/comment/show/{commentId}", [CommentController::class, "show"])->name("comment.show");
 
@@ -124,3 +122,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/price/list', function()
+{
+    return view('dashboard.price.priceList');
+});

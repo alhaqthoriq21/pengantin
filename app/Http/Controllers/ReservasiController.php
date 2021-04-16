@@ -27,10 +27,11 @@ class ReservasiController extends Controller
     public function cetak(Request $request)
     {
     $calon = Calon::first();
-    $r =$request->only(["calon_id"]);
-	$reservasi = Reservasi::where('calon_id', $r)->get();
+    $r = $request->only(["calon_id"]);
+	$reservasi = Reservasi::where('calon_id', $r)->with('calon')->get();
+    // dd($reservasi);
 	$pdf = PDF::loadview('dashboard.reservasi.reservasiPdf', compact('reservasi','calon'));
-    // dd($calon);
+    
 	return $pdf->stream();
     }
 

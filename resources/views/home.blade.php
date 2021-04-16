@@ -1,6 +1,7 @@
 @extends("layouts.dashboard.master")
 
 @section("content")
+<link rel="shortcut icon" type="image/x-icon" href="{{asset('assets/img/logo/tobeabride.ico')}}">
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">

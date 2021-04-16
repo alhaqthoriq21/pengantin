@@ -74,7 +74,7 @@ a:focus {
 
 p {
     margin-bottom: 0;
-    font-size: 12px;
+    font-size: 16px;
 }
 
 @media screen and (max-width: 320px) {
@@ -2261,14 +2261,7 @@ h2.komentar {
     color: #fff;
 }
 
-.social.social-circle a {
-    background: #FF847C;
-    color: #fff;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    border-radius: 50%;
-}
+
 
 .js .to-animate,
 .js .to-animate-2,

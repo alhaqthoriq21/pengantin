@@ -211,8 +211,11 @@
         width: 50%;
     }
 
-    .commentText p {
+    .commentText p,
+    ul,
+    li {
         margin: 0;
+        font-size: 16px;
     }
 
 
@@ -268,6 +271,10 @@
         margin: 10px;
     }
 
+    .couple-font p {
+        font-size: 12px;
+    }
+
     @media screen and (max-width: 768px) {
         #qbootstrap-couple h3 {
             font-size: 17px;
@@ -321,6 +328,16 @@
 
     .music-box.music-box-2 button {
         color: <?=$calon->color ?>;
+    }
+
+    /* button footer  */
+    .social.social-circle a {
+        background: <?=$calon->color ?>;
+        color: #fff;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        border-radius: 50%;
     }
     </style>
 
@@ -394,7 +411,7 @@
                 </div>
             </div>
             <div class="row animate-box">
-                <div class="col-md-8 col-md-offset-2 text-center">
+                <div class="col-md-8 col-md-offset-2 text-center couple-font">
                     <div class="col-md-5 col-sm-5 col-xs-5 nopadding">
                         <img class="center" src="{{$calon->foto_pria}}" style="width:110px;height:110px;"
                             class="img-responsive" alt="">
@@ -997,7 +1014,7 @@
                 <h8>Thank You</h8>
                 <h1><strong>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</strong></h1>
             </div>
-            <div class="row pb-4">
+            <div class="row pb-4 commentText">
                 <div class="col-md-12 text-center">
                     <h8>Turut Mengundang :</h8>
                 </div>
@@ -1015,8 +1032,8 @@
             </div>
             <div class="row row-bottom-padded-sm">
                 <div class="col-md-12">
-                    <p class="copyright text-center">ToBeABrideXCloudStudio</p>
-                    <img class="center" style="width:300px;height:300px;" src="assets/img/logo/tobeabride.png" alt="">
+                    <!-- <p class="copyright text-center">ToBeABrideXCloudStudio</p> -->
+                    <img class="center" style="width:200px;height:100px;" src="assets/img/logo/tobeabride.png" alt="">
                 </div>
             </div>
             <div class="row">

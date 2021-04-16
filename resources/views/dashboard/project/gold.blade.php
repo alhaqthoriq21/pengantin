@@ -234,6 +234,16 @@
         cursor: pointer;
         opacity: 0.5;
     }
+
+    /* button footer  */
+    .social.social-circle a {
+        background: <?=$calon->color ?>;
+        color: #fff;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        border-radius: 50%;
+    }
     </style>
 
 </head>
@@ -803,8 +813,8 @@
 
                 </div>
             </div>
-            <div class="copyright text-center color-wht">ToBeABrideXCloudStudio</div>
-            <p><img class="center" style="width:300px;height:300px;" src="assets/img/logo/tobeabride.png" alt=""></p>
+            <!-- <div class="copyright text-center color-wht">ToBeABrideXCloudStudio</div> -->
+            <p><img class="center" style="width:200px;height:100px;" src="assets/img/logo/tobeabride.png" alt=""></p>
             <div class="row">
                 <div class="col-md-12 text-center">
                     <ol class="social social-circle">

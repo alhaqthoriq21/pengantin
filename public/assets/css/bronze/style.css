@@ -162,6 +162,15 @@ p {
     margin-bottom: 0px;
 }
 
+p,
+ul,
+ol {
+    margin-bottom: 1.5em;
+    font-size: 16px;
+    /* color: #ffffff; */
+    /* font-family: "Open Sans", Arial, sans-serif; */
+}
+
 img {
     max-width: 100%;
 }
@@ -2025,14 +2034,7 @@ h4.comment-title {
     color: #fff;
 }
 
-.social.social-circle a {
-    background: #FF847C;
-    color: #fff;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    border-radius: 50%;
-}
+
 
 /* //Header  */
 /* //header  */

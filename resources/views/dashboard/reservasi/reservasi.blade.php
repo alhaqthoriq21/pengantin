@@ -71,7 +71,7 @@
                 <table>
                     <tbody>
                         <tr>
-                            <td>Calon ID</td>
+                            <td>Pasangan</td>
                             <td>:</td>
                             <td>
                                 <select name="calon_id" id="calon_id" class="form-control">
@@ -82,8 +82,11 @@
                             </td>
                         </tr>
                         <tr>
-                            <td><input type="submit" value="Cetak" /></td>
+                            <!-- <td><input type="submit" value="Cetak" /></td> -->
+                            <td><button type="submit" class="btn btn-primary hidden-print"><span
+                                        class="glyphicon glyphicon-print" aria-hidden="true"></span> Print</button></td>
                         </tr>
+
                     </tbody>
                 </table>
             </form>

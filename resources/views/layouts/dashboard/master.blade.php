@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>@yield('title')</title>
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/tobeabride.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset('assets/img/logo/tobeabride.ico')}}">
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Font Awesome -->
