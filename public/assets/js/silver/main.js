@@ -279,7 +279,7 @@ Table of Contents:
     //         var timeinterval = setInterval(updateClock, 1000);
     //     }
     //     // set your wedding date here
-    //     var deadline = 'August 18 2021 17:30:00 GMT+0300';
+    //     var deadline = 'August 18 2022 17:30:00 GMT+0300';
     //     if (countdown) {
     //         initializeClock('timer', deadline);
     //     }
@@ -334,7 +334,7 @@ Table of Contents:
         // countdown();
         filledLabels();
         pageScroll();
-        submitForm();
+        // submitForm();
     });
 
 }());

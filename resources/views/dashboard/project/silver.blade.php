@@ -1007,9 +1007,24 @@
     const calon = @json($calon);
     // console.log(calon);
 
-    /* 7. Countdown
-    ====================*/
+    $(".button").click(function() {
+        $(".gateway").slideUp("slow");
+    });
+
+
+    // $('.popup-gmaps').magnificPopup({
+    //     disableOn: 700,
+    //     type: 'iframe',
+    //     mainClass: 'mfp-fade',
+    //     removalDelay: 160,
+    //     preloader: false,
+    //     fixedContentPos: false
+    // });
+
     (function() {
+
+
+
         var countdown = function() {
             var countdown = document.querySelector('.countdown');
 
@@ -1084,20 +1099,6 @@
             countdown();
         });
     }());
-
-    $(".button").click(function() {
-        $(".gateway").slideUp("slow");
-    });
-
-
-    // $('.popup-gmaps').magnificPopup({
-    //     disableOn: 700,
-    //     type: 'iframe',
-    //     mainClass: 'mfp-fade',
-    //     removalDelay: 160,
-    //     preloader: false,
-    //     fixedContentPos: false
-    // });
     </script>
 
 </body>
