@@ -10,13 +10,13 @@
     <meta charset="utf-8">
     <meta name="keywords" content="">
     <script>
-    addEventListener("load", function() {
-        setTimeout(hideURLbar, 0);
-    }, false);
+    // addEventListener("load", function() {
+    //     setTimeout(hideURLbar, 0);
+    // }, false);
 
-    function hideURLbar() {
-        window.scrollTo(0, 1);
-    }
+    // function hideURLbar() {
+    //     window.scrollTo(0, 1);
+    // }
     </script>
     <!-- //Meta-Tags -->
     <link rel="shortcut icon" type="image/x-icon" href="{{asset('assets/img/logo/tobeabride.ico')}}">
