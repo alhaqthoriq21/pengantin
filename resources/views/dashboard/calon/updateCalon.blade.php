@@ -124,8 +124,8 @@
                                                                     Color</label>
                                                             </div>
                                                             <div id="color" class="input-group color">
-                                                                <input type="text" name="color" id="color" value=""
-                                                                    class="form-control" value="{{$calon->color}}">
+                                                                <input type="text" name="color" id="color"
+                                                                    value="{{$calon->color}}" class="form-control" />
                                                                 <div class="input-group-append">
                                                                     <span
                                                                         class="input-group-text colorpicker-component"><i
@@ -807,7 +807,6 @@ $(document).ready(function() {
         showMeridian: 1
     });
 
-
     $('#color').colorpicker({
         popover: false,
         inline: false,
@@ -815,19 +814,11 @@ $(document).ready(function() {
         container: '#color'
     });
 
-    var codeRGB = $(this).data('RGB');
+    $('#color').on('colorpickerChange', function(event) {
+        $('#color .fa-square').css('color', event.color.toString());
+    });
 
-    $('#color').css('background-color', codeRGB);
-    $('#color').val(codeRGB);
-
-
-    // document.getElementById("#color").value;
-
-    // $('.my-colorpicker2').colorpicker()
-
-    // $('#color').on('colorpickerChange', function(event) {
-    //     $('#color .fa-square').css('color', event.color.toString());
-    // });
+    document.getElementById("color").value;
 
 })
 </script>

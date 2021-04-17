@@ -47,7 +47,7 @@
     <section class="title text-center">
         <div class="container">
             <div class="date-section__flowers m-auto">
-                <img style="width:400px;height:100px;" src="assets\img\logo\flow.png" alt="flowers">
+                <img style="width:400px;height:100px;" src="{{asset('assets\img\logo\flow.png')}}" alt="flowers">
             </div>
         </div>
     </section>

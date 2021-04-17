@@ -232,16 +232,6 @@
                                                                 <label for="" class="col-form-label">Pick Background
                                                                     Color</label>
                                                             </div>
-                                                            <!-- <div id="cp3a" class="input-group"
-                                                                data-color="rgb(241, 138, 49)"
-                                                                title="Using data-color attribute in the colorpicker element">
-                                                                <input type="text" name="cp3a" id="cp3a"
-                                                                    class="form-control input-lg" />
-                                                                <span class="input-group-append">
-                                                                    <span
-                                                                        class="input-group-text colorpicker-input-addon"><i></i></span>
-                                                                </span>
-                                                            </div> -->
                                                             <div id="color" class="input-group color">
                                                                 <input type="text" name="color" id="color" value=""
                                                                     class="form-control" />
