@@ -717,8 +717,12 @@ couple-area
     }
 
     .couple-content h4 {
-        font-size: 25px;
+        font-size: 20px;
         color: <?=$calon->color ?>;
+    }
+
+    .couple-content p {
+        font-size: 14px;
     }
 
     .couple-content2 h4 {

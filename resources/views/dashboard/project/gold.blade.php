@@ -131,10 +131,16 @@
         font-family: "Sacramento", Arial, serif;
     }
 
+    .couple-half p {
+        font-size: 15px;
+        margin-bottom: 0px;
+
+    }
+
     .couple-half h3 {
         font-family: "Sacramento", Arial, serif;
         color: <?=$calon->color ?>;
-        font-size: 30px;
+        font-size: 22px;
         margin-bottom: 0px;
         /* margin-top: 10px; */
 
@@ -143,7 +149,7 @@
     .couple-half h3 strong {
         font-family: "Sacramento", Arial, serif;
         color: <?=$calon->color ?>;
-        font-size: 25px;
+        font-size: 22px;
         margin-bottom: 0px;
         /* margin-top: 10px; */
     }

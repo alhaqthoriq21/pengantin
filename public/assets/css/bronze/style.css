@@ -166,7 +166,7 @@ p,
 ul,
 ol {
     margin-bottom: 1.5em;
-    font-size: 16px;
+    font-size: 14px;
     /* color: #ffffff; */
     /* font-family: "Open Sans", Arial, sans-serif; */
 }
@@ -268,7 +268,7 @@ Home-page-one
 
 .main-menu .submenu li a {
     padding: 10px 15px;
-    color: :#333;
+    color: #333;
 }
 
 .main-menu nav ul {
@@ -827,6 +827,10 @@ Story-Area
     width: 100%
 }
 
+.story-content p {
+    font-size: 16px;
+}
+
 .story .item .story-content>p {
     margin-bottom: 20px;
 }
@@ -1011,6 +1015,10 @@ service-area
 
 .service-area-menu ul {
     justify-content: space-around;
+}
+
+.service-area-menu ul {
+    font-size: 16px;
 }
 
 .service-area-menu li a {

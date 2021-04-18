@@ -33,7 +33,14 @@
         rel="stylesheet">
     <!-- //web-fonts -->
     <style>
-
+    .social.social-circle a {
+        background: #ffffff;
+        color: #fff;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        border-radius: 50%;
+    }
     </style>
 
 </head>
@@ -71,7 +78,7 @@
                             <!-- <p class="text"><span class="fa fa-times"></span><span>Foundation</span> Training</p> -->
                         </div>
                         <div class="buy-button">
-                            <a href="/icha-agi-empat?u=Nama+Anda">Lihat</a>
+                            <a href="/icha-agi-empat?u=Nama+Tamu">Lihat</a>
                         </div>
                     </div>
                 </div>
@@ -99,7 +106,7 @@
                             <!-- <p class="text"><span class="fa fa-times"></span><span>Foundation</span> Training</p> -->
                         </div>
                         <div class="buy-button">
-                            <a href="/icha-agi-tiga?u=Nama+Anda">Lihat</a>
+                            <a href="/icha-agi-tiga?u=Nama+Tamu">Lihat</a>
                         </div>
                     </div>
                 </div>
@@ -127,7 +134,7 @@
                             <!-- <p class="text"><span class="fa fa-times"></span><span>Foundation</span> Training</p> -->
                         </div>
                         <div class="buy-button">
-                            <a href="/icha-agi-dua?u=Nama+Anda">Lihat</a>
+                            <a href="/icha-agi-dua?u=Nama+Tamu">Lihat</a>
                         </div>
                     </div>
                 </div>
@@ -156,7 +163,7 @@
                             <!-- <p class="text"><span class="fa fa-check"></span><span>Foundation</span> Training</p> -->
                         </div>
                         <div class="buy-button">
-                            <a href="/icha-agi-satu?u=Nama+Anda">Lihat</a>
+                            <a href="/icha-agi-satu?u=Nama+Tamu">Lihat</a>
                         </div>
                     </div>
                 </div>
@@ -167,9 +174,15 @@
     <!--//main-->
     <!--footer-->
     <div class="footer">
-        <p>Untuk pemesanan <a href="https://api.whatsapp.com/send?phone=083827589388">Klik Disini</a></p>
+        <p>Pemesanan? Hubungi<a href="https://api.whatsapp.com/send?phone=083827589388"> Disini</a></p>
         <p><img class="center" style="width:200px;height:100px;" src="{{asset('assets/img/logo/tobeabride.png')}}"
                 alt=""></p>
+        <!-- <div class="col-md-12 text-center">
+            <ol class="social social-circle">
+                <li><a href="https://www.instagram.com/tobeabride_/"><i class="icon-instagram"></i></a></li>
+                <li><a href="https://www.instagram.com/cloudphoto.id/"><i class="icon-instagram"></i></a></li>
+            </ol>
+        </div> -->
     </div>
     <!--//footer-->
 

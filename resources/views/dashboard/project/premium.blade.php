@@ -215,7 +215,7 @@
     ul,
     li {
         margin: 0;
-        font-size: 16px;
+        font-size: 14px;
     }
 
 
@@ -274,6 +274,8 @@
     .couple-font p {
         font-size: 12px;
     }
+
+
 
     @media screen and (max-width: 768px) {
         #qbootstrap-couple h3 {

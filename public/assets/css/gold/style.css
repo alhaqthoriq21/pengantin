@@ -66,6 +66,15 @@ dl {
     padding: 0;
 }
 
+p,
+ul,
+ol {
+    /* margin-bottom: 1.5em; */
+    font-size: 14px;
+    /* color: #ffffff; */
+    /* font-family: "Open Sans", Arial, sans-serif; */
+}
+
 li {
     /* stylelint-disable-next-line sh-waqar/declaration-use-variable */
     font-size: inherit;
@@ -480,7 +489,7 @@ figure {
 
 #fh5co-counter .fh5co-heading span,
 #fh5co-event .fh5co-heading span {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgb(3, 3, 3);
     text-transform: uppercase;
     font-size: 13px;
     letter-spacing: 2px;
@@ -1489,7 +1498,7 @@ form label {
     font-size: 13px;
     letter-spacing: 2px;
     font-weight: 600;
-    color: rgba(0, 0, 0, 0.4);
+    color: rgb(0, 0, 0);
 }
 
 #fh5co-testimonial .wrap-testimony {
