@@ -197,7 +197,7 @@
     <!-- //jquery -->
 
     <!-- Pop-up for pricing tables -->
-    <script src="{{asset('assets/js/price/jquery.magnific-popup.js')}}" type="text/javascript"></script>
+    <!-- <script src="{{asset('assets/js/price/jquery.magnific-popup.js')}}" type="text/javascript"></script> -->
     <script>
     // $(document).ready(function() {
     //     $('.popup-with-zoom-anim').magnificPopup({
