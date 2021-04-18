@@ -36,7 +36,7 @@
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <!-- {{ config('app.name', 'ToBeAbrideXCloudStudio') }} -->
-                    <img class="center" style="width:120px;height:120px;" src="assets/img/logo/tobeabride.png" alt="">
+                    <img class="center" style="width:220px;height:100px;" src="assets/img/login.png" alt="">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"

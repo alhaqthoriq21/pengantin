@@ -14,7 +14,7 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Login Form') }}</div>
-                <img class="center" style="width:700px;height:500px;" src="assets/img/meong.jpeg" alt="">
+                <img class="center" style="width:300px;height:300px;" src="assets/img/ole.jpg" alt="">
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
