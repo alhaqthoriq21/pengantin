@@ -5,6 +5,7 @@
     <title>ToBeABrideXCloudStudio</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/tobeabride.ico">
 
@@ -39,6 +40,13 @@
     .section--bg {
         background: <?=$calon->color ?>;
     }
+
+    /* 
+    .flower {
+        width: 400px;
+        height: 100px;
+        img: url(assets\img\logo\flow.png);
+    } */
     </style>
 
 </head>
@@ -47,7 +55,7 @@
 
     <section class="title text-center">
         <div class="container">
-            <div class="date-section__flowers m-auto">
+            <div class="date-section__flowers m-auto flower">
                 <img style="width:400px;height:100px;" src="assets\img\logo\flow.png" alt="flowers">
             </div>
         </div>

@@ -167,6 +167,7 @@
     <!--//main-->
     <!--footer-->
     <div class="footer">
+        <p>Untuk pemesanan <a href="https://api.whatsapp.com/send?phone=083827589388">Klik Disini</a></p>
         <p><img class="center" style="width:200px;height:100px;" src="{{asset('assets/img/logo/tobeabride.png')}}"
                 alt=""></p>
     </div>

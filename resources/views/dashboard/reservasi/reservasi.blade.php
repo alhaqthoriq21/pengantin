@@ -83,8 +83,8 @@
                         </tr>
                         <tr>
                             <!-- <td><input type="submit" value="Cetak" /></td> -->
-                            <td><button type="submit" class="btn btn-primary hidden-print"><span
-                                        class="glyphicon glyphicon-print" aria-hidden="true"></span> Print</button></td>
+                            <td><button type="submit" class="btn btn-primary hidden-print"><span class="fa fa-print"
+                                        aria-hidden="true"></span> Print</button></td>
                         </tr>
 
                     </tbody>
@@ -104,6 +104,10 @@
 </section>
 
 @endsection
+
+@push("style")
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+@endpush
 
 @push('scripts')
 <script src="{{asset('assets/plugins/datatables/jquery.dataTables.min.js')}}"></script>
