@@ -49,6 +49,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/bronze/slick-theme.css')}}">
     <link href='https://fonts.googleapis.com/css?family=Beth+Ellen' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet'>
     <style>
     body,
     html {
@@ -718,6 +719,7 @@ couple-area
 
     .couple-content h4 {
         font-size: 20px;
+        font-family: "Lobster Two";
         color: <?=$calon->color ?>;
     }
 
@@ -1128,6 +1130,7 @@ couple-area end
                                                 Open
                                                 Invitation</button></p>
                                     </div>
+
                                 </div>
 
                             </div>
@@ -1184,7 +1187,7 @@ couple-area end
                             </div>
                             <div class="couple-text">
                                 <div class="couple-content">
-                                    <h4>{{$calon->calon_wanita}}</h4>
+                                    <h4><strong>{{$calon->calon_wanita}}</strong></h4>
                                     <p><strong>Putri Dari</strong></p>
                                     <p>Bpk. {{$calon->ayah_wanita}}</p>
                                     <p>Ibu {{$calon->ibu_wanita}}</p>
@@ -1214,7 +1217,7 @@ couple-area end
                             </div>
                             <div class="couple-text">
                                 <div class="couple-content">
-                                    <h4>{{$calon->calon_pria}}</h4>
+                                    <h4><strong>{{$calon->calon_pria}}</strong></h4>
                                     <p><strong>Putra Dari</strong></p>
                                     <p>Bpk. {{$calon->ayah_pria}}</p>
                                     <p>Ibu {{$calon->ibu_pria}}</p>

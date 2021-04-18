@@ -357,7 +357,7 @@
                             <div class="col-md-10 col-md-offset-1">
                                 <div class="animate-box svg-sm colored">
                                     @if (isset($qs['u']))
-                                    <h6>Dear, {{$qs['u']}}</h6>
+                                    <h6>Dear {{$qs['u']}},</h6>
                                     @endif
                                     <p><span>You're Invited!</span></p>
                                     <h3 class="holder"><span>The Wedding of</span></h3>
