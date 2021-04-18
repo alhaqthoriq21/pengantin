@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/tobeabride.ico">
 
+
     <style type="text/css">
     table tr td,
     table tr th {
@@ -47,9 +48,7 @@
     <section class="title text-center">
         <div class="container">
             <div class="date-section__flowers m-auto">
-                <img style="width:400px;height:100px;" alt="flowers"
-                    src="'.$_SERVER['DOCUMENT_ROOT'].'assets\img\logo\flow.png">
-                <!-- <img style="width:400px;height:100px;" src="assets\img\logo\flow.png" alt="flowers"> -->
+                <img style="width:400px;height:100px;" src="assets\img\logo\flow.png" alt="flowers">
             </div>
         </div>
     </section>
