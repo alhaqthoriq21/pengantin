@@ -845,7 +845,7 @@
                 </div>
             </div>
             <!-- <div class="copyright text-center color-wht">ToBeABrideXCloudStudio</div> -->
-            <p><img class="center" style="width:200px;height:100px;" src="assets/img/logo/tobeabride.png" alt=""></p>
+            <p><img class="center" style="width:230px;height:100px;" src="assets/img/logo/tobeabride.png" alt=""></p>
             <div class="row">
                 <div class="col-md-12 text-center">
                     <ol class="social social-circle">

@@ -1055,7 +1055,7 @@
             <div class="row row-bottom-padded-sm">
                 <div class="col-md-12">
                     <!-- <p class="copyright text-center">ToBeABrideXCloudStudio</p> -->
-                    <img class="center" style="width:200px;height:100px;" src="assets/img/logo/tobeabride.png" alt="">
+                    <img class="center" style="width:230px;height:100px;" src="assets/img/logo/tobeabride.png" alt="">
                 </div>
             </div>
             <div class="row">

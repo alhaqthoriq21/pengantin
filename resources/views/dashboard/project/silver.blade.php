@@ -973,7 +973,7 @@
                 </div>
             </div>
             <!-- <div class="copyright text-center">ToBeABrideXCloudStudio</div> -->
-            <p><img class="center" style="width:200px;height:100px;" src="assets/img/logo/tobeabride.png" alt="">
+            <p><img class="center" style="width:230px;height:100px;" src="assets/img/logo/tobeabride_black.png" alt="">
             </p>
             <div class="row">
                 <div class="col-md-12 text-center">
