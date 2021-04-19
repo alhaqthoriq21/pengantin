@@ -866,7 +866,7 @@ a:hover {
 }
 
 .date-section__block .title--special {
-    font-size: 40px;
+    font-size: 35px;
     line-height: 40px;
     margin-bottom: 30px;
 }
@@ -878,7 +878,7 @@ a:hover {
 
 .date-section__place {
     font-family: "Playfair Display", serif;
-    font-size: 25px;
+    font-size: 20px;
     margin-bottom: 40px;
 }
 
@@ -1157,17 +1157,9 @@ footer:before {
     top: 0;
 }
 
-.footer__title {
-    position: relative;
-    font-family: "Sofia";
-    font-size: 2rem;
-    line-height: 2.5rem;
-    margin-bottom: 40px;
-}
-
 @media only screen and (min-width: 768px) {
     .footer__title {
-        font-size: 2.75rem;
+        font-size: 30px;
         line-height: 3.25rem;
     }
 }
@@ -1804,14 +1796,6 @@ g.pd {
     font-weight: 700;
 }
 
-@media screen and (max-width: 768px) {
-
-    .qbootstrap-cover .display-tc h2,
-    .video-hero .display-tc h2 {
-        font-size: 25px;
-    }
-}
-
 .qbootstrap-cover .display-tc h3,
 .video-hero .display-tc h3 {
     color: #fff;
@@ -1944,7 +1928,7 @@ g.pd {
 
 .wishes__slider h5 {
     font-family: "Source Sans Pro", Arial, sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 0px;
 }
 

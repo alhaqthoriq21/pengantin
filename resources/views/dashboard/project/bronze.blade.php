@@ -47,7 +47,7 @@
 
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/bronze/slick.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/bronze/slick-theme.css')}}">
-    <link href='https://fonts.googleapis.com/css?family=Beth+Ellen' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet'>
     <style>
@@ -239,7 +239,7 @@ welcome-area
     }
 
     .welcome-content p {
-        font-size: 18px;
+        font-size: 16px;
         padding: 10px 0px 20px;
         color: #fff;
         max-width: 700px;
@@ -251,7 +251,7 @@ welcome-area
         background: #fff;
         color: <?=$calon->color ?>;
         padding: 10px 38px;
-        font-size: 18px;
+        font-size: 16px;
         transition: all .3s;
         font-weight: 600;
     }
@@ -723,10 +723,6 @@ couple-area
         color: <?=$calon->color ?>;
     }
 
-    .couple-content p {
-        font-size: 14px;
-    }
-
     .couple-content2 h4 {
         font-size: 25px;
         color: <?=$calon->color ?>;
@@ -734,8 +730,10 @@ couple-area
 
 
     .couple-content p {
+        margin-top: 0px;
         margin-bottom: 0px;
         font-family: "Arial";
+        font-size: 14px;
     }
 
     .couple-content2 p {
@@ -959,12 +957,17 @@ couple-area end
 
     .footer__title {
         position: relative;
-        font-family: "Beth Ellen";
-        font-size: 30px;
+        font-family: "Satisfy";
+        font-size: <?=$calon->size_font ?>px;
         line-height: 40px;
         /* line-height: 2.5rem; */
         margin-bottom: 40px;
     }
+
+    /* 
+    .footer__title h2 {
+        font-size: 20px;
+    } */
 
     @media only screen and (min-width: 768px) {
         .footer__title {
@@ -1008,7 +1011,7 @@ couple-area end
     .story .story-content h2 {
         margin-bottom: 2px;
         font-family: 'Great Vibes', cursive;
-        font-size: 25px;
+        font-size: 20px;
         color: <?=$calon->color ?>;
     }
 
@@ -1035,7 +1038,7 @@ couple-area end
     }
 
     .ceromony-content h3 {
-        font-size: 30px;
+        font-size: 20px;
         color: <?=$calon->color ?>;
         margin-bottom: 16px;
     }
@@ -1074,6 +1077,14 @@ couple-area end
         -moz-border-radius: 50%;
         -ms-border-radius: 50%;
         border-radius: 50%;
+    }
+
+    @media screen and (max-width: 836px) {
+
+        .qbootstrap-cover .display-tc h2,
+        .video-hero .display-tc h2 {
+            font-size: <?=$calon->size_font ?>px;
+        }
     }
     </style>
 
@@ -1597,7 +1608,7 @@ couple-area end
                         <div class="media-body u-shadow-v18 g-bg-secondary g-pa-30">
                             @foreach($calon->comment as $data)
                             <div class="commentText">
-                                <h2><strong>{{ $data->nama }}</strong></h2>
+                                <h3><strong>{{ $data->nama }}</strong></h3>
                                 <p>{{ $data->comment }}</p>
                             </div>
                             @endforeach

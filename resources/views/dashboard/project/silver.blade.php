@@ -92,8 +92,9 @@
         margin-bottom: 0px;
     }
 
-    .commentText p {
-        margin: 0px;
+    .commentText p,
+    h6 {
+        margin-bottom: 0px;
     }
 
     .rsvp {
@@ -408,6 +409,22 @@
         -ms-border-radius: 50%;
         border-radius: 50%;
     }
+
+    @media screen and (max-width: 768px) {
+
+        .qbootstrap-cover .display-tc h2,
+        .video-hero .display-tc h2 {
+            font-size: <?=$calon->size_font ?>px;
+        }
+    }
+
+    .footer__title {
+        position: relative;
+        font-family: "Sofia";
+        font-size: <?=$calon->size_font ?>px;
+        line-height: 2.5rem;
+        margin-bottom: 40px;
+    }
     </style>
 </head>
 
@@ -640,7 +657,7 @@
             </div>
             <h1 class="title">Quotes</h1>
             <p class="m-auto">{{$calon->quotes->isi}}.</p>
-            <span>&ldquo;{{$calon->quotes->judul}}&rdquo;</span>
+            <span><strong>&ldquo;{{$calon->quotes->judul}}&rdquo;</strong></span>
         </div>
     </section>
     <!-- Section Date -->

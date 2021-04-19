@@ -250,6 +250,30 @@
         -ms-border-radius: 50%;
         border-radius: 50%;
     }
+
+    @media screen and (max-width: 480px) {
+
+        #fh5co-header .display-tc h1,
+        #fh5co-counter .display-tc h1,
+        .fh5co-cover .display-tc h1 {
+            font-size: <?=$calon->size_font ?>px;
+        }
+
+        .center-bg {
+            background-position: center center !important;
+            background-repeat: no-repeat;
+        }
+    }
+
+    .footer__title {
+        position: relative;
+        font-family: "Sacramento",
+            Arial,
+            serif;
+        font-size: <?=$calon->size_font ?>px;
+        line-height: 35px;
+        margin-bottom: 40px;
+    }
     </style>
 
 </head>

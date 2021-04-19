@@ -152,6 +152,19 @@
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                        <div class="row form-group">
+                                                            <div class="col-sm-4">
+                                                                <label for="" class="col-form-label">Size Font</label>
+                                                            </div>
+                                                            <div class="col-sm-8">
+                                                                <div class="d-flex flex-row">
+                                                                    <input name="size_font" id="size_font"
+                                                                        placeholder="" type="number"
+                                                                        class="form-control"
+                                                                        value="{{$calon->size_font}}">
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                     <div class="col-12 card--shadow">
                                                         <h5>Calon Pengantin Pria</h5>

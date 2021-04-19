@@ -576,14 +576,6 @@ h4 {
     font-weight: 700;
 }
 
-@media screen and (max-width: 768px) {
-
-    .qbootstrap-cover .display-tc h2,
-    .video-hero .display-tc h2 {
-        font-size: 30px;
-    }
-}
-
 .qbootstrap-cover .display-tc p,
 .video-hero .display-tc p {
     color: #fff;

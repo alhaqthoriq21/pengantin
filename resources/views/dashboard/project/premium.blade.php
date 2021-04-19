@@ -341,6 +341,22 @@
         -ms-border-radius: 50%;
         border-radius: 50%;
     }
+
+    @media screen and (max-width: 768px) {
+
+        .qbootstrap-cover .display-tc h2,
+        .video-hero .display-tc h2 {
+            font-size: <?=$calon->size_font ?>px;
+        }
+    }
+
+    .footer h1 {
+        font-size: <?=$calon->size_font ?>px;
+    }
+
+    .footer h1 {
+        color: #ffffff;
+    }
     </style>
 
 </head>
@@ -1012,8 +1028,8 @@
 
     <footer id="footer" role="contentinfo" class="section--bg">
         <div class="container overlay">
-            <div class="col-md-12 text-center">
-                <h8>Thank You</h8>
+            <div class="col-md-12 text-center footer">
+                <h1>Thank You</h1>
                 <h1><strong>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</strong></h1>
             </div>
             <div class="row pb-4 commentText">

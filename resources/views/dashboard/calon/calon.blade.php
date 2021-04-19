@@ -256,19 +256,18 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <!-- <div class="form-group">
-                                                        <label>Color picker with addon:</label>
-
-                                                        <div class="input-group my-colorpicker2">
-                                                            <input type="text" class="form-control">
-
-                                                            <div class="input-group-append">
-                                                                <span class="input-group-text"><i
-                                                                        class="fas fa-square"></i></span>
+                                                        <div class="row form-group">
+                                                            <div class="col-sm-4">
+                                                                <label for="" class="col-form-label">Size Font</label>
+                                                            </div>
+                                                            <div class="col-sm-8">
+                                                                <div class="d-flex flex-row">
+                                                                    <input name="size_font" id="size_font"
+                                                                        placeholder="" type="number"
+                                                                        class="form-control" value="">
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                        
-                                                    </div> -->
                                                     </div>
                                                     <div class="col-12 card--shadow">
                                                         <h5>Calon Pengantin Pria</h5>
