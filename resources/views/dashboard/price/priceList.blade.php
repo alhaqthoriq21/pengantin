@@ -59,7 +59,7 @@
                 <div class="pricing_grid">
                     <div class="wthree-pricing-info pricing-top first-top">
                         <h3>Premium</h3>
-                        <p>RP<span>175</span>K</p>
+                        <p>RP<span>200</span>K</p>
                     </div>
                     <div class="pricing-bottom">
                         <div class="pricing-bottom-bottom first-pricing-bottom-top">
@@ -87,12 +87,12 @@
                 <div class="pricing_grid">
                     <div class="wthree-pricing-info pricing-top second-top">
                         <h3>Gold</h3>
-                        <p>RP<span>170</span>K</p>
+                        <p>RP<span>175</span>K</p>
                     </div>
                     <div class="pricing-bottom">
                         <div class="pricing-bottom-bottom second-pricing-bottom-top">
                             <p><span class="fa fa-check"></span><span>Fitur Kepada</span></p>
-                            <p><span class="fa fa-check"></span><span>15 Foto</span></p>
+                            <p><span class="fa fa-check"></span><span>12 Foto</span></p>
                             <p><span class="fa fa-check"></span><span>Alamat</span></p>
                             <p><span class="fa fa-check"></span><span>Lokasi</span></p>
                             <p><span class="fa fa-check"></span><span>Hitung Mundur</span></p>
@@ -120,7 +120,7 @@
                     <div class="pricing-bottom">
                         <div class="pricing-bottom-bottom third-pricing-bottom-top">
                             <p><span class="fa fa-check"></span><span>Fitur Kepada</span></p>
-                            <p><span class="fa fa-check"></span><span>12 Foto</span></p>
+                            <p><span class="fa fa-check"></span><span>8 Foto</span></p>
                             <p><span class="fa fa-check"></span><span>Alamat</span></p>
                             <p><span class="fa fa-check"></span><span>Lokasi</span></p>
                             <p><span class="fa fa-check"></span><span>Hitung Mundur</span></p>
@@ -149,7 +149,7 @@
                     <div class="pricing-bottom">
                         <div class="pricing-bottom-bottom fourth-pricing-bottom-top">
                             <p><span class="fa fa-check"></span><span>Fitur Kepada</span></p>
-                            <p><span class="fa fa-check"></span><span>12 Foto</span></p>
+                            <p><span class="fa fa-check"></span><span>6 Foto</span></p>
                             <p><span class="fa fa-check"></span><span>Alamat</span></p>
                             <p><span class="fa fa-check"></span><span>Lokasi</span></p>
                             <p><span class="fa fa-check"></span><span>Hitung Mundur</span></p>
