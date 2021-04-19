@@ -1295,7 +1295,7 @@ couple-area end
                                             @endif
                                         </div>
                                     </div>
-                                    <h2>First Meet</h2>
+                                    <h2><strong>First Meet</strong></h2>
                                     <span class="date">{{$calon->loveStory->tgl_firstmeet}}</span>
                                     <p>{{$calon->loveStory->story_firstmeet}},</p>
                                     <!-- <div class="story-button">
@@ -1317,7 +1317,7 @@ couple-area end
                                             @endif
                                         </div>
                                     </div>
-                                    <h2>First Date</h2>
+                                    <h2><strong>First Date</strong></h2>
                                     <span class="date">{{$calon->loveStory->tgl_firstdate}}</span>
                                     <p>{{$calon->loveStory->story_firstdate}},</p>
                                     <!-- <div class="story-button">
@@ -1339,7 +1339,7 @@ couple-area end
                                             @endif
                                         </div>
                                     </div>
-                                    <h2>In Relationship</h2>
+                                    <h2><strong>In Relationship</strong></h2>
                                     <span class="date">{{$calon->loveStory->tgl_relationship}}</span>
                                     <p>{{$calon->loveStory->story_relationship}}</p>
                                     <!-- <div class="story-button">
@@ -1361,7 +1361,7 @@ couple-area end
                                             @endif
                                         </div>
                                     </div>
-                                    <h2>Engagement</h2>
+                                    <h2><strong>Engagement</strong></h2>
                                     <span class="date">{{$calon->loveStory->tgl_enganged}}</span>
                                     <p>{{$calon->loveStory->story_enganged}}</p>
                                     <!-- <div class="story-button">
