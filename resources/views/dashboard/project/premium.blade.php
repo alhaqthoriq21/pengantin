@@ -218,6 +218,10 @@
         font-size: 14px;
     }
 
+    .commentText p {
+        color: #000000;
+    }
+
 
     div.parent {
         text-align: center;
@@ -925,7 +929,7 @@
                             <div class="media-body u-shadow-v18 g-bg-secondary g-pa-30">
                                 @foreach($calon->comment as $data)
                                 <div class="commentText">
-                                    <hp><strong>{{ $data->nama }}</strong></hp>
+                                    <p><strong>{{ $data->nama }}</strong></p>
                                     <p class="">{{ $data->comment }}</p>
                                 </div>
                                 @endforeach

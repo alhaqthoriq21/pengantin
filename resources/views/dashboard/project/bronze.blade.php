@@ -1011,7 +1011,7 @@ couple-area end
     .story .story-content h2 {
         margin-bottom: 2px;
         font-family: 'Great Vibes', cursive;
-        font-size: 20px;
+        font-size: 22px;
         color: <?=$calon->color ?>;
     }
 

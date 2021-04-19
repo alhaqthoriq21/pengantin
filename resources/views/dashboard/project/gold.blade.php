@@ -83,6 +83,7 @@
     .commentText p {
         margin: 0px;
         margin-bottom: 0px;
+        color: #000000;
     }
 
     div.parent {
