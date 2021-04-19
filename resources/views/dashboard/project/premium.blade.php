@@ -562,7 +562,7 @@
                             <div class="timeline-panel">
                                 <div class="overlay"></div>
                                 <div class="timeline-heading">
-                                    <h3 class="timeline-title">First We Meet</h3>
+                                    <h3 class="timeline-title"><strong>First We Meet</strong></h3>
                                     <span class="date">{{$calon->loveStory->tgl_firstmeet}}</span>
                                 </div>
                                 <div class="timeline-body">
@@ -578,7 +578,7 @@
                             <div class="timeline-panel">
                                 <div class="overlay overlay-2"></div>
                                 <div class="timeline-heading">
-                                    <h3 class="timeline-title">First Date</h3>
+                                    <h3 class="timeline-title"><strong>First Date</strong></h3>
                                     <span class="date">{{$calon->loveStory->tgl_firstdate}}</span>
                                 </div>
                                 <div class="timeline-body">
@@ -594,7 +594,7 @@
                             <div class="timeline-panel">
                                 <div class="overlay"></div>
                                 <div class="timeline-heading">
-                                    <h3 class="timeline-title">In A Relationship</h3>
+                                    <h3 class="timeline-title"><strong>In A Relationship</strong></h3>
                                     <span class="date">{{$calon->loveStory->tgl_relationship}}</span>
                                 </div>
                                 <div class="timeline-body">
@@ -610,7 +610,7 @@
                             <div class="timeline-panel">
                                 <div class="overlay overlay-2"></div>
                                 <div class="timeline-heading">
-                                    <h3 class="timeline-title">We're Engaged</h3>
+                                    <h3 class="timeline-title"><strong>We're Engaged</strong></h3>
                                     <span class="date">{{$calon->loveStory->tgl_enganged}}</span>
                                 </div>
                                 <div class="timeline-body">
