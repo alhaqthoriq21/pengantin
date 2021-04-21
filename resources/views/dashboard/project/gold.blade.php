@@ -292,7 +292,7 @@
                         <div class="display-t">
                             <div class="display-tc animate-box" data-animate-effect="fadeIn">
                                 @if (isset($qs['u']))
-                                <h6>Dear, {{$qs['u']}}</h6>
+                                <h6>Dear {{$qs['u']}},</h6>
                                 @endif
                                 <p><strong>You're Invited!</strong></p>
                                 <h3>We Are Getting Married</h3>

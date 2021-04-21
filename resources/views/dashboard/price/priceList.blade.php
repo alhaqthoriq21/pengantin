@@ -174,7 +174,7 @@
     <!--//main-->
     <!--footer-->
     <div class="footer">
-        <p>Pemesanan? Hubungi Kami <a href="https://api.whatsapp.com/send?phone=6283827589388">Disini</a></p>
+        <p>Pemesanan? Hubungi Kami <a href="https://api.whatsapp.com/send?phone=6283827589388"><u>Disini</u></a></p>
         <p><img class="center" style="width:250px;height:100px;" src="{{asset('assets/img/logo/tobeabride.png')}}"
                 alt=""></p>
         <!-- <div class="col-md-12 text-center">
