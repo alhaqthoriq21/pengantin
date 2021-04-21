@@ -361,6 +361,10 @@
     .footer h1 {
         color: #ffffff;
     }
+
+    .demo h2 {
+        color: #ffffff;
+    }
     </style>
 
 </head>
@@ -474,12 +478,12 @@
                         <img src="assets/img/premium/flaticon/svg/006-flower-bell-outline-design-variant-with-vines-and-leaves.svg"
                             class="svg" alt="">
                         <h2 class="">The Wedding Day</h2>
-                        <h1 class="datewed">{{date("l jS F Y", strtotime($calon->akadNikah->tgl))}}</h1>
+                        <span class="datewed">{{date("l jS F Y", strtotime($calon->akadNikah->tgl))}}</span>
                     </div>
                 </div>
                 <div class="row animate-box">
-                    <div class="col-md-8 col-md-offset-2 text-center">
-                        <h1 id="demo"></h1>
+                    <div class="col-md-8 col-md-offset-2 text-center demo">
+                        <h2 id="demo"></h2>
                         <p class="countdown" id="countdown">
                             <span id="days"></span>
                             <span id="hours"></span>
