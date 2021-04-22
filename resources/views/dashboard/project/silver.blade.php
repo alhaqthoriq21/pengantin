@@ -425,6 +425,14 @@
         line-height: 2.5rem;
         margin-bottom: 40px;
     }
+
+    /* button.logo_btn {
+        height: 32px;
+        padding-left: 36px;
+        border: 1px solid #000;
+        background: #ff9900 url(assets/img/logo/btn.png) no-repeat 10px center;
+        cursor: pointer;
+    } */
     </style>
 </head>
 
@@ -455,9 +463,11 @@
 
                                 </div>
                             </div>
-                            <p><button href="#" id="play-music" class="button button4"><i class="fa fa-heart"></i>
+                            <p><button href="#" id="play-music" class="button text-center button4"><i
+                                        class="fa fa-heart"></i>
                                     Open
                                     Invitation</button>
+
                             </p>
                         </div>
                     </div>

@@ -780,7 +780,7 @@ couple-area
         top: 11px;
         width: 94%;
         height: 95%;
-        background: url(assets/img/bronze/couple/4.png) no-repeat center center / cover;
+        /* background: url(assets/img/bronze/couple/4.png) no-repeat center center / cover; */
     }
 
     .couple-img2:after {
@@ -790,7 +790,7 @@ couple-area
         top: 11px;
         width: 94%;
         height: 95%;
-        background: url(assets/img/bronze/couple/5.png) no-repeat center center / cover;
+        /* background: url(assets/img/bronze/couple/5.png) no-repeat center center / cover; */
     }
 
     .couple-img3 {
@@ -804,7 +804,7 @@ couple-area
         top: 10px;
         width: 45%;
         height: 51%;
-        background: url(assets/img/bronze/couple/6.png) no-repeat center center / cover;
+        /* background: url(assets/img/bronze/couple/6.png) no-repeat center center / cover; */
     }
 
     .couple-img3:after {
@@ -814,7 +814,7 @@ couple-area
         bottom: 10px;
         width: 45%;
         height: 51%;
-        background: url(assets/img/bronze/couple/7.png) no-repeat center center / cover;
+        /* background: url(assets/img/bronze/couple/7.png) no-repeat center center / cover; */
     }
 
 
@@ -1028,7 +1028,7 @@ couple-area end
     /* // service area alias when n where  */
     .service-area-menu li a.active,
     .service-area-menu li a:hover {
-        background: <?=$calon->color ?>;
+        background: #e7e7e7;
         color: #fff;
     }
 
@@ -1047,6 +1047,12 @@ couple-area end
         color: <?=$calon->color ?>;
         font-weight: 600;
     }
+
+
+
+
+
+
 
     /* //music box  */
     .music-box.music-box-2 button {
