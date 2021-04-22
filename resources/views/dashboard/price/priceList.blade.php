@@ -48,7 +48,7 @@
 <body>
     <!--header-->
     <div class="header-w3l">
-        <h1>Pricelist Template</h1>
+        <h1>Pricelist Template Undangan</h1>
     </div>
     <!--//header-->
     <!--main-->
@@ -65,8 +65,8 @@
                         <div class="pricing-bottom-bottom first-pricing-bottom-top">
                             <p><span class="fa fa-check"></span><span>Fitur Kepada</span></p>
                             <p><span class="fa fa-check"></span><span>15 Foto</span></p>
-                            <p><span class="fa fa-check"></span><span>Alamat</span></p>
-                            <p><span class="fa fa-check"></span><span>Lokasi</span></p>
+                            <p><span class="fa fa-check"></span><span>Alamat Lokasi</span></p>
+                            <!-- <p><span class="fa fa-check"></span><span>Lokasi</span></p> -->
                             <p><span class="fa fa-check"></span><span>Hitung Mundur</span></p>
                             <p><span class="fa fa-check"></span><span>Navigasi Lokasi</span></p>
                             <p><span class="fa fa-check"></span><span>Link Sosial Media</span></p>
@@ -93,8 +93,8 @@
                         <div class="pricing-bottom-bottom second-pricing-bottom-top">
                             <p><span class="fa fa-check"></span><span>Fitur Kepada</span></p>
                             <p><span class="fa fa-check"></span><span>12 Foto</span></p>
-                            <p><span class="fa fa-check"></span><span>Alamat</span></p>
-                            <p><span class="fa fa-check"></span><span>Lokasi</span></p>
+                            <p><span class="fa fa-check"></span><span>Alamat Lokasi</span></p>
+                            <!-- <p><span class="fa fa-check"></span><span>Lokasi</span></p> -->
                             <p><span class="fa fa-check"></span><span>Hitung Mundur</span></p>
                             <p><span class="fa fa-check"></span><span>Navigasi Lokasi</span></p>
                             <p><span class="fa fa-check"></span><span>Link Sosial Media</span></p>
@@ -121,8 +121,8 @@
                         <div class="pricing-bottom-bottom third-pricing-bottom-top">
                             <p><span class="fa fa-check"></span><span>Fitur Kepada</span></p>
                             <p><span class="fa fa-check"></span><span>8 Foto</span></p>
-                            <p><span class="fa fa-check"></span><span>Alamat</span></p>
-                            <p><span class="fa fa-check"></span><span>Lokasi</span></p>
+                            <p><span class="fa fa-check"></span><span>Alamat Lokasi</span></p>
+                            <!-- <p><span class="fa fa-check"></span><span>Lokasi</span></p> -->
                             <p><span class="fa fa-check"></span><span>Hitung Mundur</span></p>
                             <p><span class="fa fa-check"></span><span>Navigasi Lokasi</span></p>
                             <p><span class="fa fa-check"></span><span>Link Sosial Media</span></p>
