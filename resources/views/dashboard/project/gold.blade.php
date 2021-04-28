@@ -905,22 +905,22 @@
     // console.log(new Date());
 
     // default example
-    simplyCountdown('.simply-countdown-one', {
-        year: d.getFullYear(),
-        month: d.getMonth() + 1,
-        day: d.getDate(),
-        hour: d.getHours(),
-        minute: d.getMinutes(),
-        second: d.getSeconds()
-    });
-
-    //jQuery example
-    // $('#simply-countdown-losange').simplyCountdown({
+    // simplyCountdown('.simply-countdown-one', {
     //     year: d.getFullYear(),
     //     month: d.getMonth() + 1,
     //     day: d.getDate(),
-    //     enableUtc: false
+    //     hour: d.getHours(),
+    //     minute: d.getMinutes(),
+    //     second: d.getSeconds()
     // });
+
+    //jQuery example
+    $('.simply-countdown-one').simplyCountdown({
+        year: d.getFullYear(),
+        month: d.getMonth() + 1,
+        day: d.getDate(),
+        enableUtc: false
+    });
 
     $(".button").click(function() {
         $(".gateway").slideUp("slow");

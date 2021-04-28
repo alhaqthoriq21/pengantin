@@ -5,12 +5,18 @@
     <title>ToBeABrideXCloudStudio</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/tobeabride.ico">
 
 
     <style type="text/css">
+    @font-face {
+        font-family: 'Merienda-Regular';
+        font-style: normal;
+        font-weight: 700;
+        src: url(http://" . $_SERVER['SERVER_NAME']."/dompdf/fonts/Merienda-Regular.ttf) format('truetype');
+    }
+
     table tr td,
     table tr th {
         font-size: 9pt;
@@ -29,7 +35,12 @@
         line-height: 1.7;
         color: #212529;
         overflow-x: hidden;
-        background: url(assets/img/silver/seamless.png);
+        /* background: url(assets/img/silver/seamless.png); */
+    }
+
+    .h2 {
+        font-family: 'Merienda-Regular';
+        font-size: 30px;
     }
 
     .date-section__flowers {
@@ -37,9 +48,9 @@
         padding-bottom: 30px;
     }
 
-    .section--bg {
-        background: <?=$calon->color ?>;
-    }
+    /* .section--bg {
+        background: ;
+    } */
 
     /* 
     .flower {
@@ -57,6 +68,7 @@
         <div class="container">
             <div class="date-section__flowers m-auto flower">
                 <img style="width:400px;height:100px;" src="assets\img\logo\flow.png" alt="flowers">
+                <h2>{{$calon->nick_pria}} & {{$calon->nick_wanita}}</h2>
             </div>
         </div>
     </section>
@@ -83,8 +95,6 @@
             @endforeach
         </tbody>
     </table>
-
-
 
 </body>
 

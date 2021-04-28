@@ -9,10 +9,11 @@ use Validator;
 
 class QuotesController extends Controller
 {
-    public function getData(){
+    public function getData(Request $request){
         $calon = Calon::get();
         $quotes = Quotes::with('calon')->paginate(10);
-        return view('dashboard.quotes.quotes', compact('quotes','calon'));
+        $page = $request->page != null ? $request->page : 1;
+        return view('dashboard.quotes.quotes', compact('quotes','calon','page'));
     }
     
     public function acceptedQuotes($id)

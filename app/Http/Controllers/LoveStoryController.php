@@ -10,10 +10,11 @@ use Validator;
 
 class LoveStoryController extends Controller
 {
-    public function getData(){
+    public function getData(Request $request){
         $calon = Calon::get();
         $loveStory = LoveStory::paginate(10);
-        return view('dashboard.love.loveStory', compact('loveStory','calon'));
+        $page = $request->page != null ? $request->page : 1;
+        return view('dashboard.love.loveStory', compact('loveStory','calon','page'));
     }
     
     public function acceptedLoveStory($id)

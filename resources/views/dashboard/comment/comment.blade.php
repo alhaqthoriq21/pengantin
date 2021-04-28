@@ -39,7 +39,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <?php $no = 1; ?>
+                            <?php $no = $page > 1 ? ($page - 1)*10 +1: 1; ?>
                             @foreach($comment as $data)
                             <tr>
                                 <th scope="row">{{ $no }}</th>

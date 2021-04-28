@@ -10,10 +10,11 @@ use Validator;
 
 class ResepsiController extends Controller
 {
-    public function getData(){
+    public function getData(Request $request){
         $calon = Calon::get();
         $resepsi = Resepsi::paginate(10);
-        return view('dashboard.resepsi.resepsi', compact('resepsi','calon'));
+        $page = $request->page != null ? $request->page : 1;
+        return view('dashboard.resepsi.resepsi', compact('resepsi','calon','page'));
     }
     
     public function acceptedResepsi($id)

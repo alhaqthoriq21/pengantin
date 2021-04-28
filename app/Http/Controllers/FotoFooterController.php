@@ -9,10 +9,11 @@ use Validator;
 
 class FotoFooterController extends Controller
 {
-    public function getData(){
+    public function getData(Request $request){
         $calon = Calon::get();
         $fotoFooter = FotoFooter::with('calon')->paginate(10);
-        return view('dashboard.fotoFooter.fotoFooter', compact('fotoFooter','calon'));
+        $page = $request->page != null ? $request->page : 1;
+        return view('dashboard.fotoFooter.fotoFooter', compact('fotoFooter','calon','page'));
     }
     
     public function acceptedFotoFooter($id)

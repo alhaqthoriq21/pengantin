@@ -11,10 +11,11 @@ use PDF;
 
 class ReservasiController extends Controller
 {
-    public function getData(){
+    public function getData(Request $request){
         $calon = Calon::get();
         $reservasi = Reservasi::with('calon')->paginate(10);
-        return view('dashboard.reservasi.reservasi', compact('reservasi','calon'));
+        $page = $request->page != null ? $request->page : 1;
+        return view('dashboard.reservasi.reservasi', compact('reservasi','calon','page'));
     }
 
     public function show($reservasiId)
@@ -26,10 +27,10 @@ class ReservasiController extends Controller
 
     public function cetak(Request $request)
     {
-    $calon = Calon::first();
+        
     $r = $request->only(["calon_id"]);
+    $calon = Calon::find($r)->first();
 	$reservasi = Reservasi::where('calon_id', $r)->with('calon')->get();
-    // dd($reservasi);
 	$pdf = PDF::loadview('dashboard.reservasi.reservasiPdf', compact('reservasi','calon'));
     
 	return $pdf->stream();

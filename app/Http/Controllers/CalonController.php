@@ -16,9 +16,10 @@ use Validator;
 
 class CalonController extends Controller
 {
-    public function getData(){
+    public function getData(Request $request){
         $calon = Calon::paginate(10);
-        return view('dashboard.calon.calon', compact('calon'));
+        $page = $request->page != null ? $request->page : 1;
+        return view('dashboard.calon.calon', compact('calon','page'));
     }
     
     public function acceptedCalon($id)

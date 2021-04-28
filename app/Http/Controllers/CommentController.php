@@ -8,9 +8,10 @@ use Illuminate\Http\Request;
 
 class CommentController extends Controller
 {
-    public function getData(){
+    public function getData(Request $request){
         $comment = Comment::paginate(10);
-        return view('dashboard.comment.comment', compact('comment'));
+        $page = $request->page != null ? $request->page : 1;
+        return view('dashboard.comment.comment', compact('comment','page'));
     }
 
     public function show($commentId)

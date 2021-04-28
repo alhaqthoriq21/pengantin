@@ -10,10 +10,11 @@ use Validator;
 
 class AkadNikahController extends Controller
 {
-    public function getData(){
+    public function getData(Request $request){
         $calon = Calon::get();
         $akadNikah = AkadNikah::with("calon")->paginate(10);
-        return view('dashboard.akad.akadNikah', compact('akadNikah','calon'));
+        $page = $request->page != null ? $request->page : 1;
+        return view('dashboard.akad.akadNikah', compact('akadNikah','calon','page'));
     }
     
     public function acceptedAkadNikah($id)

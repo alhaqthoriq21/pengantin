@@ -41,7 +41,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php $no = 1; ?>
+                                <?php $no = $page > 1 ? ($page - 1)*10 +1: 1; ?>
                                 @foreach($reservasi as $data)
                                 <tr>
                                     <th scope="row">{{ $no }}</th>
@@ -107,6 +107,7 @@
 
 @push("style")
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=Merienda' rel='stylesheet'>
 @endpush
 
 @push('scripts')

@@ -9,10 +9,11 @@ use Validator;
 
 class SongController extends Controller
 {
-    public function getData(){
-         $calon = Calon::get();
+    public function getData(Request $request){
+        $calon = Calon::get();
         $song = Song::with('calon')->paginate(10);
-        return view('dashboard.song.song', compact('song','calon'));
+        $page = $request->page != null ? $request->page : 1;
+        return view('dashboard.song.song', compact('song','calon','page'));
     }
     
     public function acceptedSong($id)
