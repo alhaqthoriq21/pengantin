@@ -249,7 +249,7 @@ welcome-area
         font-size: 16px;
         padding: 10px 0px 20px;
         color: #fff;
-        max-width: 700px;
+        /* max-width: 700px; */
         margin-bottom: 0px;
     }
 
@@ -967,10 +967,12 @@ couple-area end
     .footer__title {
         position: relative;
         font-family: "Satisfy";
-        font-size: <?=$calon->size_font ?>px;
+        /* font-size: <?=$calon->size_font ?>px; */
+        font-size: 30px;
         line-height: 40px;
         /* line-height: 2.5rem; */
         margin-bottom: 40px;
+        margin-top: 20px;
     }
 
     /* 

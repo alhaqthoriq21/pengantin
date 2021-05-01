@@ -19,12 +19,12 @@
         font-weight: 700;
     } */
 
-    @import url('assets/fonts/La-storia-Demo.otf');
+    /* @import url('assets/fonts/La-storia-Demo.otf'); */
 
-    /* @font-face {
+    @font-face {
         font-family: La-storia-Demo;
         src: url("assets/fonts/La-storia-Demo.otf") format("opentype");
-    } */
+    }
 
 
 
@@ -50,7 +50,7 @@
     }
 
     .h2 {
-        font-family: 'Merienda';
+        font-family: 'La-storia-Demo';
         font-size: 30px;
     }
 
