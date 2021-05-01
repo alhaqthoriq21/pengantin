@@ -53,7 +53,7 @@
     <style>
     @font-face {
         font-family: La-storia-Demo;
-        src: url("vendor/dompdf/dompdf/lib/fonts/La-storia-Demo.otf") format("opentype");
+        src: url("assets/fonts/La-storia-Demo.otf") format("opentype");
     }
 
     body,
