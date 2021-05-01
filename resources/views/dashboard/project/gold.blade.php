@@ -297,7 +297,8 @@
                                 <p><strong>You're Invited!</strong></p>
                                 <h3>We Are Getting Married</h3>
                                 <h1>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</h1>
-                                <p><button href="#" id="play-music" class="button button4"><i class="fa fa-heart"></i>
+                                <p><button href="#" id="play-music" class="button button4"><img
+                                            src="assets/img/logo/btn.png" width="25px" height="25px" alt="" srcset="">
                                         Open
                                         Invitation</button>
                                 </p>
@@ -321,6 +322,7 @@
                             <div class="display-tc animate-box" data-animate-effect="fadeIn">
                                 <h1>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</h1>
                                 <h2>We Are Getting Married</h2>
+                                <!-- <p>{{$tanggalIndoAkad}}</p> -->
                                 <!-- <div class="simply-countdown-losange" id="simply-countdown-losange"></div> -->
                                 <div class="simply-countdown simply-countdown-one">
                                 </div>
@@ -340,7 +342,7 @@
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
                         <h2>Welcome!</h2>
-                        <h3> {{date("l jS F Y", strtotime($calon->akadNikah->tgl))}}</h3>
+                        <h3>{{$tanggalIndoAkad}}</h3>
                         <p>We invited you to celebrate our wedding</p>
                     </div>
                 </div>
@@ -404,7 +406,7 @@
                                         </div>
                                         <div class="event-col">
                                             <i class="icon-calendar"></i>
-                                            <span>{{date("l jS F Y", strtotime($calon->akadNikah->tgl))}}</span>
+                                            <span>{{$tanggalIndoAkad}}</span>
                                         </div>
                                         <p>
                                             {{$calon->akadNikah->tempat}}
@@ -429,7 +431,7 @@
                                         </div>
                                         <div class="event-col">
                                             <i class="icon-calendar"></i>
-                                            <span>{{date("l jS F Y", strtotime($calon->resepsi->tgl_rsp))}}</span>
+                                            <span>{{$tanggalIndoResepsi}}</span>
                                             <!-- <span>Monday 28</span>
                                             <span>November, 2016</span> -->
                                         </div>

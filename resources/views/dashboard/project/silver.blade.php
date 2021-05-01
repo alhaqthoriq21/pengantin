@@ -463,8 +463,8 @@
 
                                 </div>
                             </div>
-                            <p><button href="#" id="play-music" class="button text-center button4"><i
-                                        class="fa fa-heart"></i>
+                            <p><button href="#" id="play-music" class="button text-center button4"><img
+                                        src="assets/img/logo/btn.png" width="25px" height="25px" alt="" srcset="">
                                     Open
                                     Invitation</button>
 
@@ -490,7 +490,7 @@
                                 <!-- <img src="assets/img/premium/flaticon/svg/004-nature.svg" class="svg" alt=""> -->
                                 <h1 class="holder"><span>The Wedding of</span></h1>
                                 <h2>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</h2>
-                                <p>{{date("l jS F Y", strtotime($calon->akadNikah->tgl))}}</p>
+                                <p>{{$tanggalIndoAkad}}</p>
                             </div>
                         </div>
                     </div>
@@ -678,7 +678,7 @@
             </div>
             <div class="date-section__block">
                 <div class="d-inline-block">
-                    <h2 class="title--special">{{date("l jS F Y", strtotime($calon->akadNikah->tgl))}}</h2>
+                    <h2 class="title--special">{{$tanggalIndoAkad}}</h2>
                     <h3 class="date-section__place">
                         {{$calon->akadNikah->tempat}}<br>
                         {{$calon->akadNikah->alamat}}
@@ -738,7 +738,7 @@
                                 </p>
                                 <p class="d-flex align-items-center"><i
                                         class="fa fa-2x fa-clock-o align-middle pr-1"></i>{{$calon->akadNikah->waktu}},
-                                    {{date("l jS F Y", strtotime($calon->akadNikah->tgl))}}
+                                    {{$tanggalIndoAkad}}
                                 </p>
                                 <!-- <p class="font-weight-bold">Keep it classy</p> -->
                                 <a class="btn btn-outline-dark rounded-0 px-2 py-1 popup-gmaps"
@@ -761,7 +761,7 @@
                                 </p>
                                 <p class="d-flex align-items-center"><i
                                         class="fa fa-2x fa-clock-o align-middle pr-1"></i>{{$calon->resepsi->waktu_rsp}},
-                                    {{date("l jS F Y", strtotime($calon->resepsi->tgl_rsp))}}
+                                    {{$tanggalIndoResepsi}}
                                 </p>
                                 <!-- <p class="font-weight-bold">Keep it classy</p> -->
                                 <a class="btn btn-outline-dark rounded-0 px-2 py-1 popup-gmaps"

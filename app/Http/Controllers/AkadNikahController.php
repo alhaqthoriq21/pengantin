@@ -119,4 +119,7 @@ class AkadNikahController extends Controller
         return view('dashboard.akad.detailAkadNikah', compact('akadNikah','calon'));
     }
 
+   
+
+
 }

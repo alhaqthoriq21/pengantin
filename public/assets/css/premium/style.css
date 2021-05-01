@@ -862,6 +862,7 @@ h4 {
 #qbootstrap-countdown .section-heading .datewed {
     font-size: 20px;
     color: rgba(255, 255, 255);
+    font-family: "Sofia";
 }
 
 #qbootstrap-countdown .section-heading.svg-sm .svg {

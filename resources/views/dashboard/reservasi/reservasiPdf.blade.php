@@ -10,12 +10,15 @@
 
 
     <style type="text/css">
+    @import 'https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap';
+
     @font-face {
-        font-family: 'Merienda-Regular';
+        font-family: 'Merienda', cursive;
         font-style: normal;
         font-weight: 700;
-        src: url(http://" . $_SERVER['SERVER_NAME']."/dompdf/fonts/Merienda-Regular.ttf) format('truetype');
     }
+
+
 
     table tr td,
     table tr th {
@@ -39,7 +42,7 @@
     }
 
     .h2 {
-        font-family: 'Merienda-Regular';
+        font-family: 'Merienda';
         font-size: 30px;
     }
 

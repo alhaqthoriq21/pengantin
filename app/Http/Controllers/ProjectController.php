@@ -14,33 +14,35 @@ class ProjectController extends Controller
         $calon = Calon::where('slug',$slug)->with("akadNikah","loveStory","resepsi",
         "quotes","song","comment","reservasi","fotoHeader","fotoBody","fotoFooter","user")->first();
         $qs =$request->only(["u"]);
+        $tanggalIndoAkad = $this->convertIndoDate($calon->akadNikah->tgl);
+        $tanggalIndoResepsi = $this->convertIndoDate($calon->resepsi->tgl_rsp);
         // dd($calon);
-        return $this->pickTemplate($calon->template,$calon, $qs);
+        return $this->pickTemplate($calon->template,$calon, $qs, $tanggalIndoAkad, $tanggalIndoResepsi);
     }
 
-    public function pickTemplate($template,$calon, $qs){
+    public function pickTemplate($template,$calon, $qs, $tanggalIndoAkad, $tanggalIndoResepsi){
         // dd($qs);
         switch ($template) {
     case "gold":
-        return view('dashboard.project.gold', compact('calon', 'qs'));
+        return view('dashboard.project.gold', compact('calon', 'qs','tanggalIndoAkad', 'tanggalIndoResepsi'));
         break;
     case "silver":
-        return view('dashboard.project.silver', compact('calon', 'qs'));
+        return view('dashboard.project.silver', compact('calon', 'qs','tanggalIndoAkad', 'tanggalIndoResepsi'));
         break;
     case "premium":
-        return view('dashboard.project.premium', compact('calon', 'qs'));
+        return view('dashboard.project.premium', compact('calon', 'qs','tanggalIndoAkad', 'tanggalIndoResepsi'));
         break;
     case "bronze":
-        return view('dashboard.project.bronze', compact('calon', 'qs'));
+        return view('dashboard.project.bronze', compact('calon', 'qs','tanggalIndoAkad', 'tanggalIndoResepsi'));
         break;
     case "honey":
-        return view('dashboard.project.honey', compact('calon', 'qs'));
+        return view('dashboard.project.honey', compact('calon', 'qs','tanggalIndoAkad', 'tanggalIndoResepsi'));
         break;
     case "cherry":
-        return view('dashboard.project.cherry', compact('calon', 'qs'));
+        return view('dashboard.project.cherry', compact('calon', 'qs','tanggalIndoAkad', 'tanggalIndoResepsi'));
         break;
     case "clone":
-        return view('dashboard.project.clone', compact('calon', 'qs'));
+        return view('dashboard.project.clone', compact('calon', 'qs','tanggalIndoAkad', 'tanggalIndoResepsi'));
         break;
     }
     }
@@ -92,6 +94,22 @@ class ProjectController extends Controller
         } catch (\Exception $e) {
             return redirect(route("get.project.data",$slug))->with("error", $e->getMessage());
         }
+    }
+
+     function convertIndoDate($date){
+    // contoh : 17 Agustus 2019 10:20:20
+    
+    $bulanIndo = ['', 'Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September' , 'Oktober', 'November', 'Desember'];
+
+    $hariIndo = ['Minggu', 'Senin', 'Selasa','Rabu','Kamis',"Jum'at",'Sabtu'];
+
+    $hari = date("w", strtotime($date));
+    $tanggal = date("j", strtotime($date));
+    $bulan = date('n', strtotime($date));
+    $tahun = date("Y", strtotime($date));
+    
+
+    return $hariIndo[$hari] . " " . $tanggal . " " . $bulanIndo[$bulan] . " " . $tahun;
     }
 
 }

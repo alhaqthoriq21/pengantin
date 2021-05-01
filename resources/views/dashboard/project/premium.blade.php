@@ -254,7 +254,7 @@
         font-size: 80px;
         color: <?=$calon->color ?>;
         display: block;
-        padding-bottom: 20px;
+        /* padding-bottom: 20px; */
         line-height: 1.5;
     }
 
@@ -386,8 +386,9 @@
                                     <p><span>You're Invited!</span></p>
                                     <h3 class="holder"><span>The Wedding of</span></h3>
                                     <h2><strong>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</strong></h2>
-                                    <p><button href="#" id="play-music" class="button button4"><i
-                                                class="fa fa-heart"></i> Open
+                                    <p><button href="#" id="play-music" class="button button4"><img
+                                                src="assets/img/logo/btn.png" width="25px" height="25px" alt=""
+                                                srcset=""> Open
                                             Invitation</button>
                                     </p>
                                 </div>
@@ -413,7 +414,7 @@
                                 <img src="assets/img/premium/flaticon/svg/004-nature.svg" class="svg" alt="">
                                 <h1 class="holder"><span>The Wedding of</span></h1>
                                 <h2><strong>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</strong></h2>
-                                <p>{{date("l jS F Y", strtotime($calon->akadNikah->tgl))}}</p>
+                                <p>{{$tanggalIndoAkad}}</p>
                             </div>
                         </div>
                     </div>
@@ -478,7 +479,7 @@
                         <img src="assets/img/premium/flaticon/svg/006-flower-bell-outline-design-variant-with-vines-and-leaves.svg"
                             class="svg" alt="">
                         <h2 class="">The Wedding Day</h2>
-                        <span class="datewed">{{date("l jS F Y", strtotime($calon->akadNikah->tgl))}}</span>
+                        <span class="datewed">{{$tanggalIndoAkad}}</span>
                     </div>
                 </div>
                 <div class="row animate-box">
@@ -666,7 +667,7 @@
                                     <div class="date">
                                         <i class="icon-calendar"></i>
                                         <!-- <span>Saturday</span> -->
-                                        <span>{{date("l jS F Y", strtotime($calon->akadNikah->tgl))}}</span>
+                                        <span>{{$tanggalIndoAkad}}</span>
                                     </div>
                                 </div>
                                 <div class="col-md-5 col-md-pull-1">
@@ -703,7 +704,7 @@
                                     <div class="date">
                                         <i class="icon-calendar"></i>
                                         <!-- <span>Saturday</span> -->
-                                        <span>{{date("l jS F Y", strtotime($calon->resepsi->tgl_rsp))}}</span>
+                                        <span>{{$tanggalIndoResepsi}}</span>
                                     </div>
                                 </div>
                                 <div class="col-md-5 col-md-pull-1">

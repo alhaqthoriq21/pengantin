@@ -731,7 +731,9 @@ couple-area
 
     .couple-content p {
         margin-top: 0px;
+        margin-right: 0px;
         margin-bottom: 0px;
+        margin-left: 0px;
         font-family: "Arial";
         font-size: 14px;
     }
@@ -1142,8 +1144,9 @@ couple-area end
                                         <p><strong>You're Invited!</strong></h6>
                                         <h4>We're Getting Married</h4>
                                         <h2>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</h2>
-                                        <p><button href="#" id="play-music" class="button text-center button4"><i
-                                                    class="fa fa-heart"></i>
+                                        <p><button href="#" id="play-music" class="button text-center button4">
+                                                <img src="assets/img/logo/btn.png" width="25px" height="25px" alt=""
+                                                    srcset="">
                                                 Open
                                                 Invitation</button></p>
                                     </div>
@@ -1173,7 +1176,7 @@ couple-area end
                                 <div class="col-lg-12">
                                     <h4>We're Getting Married</h4>
                                     <h2>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</h2>
-                                    <p>{{date("l jS F Y", strtotime($calon->akadNikah->tgl))}}</p>
+                                    <p>{{$tanggalIndoAkad}}</p>
                                 </div>
                             </div>
                         </div>
@@ -1432,7 +1435,7 @@ couple-area end
                                 <div class="col-lg-7">
                                     <div class="ceromony-content">
                                         <h3>Akad Nikah</h3>
-                                        <span>{{date("l jS F Y", strtotime($calon->akadNikah->tgl))}},
+                                        <span>{{$tanggalIndoAkad}},
                                             {{$calon->akadNikah->waktu}}</span>
                                         <span>{{$calon->akadNikah->tempat}}</span>
                                         <span>{{$calon->akadNikah->alamat}}</span>
@@ -1453,7 +1456,7 @@ couple-area end
                                 <div class="col-lg-7">
                                     <div class="ceromony-content ceromony-content2">
                                         <h3>Resepsi</h3>
-                                        <span>{{date("l jS F Y", strtotime($calon->resepsi->tgl_rsp))}},
+                                        <span>{{$tanggalIndoResepsi}},
                                             {{$calon->resepsi->waktu_rsp}}</span>
                                         <span>{{$calon->resepsi->tempat_rsp}}</span>
                                         <span>{{$calon->resepsi->alamat_rsp}}</span>
