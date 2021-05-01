@@ -130,7 +130,7 @@
                             <p><span class="fa fa-check"></span><span>Turut Mengundang</span></p>
                             <p><span class="fa fa-check"></span><span>Kolom Ucapan</span></p>
                             <p><span class="fa fa-times"></span><span>RSVP</span></p>
-                            <p><span class="fa fa-check"></span><span>Love Story</span></p>
+                            <p><span class="fa fa-times"></span><span>Love Story</span></p>
                             <!-- <p class="text"><span class="fa fa-times"></span><span>Foundation</span> Training</p> -->
                         </div>
                         <div class="buy-button">
@@ -150,8 +150,8 @@
                         <div class="pricing-bottom-bottom fourth-pricing-bottom-top">
                             <p><span class="fa fa-check"></span><span>Fitur Kepada</span></p>
                             <p><span class="fa fa-check"></span><span>6 Foto</span></p>
-                            <p><span class="fa fa-check"></span><span>Alamat</span></p>
-                            <p><span class="fa fa-check"></span><span>Lokasi</span></p>
+                            <p><span class="fa fa-check"></span><span>Alamat Lokasi</span></p>
+                            <!-- <p><span class="fa fa-check"></span><span>Lokasi</span></p> -->
                             <p><span class="fa fa-check"></span><span>Hitung Mundur</span></p>
                             <p><span class="fa fa-check"></span><span>Navigasi Lokasi</span></p>
                             <p><span class="fa fa-check"></span><span>Link Sosial Media</span></p>
@@ -159,7 +159,7 @@
                             <p><span class="fa fa-check"></span><span>Turut Mengundang</span></p>
                             <p><span class="fa fa-check"></span><span>Kolom Ucapan</span></p>
                             <p><span class="fa fa-times"></span><span>RSVP</span></p>
-                            <p><span class="fa fa-check"></span><span>Love Story</span></p>
+                            <p><span class="fa fa-times"></span><span>Love Story</span></p>
                             <!-- <p class="text"><span class="fa fa-check"></span><span>Foundation</span> Training</p> -->
                         </div>
                         <div class="buy-button">

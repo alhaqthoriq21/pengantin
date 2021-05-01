@@ -550,7 +550,7 @@
         </div>
     </div> -->
 
-    <div id="qbootstrap-story" data-section="story">
+    <!-- <div id="qbootstrap-story" data-section="story">
         <div class="container">
             <div class="row animate-box">
                 <div class="col-md-8 col-md-offset-2">
@@ -631,7 +631,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <div id="qbootstrap-when-where" data-section="when-where">
         <div class="container">

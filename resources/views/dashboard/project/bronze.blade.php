@@ -51,6 +51,11 @@
     <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet'>
     <style>
+    @font-face {
+        font-family: La-storia-Demo;
+        src: url("vendor/dompdf/dompdf/lib/fonts/La-storia-Demo.otf") format("opentype");
+    }
+
     body,
     html {
         height: 100%;
@@ -91,6 +96,7 @@
         border-radius: 12px;
         width: 300px;
         height: 45px;
+        margin-top: 0px;
     }
 
 
@@ -100,6 +106,7 @@
             width: 260px;
             display: table-cell;
             vertical-align: middle;
+
         }
     }
 
@@ -1143,7 +1150,8 @@ couple-area end
                                         @endif
                                         <p><strong>You're Invited!</strong></h6>
                                         <h4>We're Getting Married</h4>
-                                        <h2>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</h2>
+                                        <h2><strong>{{$calon->nick_pria}} &amp;</strong></h2>
+                                        <h2><strong>{{$calon->nick_wanita}}</strong></h2>
                                         <p><button href="#" id="play-music" class="button text-center button4">
                                                 <img src="assets/img/logo/btn.png" width="25px" height="25px" alt=""
                                                     srcset="">
@@ -1175,8 +1183,9 @@ couple-area end
                             <div class="slider-content">
                                 <div class="col-lg-12">
                                     <h4>We're Getting Married</h4>
-                                    <h2>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</h2>
-                                    <p>{{$tanggalIndoAkad}}</p>
+                                    <h2><strong>{{$calon->nick_pria}} &amp;</strong>
+                                        <h2><strong>{{$calon->nick_wanita}}</strong></h2>
+                                        <p>{{$tanggalIndoAkad}}</p>
                                 </div>
                             </div>
                         </div>

@@ -10,15 +10,17 @@
 
 
     <style type="text/css">
-    @import 'https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap';
+    /* @import 'https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap';
 
     @font-face {
         font-family: 'Merienda', cursive;
         font-style: normal;
         font-weight: 700;
+    } */
+    @font-face {
+        font-family: La-storia-Demo;
+        src: url("assets/fonts/La-storia-Demo.otf") format("opentype");
     }
-
-
 
     table tr td,
     table tr th {
@@ -42,7 +44,7 @@
     }
 
     .h2 {
-        font-family: 'Merienda';
+        font-family: 'La-storia-Demo';
         font-size: 30px;
     }
 
