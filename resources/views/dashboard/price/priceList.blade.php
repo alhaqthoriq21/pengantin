@@ -134,7 +134,7 @@
                             <!-- <p class="text"><span class="fa fa-times"></span><span>Foundation</span> Training</p> -->
                         </div>
                         <div class="buy-button">
-                            <a href="/icha-agi-tiga?u=Nama+Tamu">Lihat</a>
+                            <a href="/satria-berlin?u=Nama+Tamu">Lihat</a>
                         </div>
                     </div>
                 </div>
