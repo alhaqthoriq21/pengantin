@@ -57,7 +57,7 @@
 
     <style>
     .gateway {
-        background-image: url('{{$calon->fotoHeader->foto_header}}');
+        background-image: url('{{$calon->foto_gateway}}');
         height: 100%;
         background-position: center;
         background-size: cover;
@@ -409,7 +409,7 @@
                                             <span>{{$tanggalIndoAkad}}</span>
                                         </div>
                                         <p>
-                                            {{$calon->akadNikah->tempat}}
+                                            <span>{{$calon->akadNikah->tempat}}</span>
                                         </p>
                                         <p>
                                             <span>{{$calon->akadNikah->alamat}}</span>

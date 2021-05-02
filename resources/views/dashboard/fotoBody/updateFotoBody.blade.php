@@ -65,8 +65,9 @@
                                     <div class="col-sm-8">
                                         <div class="d-flex flex-row">
                                             <div class="d-flex flex-row">
-                                                @if($fotoBody->foto)
-                                                <img width="100px" src="{{url($fotoBody->foto)}}" alt="" srcset="">
+                                                @if($fotoBody->foto_pertama)
+                                                <img width="100px" src="{{url($fotoBody->foto_pertama)}}" alt=""
+                                                    srcset="">
                                                 @endif
                                             </div>
                                             <input type="file" name="foto_pertama" id="foto_pertama"

@@ -527,7 +527,7 @@
                                                                 <div class="d-flex flex-row">
                                                                     <input name="judul" id="judul" placeholder=""
                                                                         type="text" class="form-control"
-                                                                        value="{{$calon->song->judul}}">
+                                                                        value="{{$calon->song->judul_song}}">
                                                                 </div>
                                                             </div>
                                                         </div>

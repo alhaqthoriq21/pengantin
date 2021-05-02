@@ -85,7 +85,7 @@
     }
 
     .gateway {
-        background-image: url('{{$calon->fotoHeader->foto_header}}');
+        background-image: url('{{$calon->foto_gateway}}');
         height: 100%;
         background-position: center;
         background-size: cover;
