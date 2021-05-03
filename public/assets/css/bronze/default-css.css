@@ -748,11 +748,24 @@ textarea {
     top: 0;
     left: 0;
     right: 0;
+    margin: auto;
     width: 100%;
     height: 100%;
     z-index: 1000;
     background: #fff;
 }
+
+@media screen and (max-width: 500px) {
+
+    .preloader {
+        margin-right: 10px;
+        /* margin-left: 10px; */
+        /* left: 10px; */
+        /* right: 10px; */
+    }
+}
+
+
 
 .hart-wrap {
     display: block;
