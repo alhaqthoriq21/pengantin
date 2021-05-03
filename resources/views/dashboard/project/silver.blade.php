@@ -452,22 +452,21 @@
                     <div class="display-tc">
                         <div class="container">
                             <div class="col-md-10 col-md-offset-1">
-                                <div class="animate-box svg-sm colored">
-                                    <!-- <img src="assets/img/premium/flaticon/svg/004-nature.svg" class="svg" alt=""> -->
-                                    @if (isset($qs['u']))
-                                    <h3>Dear {{$qs['u']}},</h3>
-                                    @endif
-                                    <p><strong>You're Invited!</strong></p>
-                                    <h1 class="holder"><span>The Wedding of</span></h1>
-                                    <h2>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</h2>
-                                    <p><button href="#" id="play-music" class="button text-center button4"><img
-                                                src="assets/img/logo/btn.png" width="25px" height="25px" alt=""
-                                                srcset="">
-                                            Open
-                                            Invitation</button>
+                                <!-- <div class="animate-box svg-sm colored"> -->
+                                <!-- <img src="assets/img/premium/flaticon/svg/004-nature.svg" class="svg" alt=""> -->
+                                @if (isset($qs['u']))
+                                <h3>Dear {{$qs['u']}},</h3>
+                                @endif
+                                <p><strong>You're Invited!</strong></p>
+                                <h1 class="holder"><span>The Wedding of</span></h1>
+                                <h2>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</h2>
+                                <p><button href="#" id="play-music" class="button text-center button4"><img
+                                            src="assets/img/logo/btn.png" width="25px" height="25px" alt="" srcset="">
+                                        Open
+                                        Invitation</button>
 
-                                    </p>
-                                </div>
+                                </p>
+                                <!-- </div> -->
                             </div>
 
                         </div>
