@@ -1145,23 +1145,22 @@ couple-area end
                     <div class="display-tc">
                         <div class="container">
                             <div class="col-md-10 col-md-offset-1">
-                                <div class="slider-content">
-                                    <div class="col-lg-12">
-                                        @if (isset($qs['u']))
-                                        <h3>Dear {{$qs['u']}},</h3>
-                                        @endif
-                                        <p><strong>You're Invited!</strong></h6>
-                                        <h4>We're Getting Married</h4>
-                                        <h2><strong>{{$calon->nick_pria}} &amp;</strong></h2>
-                                        <h2><strong>{{$calon->nick_wanita}}</strong></h2>
-                                        <p><button href="#" id="play-music" class="button text-center button4">
-                                                <img src="assets/img/logo/btn.png" width="25px" height="25px" alt=""
-                                                    srcset="">
-                                                Open
-                                                Invitation</button></p>
-                                    </div>
+                                <!-- <div class="slider-content"> -->
+                                <!-- <div class="col-lg-12"> -->
+                                @if (isset($qs['u']))
+                                <h3>Dear {{$qs['u']}},</h3>
+                                @endif
+                                <p><strong>You're Invited!</strong></h6>
+                                <h4>We're Getting Married</h4>
+                                <h2><strong>{{$calon->nick_pria}} &amp;</strong></h2>
+                                <h2><strong>{{$calon->nick_wanita}}</strong></h2>
+                                <p><button href="#" id="play-music" class="button text-center button4">
+                                        <img src="assets/img/logo/btn.png" width="25px" height="25px" alt="" srcset="">
+                                        Open
+                                        Invitation</button></p>
+                                <!-- </div> -->
 
-                                </div>
+                                <!-- </div> -->
 
                             </div>
                         </div>

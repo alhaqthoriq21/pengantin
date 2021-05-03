@@ -460,15 +460,16 @@
                                     <p><strong>You're Invited!</strong></p>
                                     <h1 class="holder"><span>The Wedding of</span></h1>
                                     <h2>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</h2>
+                                    <p><button href="#" id="play-music" class="button text-center button4"><img
+                                                src="assets/img/logo/btn.png" width="25px" height="25px" alt=""
+                                                srcset="">
+                                            Open
+                                            Invitation</button>
 
+                                    </p>
                                 </div>
                             </div>
-                            <p><button href="#" id="play-music" class="button text-center button4"><img
-                                        src="assets/img/logo/btn.png" width="25px" height="25px" alt="" srcset="">
-                                    Open
-                                    Invitation</button>
 
-                            </p>
                         </div>
                     </div>
                 </div>
