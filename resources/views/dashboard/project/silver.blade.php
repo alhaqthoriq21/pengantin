@@ -94,7 +94,11 @@
 
     .commentText p,
     h6 {
-        margin-bottom: 0px;
+        margin-bottom: 5px;
+        margin-top: 0px;
+        /* margin: 0px; */
+        padding: 0px;
+        line-height: normal;
     }
 
     .rsvp {

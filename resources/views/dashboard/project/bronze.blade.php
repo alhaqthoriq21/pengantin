@@ -743,6 +743,7 @@ couple-area
         margin-left: 0px;
         font-family: "Arial";
         font-size: 14px;
+        line-height: normal;
     }
 
     .couple-content2 p {
