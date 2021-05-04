@@ -331,7 +331,7 @@ guest-area
 
     .guest-wrap {
         background: rgba(255, 255, 255, .5);
-        padding: 70px;
+        padding: 40px;
     }
 
     .section-title2.section-title3 h2:before {
@@ -505,7 +505,7 @@ comment-area
 
     .comment-wrap {
         background: rgba(255, 255, 255, .5);
-        padding: 70px;
+        padding: 40px;
     }
 
     .section-title2.section-title3 h2:before {
