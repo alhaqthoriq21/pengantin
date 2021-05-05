@@ -135,6 +135,7 @@
     .couple-half p {
         font-size: 15px;
         margin-bottom: 0px;
+        line-height: normal;
 
     }
 

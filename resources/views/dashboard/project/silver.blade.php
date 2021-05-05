@@ -437,6 +437,13 @@
         background: #ff9900 url(assets/img/logo/btn.png) no-repeat 10px center;
         cursor: pointer;
     } */
+
+    .item-p p {
+        font-size: inherit;
+        line-height: normal;
+        margin-bottom: 0px;
+        margin-top: revert;
+    }
     </style>
 </head>
 
@@ -587,16 +594,16 @@
             <h1 class="title">Happy Couple</h1>
             <p class="subtitle m-auto">Our Happiness is begun..</p>
             <div class="wishes__slider">
-                <div class="slick slick-wishes mb-0">
+                <div class="slick slick-wishes mb-0 item-p">
                     <div class="slider__item">
                         <div class="wishes__person">
                             <img class="rounded-circle m-auto" style="width:200px;height:200px;"
                                 src="{{$calon->foto_pria}}" alt="slider">
                         </div>
                         <h4 class="wishes__title font-weight-bold">{{$calon->calon_pria}}</h4>
-                        <p class="mx-auto"><strong>Putra Dari</strong></p>
-                        <h5 class="mx-auto">Bpk. {{$calon->ayah_pria}}</h5>
-                        <h5 class="mx-auto">Ibu {{$calon->ibu_pria}}</h5>
+                        <p><strong>Putra Dari</strong></p>
+                        <h5>Bpk. {{$calon->ayah_pria}}</h5>
+                        <h5>Ibu {{$calon->ibu_pria}}</h5>
                         <div class="col-md-12 text-center">
                             <ol class="social social-circle-couple">
                                 <li><a href="https://www.instagram.com/{{$calon->sosmed_pria}}/"><i
@@ -610,7 +617,7 @@
                                 src="{{$calon->foto_wanita}}" alt="slider">
                         </div>
                         <h4 class="wishes__title font-weight-bold">{{$calon->calon_wanita}}</h4>
-                        <p class="mx-auto"><strong>Putri Dari</strong></p>
+                        <p><strong>Putri Dari</strong></p>
                         <h5>Bpk. {{$calon->ayah_pria}}</h5>
                         <h5>Ibu {{$calon->ibu_pria}}</h5>
                         <div class="col-md-12 text-center">

@@ -211,8 +211,15 @@
         width: 50%;
     }
 
-    .commentText p,
-    ul,
+    .commentText p {
+        margin: 0;
+        font-size: 14px;
+        line-height: normal;
+        margin-bottom: 0px;
+        margin-top: 5px;
+    }
+
+    .commentText ul,
     li {
         margin: 0;
         font-size: 14px;
@@ -271,12 +278,13 @@
         font-size: 34px;
         font-family: "Clicker Script", cursive;
         color: <?=$calon->color ?>;
-        margin-bottom: 0px;
-        margin: 10px;
+        /* margin-bottom: 0px; */
+        margin-bottom: 10px;
     }
 
     .couple-font p {
         font-size: 12px;
+        line-height: normal;
     }
 
 
@@ -284,8 +292,8 @@
     @media screen and (max-width: 768px) {
         #qbootstrap-couple h3 {
             font-size: 17px;
-            margin-bottom: 0px;
-            margin: 10px;
+            /* margin-bottom: 0px; */
+            margin-bottom: 10px;
         }
     }
 
@@ -364,6 +372,10 @@
 
     .demo h2 {
         color: #ffffff;
+    }
+
+    .footer p {
+        margin-top: 20px;
     }
     </style>
 
@@ -1036,14 +1048,14 @@
     </div> -->
 
     <footer id="footer" role="contentinfo" class="section--bg">
-        <div class="container overlay">
-            <div class="col-md-12 text-center footer">
+        <div class="container overlay footer">
+            <div class="col-md-12 text-center">
                 <h1>Thank You</h1>
                 <h1><strong>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</strong></h1>
             </div>
-            <div class="row pb-4 commentText">
+            <div class="row pb-4">
                 <div class="col-md-12 text-center">
-                    <h8>Turut Mengundang :</h8>
+                    <p>Turut Mengundang :</p>
                 </div>
                 <div class="col-md-12 text-center parent">
                     <?php 
