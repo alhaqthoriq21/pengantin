@@ -78,7 +78,7 @@
                             <!-- <p class="text"><span class="fa fa-times"></span><span>Foundation</span> Training</p> -->
                         </div>
                         <div class="buy-button">
-                            <a href="/icha-agi-satu?u=Nama+Tamu">Lihat</a>
+                            <a href="/icha-agi?u=Nama+Tamu">Lihat</a>
                         </div>
                     </div>
                 </div>
@@ -106,7 +106,7 @@
                             <!-- <p class="text"><span class="fa fa-times"></span><span>Foundation</span> Training</p> -->
                         </div>
                         <div class="buy-button">
-                            <a href="/icha-agi-dua?u=Nama+Tamu">Lihat</a>
+                            <a href="/alfarizi-intan?u=Nama+Tamu">Lihat</a>
                         </div>
                     </div>
                 </div>
@@ -163,7 +163,7 @@
                             <!-- <p class="text"><span class="fa fa-check"></span><span>Foundation</span> Training</p> -->
                         </div>
                         <div class="buy-button">
-                            <a href="/icha-agi-empat?u=Nama+Tamu">Lihat</a>
+                            <a href="/lusi-gilang?u=Nama+Tamu">Lihat</a>
                         </div>
                     </div>
                 </div>
