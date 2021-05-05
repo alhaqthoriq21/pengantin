@@ -84,6 +84,8 @@
         margin: 0px;
         margin-bottom: 0px;
         color: #000000;
+        line-height: normal;
+        margin-top: 5px;
     }
 
     div.parent {
@@ -357,7 +359,7 @@
                             <h3><strong>{{$calon->calon_pria}}</strong></h3>
                             <p><strong>Putra Dari</strong></p>
                             <p>Bpk. {{$calon->ayah_pria}} </p>
-                            <p>& Ibu {{$calon->ibu_pria}} </p>
+                            <p>Ibu {{$calon->ibu_pria}} </p>
                             <p><a href="https://www.instagram.com/{{$calon->sosmed_pria}}/"><i
                                         class="icon-instagram"></i></a></p>
                         </div>
@@ -372,7 +374,7 @@
                             <h3><strong>{{$calon->calon_wanita}}</strong></h3>
                             <p><strong>Putri Dari</strong></p>
                             <p>Bpk. {{$calon->ayah_wanita}} </p>
-                            <p>& Ibu {{$calon->ibu_wanita}} </p>
+                            <p>Ibu {{$calon->ibu_wanita}} </p>
                             <p><a href="https://www.instagram.com/{{$calon->sosmed_wanita}}/"><i
                                         class="icon-instagram"></i></a></p>
                         </div>
