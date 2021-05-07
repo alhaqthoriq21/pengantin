@@ -101,7 +101,7 @@ class CalonController extends Controller
             $quotes['calon_id'] = $calon->id;
             $quotes = Quotes::create($quotes);
 
-            $song = $request->only(["calon_id","judul_song","song"]);
+            $song = $request->only(["calon_id","judul_song","song","video"]);
             $song['calon_id'] = $calon->id;
             $song = Song::create($song);
 
@@ -163,7 +163,7 @@ class CalonController extends Controller
             // $quotes['calon_id'] = $calon->id;
             $quotes = Quotes::where("calon_id",$request->calonId)->update($quotes);
             
-            $song = $request->only(["calon_id","judul_song","song"]);
+            $song = $request->only(["calon_id","judul_song","song","video"]);
             // $song['calon_id'] = $calon->id;
             $song = Song::where("calon_id",$request->calonId)->update($song);
             

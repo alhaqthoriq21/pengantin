@@ -1104,6 +1104,69 @@ couple-area end
             font-size: <?=$calon->size_font ?>px;
         }
     }
+
+    /* // video  */
+    .video-card {
+        margin-top: 50px;
+        clear: both;
+        text-align: center;
+    }
+
+    .video-card-top {
+        border-radius: 10px;
+        border-top: 10px;
+        box-shadow: 16px 13px 42px -17px rgba(0, 0, 0, 0.63);
+        height: 300px;
+        width: 300px;
+    }
+
+    @media screen and (min-width: 500px) {
+        .video-card-top {
+            border-radius: 10px;
+            border-top: 10px;
+            box-shadow: 16px 13px 42px -17px rgba(0, 0, 0, 0.63);
+            height: 520px;
+            width: 650px;
+        }
+    }
+
+    /* //modal vid  */
+    /* body {
+        margin: 0;
+    } */
+
+    /* .modal-dialog {
+        max-width: 800px;
+        margin: 30px auto;
+    }
+
+    .modal-body {
+        position: relative;
+        padding: 0px;
+    }
+
+    .close {
+        position: absolute;
+        right: -30px;
+        top: 0;
+        z-index: 999;
+        font-size: 2rem;
+        font-weight: normal;
+        color: #fff;
+        opacity: 1;
+    } */
+
+    /* //header love  */
+    /* .header-area.header-area-3 .logo h1 a {
+        font-size: 20px;
+        font-family: 'Great Vibes', cursive;
+        color: <?=$calon->color ?>;
+    } */
+
+    /* // colored  */
+    .colored-header {
+        fill: <?=$calon->color ?>;
+    }
     </style>
 
 
@@ -1119,6 +1182,8 @@ couple-area end
             <div class="heart"></div>
         </div>
     </div>
+
+
     <!-- prealoader area end -->
 
     <!-- header-area start -->
@@ -1145,7 +1210,7 @@ couple-area end
                 <div class="display-t">
                     <div class="display-tc">
                         <div class="container">
-                            <div class="col-md-10 col-md-offset-1">
+                            <div class="col-md-10 col-md-offset-1 colored-header">
                                 <!-- <div class="slider-content"> -->
                                 <!-- <div class="col-lg-12"> -->
                                 @if (isset($qs['u']))
@@ -1162,7 +1227,17 @@ couple-area end
                                 <!-- </div> -->
 
                                 <!-- </div> -->
+                                <!-- <button type="button" class="btn btn-primary video-btn" data-toggle="modal"
+                                    data-src="https://www.youtube.com/embed/Jfrjeg26Cwk" data-target="#myModal">
+                                    Play Video 1
+                                </button> -->
 
+
+                            </div>
+                            <div class="video-card">
+                                <iframe allowfullscreen="" class="YOUTUBE-iframe-video video-card-top"
+                                    data-thumbnail-src="" frameborder="0" src="{{$calon->song->video}}">
+                                </iframe>
                             </div>
                         </div>
                     </div>
@@ -1171,9 +1246,33 @@ couple-area end
         </div>
     </div>
 
+    <!-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+
+                <div class="modal-body">
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    16:9 aspect ratio
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="" id="video" allowscriptaccess="always"
+                            allow="autoplay"></iframe>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div> -->
+
     <!-- slider-area start -->
     <div class="qbootstrap-hero" data-section="home">
-        <div class=" qbootstrap-overlay"></div>
+        <div class="qbootstrap-overlay"></div>
         @if($calon->fotoHeader->foto_header)
         <div class="qbootstrap-cover text-center center-bg bg-cover" data-stellar-background-ratio="0.5"
             style="background-image:url({{$calon->fotoHeader->foto_header}});">
@@ -1746,6 +1845,41 @@ couple-area end
 
     $(".button").click(function() {
         $(".gateway").slideUp("slow");
+    });
+
+    $(document).ready(function() {
+
+        // Gets the video src from the data-src on each button
+
+        var $videoSrc;
+        $('.video-btn').click(function() {
+            $videoSrc = $(this).data("src");
+        });
+        console.log($videoSrc);
+
+
+
+        // when the modal is opened autoplay it  
+        $('#myModal').on('shown.bs.modal', function(e) {
+
+            // set the video src to autoplay and not to show related video. Youtube related video is like a box of chocolates... you never know what you're gonna get
+            $("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
+        })
+
+
+
+        // stop playing the youtube video when I close the modal
+        $('#myModal').on('hide.bs.modal', function(e) {
+            // a poor man's stop video
+            $("#video").attr('src', $videoSrc);
+        })
+
+
+
+
+
+
+        // document ready  
     });
     </script>
 </body>

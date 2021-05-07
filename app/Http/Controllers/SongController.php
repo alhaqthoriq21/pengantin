@@ -64,7 +64,7 @@ class SongController extends Controller
         }
 
         try {
-            $input = $request->only(["calon_id","judul","song","status"]);
+            $input = $request->only(["calon_id","judul","song","video","status"]);
             $song = Song::create($input);
             // $this->uploadSong($request, $song->id);
             return redirect(route("get.song.data"))->with("success", "Songs Footer Has Been Added");
@@ -84,7 +84,7 @@ class SongController extends Controller
         }
 
         try {
-            $input = $request->only(["calon_id","judul_song","song"]);
+            $input = $request->only(["calon_id","judul_song","song","video"]);
             $song = Song::find($songId);
         
             if ($song) {

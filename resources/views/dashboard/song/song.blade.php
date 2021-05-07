@@ -9,7 +9,7 @@
             <div class="col-sm-6 ml-auto">
                 <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item active">Song</li>
+                    <li class="breadcrumb-item active">Song & Video</li>
                 </ol>
             </div><!-- /.col -->
         </div><!-- /.row -->
@@ -105,7 +105,7 @@
                 <div class="card-header">
                     <div class="row align-items-center">
                         <div class="col">
-                            <h5 class="h3 mb-0">Form Lagu</h5>
+                            <h5 class="h3 mb-0">Form Lagu & Video</h5>
                         </div>
                     </div>
                 </div>
@@ -152,6 +152,17 @@
                                     <div class="col-sm-8">
                                         <div class="d-flex flex-row">
                                             <input name="song" id="song" placeholder="" min="1" type="text"
+                                                class="form-control" value="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-sm-4">
+                                        <label for="" class="col-form-label">Link Video</label>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <div class="d-flex flex-row">
+                                            <input name="video" id="video" placeholder="" min="1" type="text"
                                                 class="form-control" value="">
                                         </div>
                                     </div>

@@ -183,7 +183,8 @@
                                             <li class="nav-item">
                                                 <a class="nav-link" id="custom-tabs-four-song-tab" data-toggle="pill"
                                                     href="#custom-tabs-four-song" role="tab"
-                                                    aria-controls="custom-tabs-four-song" aria-selected="false">Song</a>
+                                                    aria-controls="custom-tabs-four-song" aria-selected="false">Song &
+                                                    Video</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -627,7 +628,7 @@
                                                 aria-labelledby="custom-tabs-four-song-tab">
                                                 <div class="tab-pane">
                                                     <div class="col-12 card--shadow">
-                                                        <h5>Song</h5>
+                                                        <h5>Song & Video</h5>
                                                         <div class="row form-group">
                                                             <div class="col-sm-4">
                                                                 <label for="" class="col-form-label">Judul Lagu</label>
@@ -647,6 +648,17 @@
                                                             <div class="col-sm-8">
                                                                 <div class="d-flex flex-row">
                                                                     <input name="song" id="song" placeholder=""
+                                                                        type="text" class="form-control" value="">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row form-group">
+                                                            <div class="col-sm-4">
+                                                                <label for="" class="col-form-label">Link Video</label>
+                                                            </div>
+                                                            <div class="col-sm-8">
+                                                                <div class="d-flex flex-row">
+                                                                    <input name="video" id="video" placeholder=""
                                                                         type="text" class="form-control" value="">
                                                                 </div>
                                                             </div>
