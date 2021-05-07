@@ -1107,7 +1107,7 @@ couple-area end
 
     /* // video  */
     .video-card {
-        margin-top: 50px;
+        margin-top: 30px;
         clear: both;
         text-align: center;
     }
