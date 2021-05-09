@@ -1112,7 +1112,7 @@ couple-area end
 
     /* // video  */
     .video-card {
-        margin-top: 30px;
+        margin-top: 10px;
         clear: both;
         text-align: center;
     }
@@ -1121,11 +1121,17 @@ couple-area end
         border-radius: 10px;
         border-top: 10px;
         box-shadow: 16px 13px 42px -17px rgba(0, 0, 0, 0.63);
-        height: 300px;
-        width: 300px;
+        height: 250px;
+        width: 250px;
     }
 
     @media screen and (min-width: 500px) {
+        .video-card {
+            margin-top: 10px;
+            clear: both;
+            text-align: center;
+        }
+
         .video-card-top {
             border-radius: 10px;
             border-top: 10px;
@@ -1174,7 +1180,7 @@ couple-area end
     }
 
     img.gallery {
-        width: 400px;
+        width: 100%;
         height: 400px;
         object-fit: cover;
     }
@@ -1182,7 +1188,7 @@ couple-area end
     @media screen and (min-width: 500px) {
         img.gallery {
             width: 100%;
-            height: 700px;
+            height: 620px;
             object-fit: cover;
         }
     }
@@ -1231,19 +1237,20 @@ couple-area end
                         <div class="container">
                             <div class="col-md-10 col-md-offset-1 colored-header">
                                 <!-- <div class="slider-content"> -->
-                                <!-- <div class="col-lg-12"> -->
-                                @if (isset($qs['u']))
-                                <h3>Dear {{$qs['u']}},</h3>
-                                @endif
-                                <p><strong>You're Invited!</strong></h6>
-                                <h4>We're Getting Married</h4>
-                                <h2><strong>{{$calon->nick_pria}} &amp;</strong></h2>
-                                <h2><strong>{{$calon->nick_wanita}}</strong></h2>
-                                <p><button href="#" id="play-music" class="button text-center button4">
-                                        <img src="assets/img/logo/btn.png" width="25px" height="25px" alt="" srcset="">
-                                        Open
-                                        Invitation</button></p>
-                                <!-- </div> -->
+                                <div class="col-lg-12">
+                                    @if (isset($qs['u']))
+                                    <h3>Dear {{$qs['u']}},</h3>
+                                    @endif
+                                    <p><strong>You're Invited!</strong></h6>
+                                    <h4>We're Getting Married</h4>
+                                    <h2><strong>{{$calon->nick_pria}} &amp;</strong></h2>
+                                    <h2><strong>{{$calon->nick_wanita}}</strong></h2>
+                                    <p><button href="#" id="play-music" class="button text-center button4">
+                                            <img src="assets/img/logo/btn.png" width="25px" height="25px" alt=""
+                                                srcset="">
+                                            Open
+                                            Invitation</button></p>
+                                </div>
 
                                 <!-- </div> -->
                                 <!-- <button type="button" class="btn btn-primary video-btn" data-toggle="modal"

@@ -959,6 +959,7 @@
                 <div class="col-md-12">
                     <h4><strong>Comment Section</strong></h4>
                     <div class="media g-mb-30 media-comment">
+
                         <div class="media-body u-shadow-v18 g-bg-secondary g-pa-30">
                             @foreach($calon->comment as $data)
                             <div class="commentText">
