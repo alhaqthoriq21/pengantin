@@ -43,6 +43,8 @@
     <!-- responsive.css -->
     <link rel="stylesheet" href="{{asset('assets/css/bronze/responsive.css')}}">
 
+    <!-- <link rel="stylesheet" href="{{asset('assets/css/bronze/bt.css')}}"> -->
+
     <link rel="stylesheet" href="{{asset('assets/css/premium/icomoon.css')}}">
 
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/bronze/slick.css')}}">
@@ -50,6 +52,9 @@
     <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet'>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <style>
     @font-face {
         font-family: La-storia-Demo;
@@ -1167,6 +1172,20 @@ couple-area end
     .colored-header {
         fill: <?=$calon->color ?>;
     }
+
+    img.gallery {
+        width: 400px;
+        height: 400px;
+        object-fit: cover;
+    }
+
+    @media screen and (min-width: 500px) {
+        img.gallery {
+            width: 100%;
+            height: 700px;
+            object-fit: cover;
+        }
+    }
     </style>
 
 
@@ -1604,8 +1623,34 @@ couple-area end
                     </div>
                 </div>
             </div>
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <!-- <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol> -->
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    @if($calon->fotoBody->foto_kedua)
+                    <div class="item active">
+                        <img class="gallery" src="{{$calon->fotoBody->foto_kedua}}" alt="">
+                    </div>
+                    @endif
+                    @foreach($calon->fotoFooter as $data)
+                    <div class="item">
+                        <img class="gallery" src="{{$data->foto}}" alt="">
+                    </div>
+                    @endforeach
+
+                    <!-- <div class="item">
+                        <img src="assets/img/love/7.jpg" alt="New york" style="width:100%;">
+                    </div> -->
+                </div>
+            </div>
             <!-- <div class="row grid"> -->
-            <div class="gallery__slider">
+            <!-- <div class="gallery__slider">
                 <div class="slick-gallery slick mb-0 ">
                     @foreach($calon->fotoFooter as $data)
                     <div class="slider__item">
@@ -1618,7 +1663,7 @@ couple-area end
                     <div class="pr-1">from</div>
                     <div class="gallery__slider-all"></div>
                 </div>
-            </div>
+            </div> -->
             <!-- </div> -->
         </div>
     </div>
@@ -1847,40 +1892,35 @@ couple-area end
         $(".gateway").slideUp("slow");
     });
 
-    $(document).ready(function() {
+    // $(document).ready(function() {
 
-        // Gets the video src from the data-src on each button
+    //     // Gets the video src from the data-src on each button
 
-        var $videoSrc;
-        $('.video-btn').click(function() {
-            $videoSrc = $(this).data("src");
-        });
-        console.log($videoSrc);
-
-
-
-        // when the modal is opened autoplay it  
-        $('#myModal').on('shown.bs.modal', function(e) {
-
-            // set the video src to autoplay and not to show related video. Youtube related video is like a box of chocolates... you never know what you're gonna get
-            $("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
-        })
+    //     var $videoSrc;
+    //     $('.video-btn').click(function() {
+    //         $videoSrc = $(this).data("src");
+    //     });
+    //     console.log($videoSrc);
 
 
 
-        // stop playing the youtube video when I close the modal
-        $('#myModal').on('hide.bs.modal', function(e) {
-            // a poor man's stop video
-            $("#video").attr('src', $videoSrc);
-        })
+    //     // when the modal is opened autoplay it  
+    //     $('#myModal').on('shown.bs.modal', function(e) {
+
+    //         // set the video src to autoplay and not to show related video. Youtube related video is like a box of chocolates... you never know what you're gonna get
+    //         $("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
+    //     })
 
 
 
+    //     // stop playing the youtube video when I close the modal
+    //     $('#myModal').on('hide.bs.modal', function(e) {
+    //         // a poor man's stop video
+    //         $("#video").attr('src', $videoSrc);
+    //     })
 
-
-
-        // document ready  
-    });
+    //     // document ready  
+    // });
     </script>
 </body>
 

@@ -844,7 +844,7 @@
                 <div class="slick-gallery slick mb-0 ">
                     @foreach($calon->fotoFooter as $data)
                     <div class="slider__item">
-                        <img src="{{$data->foto}}" alt="slider">
+                        <img class="gallery" src="{{$data->foto}}" alt="slider">
                     </div>
                     @endforeach
                 </div>

@@ -173,6 +173,13 @@ img {
     vertical-align: middle;
 }
 
+img.gallery {
+    height: 500px;
+    object-fit: cover;
+}
+
+
+
 .img--rounded {
     border-radius: 20px;
 }
