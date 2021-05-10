@@ -1125,7 +1125,39 @@ couple-area end
         width: 250px;
     }
 
-    @media screen and (min-width: 500px) {
+    /* @media screen and (min-width: 950px) {
+        .video-card {
+            margin-top: -100px;
+            clear: both;
+            text-align: center;
+        }
+
+        .video-card-top {
+            border-radius: 10px;
+            border-top: 10px;
+            box-shadow: 16px 13px 42px -17px rgba(0, 0, 0, 0.63);
+            height: 420px;
+            width: 450px;
+        }
+    } */
+
+    @media screen and (min-width: 550px) {
+        .video-card {
+            margin-top: -100px;
+            clear: both;
+            text-align: center;
+        }
+
+        .video-card-top {
+            border-radius: 10px;
+            border-top: 10px;
+            box-shadow: 16px 13px 42px -17px rgba(0, 0, 0, 0.63);
+            height: 320px;
+            width: 350px;
+        }
+    }
+
+    @media screen and (max-width: 375px) {
         .video-card {
             margin-top: 10px;
             clear: both;
@@ -1136,10 +1168,11 @@ couple-area end
             border-radius: 10px;
             border-top: 10px;
             box-shadow: 16px 13px 42px -17px rgba(0, 0, 0, 0.63);
-            height: 520px;
-            width: 650px;
+            height: 200px;
+            width: 200px;
         }
     }
+
 
     /* //modal vid  */
     /* body {
@@ -1236,35 +1269,36 @@ couple-area end
                     <div class="display-tc">
                         <div class="container">
                             <div class="col-md-10 col-md-offset-1 colored-header">
-                                <!-- <div class="slider-content"> -->
-                                <div class="col-lg-12">
-                                    @if (isset($qs['u']))
-                                    <h3>Dear {{$qs['u']}},</h3>
-                                    @endif
-                                    <p><strong>You're Invited!</strong></h6>
-                                    <h4>We're Getting Married</h4>
-                                    <h2><strong>{{$calon->nick_pria}} &amp;</strong></h2>
-                                    <h2><strong>{{$calon->nick_wanita}}</strong></h2>
-                                    <p><button href="#" id="play-music" class="button text-center button4">
-                                            <img src="assets/img/logo/btn.png" width="25px" height="25px" alt=""
-                                                srcset="">
-                                            Open
-                                            Invitation</button></p>
-                                </div>
+                                <div class="slider-content">
+                                    <div class="col-lg-12">
+                                        @if (isset($qs['u']))
+                                        <h3>Dear {{$qs['u']}},</h3>
+                                        @endif
+                                        <p><strong>You're Invited!</strong></h6>
+                                        <h4>We're Getting Married</h4>
+                                        <h2><strong>{{$calon->nick_pria}} &amp;</strong></h2>
+                                        <h2><strong>{{$calon->nick_wanita}}</strong></h2>
+                                        <p><button href="#" id="play-music" class="button text-center button4">
+                                                <img src="assets/img/logo/btn.png" width="25px" height="25px" alt=""
+                                                    srcset="">
+                                                Open
+                                                Invitation</button></p>
+                                    </div>
 
-                                <!-- </div> -->
+                                </div>
                                 <!-- <button type="button" class="btn btn-primary video-btn" data-toggle="modal"
                                     data-src="https://www.youtube.com/embed/Jfrjeg26Cwk" data-target="#myModal">
                                     Play Video 1
                                 </button> -->
+                                <div class="video-card">
+                                    <iframe allowfullscreen="" class="YOUTUBE-iframe-video video-card-top"
+                                        data-thumbnail-src="" frameborder="0" src="{{$calon->song->video}}">
+                                    </iframe>
+                                </div>
 
 
                             </div>
-                            <div class="video-card">
-                                <iframe allowfullscreen="" class="YOUTUBE-iframe-video video-card-top"
-                                    data-thumbnail-src="" frameborder="0" src="{{$calon->song->video}}">
-                                </iframe>
-                            </div>
+
                         </div>
                     </div>
                 </div>
