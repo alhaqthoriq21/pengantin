@@ -48,7 +48,7 @@
                             <tr>
                                 <th scope="row">{{ $no }}</th>
                                 <td>{{ $data->calon->slug }}</td>
-                                <td>{{ $data->judul }}</td>
+                                <td>{{ $data->judul_song }}</td>
                                 <td width="200px"> <a href="{{route('update.status.song', $data->id)}}"
                                         class="btn btn-primary btn-status btn-sm" type="accept"
                                         data-value="{{$data->id}}" data-status="{{$data->status}}"><i
@@ -140,7 +140,7 @@
                                     </div>
                                     <div class="col-sm-8">
                                         <div class="d-flex flex-row">
-                                            <input name="judul" id="judul" placeholder="" min="1" type="text"
+                                            <input name="judul_song" id="judul_song" placeholder="" min="1" type="text"
                                                 class="form-control" value="">
                                         </div>
                                     </div>

@@ -64,8 +64,8 @@
                                     </div>
                                     <div class="col-sm-8">
                                         <div class="d-flex flex-row">
-                                            <input name="judul" id="judul" placeholder="" min="1" type="text"
-                                                class="form-control" value="{{$song->judul}}">
+                                            <input name="judul_song" id="judul_song" placeholder="" min="1" type="text"
+                                                class="form-control" value="{{$song->judul_song}}">
                                         </div>
                                     </div>
                                 </div>
