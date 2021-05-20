@@ -108,11 +108,33 @@
 
     /* //button  */
     .button4 {
+        margin-top: 10px;
         background-color: #ffffff;
         color: black;
         border-radius: 12px;
         width: 300px;
         height: 45px;
+        margin-top: 0px;
+    }
+
+
+    @media screen and (max-width: 768px) {
+
+        .qbootstrap-cover .display-t .display-tc .button4 {
+            width: 260px;
+            display: table-cell;
+            vertical-align: middle;
+
+        }
+    }
+
+    @media screen and (max-width: 360px) {
+
+        .qbootstrap-cover .display-t .display-tc .button4 {
+            width: 230px;
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 
 
@@ -176,7 +198,10 @@
 
     @media (min-width: 0) {
         .g-pa-30 {
-            padding: 2.14286rem !important;
+            padding-top: 20px !important;
+            padding-right: 10px !important;
+            padding-bottom: 20px !important;
+            padding-left: 10px !important;
         }
     }
 
@@ -940,8 +965,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h7><strong>Comment Section</strong></h7>
-                        <div class="media g-mb-30 media-comment">
+
+                        <div class="media g-mb-30 media-comment animate-box">
+                            <h7><strong>Comment Section</strong></h7>
                             <!-- <img class="d-flex g-width-50 g-height-50 rounded-circle g-mt-3 g-mr-15"> -->
                             <div class="media-body u-shadow-v18 g-bg-secondary g-pa-30">
                                 @foreach($calon->comment as $data)
@@ -1048,7 +1074,7 @@
     </div> -->
 
     <footer id="footer" role="contentinfo" class="section--bg">
-        <div class="container overlay footer">
+        <div class="container overlay footer animate-box">
             <div class="col-md-12 text-center">
                 <h1>Thank You</h1>
                 <h1><strong>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</strong></h1>

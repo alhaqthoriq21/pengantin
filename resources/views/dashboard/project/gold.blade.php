@@ -49,6 +49,10 @@
 
     <link rel="stylesheet" href="{{asset('assets/css/premium/icomoon.css')}}">
 
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script> -->
+
     <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
     <!-- FOR IE9 below -->
     <!--[if lt IE 9]>
@@ -214,19 +218,32 @@
 
     /* //button  */
     .button4 {
+        margin-top: 10px;
         background-color: #ffffff;
         color: black;
         border-radius: 12px;
         width: 300px;
         height: 45px;
+        margin-top: 0px;
     }
 
 
-    @media screen and (min-width: 280px) {
+    @media screen and (max-width: 768px) {
 
-        .qbootstrap-cover .display-t .display-tc .button4 {
-            width: 250px;
+        .fh5co-cover .display-t .display-tc .button4 {
+            width: 260px;
+            display: table-cell;
             vertical-align: middle;
+
+        }
+    }
+
+    @media screen and (max-width: 360px) {
+
+        .fh5co-cover .display-t .display-tc .button4 {
+            width: 230px;
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 
@@ -275,7 +292,7 @@
             Arial,
             serif;
         font-size: <?=$calon->size_font ?>px;
-        line-height: 35px;
+        line-height: 40px;
         margin-bottom: 40px;
     }
     </style>
@@ -757,7 +774,7 @@
 
 
         @if($calon->fotoBody->foto_kedua)
-        <div id="fh5co-started" class="fh5co-bg comment-area"
+        <div id="fh5co-started" class="fh5co-bg comment-area animate-box"
             style="background-image:url({{$calon->fotoBody->foto_kedua}});">
             @endif
             <!-- style="background-image:url(assets/img/gold/img_bg_4.jpg);" -->
@@ -800,7 +817,7 @@
         <div id="fh5co-started" class="">
             <!-- style="background-image:url(assets/img/gold/img_bg_4.jpg);" -->
             <!-- <div class="overlay"></div> -->
-            <div class="row horizontal-line">
+            <div class="row horizontal-line animate-box">
                 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
                     rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
                     crossorigin="anonymous">
@@ -828,7 +845,7 @@
     <!-- </div> -->
 
     <footer class="section section--bg">
-        <div class="container text-white position-relative">
+        <div class="container text-white position-relative animate-box">
             <div class="footer__title color-wht">
                 <div class="text-center">Thank You</div>
                 <div class="text-center"><strong>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</strong></div>
@@ -930,6 +947,15 @@
     $(".button").click(function() {
         $(".gateway").slideUp("slow");
     });
+
+    // wow = new WOW({
+    //     boxClass: 'wow', // default
+    //     animateClass: 'animated', // change this if you are not using animate.css
+    //     offset: 0, // default
+    //     mobile: true, // keep it on mobile
+    //     live: true // track if element updates
+    // })
+    // wow.init();
 
     const Player = document.getElementById('music');
     const PlayBtn = document.getElementById('play-music');

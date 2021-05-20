@@ -1067,7 +1067,10 @@ body {
 
 @media (min-width: 0) {
     .g-pa-30 {
-        padding: 2.14286rem !important;
+        padding-top: 20px !important;
+        padding-right: 10px !important;
+        padding-bottom: 20px !important;
+        padding-left: 10px !important;
     }
 }
 

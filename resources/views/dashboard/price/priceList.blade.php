@@ -48,7 +48,7 @@
 <body>
     <!--header-->
     <div class="header-w3l">
-        <h1>Pricelist Template Undangan</h1>
+        <h1>Pricelist Undangan</h1>
     </div>
     <!--//header-->
     <!--main-->
@@ -75,6 +75,7 @@
                             <p><span class="fa fa-check"></span><span>Kolom Ucapan</span></p>
                             <p><span class="fa fa-check"></span><span>RSVP</span></p>
                             <p><span class="fa fa-check"></span><span>Love Story</span></p>
+                            <p><span class="fa fa-check"></span><span>Video</span></p>
                             <!-- <p class="text"><span class="fa fa-times"></span><span>Foundation</span> Training</p> -->
                         </div>
                         <div class="buy-button">
@@ -103,6 +104,7 @@
                             <p><span class="fa fa-check"></span><span>Kolom Ucapan</span></p>
                             <p><span class="fa fa-check"></span><span>RSVP</span></p>
                             <p><span class="fa fa-times"></span><span>Love Story</span></p>
+                            <p><span class="fa fa-times"></span><span>Video</span></p>
                             <!-- <p class="text"><span class="fa fa-times"></span><span>Foundation</span> Training</p> -->
                         </div>
                         <div class="buy-button">
@@ -131,6 +133,7 @@
                             <p><span class="fa fa-check"></span><span>Kolom Ucapan</span></p>
                             <p><span class="fa fa-times"></span><span>RSVP</span></p>
                             <p><span class="fa fa-times"></span><span>Love Story</span></p>
+                            <p><span class="fa fa-times"></span><span>Video</span></p>
                             <!-- <p class="text"><span class="fa fa-times"></span><span>Foundation</span> Training</p> -->
                         </div>
                         <div class="buy-button">
@@ -160,6 +163,7 @@
                             <p><span class="fa fa-check"></span><span>Kolom Ucapan</span></p>
                             <p><span class="fa fa-times"></span><span>RSVP</span></p>
                             <p><span class="fa fa-times"></span><span>Love Story</span></p>
+                            <p><span class="fa fa-times"></span><span>Video</span></p>
                             <!-- <p class="text"><span class="fa fa-check"></span><span>Foundation</span> Training</p> -->
                         </div>
                         <div class="buy-button">

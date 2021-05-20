@@ -97,9 +97,9 @@ Theme Default CSS
             }
         } */
 
-.js .animate-box {
+/* .js .animate-box {
     opacity: 0;
-}
+} */
 
 * {
     margin: 0;
@@ -2848,6 +2848,4 @@ h3 {
     }
 }
 
-/* .img {
-    object-fill: cover;
-} */
+/* 

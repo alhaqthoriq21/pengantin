@@ -40,8 +40,14 @@
     <link rel="stylesheet" href="{{asset('assets/css/bronze/default-css.css')}}">
     <!-- style.css -->
     <link rel="stylesheet" href="{{asset('assets/css/bronze/style.css')}}">
+
+    <!-- <link rel="stylesheet" href="{{asset('assets/css/bronze/style.scss')}}"> -->
     <!-- responsive.css -->
     <link rel="stylesheet" href="{{asset('assets/css/bronze/responsive.css')}}">
+
+    <!-- <link rel="stylesheet" href="{{asset('assets/css/premium/animate.css')}}"> -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
 
     <!-- <link rel="stylesheet" href="{{asset('assets/css/bronze/bt.css')}}"> -->
 
@@ -55,6 +61,20 @@
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+    <!-- <script>
+    wow = new WOW({
+        boxClass: 'wow', // default
+        animateClass: 'animated', // change this if you are not using animate.css
+        offset: 0, // default
+        mobile: true, // keep it on mobile
+        live: true // track if element updates
+    })
+    wow.init();
+    </script> -->
+
     <style>
     @font-face {
         font-family: La-storia-Demo;
@@ -621,12 +641,13 @@ couple-area
 =====================================*/
 
 
-    .section-title .svg-sm .svg {
-        height: -50px;
-        margin-bottom: 0;
+    .section-title.svg-sm .svg {
+        height: 160px;
+        margin-bottom: -70px;
+        padding: 0;
     }
 
-    .section-title .colored .svg {
+    .section-title.colored .svg {
         fill: <?=$calon->color ?>;
     }
 
@@ -1112,7 +1133,7 @@ couple-area end
 
     /* // video  */
     .video-card {
-        margin-top: 10px;
+        margin-top: 15px;
         clear: both;
         text-align: center;
     }
@@ -1159,7 +1180,7 @@ couple-area end
 
     @media screen and (max-width: 375px) {
         .video-card {
-            margin-top: 10px;
+            margin-top: 15px;
             clear: both;
             text-align: center;
         }
@@ -1208,9 +1229,9 @@ couple-area end
     } */
 
     /* // colored  */
-    .colored-header {
+    /* .colored-header {
         fill: <?=$calon->color ?>;
-    }
+    } */
 
     img.gallery {
         width: 100%;
@@ -1268,7 +1289,7 @@ couple-area end
                 <div class="display-t">
                     <div class="display-tc">
                         <div class="container">
-                            <div class="col-md-10 col-md-offset-1 colored-header">
+                            <div class="col-md-10 col-md-offset-1">
                                 <div class="slider-content">
                                     <div class="col-lg-12">
                                         @if (isset($qs['u']))
@@ -1361,7 +1382,8 @@ couple-area end
     <div id="cuple" class="couple-area ptb--100">
         <div class="container">
             <div class="col-l2">
-                <div class="section-title text-center svg-sm colored">
+                <div class="text-center section-title svg-sm colored">
+                    <!-- <img src="assets/img/premium/flaticon/svg/005-two.svg" class="svg" alt=""> -->
                     <!-- <img src="assets/img/premium/flaticon/svg/004-nature.svg" class="svg" alt=""> -->
                     <h2>Happy Couple</h2>
                     <!-- <img src="assets/img/bronze/svg/2.svg" class="svg" alt=""> -->
@@ -1369,7 +1391,7 @@ couple-area end
             </div>
             <div class="couple-wrap">
                 <div class="row">
-                    <div class="col-lg-4 col-md-6 col-sm-6 couple-single">
+                    <div class="col-lg-4 col-md-6 col-sm-6 couple-single wow slideInLeft">
                         <div class="couple-wrap2 couple-s-3">
                             <div class="couple-img3">
                                 <img class="center" src="{{$calon->foto_wanita}}" style="max-width:100%;height:auto;"
@@ -1391,7 +1413,7 @@ couple-area end
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 couple-single">
+                    <div class="col-lg-4 col-md-6 col-sm-6 couple-single wow fadeInDown">
                         @if($calon->fotoHeader->foto_countdown)
                         <div class="couple-img2">
                             <img src="{{$calon->fotoHeader->foto_countdown}}" style="max-width:100%;height:auto;"
@@ -1399,7 +1421,7 @@ couple-area end
                         </div>
                         @endif
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 couple-single md-0">
+                    <div class="col-lg-4 col-md-6 col-sm-6 couple-single md-0 wow slideInRight">
                         <div class="couple-wrap2 couple-s-3">
                             <div class="couple-img3">
                                 <img class="center" src="{{$calon->foto_pria}}" style="max-width:100%;height:auto;"
@@ -1430,11 +1452,11 @@ couple-area end
     <div id="countdown" class="count-down-area count-down-area-sub">
         <section class="count-down-section section-padding parallax" data-speed="7">
             <div class="container">
-                <div class="row">
+                <div class="row wow fadeInDown">
                     <div class="col-12 col-md-4">
                         <h2 class="big"><span>We Are Waiting For.....</span> The Big Day</h2>
                     </div>
-                    <div class="col-12 col-md-8 ">
+                    <div class="col-12 col-md-8">
                         <div class="count-down-clock">
                             <div id="clock">
                             </div>
@@ -1460,7 +1482,7 @@ couple-area end
                     <div class="story clearfix">
                         <div class="story-top"></div>
                         <div class="content-wrapper">
-                            <div class="item">
+                            <div class="item wow slideInLeft">
                                 <div class="story-icon">
                                     <span class="flaticon-birds-in-love"></span>
                                 </div>
@@ -1482,7 +1504,7 @@ couple-area end
                                     </div> -->
                                 </div>
                             </div>
-                            <div class="item">
+                            <div class="item wow slideInRight">
                                 <div class="story-icon">
                                     <span class="flaticon-birds-in-love"></span>
                                 </div>
@@ -1504,7 +1526,7 @@ couple-area end
                                     </div> -->
                                 </div>
                             </div>
-                            <div class="item">
+                            <div class="item wow slideInLeft">
                                 <div class="story-icon">
                                     <span class="flaticon-birds-in-love"></span>
                                 </div>
@@ -1526,7 +1548,7 @@ couple-area end
                                     </div> -->
                                 </div>
                             </div>
-                            <div class="item">
+                            <div class="item wow slideInRight">
                                 <div class="story-icon">
                                     <span class="flaticon-birds-in-love"></span>
                                 </div>
@@ -1561,7 +1583,7 @@ couple-area end
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="welcome-content">
+                    <div class="welcome-content wow slideInUp">
                         <h2>Welcome to our big day</h2>
                         <p>&ldquo;{{$calon->quotes->isi}}&rdquo;</p>
                         <p>&ldquo;{{$calon->quotes->judul}}&rdquo;</p>
@@ -1578,7 +1600,7 @@ couple-area end
     <!-- welcome area end-->
     <!-- service-area start -->
     <div id="event" class="service-area ptb--100">
-        <div class="container">
+        <div class="container wow fadeInDown">
             <div class="col-l2">
                 <div class="section-title text-center">
                     <h2>When & Where</h2>
@@ -1656,7 +1678,7 @@ couple-area end
     <!-- Section Gallery -->
 
     <div id="gallery" class="gallery-area gallery pt--100 pb--70">
-        <div class="container">
+        <div class="container wow slideInRight">
             <div class="row">
                 <div class="col-12">
                     <div class="section-title-gallery text-center">
@@ -1713,7 +1735,7 @@ couple-area end
     <div id="rsvp" class="guest-area horizontal-line">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 offset-lg-2">
+                <div class="col-lg-8 offset-lg-2 wow fadeInDown">
                     <div class="guest-wrap">
                         <div class="col-12">
                             <div class="section-title-guest section-title4 text-center">
@@ -1764,7 +1786,7 @@ couple-area end
     <div id="comment" class="comment-area horizontal-line">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 offset-lg-2">
+                <div class="col-lg-8 offset-lg-2 wow fadeInDown">
                     <div class="comment-wrap">
                         <div class="col-12">
                             <div class="section-title-comment section-title4 text-center">
@@ -1806,7 +1828,7 @@ couple-area end
             integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12 wow fadeInDown">
                     <h1><strong>Comment Section</strong></h1>
                     <div class="media g-mb-30 media-comment">
                         <!-- <img class="d-flex g-width-50 g-height-50 rounded-circle g-mt-3 g-mr-15"> -->
@@ -1827,7 +1849,7 @@ couple-area end
     <!-- Comment-area end -->
     <!-- .footer-area start -->
     <footer class="section horizontal-line ">
-        <div class="container text-white position-relative">
+        <div class="container text-white position-relative wow fadeInDown">
             <div class="footer__title">
                 <div class="text-center">Thank You</div>
                 <div class="text-center"><strong>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</strong></div>
@@ -1904,6 +1926,15 @@ couple-area end
     <script src="{{asset('assets/js/bronze/slick.min.js')}}"></script>
 
     <script>
+    wow = new WOW({
+        boxClass: 'wow', // default
+        animateClass: 'animated', // change this if you are not using animate.css
+        offset: 0, // default
+        mobile: true, // keep it on mobile
+        live: true // track if element updates
+    })
+    wow.init();
+
     const Player = document.getElementById('music');
     const PlayBtn = document.getElementById('play-music');
     let times = 0,

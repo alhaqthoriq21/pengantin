@@ -37,6 +37,10 @@
         href="{{asset('assets/css/fonts/font-awesome-4.7.0\css\font-awesome.min.css')}}">
     <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
     <!-- <link
         href="https://fonts.googleapis.com/css?family=Playfair+Display%7COpen+Sans:300,400,600,700%7CSource+Serif+Pro%7CDosis"
         rel="stylesheet"> -->
@@ -462,7 +466,7 @@
                 <div class="display-t">
                     <div class="display-tc">
                         <div class="container">
-                            <div class="col-md-10 col-md-offset-1">
+                            <div class="col-md-10 col-md-offset-1 wow slideInUp">
                                 <!-- <div class="animate-box svg-sm colored"> -->
                                 <!-- <img src="assets/img/premium/flaticon/svg/004-nature.svg" class="svg" alt=""> -->
                                 @if (isset($qs['u']))
@@ -497,7 +501,7 @@
                 <div class="display-tc">
                     <div class="container">
                         <div class="col-md-10 col-md-offset-1">
-                            <div class="animate-box svg-sm colored">
+                            <div class="animate-box svg-sm colored wow slideInUp">
                                 <!-- <img src="assets/img/premium/flaticon/svg/004-nature.svg" class="svg" alt=""> -->
                                 <h1 class="holder"><span>The Wedding of</span></h1>
                                 <h2>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</h2>
@@ -591,40 +595,42 @@
             <div class="date-section__flowers m-auto">
                 <img src="assets\img\silver\date-flowers.png" alt="flowers">
             </div>
-            <h1 class="title">Happy Couple</h1>
-            <p class="subtitle m-auto">Our Happiness is begun..</p>
-            <div class="wishes__slider">
-                <div class="slick slick-wishes mb-0 item-p">
-                    <div class="slider__item">
-                        <div class="wishes__person">
-                            <img class="rounded-circle m-auto" style="width:200px;height:200px;"
-                                src="{{$calon->foto_pria}}" alt="slider">
+            <div class="wow slideInLeft">
+                <h1 class="title">Happy Couple</h1>
+                <p class="subtitle m-auto">Our Happiness is begun..</p>
+                <div class="wishes__slider">
+                    <div class="slick slick-wishes mb-0 item-p">
+                        <div class="slider__item">
+                            <div class="wishes__person">
+                                <img class="rounded-circle m-auto" style="width:200px;height:200px;"
+                                    src="{{$calon->foto_pria}}" alt="slider">
+                            </div>
+                            <h4 class="wishes__title font-weight-bold">{{$calon->calon_pria}}</h4>
+                            <p><strong>Putra Dari</strong></p>
+                            <h5>Bpk. {{$calon->ayah_pria}}</h5>
+                            <h5>Ibu {{$calon->ibu_pria}}</h5>
+                            <div class="col-md-12 text-center">
+                                <ol class="social social-circle-couple">
+                                    <li><a href="https://www.instagram.com/{{$calon->sosmed_pria}}/"><i
+                                                class="fa fa-instagram"></i></a></li>
+                                </ol>
+                            </div>
                         </div>
-                        <h4 class="wishes__title font-weight-bold">{{$calon->calon_pria}}</h4>
-                        <p><strong>Putra Dari</strong></p>
-                        <h5>Bpk. {{$calon->ayah_pria}}</h5>
-                        <h5>Ibu {{$calon->ibu_pria}}</h5>
-                        <div class="col-md-12 text-center">
-                            <ol class="social social-circle-couple">
-                                <li><a href="https://www.instagram.com/{{$calon->sosmed_pria}}/"><i
-                                            class="fa fa-instagram"></i></a></li>
-                            </ol>
-                        </div>
-                    </div>
-                    <div class="slider__item">
-                        <div class="wishes__person">
-                            <img class="rounded-circle m-auto" style="width:200px;height:200px;"
-                                src="{{$calon->foto_wanita}}" alt="slider">
-                        </div>
-                        <h4 class="wishes__title font-weight-bold">{{$calon->calon_wanita}}</h4>
-                        <p><strong>Putri Dari</strong></p>
-                        <h5>Bpk. {{$calon->ayah_pria}}</h5>
-                        <h5>Ibu {{$calon->ibu_pria}}</h5>
-                        <div class="col-md-12 text-center">
-                            <ol class="social social-circle-couple">
-                                <li><a href="https://www.instagram.com/{{$calon->sosmed_wanita}}/"><i
-                                            class="fa fa-instagram"></i></a></li>
-                            </ol>
+                        <div class="slider__item">
+                            <div class="wishes__person">
+                                <img class="rounded-circle m-auto" style="width:200px;height:200px;"
+                                    src="{{$calon->foto_wanita}}" alt="slider">
+                            </div>
+                            <h4 class="wishes__title font-weight-bold">{{$calon->calon_wanita}}</h4>
+                            <p><strong>Putri Dari</strong></p>
+                            <h5>Bpk. {{$calon->ayah_pria}}</h5>
+                            <h5>Ibu {{$calon->ibu_pria}}</h5>
+                            <div class="col-md-12 text-center">
+                                <ol class="social social-circle-couple">
+                                    <li><a href="https://www.instagram.com/{{$calon->sosmed_wanita}}/"><i
+                                                class="fa fa-instagram"></i></a></li>
+                                </ol>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -676,9 +682,11 @@
             <div class="love-story__flowers m-auto">
                 <img src="assets\img\silver\story-flowers.png" alt="flowers">
             </div>
-            <h1 class="title">Quotes</h1>
-            <p class="m-auto">{{$calon->quotes->isi}}.</p>
-            <span><strong>&ldquo;{{$calon->quotes->judul}}&rdquo;</strong></span>
+            <div class="wow fadeInRight">
+                <h1 class="title">Quotes</h1>
+                <p class="m-auto">{{$calon->quotes->isi}}.</p>
+                <span><strong>&ldquo;{{$calon->quotes->judul}}&rdquo;</strong></span>
+            </div>
         </div>
     </section>
     <!-- Section Date -->
@@ -687,38 +695,40 @@
             <div class="date-section__flowers m-auto">
                 <img src="assets\img\silver\date-flowers.png" alt="flowers">
             </div>
-            <div class="date-section__block">
-                <div class="d-inline-block">
-                    <h2 class="title--special">{{$tanggalIndoAkad}}</h2>
-                    <h3 class="date-section__place">
-                        {{$calon->akadNikah->tempat}}<br>
-                        {{$calon->akadNikah->alamat}}
-                    </h3>
+            <div class="wow fadeInDown">
+                <div class="date-section__block">
+                    <div class="d-inline-block">
+                        <h2 class="title--special">{{$tanggalIndoAkad}}</h2>
+                        <h3 class="date-section__place">
+                            {{$calon->akadNikah->tempat}}<br>
+                            {{$calon->akadNikah->alamat}}
+                        </h3>
+                    </div>
                 </div>
-            </div>
-            <div id="timer" class="timer d-flex justify-content-center">
-                <div class="timer-item">
-                    <span class="days timer__digit"></span>
-                    <div class="timer__text">days</div>
-                </div>
-                <div class="timer-item">
-                    <span class="hours timer__digit"></span>
-                    <div class="timer__text">hours</div>
-                </div>
-                <div class="timer-item">
-                    <span class="minutes timer__digit"></span>
-                    <div class="timer__text">minutes</div>
-                </div>
-                <div class="timer-item">
-                    <span class="seconds timer__digit"></span>
-                    <div class="timer__text">seconds</div>
+                <div id="timer" class="timer d-flex justify-content-center">
+                    <div class="timer-item">
+                        <span class="days timer__digit"></span>
+                        <div class="timer__text">days</div>
+                    </div>
+                    <div class="timer-item">
+                        <span class="hours timer__digit"></span>
+                        <div class="timer__text">hours</div>
+                    </div>
+                    <div class="timer-item">
+                        <span class="minutes timer__digit"></span>
+                        <div class="timer__text">minutes</div>
+                    </div>
+                    <div class="timer-item">
+                        <span class="seconds timer__digit"></span>
+                        <div class="timer__text">seconds</div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     <!-- Section Events -->
     <section id="events" class="events section text-center">
-        <div class="container">
+        <div class="container wow slideInUp">
             <h1 class="title">Wedding events</h1>
             <p class="subtitle mx-auto">Real life will begins.</p>
             <div id="accordion">
@@ -837,7 +847,7 @@
         <div class="d-none d-lg-block gallery__flower-prlx-r position-absolute parallax">
             <img src="assets\img\silver\gallery-prlx-r.png" alt="flower">
         </div>
-        <div class="container position-relative">
+        <div class="container position-relative wow slideInLeft">
             <h1 class="title">Gallery</h1>
             <p class="subtitle mx-auto">Our hapiness in photograph...</p>
             <div class="gallery__slider">
@@ -861,7 +871,7 @@
     <!-- RSVP -->
     <section id="rsvp" class="rsvp section ">
         <div class="container">
-            <div class="row">
+            <div class="row wow slideInUp">
                 <div class="d-none d-md-block col-sm-12 col-md-4">
                     <img src="assets\img\silver\rsvp-flower.png" class="parallax" alt="flower">
                 </div>
@@ -914,7 +924,7 @@
 
     <section id="comment" class="comment section section--bg">
         <div class="container">
-            <div class="row">
+            <div class="row wow slideInUp">
                 <div class="d-none d-md-block col-sm-12 col-md-4">
                     <img src="assets\img\silver\rsvp-flower.png" class="parallax" alt="flower">
                 </div>
@@ -955,7 +965,7 @@
     <section id="komentar panel" class="comment section">
         <!-- <div class="row horizontal-line"> -->
         <div class="container">
-            <div class="row">
+            <div class="row wow slideInUp">
                 <div class="col-md-12">
                     <h4><strong>Comment Section</strong></h4>
                     <div class="media g-mb-30 media-comment">
@@ -976,7 +986,7 @@
     </section>
     <!-- Footer -->
     <footer class="section section--bg">
-        <div class="container text-white position-relative">
+        <div class="container text-white position-relative wow slideInUp">
             <div class="footer__title">
                 <div class="text-center">Thank You</div>
                 <div class="text-center"><strong>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</strong></div>
@@ -1049,6 +1059,15 @@
     $(".button").click(function() {
         $(".gateway").slideUp("slow");
     });
+
+    wow = new WOW({
+        boxClass: 'wow', // default
+        animateClass: 'animated', // change this if you are not using animate.css
+        offset: 0, // default
+        mobile: true, // keep it on mobile
+        live: true // track if element updates
+    })
+    wow.init();
 
 
     // $('.popup-gmaps').magnificPopup({
