@@ -1133,7 +1133,7 @@ couple-area end
 
     /* // video  */
     .video-card {
-        margin-top: 15px;
+        margin-top: 5px;
         clear: both;
         text-align: center;
     }
@@ -1180,7 +1180,7 @@ couple-area end
 
     @media screen and (max-width: 375px) {
         .video-card {
-            margin-top: 15px;
+            margin-top: 5px;
             clear: both;
             text-align: center;
         }
