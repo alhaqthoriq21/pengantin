@@ -294,7 +294,7 @@
 
     @media screen and (max-width: 768px) {
         .section-heading h2 {
-            font-size: 40px;
+            font-size: 35px;
         }
     }
 
