@@ -21,14 +21,14 @@ use App\Http\Controllers\ReservasiController;
 use App\Http\Controllers\FotoHeaderController;
 use App\Http\Controllers\FotoBodyController;
 use App\Http\Controllers\FotoFooterController;
+use App\Http\Controllers\LandingPage_Controller;
 use App\Http\Controllers\LoveStoryController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\SongController;
 use Illuminate\Support\Facades\Auth;
 
-Route::get('/', function () {
-        return view('auth/login');
-    });
+Route::get('/', [LandingPage_Controller::class, 'index'])->name('landing.page');
+Route::POST('/send-message', [LandingPage_Controller::class, 'sendMessage'])->name('send.message');
 
     Auth::routes();
 
@@ -122,8 +122,3 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Route::get('/price/list', function()
-{
-    return view('dashboard.price.priceList');
-});

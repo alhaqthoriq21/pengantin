@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>ToBeAbrideXCloudStudio</title>
+    <title>{{ config('app.name') }}</title>
 
     <!-- Scripts -->
     <script src="{{ 'js/app.js' }}" defer></script>
@@ -35,8 +35,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <!-- {{ config('app.name', 'ToBeAbrideXCloudStudio') }} -->
-                    <img class="center" style="width:220px;height:100px;" src="assets/img/login.png" alt="">
+                    <img class="img-fluid" style="width: 100px" src="{{ url('tbb-logo.png') }}" alt="">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
