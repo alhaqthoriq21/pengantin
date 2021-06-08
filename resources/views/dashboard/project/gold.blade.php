@@ -1,10 +1,5 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js">
-<!--<![endif]-->
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -26,38 +21,34 @@
     <meta name="twitter:url" content="" />
     <meta name="twitter:card" content="" />
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/tobeabride.ico">
-
-    <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,400italic,700' rel='stylesheet'
-        type='text/css'>
-    <link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
-
-    <!-- Animate.css -->
-    <link rel="stylesheet" href="{{asset('assets/css/gold/animate.css')}}">
-    <!-- Icomoon Icon Fonts-->
-    <link rel="stylesheet" href=" {{asset('assets/css/gold/icomoon.css')}}">
-    <!-- Bootstrap  -->
-    <link rel="stylesheet" href="{{asset('assets/css/gold/bootstrap.css')}}">
-    <!-- Magnific Popup -->
-    <link rel="stylesheet" href="{{asset('assets/css/gold/magnific-popup.css')}}">
-    <!-- Owl Carousel  -->
-    <link rel="stylesheet" href="{{asset('assets/css/gold/owl.carousel.min.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/gold/owl.theme.default.min.css')}}">
-    <!-- Theme style  -->
-    <link rel="stylesheet" href="{{asset('assets/css/gold/style.css')}}">
-    <!-- Modernizr JS -->
-    <script src="{{asset('assets/js/gold/modernizr-2.6.2.min.js')}}"></script>
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/gold/vendor/bootstrap.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/gold/vendor/slick.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/gold/vendor/slick-theme.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/gold/vendor/lightbox.min.css')}}">
+    <!-- <link rel="stylesheet" type="text/css" href="{{asset('assets/css/gold/magnific-popup.css')}}"> -->
 
     <link rel="stylesheet" href="{{asset('assets/css/premium/icomoon.css')}}">
 
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script> -->
-
+    <!-- Main style -->
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/gold/main.css')}}">
+    <!-- Fonts -->
+    <link rel="stylesheet" type="text/css"
+        href="{{asset('assets/css/fonts/font-awesome-4.7.0\css\font-awesome.min.css')}}">
     <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
-    <!-- FOR IE9 below -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+    <!-- <link
+        href="https://fonts.googleapis.com/css?family=Playfair+Display%7COpen+Sans:300,400,600,700%7CSource+Serif+Pro%7CDosis"
+        rel="stylesheet"> -->
+    <!-- <link rel="shortcut icon" type="image/png" href="/favicon.ico"> -->
     <!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
+			<script src="js/vendor/html5shiv.min.js"></script>
+			<script src="js/vendor/respond.min.js"></script>
+		<![endif]-->
 
     <style>
     .gateway {
@@ -69,7 +60,6 @@
         color: white;
         font-family: "Courier New", Courier, monospace;
         font-size: 25px;
-
     }
 
     .gt-section {
@@ -83,13 +73,279 @@
         flex-direction: column;
     }
 
+    .button4 {
+        /* margin-top: 10px; */
+        background-color: #ffffff;
+        color: black;
+        border-radius: 12px;
+        width: 300px;
+        height: 45px;
+    }
 
-    .commentText p {
+
+    @media screen and (min-width: 280px) {
+
+        .qbootstrap-cover .display-t .display-tc .button4 {
+            width: 250px;
+            vertical-align: middle;
+        }
+    }
+
+    .h4 {
         margin: 0px;
         margin-bottom: 0px;
-        color: #000000;
+    }
+
+    .commentText p,
+    h6 {
+        margin-bottom: 5px;
+        margin-top: 0px;
+        /* margin: 0px; */
+        padding: 0px;
         line-height: normal;
-        margin-top: 5px;
+    }
+
+    .rsvp {
+        position: relative;
+    }
+
+    .rsvp:after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: url(assets/img/gold/rsvp-flowers-r.png) no-repeat;
+        background-size: contain;
+        background-position: 0 100%;
+        max-width: 500px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+
+    @media only screen and (min-width: 768px) {
+        .rsvp:before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: url(assets/img/gold/rsvp-flowers-l.png) no-repeat;
+            background-size: contain;
+            background-position: left;
+            max-width: 400px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+    }
+
+    .rsvp .title {
+        font-family: "Playfair Display", serif;
+        display: block;
+    }
+
+    .rsvp .title:after,
+    .rsvp .title:before {
+        display: none;
+    }
+
+    /* //comment */
+    .comment {
+        position: relative;
+    }
+
+    .comment:after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: url(assets/img/gold/rsvp-flowers-r.png) no-repeat;
+        background-size: contain;
+        background-position: 0 100%;
+        max-width: 500px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+
+    @media only screen and (min-width: 768px) {
+        .comment:before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: url(assets/img/gold/rsvp-flowers-l.png) no-repeat;
+            background-size: contain;
+            background-position: left;
+            max-width: 400px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+    }
+
+    .comment .title {
+        font-family: "Playfair Display", serif;
+        display: block;
+    }
+
+    .comment .title:after,
+    .comment .title:before {
+        display: none;
+    }
+
+    /* //gallery  */
+
+    .gallery {
+        position: relative;
+        background: url("{{$calon->fotoBody->foto_kedua}}");
+        background-size: cover;
+        background-position: center;
+    }
+
+    .gallery:before {
+        content: '';
+        background: <?=$calon->color ?>;
+        /* display: block; */
+        width: 100%;
+        height: 100%;
+        /* position: absolute; */
+        top: 0;
+    }
+
+    .gallery__slider {
+        position: relative;
+        margin-top: 80px;
+    }
+
+    @media only screen and (min-width: 992px) {
+        .gallery__slider {
+            margin-bottom: 100px;
+        }
+    }
+
+    .gallery__slider .slick-list {
+        margin-bottom: 30px;
+    }
+
+    .gallery__slider-num {
+        position: absolute;
+        bottom: -79px;
+        display: -ms-flexbox;
+        display: flex;
+        left: 50%;
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+        font-size: 30px;
+        font-family: georgia;
+    }
+
+    .gallery__flower-prlx-l {
+        top: -150px;
+    }
+
+    .gallery__flower-prlx-r {
+        bottom: -75px;
+        right: 0;
+    }
+
+    /* Body */
+    html,
+    body {
+        height: 100%;
+    }
+
+    body {
+        font-family: "Open Sans", sans-serif;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1.7;
+        color: #212529;
+        overflow-x: hidden;
+        background: url(assets/img/gold/seamless.png);
+    }
+
+    body.offcanvas {
+        overflow: hidden;
+    }
+
+    /*** music box ***/
+    .music-box {
+        position: fixed;
+        width: 300px;
+        height: 160px;
+        z-index: 120;
+        bottom: 30px;
+        right: 30px;
+    }
+
+    @media (max-width: 991px) {
+        .music-box {
+            width: 250px;
+            height: 120px;
+            right: auto;
+            left: 30px;
+        }
+    }
+
+    .music-box .music-holder {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: -30px;
+        visibility: hidden;
+        opacity: 0;
+        -webkit-transition: all 0.5s ease-out;
+        -o-transition: all 0.5s ease-out;
+        transition: all 0.5s ease-out;
+    }
+
+    .music-box .music-holder iframe {
+        width: 100%;
+        height: 100%;
+    }
+
+    .music-box button {
+        background: rgba(0, 0, 0, 0.1);
+        width: 40px;
+        height: 40px;
+        line-height: 35px;
+        font-size: 18px;
+        color: <?=$calon->color ?>;
+        border: 1px solid #e6e6e6;
+        outline: 0;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -o-border-radius: 50%;
+        -ms-border-radius: 50%;
+        border-radius: 50%;
+    }
+
+    .music-box.music-box-2 button {
+        color: <?=$calon->color ?>;
+    }
+
+    @media (max-width: 991px) {
+        .music-box button {
+            right: auto;
+            left: 0;
+        }
+    }
+
+    .music-box .toggle-music-box {
+        top: -50px;
+        visibility: visible;
+        opacity: 1;
     }
 
     div.parent {
@@ -102,111 +358,6 @@
         text-align: left;
     }
 
-    /* //countdown color  */
-    .simply-countdown>.simply-section {
-        /* coutndown blocks */
-        display: inline-block;
-        width: 100px;
-        height: 100px;
-        background: <?=$calon->color ?>;
-        margin: 0 4px;
-        -webkit-border-radius: 50%;
-        -moz-border-radius: 50%;
-        -ms-border-radius: 50%;
-        border-radius: 50%;
-        position: relative;
-        animation: pulse 1s ease infinite;
-    }
-
-    .heart i {
-        font-size: 20px;
-        background: #fff;
-        padding: 20px;
-        color: <?=$calon->color ?>;
-        -webkit-border-radius: 50%;
-        -moz-border-radius: 50%;
-        -ms-border-radius: 50%;
-        border-radius: 50%;
-    }
-
-    .fh5co-heading h2 {
-        font-size: 40px;
-        margin-bottom: 10px;
-        line-height: 1.5;
-        font-weight: bold;
-        color: <?=$calon->color ?>;
-        font-family: "Sacramento", Arial, serif;
-    }
-
-    .couple-half p {
-        font-size: 15px;
-        margin-bottom: 0px;
-        line-height: normal;
-
-    }
-
-    .couple-half h3 {
-        font-family: "Sacramento", Arial, serif;
-        color: <?=$calon->color ?>;
-        font-size: 22px;
-        margin-bottom: 0px;
-        /* margin-top: 10px; */
-
-    }
-
-    .couple-half h3 strong {
-        font-family: "Sacramento", Arial, serif;
-        color: <?=$calon->color ?>;
-        font-size: 22px;
-        margin-bottom: 0px;
-        /* margin-top: 10px; */
-    }
-
-    /* //btn loc  */
-    a {
-        color: <?=$calon->color ?>;
-        -webkit-transition: 0.5s;
-        -o-transition: 0.5s;
-        transition: 0.5s;
-    }
-
-    /* //musixbox  */
-    .music-box.music-box-2 button {
-        color: <?=$calon->color ?>;
-    }
-
-    /* //btn comment  */
-    #fh5co-started .btn {
-        height: 54px;
-        border: none !important;
-        background: <?=$calon->color ?>;
-        color: #fff;
-        font-size: 16px;
-        text-transform: uppercase;
-        font-weight: 400;
-        padding-left: 50px;
-        padding-right: 50px;
-    }
-
-    /* .comment-area {
-        background: url("{{$calon->fotoBody->foto_kedua}}") no-repeat center center / cover;
-        padding: 100px 0;
-        position: absolute;
-        background-attachment: fixed;
-        z-index: 1;
-    } */
-    /* //footer  */
-
-    footer:before {
-        height: 100%;
-        background-position: center;
-        background-size: cover;
-        position: absolute;
-        color: white;
-        /* font-family: "Courier New", Courier, monospace; */
-        /* font-size: 25px; */
-    }
-
     /* // background  */
     .section {
         padding: 6.25rem 0;
@@ -216,50 +367,45 @@
         background: <?=$calon->color ?>;
     }
 
-    /* //button  */
-    .button4 {
-        margin-top: 10px;
-        background-color: #ffffff;
-        color: black;
-        border-radius: 12px;
-        width: 300px;
-        height: 45px;
-        margin-top: 0px;
+    /* //popup gmaps  */
+    /**
+       * Simple fade transition,
+       */
+    .mfp-fade.mfp-bg {
+        opacity: 0;
+        -webkit-transition: all 0.15s ease-out;
+        -moz-transition: all 0.15s ease-out;
+        transition: all 0.15s ease-out;
     }
 
-
-    @media screen and (max-width: 768px) {
-
-        .fh5co-cover .display-t .display-tc .button4 {
-            width: 260px;
-            display: table-cell;
-            vertical-align: middle;
-
-        }
+    .mfp-fade.mfp-bg.mfp-ready {
+        opacity: 0.8;
     }
 
-    @media screen and (max-width: 360px) {
-
-        .fh5co-cover .display-t .display-tc .button4 {
-            width: 230px;
-            margin-left: auto;
-            margin-right: auto;
-        }
+    .mfp-fade.mfp-bg.mfp-removing {
+        opacity: 0;
     }
 
-    .hide {
-        padding: 0.5% 0%;
-        width: 18%;
-        color: white;
-        border-radius: 3px;
-        transition: 0.5s opacity;
-        background: rgba(1, 1, 1, 1);
-        border: 2px solid rgba(1, 1, 1, 0.7);
+    .mfp-fade.mfp-wrap .mfp-content {
+        opacity: 0;
+        -webkit-transition: all 0.15s ease-out;
+        -moz-transition: all 0.15s ease-out;
+        transition: all 0.15s ease-out;
     }
 
-    .hide:hover {
-        cursor: pointer;
-        opacity: 0.5;
+    .mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+        opacity: 1;
+    }
+
+    .mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+        opacity: 0;
+    }
+
+    .icon {
+        margin: 5px auto;
+        width: 90px;
+
+        /*background-color: red;*/
     }
 
     /* button footer  */
@@ -272,569 +418,94 @@
         border-radius: 50%;
     }
 
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 768px) {
 
-        #fh5co-header .display-tc h1,
-        #fh5co-counter .display-tc h1,
-        .fh5co-cover .display-tc h1 {
+        .qbootstrap-cover .display-tc h2,
+        .video-hero .display-tc h2 {
             font-size: <?=$calon->size_font ?>px;
-        }
-
-        .center-bg {
-            background-position: center center !important;
-            background-repeat: no-repeat;
         }
     }
 
     .footer__title {
         position: relative;
-        font-family: "Sacramento",
-            Arial,
-            serif;
+        font-family: "Sofia";
         font-size: <?=$calon->size_font ?>px;
-        line-height: 40px;
+        line-height: 2.5rem;
         margin-bottom: 40px;
     }
-    </style>
 
+    /* button.logo_btn {
+        height: 32px;
+        padding-left: 36px;
+        border: 1px solid #000;
+        background: #ff9900 url(assets/img/logo/btn.png) no-repeat 10px center;
+        cursor: pointer;
+    } */
+
+    .item-p p {
+        font-size: inherit;
+        line-height: normal;
+        margin-bottom: 0px;
+        margin-top: revert;
+    }
+    </style>
 </head>
 
-<body>
+<body id="home">
+    <div id="loader" class="loader">
+        <div id="my-svg"></div>
+        <div class="loader-img text-center">
+            <img src="assets\img\gold\story-flowers.png" alt="flowers">
+        </div>
+    </div>
 
-    <!-- <div class="fh5co-loader"></div> -->
-
-    <div id="page">
-        <div class="fh5co-cover centre-bg c-hero-banner gateway gt-section" role="banner">
-            <div class="overlay"></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2 text-center">
-                        <div class="display-t">
-                            <div class="display-tc animate-box" data-animate-effect="fadeIn">
+    <div class="gateway gt-section" id="gt">
+        <div class="qbootstrap-hero" data-section="home">
+            <div class="qbootstrap-overlay"></div>
+            <div class="qbootstrap-cover text-center center-bg" data-stellar-background-ratio="0.5">
+                <div class="display-t">
+                    <div class="display-tc">
+                        <div class="container">
+                            <div class="col-md-10 col-md-offset-1 wow slideInUp">
+                                <!-- <div class="animate-box svg-sm colored"> -->
+                                <!-- <img src="assets/img/premium/flaticon/svg/004-nature.svg" class="svg" alt=""> -->
                                 @if (isset($qs['u']))
-                                <h6>Dear {{$qs['u']}},</h6>
+                                <h3>Dear {{$qs['u']}},</h3>
                                 @endif
                                 <p><strong>You're Invited!</strong></p>
-                                <h3>We Are Getting Married</h3>
-                                <h1>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</h1>
-                                <p><button href="#" id="play-music" class="button button4"><img
+                                <h1 class="holder"><span>The Wedding of</span></h1>
+                                <h2>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</h2>
+                                <p><button href="#" id="play-music" class="button text-center button4"><img
                                             src="assets/img/logo/btn.png" width="25px" height="25px" alt="" srcset="">
                                         Open
                                         Invitation</button>
+
                                 </p>
-                                <!-- <div class="hide" onclick="play()">Open Invitation</div> -->
+                                <!-- </div> -->
                             </div>
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
+    <div class="qbootstrap-hero" data-section="home">
+        <div class="qbootstrap-overlay"></div>
         @if($calon->fotoHeader->foto_header)
-        <header id="fh5co-header" class="fh5co-cover centre-bg c-hero-banner" role="banner"
-            style="background-image:url({{$calon->fotoHeader->foto_header}});" data-stellar-background-ratio="0.5">
+        <div class="qbootstrap-cover text-center center-bg" data-stellar-background-ratio="0.5"
+            style="background-image: url({{$calon->fotoHeader->foto_header}});">
             @endif
-            <div class="overlay"></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2 text-center">
-                        <div class="display-t">
-                            <div class="display-tc animate-box" data-animate-effect="fadeIn">
-                                <h1>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</h1>
-                                <h2>We Are Getting Married</h2>
-                                <!-- <p>{{$tanggalIndoAkad}}</p> -->
-                                <!-- <div class="simply-countdown-losange" id="simply-countdown-losange"></div> -->
-                                <div class="simply-countdown simply-countdown-one">
-                                </div>
-                                <!-- <p><a href="#" class="btn btn-default btn-sm">Save the date</a></p> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="mask">
-                <img src="assets\img\gold\mask.png" alt="">
-            </div>
-        </header>
-
-        <div id="fh5co-couple">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-                        <h2>Welcome!</h2>
-                        <h3>{{$tanggalIndoAkad}}</h3>
-                        <p>We invited you to celebrate our wedding</p>
-                    </div>
-                </div>
-                <div class="couple-wrap animate-box">
-                    <div class="couple-half">
-                        <div class="groom">
-                            <img src="{{$calon->foto_pria}}" style="width:150px;height:150px;" alt="groom"
-                                class="img-responsive">
-                        </div>
-                        <div class="desc-groom">
-                            <h3><strong>{{$calon->calon_pria}}</strong></h3>
-                            <p><strong>Putra Dari</strong></p>
-                            <p>Bpk. {{$calon->ayah_pria}} </p>
-                            <p>Ibu {{$calon->ibu_pria}} </p>
-                            <p><a href="https://www.instagram.com/{{$calon->sosmed_pria}}/"><i
-                                        class="icon-instagram"></i></a></p>
-                        </div>
-                    </div>
-                    <p class="heart text-center"><i class="icon-heart2"></i></p>
-                    <div class="couple-half">
-                        <div class="bride">
-                            <img src="{{$calon->foto_wanita}}" style="width:150px;height:150px;" alt="groom"
-                                class="img-responsive">
-                        </div>
-                        <div class="desc-bride">
-                            <h3><strong>{{$calon->calon_wanita}}</strong></h3>
-                            <p><strong>Putri Dari</strong></p>
-                            <p>Bpk. {{$calon->ayah_wanita}} </p>
-                            <p>Ibu {{$calon->ibu_wanita}} </p>
-                            <p><a href="https://www.instagram.com/{{$calon->sosmed_wanita}}/"><i
-                                        class="icon-instagram"></i></a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        @if($calon->fotoBody->foto_pertama)
-        <div id="fh5co-event" class="fh5co-bg center-bg"
-            style="background-image:url({{$calon->fotoBody->foto_pertama}});">
-            @endif
-            <div class="overlay"></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-                        <span>Our Main Events</span>
-                        <h2>Wedding Ceremony</h2>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="display-t">
-                        <div class="display-tc">
-                            <div class="col-md-10 col-md-offset-1">
-                                <div class="col-md-6 col-sm-6 text-center">
-                                    <div class="event-wrap animate-box">
-                                        <h3>Akad Nikah</h3>
-                                        <div class="event-col">
-                                            <i class="icon-clock"></i>
-                                            <span>{{$calon->akadNikah->waktu}}</span>
-                                            <!-- <span>4:00 PM</span>
-                                            <span>6:00 PM</span> -->
-                                        </div>
-                                        <div class="event-col">
-                                            <i class="icon-calendar"></i>
-                                            <span>{{$tanggalIndoAkad}}</span>
-                                        </div>
-                                        <p>
-                                            <span>{{$calon->akadNikah->tempat}}</span>
-                                        </p>
-                                        <p>
-                                            <span>{{$calon->akadNikah->alamat}}</span>
-                                        </p>
-                                        <p>
-                                            <a href="https://maps.google.com/?q={{$calon->akadNikah->google_loc}}"
-                                                class="icon-location">Location</a>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-sm-6 text-center">
-                                    <div class="event-wrap animate-box">
-                                        <h3>Resepsi</h3>
-                                        <div class="event-col">
-                                            <i class="icon-clock"></i>
-                                            <span>{{$calon->resepsi->waktu_rsp}}</span>
-                                            <!-- <span>7:00 PM</span>
-                                            <span>12:00 AM</span> -->
-                                        </div>
-                                        <div class="event-col">
-                                            <i class="icon-calendar"></i>
-                                            <span>{{$tanggalIndoResepsi}}</span>
-                                            <!-- <span>Monday 28</span>
-                                            <span>November, 2016</span> -->
-                                        </div>
-                                        <p>
-                                            <span>{{$calon->resepsi->tempat_rsp}}</span>
-                                        </p>
-                                        <p>
-                                            <span>{{$calon->resepsi->alamat_rsp}}</span>
-                                        </p>
-                                        <p>
-                                            <a href="https://maps.google.com/?q={{$calon->resepsi->google_loc_rsp}}"
-                                                class="icon-location">Location</a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- <div id="fh5co-couple-story">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-                        <span>We Love Each Other</span>
-                        <h2>Our Love Story</h2>
-                        <p>{{$calon->quotes->isi}}.</p>
-                        <span>&ldquo;{{$calon->quotes->judul}}&rdquo;</span>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 col-md-offset-0">
-                        <ul class="timeline animate-box">
-                            <li class="animate-box">
-                                @if($calon->loveStory->foto_firstmeet)
-                                <div class="timeline-badge"
-                                    style="background-image:url({{$calon->loveStory->foto_firstmeet}});">
-                                    @endif
-                                </div>
-                                <div class="timeline-panel">
-                                    <div class="timeline-heading">
-                                        <h3 class="timeline-title">First Meet</h3>
-                                        <span class="date">{{$calon->loveStory->tgl_firstmeet}}</span>
-                                    </div>
-                                    <div class="timeline-body">
-                                        <p>
-                                            {{$calon->loveStory->story_firstmeet}}.
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="timeline-inverted animate-box">
-                                @if($calon->loveStory->foto_firstdate)
-                                <div class="timeline-badge"
-                                    style="background-image:url({{$calon->loveStory->foto_firstdate}});">
-                                    @endif
-                                </div>
-                                <div class="timeline-panel">
-                                    <div class="timeline-heading">
-                                        <h3 class="timeline-title">First Date</h3>
-                                        <span class="date">{{$calon->loveStory->tgl_firstdate}}</span>
-                                    </div>
-                                    <div class="timeline-body">
-                                        <p>{{$calon->loveStory->story_firstdate}}.
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="animate-box">
-                                @if($calon->loveStory->foto_relationship)
-                                <div class="timeline-badge"
-                                    style="background-image:url({{$calon->loveStory->foto_relationship}});">
-                                    @endif
-                                </div>
-                                <div class="timeline-panel">
-                                    <div class="timeline-heading">
-                                        <h3 class="timeline-title">In A Relationship</h3>
-                                        <span class="date">{{$calon->loveStory->tgl_relationship}}</span>
-                                    </div>
-                                    <div class="timeline-body">
-                                        <p>
-                                            {{$calon->loveStory->story_relationship}}.
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="timeline-inverted animate-box">
-                                @if($calon->loveStory->foto_enganged)
-                                <div class="timeline-badge"
-                                    style="background-image:url({{$calon->loveStory->foto_enganged}});">
-                                    @endif
-                                </div>
-                                <div class="timeline-panel">
-                                    <div class="timeline-heading">
-                                        <h3 class="timeline-title">Enganged</h3>
-                                        <span class="date">{{$calon->loveStory->tgl_enganged}}</span>
-                                    </div>
-                                    <div class="timeline-body">
-                                        <p>{{$calon->loveStory->story_enganged}}.
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
-        <div id="fh5co-gallery" class="fh5co-section-gray">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-                        <span>Our Memories in photograph</span>
-                        <h2>Our Galleries</h2>
-                        <!-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                            there live the blind texts.</p> -->
-                    </div>
-                </div>
-                <div class="row row-bottom-padded-md">
-                    <div class="col-md-12">
-                        <ul id="fh5co-gallery-list">
-                            @foreach($calon->fotoFooter as $data)
-                            <li class="one-third animate-box" data-animate-effect="fadeIn"
-                                style="background-image: url({{$data->foto}});">
-                                <a href="{{$data->foto}}">
-                                    <div class="case-studies-summary">
-                                        <!-- <span>14 Photos</span>
-                                        <h2>Two Glas of Juice</h2> -->
-                                    </div>
-                                </a>
-                            </li>
-                            @endforeach
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- <div id="fh5co-counter" class="fh5co-bg fh5co-counter"
-            style="background-image:url(assets/img/gold/img_bg_5.jpg);">
-            <div class="overlay"></div>
-            <div class="container">
-                <div class="row">
-                    <div class="display-t">
-                        <div class="display-tc">
-                            <div class="col-md-3 col-sm-6 animate-box">
-                                <div class="feature-center">
-                                    <span class="icon">
-                                        <i class="icon-users"></i>
-                                    </span>
-
-                                    <span class="counter js-counter" data-from="0" data-to="500" data-speed="5000"
-                                        data-refresh-interval="50">1</span>
-                                    <span class="counter-label">Estimated Guest</span>
-
-                                </div>
-                            </div>
-                            <div class="col-md-3 col-sm-6 animate-box">
-                                <div class="feature-center">
-                                    <span class="icon">
-                                        <i class="icon-user"></i>
-                                    </span>
-
-                                    <span class="counter js-counter" data-from="0" data-to="1000" data-speed="5000"
-                                        data-refresh-interval="50">1</span>
-                                    <span class="counter-label">We Catter</span>
-                                </div>
-                            </div>
-                            <div class="col-md-3 col-sm-6 animate-box">
-                                <div class="feature-center">
-                                    <span class="icon">
-                                        <i class="icon-calendar"></i>
-                                    </span>
-                                    <span class="counter js-counter" data-from="0" data-to="402" data-speed="5000"
-                                        data-refresh-interval="50">1</span>
-                                    <span class="counter-label">Events Done</span>
-                                </div>
-                            </div>
-                            <div class="col-md-3 col-sm-6 animate-box">
-                                <div class="feature-center">
-                                    <span class="icon">
-                                        <i class="icon-clock"></i>
-                                    </span>
-
-                                    <span class="counter js-counter" data-from="0" data-to="2345" data-speed="5000"
-                                        data-refresh-interval="50">1</span>
-                                    <span class="counter-label">Hours Spent</span>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
-        <!-- <div id="fh5co-testimonial">
-            <div class="container">
-                <div class="row">
-                    <div class="row animate-box">
-                        <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-                            <span>Best Wishes</span>
-                            <h2>Friends Wishes</h2>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12 animate-box">
-                            <div class="wrap-testimony">
-                                <div class="owl-carousel-fullwidth">
-                                    <div class="item">
-                                        <div class="testimony-slide active text-center">
-                                            <figure>
-                                                <img src="assets/img/gold/couple-1.jpg" alt="user">
-                                            </figure>
-                                            <span>John Doe, via <a href="#" class="twitter">Twitter</a></span>
-                                            <blockquote>
-                                                <p>"Far far away, behind the word mountains, far from the countries
-                                                    Vokalia and Consonantia, there live the blind texts. Separated they
-                                                    live in Bookmarksgrove right at the coast of the Semantics"</p>
-                                            </blockquote>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="testimony-slide active text-center">
-                                            <figure>
-                                                <img src="assets/img/gold/couple-2.jpg" alt="user">
-                                            </figure>
-                                            <span>John Doe, via <a href="#" class="twitter">Twitter</a></span>
-                                            <blockquote>
-                                                <p>"Far far away, behind the word mountains, far from the countries
-                                                    Vokalia and Consonantia, at the coast of the Semantics, a large
-                                                    language ocean."</p>
-                                            </blockquote>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="testimony-slide active text-center">
-                                            <figure>
-                                                <img src="assets/img/gold/couple-3.jpg" alt="user">
-                                            </figure>
-                                            <span>John Doe, via <a href="#" class="twitter">Twitter</a></span>
-                                            <blockquote>
-                                                <p>"Far far away, far from the countries Vokalia and Consonantia, there
-                                                    live the blind texts. Separated they live in Bookmarksgrove right at
-                                                    the coast of the Semantics, a large language ocean."</p>
-                                            </blockquote>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
-        <!-- <div id="fh5co-services" class="fh5co-section-gray">
-            <div class="container">
-
-                <div class="row animate-box">
-                    <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-                        <h2>We Offer Services</h2>
-                        <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem
-                            provident. Odit ab aliquam dolor eius.</p>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="feature-left animate-box" data-animate-effect="fadeInLeft">
-                            <span class="icon">
-                                <i class="icon-calendar"></i>
-                            </span>
-                            <div class="feature-copy">
-                                <h3>We Organized Events</h3>
-                                <p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos
-                                    cumque dicta adipisci architecto culpa amet.</p>
-                            </div>
-                        </div>
-
-                        <div class="feature-left animate-box" data-animate-effect="fadeInLeft">
-                            <span class="icon">
-                                <i class="icon-image"></i>
-                            </span>
-                            <div class="feature-copy">
-                                <h3>Photoshoot</h3>
-                                <p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos
-                                    cumque dicta adipisci architecto culpa amet.</p>
-                            </div>
-                        </div>
-
-                        <div class="feature-left animate-box" data-animate-effect="fadeInLeft">
-                            <span class="icon">
-                                <i class="icon-video"></i>
-                            </span>
-                            <div class="feature-copy">
-                                <h3>Video Editing</h3>
-                                <p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos
-                                    cumque dicta adipisci architecto culpa amet.</p>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="col-md-6 animate-box">
-                        <div class="fh5co-video fh5co-bg" style="background-image: url(assets/img/gold/img_bg_3.jpg); ">
-                            <a href="https://vimeo.com/channels/staffpicks/93951774" class="popup-vimeo"><i
-                                    class="icon-video2"></i></a>
-                            <div class="overlay"></div>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-        </div> -->
-
-
-
-        @if($calon->fotoBody->foto_kedua)
-        <div id="fh5co-started" class="fh5co-bg comment-area animate-box"
-            style="background-image:url({{$calon->fotoBody->foto_kedua}});">
-            @endif
-            <!-- style="background-image:url(assets/img/gold/img_bg_4.jpg);" -->
-            <!-- <div class="overlay"></div> -->
-            <div class="container">
-                <div class="row animate-box">
-                    <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-                        <h2>Guest Book</h2>
-                        <p>Leave a message or send wishes for the Couple!</p>
-                    </div>
-                </div>
-                <div class="row animate-box">
-                    <div class="col-md-10 col-md-offset-1">
-                        <form action="{{route('comment.save')}}" method="post" class="form-inline">
-                            <input type="hidden" name="calon_id" id="calon_id" value="{{$calon->id}}">
-                            <input type="hidden" name="slug" id="slug" value="{{$calon->slug}}">
-                            @csrf
-                            <div class="col-md-4 col-sm-4">
-                                <div class="form-group">
-                                    <label for="name" class="sr-only">Nama</label>
-                                    <input type="name" class="form-control" name="nama" id="nama" placeholder="Name">
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-4">
-                                <div class="form-group">
-                                    <label for="comment" class="sr-only">Comment</label>
-                                    <input type="text" class="form-control" name="comment" id="comment"
-                                        placeholder="Comment">
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-4">
-                                <button type="submit" class="btn btn-default btn-block">Submit</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="fh5co-started" class="">
-            <!-- style="background-image:url(assets/img/gold/img_bg_4.jpg);" -->
-            <!-- <div class="overlay"></div> -->
-            <div class="row horizontal-line animate-box">
-                <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-                    rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-                    crossorigin="anonymous">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="media g-mb-30 media-comment">
-                                <h7><strong>Comment Section</strong></h7>
-                                <!-- <img class="d-flex g-width-50 g-height-50 rounded-circle g-mt-3 g-mr-15"> -->
-                                <div class="media-body u-shadow-v18 g-bg-secondary g-pa-30">
-                                    @foreach($calon->comment as $data)
-                                    <div class="commentText">
-                                        <p><strong>{{ $data->nama }}</strong></p>
-                                        <p class="">{{ $data->comment }}</p>
-                                    </div>
-                                    @endforeach
-                                </div>
+            <div class="display-t">
+                <div class="display-tc">
+                    <div class="container">
+                        <div class="col-md-10 col-md-offset-1">
+                            <div class="animate-box svg-sm colored wow slideInUp">
+                                <!-- <img src="assets/img/premium/flaticon/svg/004-nature.svg" class="svg" alt=""> -->
+                                <h1 class="holder"><span>The Wedding of</span></h1>
+                                <h2>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</h2>
+                                <p>{{$tanggalIndoAkad}}</p>
                             </div>
                         </div>
                     </div>
@@ -842,19 +513,487 @@
             </div>
         </div>
     </div>
-    <!-- </div> -->
 
+
+    <!-- <nav id="navbar" class="navbar navbar-expand-lg fixed-top p-0 text-white">
+        <div class="d-lg-flex w-100 align-items-start">
+            <a class="navbar-brand text-primary" href="#">
+                <img class="d-none d-lg-block navbar-brand__img" src="assets\img\gold\logo.png" alt="logo">
+                <img class="d-lg-none navbar-brand__img" src="assets\img\gold\logo-small.png" alt="logo">
+            </a>
+            <button type="button" class="d-lg-none navbar-toggle collapsed" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar top-bar"></span>
+                <span class="icon-bar middle-bar"></span>
+                <span class="icon-bar bottom-bar"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active page-scroll" href="#top">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#events">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#rsvp">RSVP</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Pages
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="blog.html">Blog</a>
+                            <a class="dropdown-item" href="gallery.html">Gallery</a>
+                            <a class="dropdown-item" href="rsvp.html">RSVP</a>
+                            <a class="dropdown-item" href="blog-single.html">Single Post</a>
+                        </div>
+                    </li>
+                    <li class="nav-item d-flex ml-lg-4">
+                        <a class="nav-link nav-link_social" href="#">
+                            <i class="fa fa-2x fa-facebook-square"></i>
+                        </a>
+                        <a class="nav-link nav-link_social" href="#">
+                            <i class="fa fa-2x fa-twitter-square"></i>
+                        </a>
+                        <a class="nav-link nav-link_social" href="#">
+                            <i class="fa fa-2x fa-google-plus-square"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item ml-lg-4 d-lg-none">
+                        <span class="nav-link">&copy; Joseph and Sophia 2018.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav> -->
+    <!-- <div id="loader" class="loader">
+        <div id="my-svg"></div>
+        <div class="loader-img text-center">
+            <img src="assets\img\gold\story-flowers.png" alt="flowers">
+        </div>
+    </div>
+    <div id="top" class="main-hero">
+        <div class="c-hero-banner c-hero-banner--main">
+            <div class="cover"></div>
+            <div class="c-hero-banner__section c-hero-banner__image">
+                <img class="lazyload" src="assets\img\gold\banner.jpg" alt="image">
+            </div>
+            <div class="mask">
+                <img src="img\mask.png" alt="">
+            </div>
+        </div>
+    </div> -->
+    <!-- Section Wishes -->
+    <section class="wishes section section--bg text-center">
+        <div class="container">
+            <div class="date-section__flowers m-auto">
+                <img src="assets\img\gold\date-flowers.png" alt="flowers">
+            </div>
+            <div class="wow slideInLeft">
+                <h1 class="title">Happy Couple</h1>
+                <p class="subtitle m-auto">Our Happiness is begun..</p>
+                <div class="wishes__slider">
+                    <div class="slick slick-wishes mb-0 item-p">
+                        <div class="slider__item">
+                            <div class="wishes__person">
+                                <img class="rounded-circle m-auto" style="width:200px;height:200px;"
+                                    src="{{$calon->foto_pria}}" alt="slider">
+                            </div>
+                            <h4 class="wishes__title font-weight-bold">{{$calon->calon_pria}}</h4>
+                            <p><strong>Putra Dari</strong></p>
+                            <h5>Bpk. {{$calon->ayah_pria}}</h5>
+                            <h5>Ibu {{$calon->ibu_pria}}</h5>
+                            <div class="col-md-12 text-center">
+                                <ol class="social social-circle-couple">
+                                    <li><a href="https://www.instagram.com/{{$calon->sosmed_pria}}/"><i
+                                                class="fa fa-instagram"></i></a></li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="slider__item">
+                            <div class="wishes__person">
+                                <img class="rounded-circle m-auto" style="width:200px;height:200px;"
+                                    src="{{$calon->foto_wanita}}" alt="slider">
+                            </div>
+                            <h4 class="wishes__title font-weight-bold">{{$calon->calon_wanita}}</h4>
+                            <p><strong>Putri Dari</strong></p>
+                            <h5>Bpk. {{$calon->ayah_pria}}</h5>
+                            <h5>Ibu {{$calon->ibu_pria}}</h5>
+                            <div class="col-md-12 text-center">
+                                <ol class="social social-circle-couple">
+                                    <li><a href="https://www.instagram.com/{{$calon->sosmed_wanita}}/"><i
+                                                class="fa fa-instagram"></i></a></li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section Gift -->
+    <!-- <section class="gifts section section--blue text-center">
+        <div class="container">
+            <h1 class="title">Gift registry</h1>
+            <p class="subtitle m-auto">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                incididunt</p>
+            <div class="wishes__slider">
+                <div class="slick slick-gifts mb-0 pb-0">
+                    <div class="slider__item">
+                        <img class="m-auto" src="assets\img\gold\gift1.png" alt="gift">
+                    </div>
+                    <div class="slider__item">
+                        <img class="m-auto" src="assets\img\gold\gift2.png" alt="gift">
+                    </div>
+                    <div class="slider__item">
+                        <img class="m-auto" src="assets\img\gold\gift3.png" alt="gift">
+                    </div>
+                    <div class="slider__item">
+                        <img class="m-auto" src="assets\img\gold\gift4.png" alt="gift">
+                    </div>
+                    <div class="slider__item">
+                        <img class="m-auto" src="assets\img\gold\gift1.png" alt="gift">
+                    </div>
+                    <div class="slider__item">
+                        <img class="m-auto" src="assets\img\gold\gift2.png" alt="gift">
+                    </div>
+                    <div class="slider__item">
+                        <img class="m-auto" src="assets\img\gold\gift3.png" alt="gift">
+                    </div>
+                    <div class="slider__item">
+                        <img class="m-auto" src="assets\img\gold\gift4.png" alt="gift">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- Section Love story -->
+    <section class="love-story section position-relative text-center">
+        <div class="d-none d-sm-block love-story__flower-parallax position-absolute parallax">
+            <img src="assets\img\gold\ls-flower-prlx.png" alt="flower">
+        </div>
+        <div class="container">
+            <div class="love-story__flowers m-auto">
+                <img src="assets\img\gold\story-flowers.png" alt="flowers">
+            </div>
+            <div class="wow fadeInRight">
+                <h1 class="title">Quotes</h1>
+                <p class="m-auto">{{$calon->quotes->isi}}.</p>
+                <span><strong>&ldquo;{{$calon->quotes->judul}}&rdquo;</strong></span>
+            </div>
+        </div>
+    </section>
+    <!-- Section Date -->
+    <section class="date-section section section--bg countdown text-center">
+        <div class="container">
+            <div class="date-section__flowers m-auto">
+                <img src="assets\img\gold\date-flowers.png" alt="flowers">
+            </div>
+            <div class="wow fadeInDown">
+                <div class="date-section__block">
+                    <div class="d-inline-block">
+                        <h2 class="title--special">{{$tanggalIndoAkad}}</h2>
+                        <h3 class="date-section__place">
+                            {{$calon->akadNikah->tempat}}<br>
+                            {{$calon->akadNikah->alamat}}
+                        </h3>
+                    </div>
+                </div>
+                <div id="timer" class="timer d-flex justify-content-center">
+                    <div class="timer-item">
+                        <span class="days timer__digit"></span>
+                        <div class="timer__text">days</div>
+                    </div>
+                    <div class="timer-item">
+                        <span class="hours timer__digit"></span>
+                        <div class="timer__text">hours</div>
+                    </div>
+                    <div class="timer-item">
+                        <span class="minutes timer__digit"></span>
+                        <div class="timer__text">minutes</div>
+                    </div>
+                    <div class="timer-item">
+                        <span class="seconds timer__digit"></span>
+                        <div class="timer__text">seconds</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section Events -->
+    <section id="events" class="events section text-center">
+        <div class="container wow slideInUp">
+            <h1 class="title">Wedding events</h1>
+            <p class="subtitle mx-auto">Real life will begins.</p>
+            <div id="accordion">
+                <div class="accordion__header d-flex justify-content-center">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                        aria-controls="collapseOne">
+                        Akad Nikah
+                    </button>
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                        aria-expanded="false" aria-controls="collapseTwo">
+                        Resepsi
+                    </button>
+                </div>
+                <div class="accordion__body">
+                    <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                        <div class="row">
+                            <h2 class="accordion__item-heading">Akad Nikah</h2>
+                            @if($calon->fotoBody->foto_pertama)
+                            <div class="col-md-6">
+                                <img class="accordion__item-img" src="{{$calon->fotoBody->foto_pertama}}"
+                                    alt="ceremony">
+                            </div>
+                            @endif
+                            <div class="col-md-6 text-left">
+                                <h3 class="accordion__item-subheading">When and Where</h3>
+                                <p class="d-flex align-items-center"><i
+                                        class="fa fa-2x fa-map-marker align-middle pr-1"></i>{{$calon->akadNikah->alamat}}
+                                </p>
+                                <p class="d-flex align-items-center"><i
+                                        class="fa fa-2x fa-clock-o align-middle pr-1"></i>{{$calon->akadNikah->waktu}},
+                                    {{$tanggalIndoAkad}}
+                                </p>
+                                <!-- <p class="font-weight-bold">Keep it classy</p> -->
+                                <a class="btn btn-outline-dark rounded-0 px-2 py-1 popup-gmaps"
+                                    href="https://maps.google.com/?q={{$calon->akadNikah->google_loc}}">View on map</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                        <div class="row">
+                            <h2 class="accordion__item-heading">Resepsi</h2>
+                            @if($calon->fotoBody->foto_kedua)
+                            <div class="col-md-6">
+                                <img class="accordion__item-img" src="{{$calon->fotoBody->foto_kedua}}" alt="ceremony">
+                            </div>
+                            @endif
+                            <div class="col-md-6 text-left">
+                                <h3 class="accordion__item-subheading">When and Where</h3>
+                                <p class="d-flex align-items-center"><i
+                                        class="fa fa-2x fa-map-marker align-middle pr-1"></i>{{$calon->resepsi->alamat_rsp}}
+                                </p>
+                                <p class="d-flex align-items-center"><i
+                                        class="fa fa-2x fa-clock-o align-middle pr-1"></i>{{$calon->resepsi->waktu_rsp}},
+                                    {{$tanggalIndoResepsi}}
+                                </p>
+                                <!-- <p class="font-weight-bold">Keep it classy</p> -->
+                                <a class="btn btn-outline-dark rounded-0 px-2 py-1 popup-gmaps"
+                                    href="https://maps.google.com/?q={{$calon->akadNikah->google_loc_rsp}}">View on
+                                    map</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div id="collapseThree" class="collapse" data-parent="#accordion">
+                        <div class="row">
+                            <h2 class="accordion__item-heading">Party</h2>
+                            <div class="col-md-6">
+                                <img class="accordion__item-img" src="assets\img\gold\party.jpg" alt="ceremony">
+                            </div>
+                            <div class="col-md-6 text-left">
+                                <h3 class="accordion__item-subheading">When and Where</h3>
+                                <p class="d-flex align-items-center"><i
+                                        class="fa fa-2x fa-map-marker align-middle pr-1"></i>W Hotel, 1423 Hobart St,
+                                    Pittsburgh, PA, 15217</p>
+                                <p class="d-flex align-items-center"><i
+                                        class="fa fa-2x fa-clock-o align-middle pr-1"></i>21:00 - 00:00, Sep 15, 2018
+                                </p>
+                                <p class="font-weight-bold">Keep it classy</p>
+                                <div class="btn btn-outline-dark rounded-0 px-2 py-1">View on map</div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <!-- <div class="events__info">
+                <div class="row text-left">
+                    <div class="col-md-4 event__info-item">
+                        <h6 class="event__info-header font-weight-bold">Getting there</h6>
+                        <p>You can get there using the car, bus or train.</p>
+                    </div>
+                    <div class="col-md-4 event__info-item">
+                        <h6 class="event__info-header font-weight-bold">Where to stay</h6>
+                        <p>Hotel, Motel</p>
+                        <p>There are many options to choose around. You can book accommodation online, either at hotel's
+                            own web site or at web site of an agency.</p>
+                    </div>
+                    <div class="col-md-4 event__info-item">
+                        <h6 class="event__info-header font-weight-bold">Activities</h6>
+                        <p>Here are a few of our favorite local spots.</p>
+                        <ul>
+                            <li>Climbing Park</li>
+                            <li>Bowling</li>
+                            <li>Golf</li>
+                            <li>Spa center</li>
+                            <li>Biking</li>
+                        </ul>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </section>
+    <!-- Section Gallery -->
+    <section id="gallery" class="gallery section section--bg text-center">
+        <div class="d-none d-lg-block gallery__flower-prlx-l position-absolute parallax">
+            <img src="assets\img\gold\gallery-prlx-l.png" alt="flower">
+        </div>
+        <div class="d-none d-lg-block gallery__flower-prlx-r position-absolute parallax">
+            <img src="assets\img\gold\gallery-prlx-r.png" alt="flower">
+        </div>
+        <div class="container position-relative wow slideInLeft">
+            <h1 class="title">Gallery</h1>
+            <p class="subtitle mx-auto">Our hapiness in photograph...</p>
+            <div class="gallery__slider">
+                <div class="slick-gallery slick mb-0 ">
+                    @foreach($calon->fotoFooter as $data)
+                    <div class="slider__item">
+                        <img class="gallery" src="{{$data->foto}}" alt="slider">
+                    </div>
+                    @endforeach
+                </div>
+
+                <div class="gallery__slider-num d-none d-lg-flex">
+                    <div class="gallery__slider-current pr-1"></div>
+                    <div class="pr-1">from</div>
+                    <div class="gallery__slider-all"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RSVP -->
+    <section id="rsvp" class="rsvp section ">
+        <div class="container">
+            <div class="row wow slideInUp">
+                <div class="d-none d-md-block col-sm-12 col-md-4">
+                    <img src="assets\img\gold\rsvp-flower.png" class="parallax" alt="flower">
+                </div>
+                <div class="col-sm-12 col-md-8 align-self-center">
+                    <h2 class="title">RSVP</h2>
+                    <h6 class="text-uppercase font-weight-bold mb-0">Will you attend?</h6>
+                    <form id="rsvp-form" action="{{route('reservasi.save')}}" method="post">
+                        <input type="hidden" name="calon_id" id="calon_id" value="{{$calon->id}}">
+                        <input type="hidden" name="slug" id="slug" value="{{$calon->slug}}">
+                        @csrf
+                        <div class="row">
+                            <div class="col-md-8 mb-3 m-md-0">
+                                <div class="form-group">
+                                    <label class="control-label" for="inputName">Name</label>
+                                    <input type="text" class="form-control" id="nama" name="nama" required="">
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label" for="inputNumber">Address</label>
+                                    <input type="tel" class="form-control" id="alamat" name="alamat" required="">
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label" for="ket"></label>
+                                    <div class="form-group">
+                                        <!-- <label for="ket" class="sr-only">Apakah Anda Akan Datang?</label> -->
+                                        <select name="ket" id="ket" placeholder="Apakah anda Datang?"
+                                            class="form-control">
+                                            <!-- <option value=""></option> -->
+                                            <option disabled="" selected="">Will you Attending?</option>
+                                            <option value="Ya, tentu saja!">Ya, tentu saja!</option>
+                                            <option value="Maaf, saya tidak bisa.">Maaf, saya tidak bisa.</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 align-self-end">
+                                <button type="submit"
+                                    class="btn btn-outline-dark rounded-0 px-3 py-1 font-weight-bold">Submit</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="success-msg"></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="comment" class="comment section section--bg">
+        <div class="container">
+            <div class="row wow slideInUp">
+                <div class="d-none d-md-block col-sm-12 col-md-4">
+                    <img src="assets\img\gold\rsvp-flower.png" class="parallax" alt="flower">
+                </div>
+                <div class="col-sm-12 col-md-8 align-self-center">
+                    <h2 class="title">Comment</h2>
+                    <h6 class="text-uppercase font-weight-bold mb-0">Send wishes or your comment!</h6>
+                    <form id="rsvp-form" action="{{route('comment.save')}}" method="post">
+                        <input type="hidden" name="calon_id" id="calon_id" value="{{$calon->id}}">
+                        <input type="hidden" name="slug" id="slug" value="{{$calon->slug}}">
+                        @csrf
+                        <div class="row">
+                            <div class="col-md-8 mb-3 m-md-0">
+                                <div class="form-group">
+                                    <label class="control-label" for="inputName">Name</label>
+                                    <input type="text" class="form-control" id="nama" name="nama" required="">
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label" for="inputNumber">Comment</label>
+                                    <input type="text" class="form-control" id="comment" name="comment" required="">
+                                </div>
+                            </div>
+                            <div class="col-md-4 align-self-end">
+                                <button type="submit"
+                                    class="btn btn-outline-dark rounded-0 px-3 py-1 font-weight-bold">Submit</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="success-msg"></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="komentar panel" class="comment section">
+        <!-- <div class="row horizontal-line"> -->
+        <div class="container">
+            <div class="row wow slideInUp">
+                <div class="col-md-12">
+                    <h4><strong>Comment Section</strong></h4>
+                    <div class="media g-mb-30 media-comment">
+
+                        <div class="media-body u-shadow-v18 g-bg-secondary g-pa-30">
+                            @foreach($calon->comment as $data)
+                            <div class="commentText">
+                                <h6><strong>{{ $data->nama }}</strong></h6>
+                                <p class="">{{ $data->comment }}</p>
+                            </div>
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- </div> -->
+    </section>
+    <!-- Footer -->
     <footer class="section section--bg">
-        <div class="container text-white position-relative animate-box">
-            <div class="footer__title color-wht">
+        <div class="container text-white position-relative wow slideInUp">
+            <div class="footer__title">
                 <div class="text-center">Thank You</div>
                 <div class="text-center"><strong>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</strong></div>
             </div>
             <div class="row pb-4">
-                <div class="col-md-12 text-center color-wht">
+                <div class="col-md-12 text-center parent">
                     <p>Turut Mengundang :</p>
-                </div>
-                <div class="col-md-12 text-center color-wht">
                     <?php 
                     $undang = explode("|",$calon->undang);
                     ?>
@@ -863,11 +1002,11 @@
                         <li>{{$data}}</li>
                         @endforeach
                     </ul>
-
                 </div>
             </div>
-            <!-- <div class="copyright text-center color-wht">ToBeABrideXCloudStudio</div> -->
-            <p><img class="center" style="width:230px;height:100px;" src="assets/img/logo/tobeabride.png" alt=""></p>
+            <!-- <div class="copyright text-center">ToBeABrideXCloudStudio</div> -->
+            <p><img class="center" style="width:230px;height:100px;" src="assets/img/logo/tobeabride_black.png" alt="">
+            </p>
             <div class="row">
                 <div class="col-md-12 text-center">
                     <ol class="social social-circle">
@@ -878,7 +1017,6 @@
             </div>
         </div>
     </footer>
-
     <!-- strat music-box -->
     <div class="music-box music-box-2">
         <button class="music-box-toggle-btn">
@@ -889,74 +1027,22 @@
                 allowfullscreen></iframe>
         </div>
     </div>
-
     <!-- end music box -->
-
-    <div class="gototop js-top">
-        <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
-    </div>
-
-    <!-- jQuery -->
-    <script src="{{asset('assets/js/gold/jquery.min.js')}}"></script>
-    <!-- jQuery Easing -->
-    <script src="{{asset('assets/js/gold/jquery.easing.1.3.js')}}"></script>
-    <!-- Bootstrap -->
-    <script src="{{asset('assets/js/gold/bootstrap.min.js')}}"></script>
-    <!-- Waypoints -->
-    <script src="{{asset('assets/js/gold/jquery.waypoints.min.js')}}"></script>
-    <!-- Carousel -->
-    <script src="{{asset('assets/js/gold/owl.carousel.min.js')}}"></script>
-    <!-- countTo -->
-    <script src="{{asset('assets/js/gold/jquery.countTo.js')}}"></script>
-    <!-- Stellar -->
-    <script src="{{asset('assets/js/gold/jquery.stellar.min.js')}}"></script>
-    <!-- Magnific Popup -->
+    <script src="{{asset('assets/js/gold/vendor/jquery.min.js')}}"></script>
+    <script src="{{asset('assets/js/gold/vendor/jquery.easing.1.3.js')}}"></script>
+    <script src="{{asset('assets/js/gold/vendor/popper.min.js')}}"></script>
+    <script src="{{asset('assets/js/gold/vendor/bootstrap.min.js')}}"></script>
+    <script src="{{asset('assets/js/gold/vendor/slick.min.js')}}"></script>
+    <script src="{{asset('assets/js/gold/vendor/vivus.min.js')}}"></script>
+    <script src="{{asset('assets/js/gold/vendor/circletype.min.js')}}"></script>
+    <script src="{{asset('assets/js/gold/vendor/masonry.pkgd.min.js')}}"></script>
+    <script src="{{asset('assets/js/gold/vendor/lightbox.min.js')}}"></script>
+    <script src="{{asset('assets/js/gold/main.js')}}"></script>
     <script src="{{asset('assets/js/gold/jquery.magnific-popup.min.js')}}"></script>
     <script src="{{asset('assets/js/gold/magnific-popup-options.js')}}"></script>
-    <!-- // <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script> -->
-    <script src=" {{asset('assets/js/gold/simplyCountdown.js')}}"></script>
-    <!-- Main -->
-    <script src="{{asset('assets/js/gold/main.js')}}"></script>
+
 
     <script>
-    const calon = @json($calon);
-    // console.log(d);
-    // var d = new Date(new Date("{{$calon->akadNikah->tgl}}").getTime());
-
-    var d = new Date(new Date(calon.akad_nikah.tgl).getTime());
-    // console.log(new Date());
-
-    // default example
-    // simplyCountdown('.simply-countdown-one', {
-    //     year: d.getFullYear(),
-    //     month: d.getMonth() + 1,
-    //     day: d.getDate(),
-    //     hour: d.getHours(),
-    //     minute: d.getMinutes(),
-    //     second: d.getSeconds()
-    // });
-
-    //jQuery example
-    $('.simply-countdown-one').simplyCountdown({
-        year: d.getFullYear(),
-        month: d.getMonth() + 1,
-        day: d.getDate(),
-        enableUtc: false
-    });
-
-    $(".button").click(function() {
-        $(".gateway").slideUp("slow");
-    });
-
-    // wow = new WOW({
-    //     boxClass: 'wow', // default
-    //     animateClass: 'animated', // change this if you are not using animate.css
-    //     offset: 0, // default
-    //     mobile: true, // keep it on mobile
-    //     live: true // track if element updates
-    // })
-    // wow.init();
-
     const Player = document.getElementById('music');
     const PlayBtn = document.getElementById('play-music');
     let times = 0,
@@ -967,33 +1053,111 @@
             times = 1;
         }
     });
+    const calon = @json($calon);
+    // console.log(calon);
+
+    $(".button").click(function() {
+        $(".gateway").slideUp("slow");
+    });
+
+    wow = new WOW({
+        boxClass: 'wow', // default
+        animateClass: 'animated', // change this if you are not using animate.css
+        offset: 0, // default
+        mobile: true, // keep it on mobile
+        live: true // track if element updates
+    })
+    wow.init();
 
 
-    // $(document).ready(function() {
-    //     $('#play-music').on('click', function(ev) {
-
-    //         $("#music")[0].src += "&autoplay=1";
-    //         ev.preventDefault();
-
-    //     });
+    // $('.popup-gmaps').magnificPopup({
+    //     disableOn: 700,
+    //     type: 'iframe',
+    //     mainClass: 'mfp-fade',
+    //     removalDelay: 160,
+    //     preloader: false,
+    //     fixedContentPos: false
     // });
 
-    // function play() {
-    //     var audio = document.getElementById('audio');
-    //     if (audio.paused) {
-    //         audio.play();
-    //     } else {
-    //         audio.pause();
-    //     }
-    //     var audios = document.getElementById('audios');
-    //     if (audios.paused) {
-    //         audios.play();
-    //     } else {
-    //         audios.pause();
-    //     }
-    // }
-    </script>
+    (function() {
 
+
+
+        var countdown = function() {
+            var countdown = document.querySelector('.countdown');
+
+            function getTimeRemaining(endtime) {
+                var t = Date.parse(endtime) - Date.parse(new Date());
+                var seconds = Math.floor((t / 1000) % 60);
+                var minutes = Math.floor((t / 1000 / 60) % 60);
+                var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+                var days = Math.floor(t / (1000 * 60 * 60 * 24));
+                return {
+                    'total': t,
+                    'days': days,
+                    'hours': hours,
+                    'minutes': minutes,
+                    'seconds': seconds
+                };
+            }
+
+            function initializeClock(id, endtime) {
+                var clock = document.getElementById(id);
+                var daysSpan = clock.querySelector('.days');
+                var hoursSpan = clock.querySelector('.hours');
+                var minutesSpan = clock.querySelector('.minutes');
+                var secondsSpan = clock.querySelector('.seconds');
+                var newChild;
+
+                function updateClock() {
+                    var t = getTimeRemaining(endtime);
+                    var daysArr = String(t.days).split('');
+                    daysSpan.innerHTML = '';
+                    for (var i = 0; i < daysArr.length; i++) {
+                        newChild = document.createElement('span');
+                        newChild.innerHTML = daysArr[i];
+                        daysSpan.appendChild(newChild);
+                    }
+                    var hoursArr = String(('0' + t.hours).slice(-2)).split('');
+                    hoursSpan.innerHTML = '';
+                    for (var i = 0; i < hoursArr.length; i++) {
+                        newChild = document.createElement('span');
+                        newChild.innerHTML = hoursArr[i];
+                        hoursSpan.appendChild(newChild);
+                    }
+                    var minuteArr = String(('0' + t.minutes).slice(-2)).split('');
+                    minutesSpan.innerHTML = '';
+                    for (var i = 0; i < minuteArr.length; i++) {
+                        newChild = document.createElement('span');
+                        newChild.innerHTML = minuteArr[i];
+                        minutesSpan.appendChild(newChild);
+                    }
+                    var secondArr = String(('0' + t.seconds).slice(-2)).split('');
+                    secondsSpan.innerHTML = '';
+                    for (var i = 0; i < secondArr.length; i++) {
+                        newChild = document.createElement('span');
+                        newChild.innerHTML = secondArr[i];
+                        secondsSpan.appendChild(newChild);
+                    }
+                    if (t.total <= 0) {
+                        clearInterval(timeinterval);
+                    }
+                }
+                updateClock();
+                var timeinterval = setInterval(updateClock, 1000);
+            }
+            // set your wedding date here
+            var deadline = calon.akad_nikah.tgl;
+            if (countdown) {
+                initializeClock('timer', deadline);
+            }
+        }
+
+        $(function() {
+            countdown();
+        });
+    }());
+    </script>
 
 </body>
 

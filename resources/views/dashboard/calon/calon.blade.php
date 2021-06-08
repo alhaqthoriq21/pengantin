@@ -217,11 +217,11 @@
                                                                 <div class="d-flex flex-row">
                                                                     <select name="template" id="template"
                                                                         class="form-control" value="">
-                                                                        <option value="premium">Premium</option>
+                                                                        <option value="platinum">Platinum</option>
                                                                         <option value="gold">Gold</option>
                                                                         <option value="silver">Silver</option>
                                                                         <option value="bronze">Bronze</option>
-                                                                        <option value="honey">Honey</option>
+                                                                        <!-- <option value="honey">Honey</option> -->
                                                                         <!-- <option value="cherry">Cherry</option>
                                                                         <option value="clone">Clone</option> -->
                                                                     </select>

@@ -111,7 +111,7 @@
                                                                     <select name="template" id="template"
                                                                         class="form-control"
                                                                         value="{{$calon->template}}">
-                                                                        <option value="premium">Premium</option>
+                                                                        <option value="platinum">Platinum</option>
                                                                         <option value="gold">Gold</option>
                                                                         <option value="silver">Silver</option>
                                                                         <option value="bronze">Bronze</option>

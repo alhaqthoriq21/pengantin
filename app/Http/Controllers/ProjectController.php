@@ -29,21 +29,21 @@ class ProjectController extends Controller
     case "silver":
         return view('dashboard.project.silver', compact('calon', 'qs','tanggalIndoAkad', 'tanggalIndoResepsi'));
         break;
-    case "premium":
-        return view('dashboard.project.premium', compact('calon', 'qs','tanggalIndoAkad', 'tanggalIndoResepsi'));
+    case "platinum":
+        return view('dashboard.project.platinum', compact('calon', 'qs','tanggalIndoAkad', 'tanggalIndoResepsi'));
         break;
     case "bronze":
         return view('dashboard.project.bronze', compact('calon', 'qs','tanggalIndoAkad', 'tanggalIndoResepsi'));
         break;
-    case "honey":
-        return view('dashboard.project.honey', compact('calon', 'qs','tanggalIndoAkad', 'tanggalIndoResepsi'));
-        break;
-    case "cherry":
-        return view('dashboard.project.cherry', compact('calon', 'qs','tanggalIndoAkad', 'tanggalIndoResepsi'));
-        break;
-    case "clone":
-        return view('dashboard.project.clone', compact('calon', 'qs','tanggalIndoAkad', 'tanggalIndoResepsi'));
-        break;
+    // case "honey":
+    //     return view('dashboard.project.honey', compact('calon', 'qs','tanggalIndoAkad', 'tanggalIndoResepsi'));
+    //     break;
+    // case "cherry":
+    //     return view('dashboard.project.cherry', compact('calon', 'qs','tanggalIndoAkad', 'tanggalIndoResepsi'));
+    //     break;
+    // case "clone":
+    //     return view('dashboard.project.clone', compact('calon', 'qs','tanggalIndoAkad', 'tanggalIndoResepsi'));
+    //     break;
     }
     }
 
