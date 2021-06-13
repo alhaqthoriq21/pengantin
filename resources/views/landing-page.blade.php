@@ -64,7 +64,7 @@
                         <h3>Siapa kita</h3>
                         <h2>To Be a Bride</h2>
                         <p>
-                            Adalah sebuah platform Undangan Pernikahan Online atau Wedding E-Invitation Latter yang
+                            Adalah sebuah platform Undangan Pernikahan Online atau Wedding E-Invitation Letter yang
                             menggunakan media website
                             untuk membantu anda dalam menyebarkan informasi acara tanpa batas jarak dan waktu.
                         <p>
@@ -272,7 +272,7 @@
                         </div>
                         <ul>
                             <li><i class="bi bi-check-circle mx-2" style="color: #0d6efd"></i> Nama Tamu Undangan</li>
-                            <li><i class="bi bi-check-circle mx-2" style="color: #0d6efd"></i> Max 6 Galler Foto</li>
+                            <li><i class="bi bi-check-circle mx-2" style="color: #0d6efd"></i> Max 6 Gallery Foto</li>
                             <li><i class="bi bi-check-circle mx-2" style="color: #0d6efd"></i> Turut Mengundang</li>
                             <li><i class="bi bi-check-circle mx-2" style="color: #0d6efd"></i> Link Sosial Media</li>
                             <li><i class="bi bi-check-circle mx-2" style="color: #0d6efd"></i> Alamat Lokasi</li>
@@ -303,14 +303,15 @@
                         </div>
                         <ul>
                             <li><i class="bi bi-check-circle mx-2" style="color: #0d6efd"></i> Nama Tamu Undangan</li>
-                            <li><i class="bi bi-check-circle mx-2" style="color: #0d6efd"></i> Max 8 Galler Foto</li>
+                            <li><i class="bi bi-check-circle mx-2" style="color: #0d6efd"></i> Max 8 Gallery Foto</li>
                             <li><i class="bi bi-check-circle mx-2" style="color: #0d6efd"></i> Turut Mengundang</li>
                             <li><i class="bi bi-check-circle mx-2" style="color: #0d6efd"></i> Link Sosial Media</li>
                             <li><i class="bi bi-check-circle mx-2" style="color: #0d6efd"></i> Alamat Lokasi</li>
                             <li><i class="bi bi-check-circle mx-2" style="color: #0d6efd"></i> Hitung Mundur</li>
                             <li><i class="bi bi-check-circle mx-2" style="color: #0d6efd"></i> Kolom Ucapan</li>
                             <li><i class="bi bi-check-circle mx-2" style="color: #0d6efd"></i> Musik</li>
-                            <li><i class="bi bi-x-circle mx-2" style="color: #0d6efd"></i> Add To Calender</li>
+                            <li class="na"><i class="bi bi-x-circle mx-2" style="color: #dc3545"></i> Add To Calender
+                            </li>
                             <li class="na"><i class="bi bi-x-circle mx-2" style="color: #dc3545"></i> RSVP/Buku Tamu
                             </li>
                             <li class="na"><i class="bi bi-x-circle mx-2" style="color: #dc3545"></i> Love Story</li>
@@ -332,7 +333,7 @@
                         </div>
                         <ul>
                             <li><i class="bi bi-check-circle mx-2" style="color: #0d6efd"></i> Nama Tamu Undangan</li>
-                            <li><i class="bi bi-check-circle mx-2" style="color: #0d6efd"></i> Max 12 Galler Foto</li>
+                            <li><i class="bi bi-check-circle mx-2" style="color: #0d6efd"></i> Max 12 Gallery Foto</li>
                             <li><i class="bi bi-check-circle mx-2" style="color: #0d6efd"></i> Turut Mengundang</li>
                             <li><i class="bi bi-check-circle mx-2" style="color: #0d6efd"></i> Link Sosial Media</li>
                             <li><i class="bi bi-check-circle mx-2" style="color: #0d6efd"></i> Alamat Lokasi</li>
@@ -360,7 +361,7 @@
                         </div>
                         <ul>
                             <li><i class="bi bi-check-circle mx-2" style="color: #0d6efd"></i> Nama Tamu Undangan</li>
-                            <li><i class="bi bi-check-circle mx-2" style="color: #0d6efd"></i> Max 15 Galler Foto</li>
+                            <li><i class="bi bi-check-circle mx-2" style="color: #0d6efd"></i> Max 15 Gallery Foto</li>
                             <li><i class="bi bi-check-circle mx-2" style="color: #0d6efd"></i> Turut Mengundang</li>
                             <li><i class="bi bi-check-circle mx-2" style="color: #0d6efd"></i> Link Sosial Media</li>
                             <li><i class="bi bi-check-circle mx-2" style="color: #0d6efd"></i> Alamat Lokasi</li>
