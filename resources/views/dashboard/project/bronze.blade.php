@@ -10,13 +10,13 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}} | ToBeABrideXCloudStudio</title>
+    <title>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}} | To Be A Bride</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, 
     user-scalable=no">
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta name="author" content="" />
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/tobeabride.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ assets('assets/img/logo/tobeabride.ico') }}">
 
     <!-- Facebook and Twitter integration -->
     <meta property="og:title" content="" />
@@ -66,7 +66,7 @@
 
     <!-- Modernizr JS -->
 
-    <script src="{{asset('assets/js/bronze/modernizr-2.6.2.min.js')}}"></script>
+    <script src="{{ asset('assets/js/bronze/modernizr-2.6.2.min.js') }}"></script>
 
     <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
     <!-- datetime/ -->
@@ -418,15 +418,16 @@
                             <div class="col-md-10 col-md-offset-1">
                                 <div class="animate-box svg-sm colored">
                                     @if (isset($qs['u']))
-                                    <h6>Dear {{$qs['u']}},</h6>
+                                        <h6>Dear {{$qs['u']}},</h6>
                                     @endif
                                     <p><span>You're Invited!</span></p>
                                     <h3 class="holder"><span>The Wedding of</span></h3>
                                     <h2><strong>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</strong></h2>
-                                    <p><button href="#" id="play-music" class="button button4"><img
-                                                src="assets/img/logo/btn.png" width="25px" height="25px" alt=""
-                                                srcset=""> Open
-                                            Invitation</button>
+                                    <p>
+                                        <button href="#" id="play-music" class="button button4">
+                                            <img src="{{ asset('assets/img/logo/btn.png') }}" width="25px" height="25px" alt="" srcset=""> 
+                                            Open Invitation
+                                        </button>
                                     </p>
                                 </div>
                             </div>

@@ -5,7 +5,9 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>{{ config('app.name') }}</title>
+  <title>
+    @yield('title')
+  </title>
 
   <!-- Favicons -->
   <link href="{{ url('landing-page/img/favicon.png') }}" rel="icon">

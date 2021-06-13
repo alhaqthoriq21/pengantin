@@ -2,49 +2,46 @@
 
 namespace App\Http\Controllers;
 
+use Validator;
 use App\Models\Calon;
 use App\Models\Comment;
 use App\Models\Reservasi;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
-use Validator;
 
 class ProjectController extends Controller
 {
-    public function getData($slug, Request $request){
+    public function getData(Request $request, $slug){
         $calon = Calon::where('slug',$slug)->with("akadNikah","loveStory","resepsi",
         "quotes","song","comment","reservasi","fotoHeader","fotoBody","fotoFooter","user")->first();
-        $qs =$request->only(["u"]);
+
+        if($calon == null){
+            return redirect()->route('landing.page');
+        }
+
+        $qs = str_replace('-', ' ', $request->only(["u"]));
+
         $tanggalIndoAkad = $this->convertIndoDate($calon->akadNikah->tgl);
         $tanggalIndoResepsi = $this->convertIndoDate($calon->resepsi->tgl_rsp);
-        // dd($calon);
-        return $this->pickTemplate($calon->template,$calon, $qs, $tanggalIndoAkad, $tanggalIndoResepsi);
+
+        return $this->pickTemplate($calon->template, $calon, $qs, $tanggalIndoAkad, $tanggalIndoResepsi);
     }
 
     public function pickTemplate($template,$calon, $qs, $tanggalIndoAkad, $tanggalIndoResepsi){
-        // dd($qs);
         switch ($template) {
-    case "gold":
-        return view('dashboard.project.gold', compact('calon', 'qs','tanggalIndoAkad', 'tanggalIndoResepsi'));
-        break;
-    case "silver":
-        return view('dashboard.project.silver', compact('calon', 'qs','tanggalIndoAkad', 'tanggalIndoResepsi'));
-        break;
-    case "platinum":
-        return view('dashboard.project.platinum', compact('calon', 'qs','tanggalIndoAkad', 'tanggalIndoResepsi'));
-        break;
-    case "bronze":
-        return view('dashboard.project.bronze', compact('calon', 'qs','tanggalIndoAkad', 'tanggalIndoResepsi'));
-        break;
-    // case "honey":
-    //     return view('dashboard.project.honey', compact('calon', 'qs','tanggalIndoAkad', 'tanggalIndoResepsi'));
-    //     break;
-    // case "cherry":
-    //     return view('dashboard.project.cherry', compact('calon', 'qs','tanggalIndoAkad', 'tanggalIndoResepsi'));
-    //     break;
-    // case "clone":
-    //     return view('dashboard.project.clone', compact('calon', 'qs','tanggalIndoAkad', 'tanggalIndoResepsi'));
-    //     break;
-    }
+            case "bronze":
+                return view('dashboard.project.bronze', compact('calon', 'qs','tanggalIndoAkad', 'tanggalIndoResepsi'));
+                break;
+            case "silver":
+                return view('dashboard.project.silver', compact('calon', 'qs','tanggalIndoAkad', 'tanggalIndoResepsi'));
+                break;
+            case "gold":
+                return view('dashboard.project.gold', compact('calon', 'qs','tanggalIndoAkad', 'tanggalIndoResepsi'));
+                break;
+            case "platinum":
+                return view('dashboard.project.platinum', compact('calon', 'qs','tanggalIndoAkad', 'tanggalIndoResepsi'));
+                break;
+            }
     }
 
     public function saveComment(Request $request)
@@ -112,4 +109,39 @@ class ProjectController extends Controller
     return $hariIndo[$hari] . " " . $tanggal . " " . $bulanIndo[$bulan] . " " . $tahun;
     }
 
+    public function generateShare($slug)
+    {
+        //get data from table calon
+        $calon = Calon::where('slug', $slug)->first();
+
+        //jika calon tidak ada maka redirect ke halaman landing poage
+        if($calon == null){
+            return redirect()->route('landing.page');
+        }
+
+        //jika ada return dengan data dibawah
+        $data = [
+            'linkUndangan' => 'https://tobeabride.com/'.$slug
+        ];
+        
+        return view('share-link', $data);
+    }
+
+    public function shareLink(Request $request)
+    {
+        $request->validate([
+            'noWhatsapp' => 'required|integer',
+            'namaTamu' => 'required|max:255'
+        ]);
+
+        $noWhatsapp = $request->input('noWhatsapp');
+
+        $linkUndangan = $request->input('linkUndangan') .'?u=' . Str::slug($request->input('namaTamu'));
+
+        $message = '&text=_Bismillahirrahmanirrahim_%0D%0A%0D%0A_Assalamualaikum+Warrahmatullahi+Wabarakatuh._%0D%0A%0D%0A%E2%80%9CDan+di+antara+tanda-tanda+%28kebesaran%29-Nya+ialah+Dia+menciptakan+pasangan-pasangan+untukmu+dari+jenismu+sendiri%2C+agar+kamu+cenderung+dan+merasa+tenteram+kepadanya%2C+dan+Dia+menjadikan+di+antaramu+rasa+kasih+dan+sayang%E2%80%9D+%28Q.S+Ar-Rum+ayat+21%29.++%0D%0A%0D%0ATanpa+mengurangi+rasa+hormat%2C+kami+mengundang+saudara%2Fi+dalam+hari+pernikahan+kami.+%0D%0A%0D%0A%2AKlik+disini+untuk+membuka+undangan%3A+%2A ' .$linkUndangan;
+
+        $linkWhatsapp = 'https://api.whatsapp.com/send/?phone=';
+
+        return redirect()->away($linkWhatsapp.$noWhatsapp.$message);
+    }
 }

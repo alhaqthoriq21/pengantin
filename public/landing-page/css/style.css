@@ -2374,3 +2374,10 @@ section {
   font-size: 13px;
   color: #012970;
 }
+
+/* style share link */
+@media (max-width: 450px) {
+  .card-share-link{
+    width: 200px;
+  }
+}
