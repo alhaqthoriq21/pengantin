@@ -18,6 +18,7 @@
                 <li><a class="nav-link scrollto" href="#values">Services</a></li>
                 <li><a class="nav-link scrollto" href="#theme">Pilihan Tema</a></li>
                 <li><a class="nav-link scrollto" href="#pricing">Price List</a></li>
+                <li><a class="nav-link scrollto" href="#video">Pilihan Video</a></li>
                 <li><a class="nav-link scrollto" href="#portfolio">Portfolio</a></li>
                 <li><a class="nav-link scrollto" href="#contact">Kontak</a></li>
             </ul>
@@ -216,8 +217,8 @@
                     <div class="service-box bronze">
                         <i class="bi bi-archive icon"></i>
                         <h3>Tema Bronze</h3>
-                        <a href="{{ route('get.project.data', 'lusi-gilang?u=Nama+Tamu') }}" class="read-more"><span>Lihat Tema</span> <i
-                                class="bi bi-arrow-right"></i></a>
+                        <a href="{{ route('get.project.data', 'lusi-gilang?u=Nama+Tamu') }}"
+                            class="read-more"><span>Lihat Tema</span> <i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
 
@@ -225,8 +226,8 @@
                     <div class="service-box silver">
                         <i class="bi bi-archive icon"></i>
                         <h3>Tema Silver</h3>
-                        <a href="{{ route('get.project.data', 'satria-berlin-gilang?u=Nama+Tamu') }}" class="read-more"><span>Lihat Tema</span> <i
-                                class="bi bi-arrow-right"></i></a>
+                        <a href="{{ route('get.project.data', 'satria-berlin-gilang?u=Nama+Tamu') }}"
+                            class="read-more"><span>Lihat Tema</span> <i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
 
@@ -234,8 +235,8 @@
                     <div class="service-box gold">
                         <i class="bi bi-archive icon"></i>
                         <h3>Tema Gold</h3>
-                        <a href="{{route('get.project.data', 'alfarizi-intan?u=Nama+Tamu')}}" class="read-more"><span>Lihat Tema</span> <i
-                                class="bi bi-arrow-right"></i></a>
+                        <a href="{{route('get.project.data', 'alfarizi-intan?u=Nama+Tamu')}}"
+                            class="read-more"><span>Lihat Tema</span> <i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
 
@@ -243,8 +244,8 @@
                     <div class="service-box platinum">
                         <i class="bi bi-archive icon"></i>
                         <h3>Tema Platinum</h3>
-                        <a href="{{route('get.project.data', 'icha-agi?u=Nama+Tamu')}}" class="read-more"><span>Lihat Tema</span> <i
-                                class="bi bi-arrow-right"></i></a>
+                        <a href="{{route('get.project.data', 'icha-agi?u=Nama+Tamu')}}" class="read-more"><span>Lihat
+                                Tema</span> <i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
 
@@ -389,23 +390,33 @@
 
     </section><!-- End Pricing Section -->
 
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
+    <!-- ======= Video Section ======= -->
+    <section id="video" class="video">
 
         <div class="container" data-aos="fade-up">
+            <header class="section-header">
+                <h2>Video</h2>
+                <p>Pilihan Video Undangan Digital</p>
+            </header>
+
             <div class="row gx-0">
 
-                <div class="col-lg-8 d-flex align-items-center embed-responsive embed-responsive-1by1" data-aos="zoom-out" data-aos-delay="200">
-                        <iframe class="embed-responsive-item" width="760" height="400" src="https://www.youtube.com/embed/GlqcbVUsyhY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="col-lg-8 d-flex align-items-center embed-responsive embed-responsive-1by1"
+                    data-aos="zoom-out" data-aos-delay="200">
+                    <iframe class="embed-responsive-item" width="760" height="400"
+                        src="https://www.youtube.com/embed/GlqcbVUsyhY" title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
                 </div>
 
-                <div class="col-lg-4 d-flex flex-column justify-content-center" data-aos="fade-left" data-aos-delay="200">
+                <div class="col-lg-4 d-flex flex-column justify-content-center" data-aos="fade-left"
+                    data-aos-delay="200">
                     <div class="content p4">
                         <h2>Video Undangan Digital</h2>
                         <p>
                             Dapatkan video undangan digital dengan tambahan Rp. 50.000 dari setiap paket.
                         </p>
-                        <button class="btn btn-primary">Lihat Tema Lainya</button>
+                        <button class="btn btn-primary">Lihat Video Lainnya</button>
                     </div>
                 </div>
 
