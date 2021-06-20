@@ -18,6 +18,7 @@
                 <li><a class="nav-link scrollto" href="#values">Services</a></li>
                 <li><a class="nav-link scrollto" href="#theme">Pilihan Tema</a></li>
                 <li><a class="nav-link scrollto" href="#pricing">Price List</a></li>
+                <li><a class="nav-link scrollto" href="#video">Pilihan Video</a></li>
                 <li><a class="nav-link scrollto" href="#portfolio">Portfolio</a></li>
                 <li><a class="nav-link scrollto" href="#contact">Kontak</a></li>
             </ul>
@@ -66,7 +67,7 @@
                         <h3>Siapa kita</h3>
                         <h2>To Be a Bride</h2>
                         <p>
-                            Adalah sebuah platform Undangan Pernikahan Online atau Wedding E-Invitation Latter yang
+                            Adalah sebuah platform Undangan Pernikahan Online atau Wedding E-Invitation Letter yang
                             menggunakan media website
                             untuk membantu anda dalam menyebarkan informasi acara tanpa batas jarak dan waktu.
                         <p>
@@ -216,8 +217,8 @@
                     <div class="service-box bronze">
                         <i class="bi bi-archive icon"></i>
                         <h3>Tema Bronze</h3>
-                        <a href="{{ route('get.project.data', 'lusi-gilang?u=Nama+Tamu') }}" class="read-more"><span>Lihat Tema</span> <i
-                                class="bi bi-arrow-right"></i></a>
+                        <a href="{{ route('get.project.data', 'lusi-gilang?u=Nama+Tamu') }}"
+                            class="read-more"><span>Lihat Tema</span> <i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
 
@@ -225,8 +226,8 @@
                     <div class="service-box silver">
                         <i class="bi bi-archive icon"></i>
                         <h3>Tema Silver</h3>
-                        <a href="{{ route('get.project.data', 'satria-berlin-gilang?u=Nama+Tamu') }}" class="read-more"><span>Lihat Tema</span> <i
-                                class="bi bi-arrow-right"></i></a>
+                        <a href="{{ route('get.project.data', 'satria-berlin-gilang?u=Nama+Tamu') }}"
+                            class="read-more"><span>Lihat Tema</span> <i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
 
@@ -234,8 +235,8 @@
                     <div class="service-box gold">
                         <i class="bi bi-archive icon"></i>
                         <h3>Tema Gold</h3>
-                        <a href="{{route('get.project.data', 'alfarizi-intan?u=Nama+Tamu')}}" class="read-more"><span>Lihat Tema</span> <i
-                                class="bi bi-arrow-right"></i></a>
+                        <a href="{{route('get.project.data', 'alfarizi-intan?u=Nama+Tamu')}}"
+                            class="read-more"><span>Lihat Tema</span> <i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
 
@@ -243,8 +244,8 @@
                     <div class="service-box platinum">
                         <i class="bi bi-archive icon"></i>
                         <h3>Tema Platinum</h3>
-                        <a href="{{route('get.project.data', 'icha-agi?u=Nama+Tamu')}}" class="read-more"><span>Lihat Tema</span> <i
-                                class="bi bi-arrow-right"></i></a>
+                        <a href="{{route('get.project.data', 'icha-agi?u=Nama+Tamu')}}" class="read-more"><span>Lihat
+                                Tema</span> <i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
 
@@ -312,7 +313,8 @@
                             <li><i class="bi bi-check-circle mx-2" style="color: #0d6efd"></i> Hitung Mundur</li>
                             <li><i class="bi bi-check-circle mx-2" style="color: #0d6efd"></i> Kolom Ucapan</li>
                             <li><i class="bi bi-check-circle mx-2" style="color: #0d6efd"></i> Musik</li>
-                            <li><i class="bi bi-x-circle mx-2" style="color: #0d6efd"></i> Add To Calender</li>
+                            <li class="na"><i class="bi bi-x-circle mx-2" style="color: #dc3545"></i> Add To Calender
+                            </li>
                             <li class="na"><i class="bi bi-x-circle mx-2" style="color: #dc3545"></i> RSVP/Buku Tamu
                             </li>
                             <li class="na"><i class="bi bi-x-circle mx-2" style="color: #dc3545"></i> Love Story</li>
@@ -388,23 +390,42 @@
 
     </section><!-- End Pricing Section -->
 
+<<<<<<< HEAD
     <!-- ======= About Section ======= -->
     <section id="videInvitation" class="about">
+=======
+    <!-- ======= Video Section ======= -->
+    <section id="video" class="video">
+>>>>>>> c2d85e9c9ea9bb876904a6a620c56851480331cc
 
         <div class="container" data-aos="fade-up">
+            <header class="section-header">
+                <h2>Video</h2>
+                <p>Pilihan Video Undangan Digital</p>
+            </header>
+
             <div class="row gx-0">
 
-                <div class="col-lg-8 d-flex align-items-center embed-responsive embed-responsive-1by1" data-aos="zoom-out" data-aos-delay="200">
-                        <iframe class="embed-responsive-item" width="760" height="400" src="https://www.youtube.com/embed/GlqcbVUsyhY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="col-lg-8 d-flex align-items-center embed-responsive embed-responsive-1by1"
+                    data-aos="zoom-out" data-aos-delay="200">
+                    <iframe class="embed-responsive-item" width="760" height="400"
+                        src="https://www.youtube.com/embed/GlqcbVUsyhY" title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
                 </div>
 
-                <div class="col-lg-4 d-flex flex-column justify-content-center" data-aos="fade-left" data-aos-delay="200">
+                <div class="col-lg-4 d-flex flex-column justify-content-center" data-aos="fade-left"
+                    data-aos-delay="200">
                     <div class="content p4">
                         <h2>Video Undangan Digital</h2>
                         <p>
                             Dapatkan video undangan digital dengan tambahan Rp. 50.000 dari setiap paket.
                         </p>
+<<<<<<< HEAD
                         <a href="{{ route('video.invitation') }}" target="__blank" class="btn btn-primary">Lihat Tema Lainya</a>
+=======
+                        <button class="btn btn-primary">Lihat Video Lainnya</button>
+>>>>>>> c2d85e9c9ea9bb876904a6a620c56851480331cc
                     </div>
                 </div>
 
