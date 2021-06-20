@@ -389,7 +389,7 @@
     </section><!-- End Pricing Section -->
 
     <!-- ======= About Section ======= -->
-    <section id="about" class="about">
+    <section id="videInvitation" class="about">
 
         <div class="container" data-aos="fade-up">
             <div class="row gx-0">
@@ -404,7 +404,7 @@
                         <p>
                             Dapatkan video undangan digital dengan tambahan Rp. 50.000 dari setiap paket.
                         </p>
-                        <button class="btn btn-primary">Lihat Tema Lainya</button>
+                        <a href="{{ route('video.invitation') }}" target="__blank" class="btn btn-primary">Lihat Tema Lainya</a>
                     </div>
                 </div>
 
