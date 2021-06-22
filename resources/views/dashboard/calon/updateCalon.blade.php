@@ -334,6 +334,59 @@
                                                             </div>
                                                         </div>
                                                     </div>
+                                                    <div class="col-12 card--shadow">
+                                                        <h5>Turut Mengundang (Tanda "," Sebagai Pemisah)</h5>
+                                                        <div class="row form-group">
+                                                            <div class="col-sm-4">
+                                                                <label for="" class="col-form-label">Undang</label>
+                                                            </div>
+                                                            <div class="col-sm-8">
+                                                                <div class="d-flex flex-row">
+                                                                    <input type="text" data-role="tagsinput"
+                                                                        name="undang" id="undang" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 card--shadow">
+                                                        <h5>Nomor Rekening (GIFT)</h5>
+                                                         <div class="row form-group">
+                                                            <div class="col-sm-4">
+                                                                <label for="" class="col-form-label">Nama Bank</label>
+                                                            </div>
+                                                            <div class="col-sm-8">
+                                                                <div class="d-flex flex-row">
+                                                                    <input name="nama_bank" id="nama_bank"
+                                                                        placeholder="" type="text" class="form-control"
+                                                                        value="">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row form-group">
+                                                            <div class="col-sm-4">
+                                                                <label for="" class="col-form-label">Nama Rekening</label>
+                                                            </div>
+                                                            <div class="col-sm-8">
+                                                                <div class="d-flex flex-row">
+                                                                    <input name="nama_rek" id="nama_rek"
+                                                                        placeholder="" type="text" class="form-control"
+                                                                        value="">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row form-group">
+                                                            <div class="col-sm-4">
+                                                                <label for="" class="col-form-label">Nomor Rekening</label>
+                                                            </div>
+                                                            <div class="col-sm-8">
+                                                                <div class="d-flex flex-row">
+                                                                    <input name="no_rek" id="no_rek"
+                                                                        placeholder="" type="text" class="form-control"
+                                                                        value="">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="tab-pane fade" id="custom-tabs-four-profile" role="tabpanel"
@@ -796,12 +849,16 @@
 <script src="{{asset('assets/plugins/daterangepicker/daterangepicker.js')}}"></script>
 <script src="{{asset('assets/plugins/datatables/jquery.dataTables.min.js')}}"></script>
 <script src="{{asset('assets/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('assets/plugins/taginput/bootstrap-tagsinput.js')}}"></script>
 
 
 <script>
 $(document).ready(function() {
 
     $('#template').val("{{$calon->template}}");
+    $('#nama_bank').val("{{$calon->nama_bank}}");
+    $('#nama_rek').val("{{$calon->nama_rek}}");
+    $('#no_rek').val("{{$calon->no_rek}}");
     $('#alamat').val("{{$calon->akadNikah->alamat}}");
     $('#alamat_rsp').val("{{$calon->resepsi->alamat_rsp}}");
     $('#isi').val("{{$calon->quotes->isi}}");

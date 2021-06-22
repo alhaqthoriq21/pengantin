@@ -480,7 +480,7 @@
                             </h2>
                             <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
                                 <div class="accordion-body">
-                                    Saat ini pembayaran hanya dilakukan melalui transfer antar bank setelah mengisi
+                                    Saat ini pembayaran hanya dilakukan melalui transfer antar bank dan via e-wallet Dana setelah mengisi
                                     format yang diberikan admin melalui pesan WhatsApp. Konfirmasi pembayaran juga
                                     dilakukan melalui pesan WhatsApp.
                                 </div>
