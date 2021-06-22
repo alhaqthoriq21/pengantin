@@ -226,7 +226,7 @@
                     <div class="service-box silver">
                         <i class="bi bi-archive icon"></i>
                         <h3>Tema Silver</h3>
-                        <a href="{{ route('get.project.data', 'satria-berlin-gilang?u=Nama+Tamu') }}"
+                        <a href="{{ route('get.project.data', 'satria-berlin?u=Nama+Tamu') }}"
                             class="read-more"><span>Lihat Tema</span> <i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
