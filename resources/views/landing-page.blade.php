@@ -421,11 +421,7 @@
                         <p>
                             Dapatkan video undangan digital dengan tambahan Rp. 50.000 dari setiap paket.
                         </p>
-<<<<<<< HEAD
-                        <a href="{{ route('video.invitation') }}" target="__blank" class="btn btn-primary">Lihat Tema Lainya</a>
-=======
                         <button class="btn btn-primary">Lihat Video Lainnya</button>
->>>>>>> c2d85e9c9ea9bb876904a6a620c56851480331cc
                     </div>
                 </div>
 
