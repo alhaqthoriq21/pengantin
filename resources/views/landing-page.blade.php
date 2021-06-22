@@ -395,7 +395,7 @@
 
         <div class="container" data-aos="fade-up">
             <header class="section-header">
-                <h2>Video</h2>
+                <h2>Pilih Video</h2>
                 <p>Pilihan Video Undangan Digital</p>
             </header>
 

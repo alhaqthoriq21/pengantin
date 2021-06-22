@@ -1312,7 +1312,7 @@ couple-area end
                                     Play Video 1
                                 </button> -->
                                 <div class="video-card">
-                                    <iframe allowfullscreen="" class="YOUTUBE-iframe-video video-card-top"
+                                    <iframe id="yt" allowfullscreen="" class="YOUTUBE-iframe-video video-card-top"
                                         data-thumbnail-src="" frameborder="0" src="{{$calon->song->video}}">
                                     </iframe>
                                 </div>
@@ -2042,6 +2042,14 @@ couple-area end
             times = 1;
         }
     });
+
+    // const Player = document.getElementById('yt');
+    // const PlayBtn = document.getElementById('stop-yt');
+    // let times = 0,
+    //     playY;
+    // const playVideo = PlayBtn.addEventListener('click', () => {
+    //     playY = Player.src += '?autoplay=0';
+    // });
 
     const calon = @json($calon);
     // console.log(calon);
