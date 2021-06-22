@@ -226,7 +226,7 @@
                     <div class="service-box silver">
                         <i class="bi bi-archive icon"></i>
                         <h3>Tema Silver</h3>
-                        <a href="{{ route('get.project.data', 'satria-berlin-gilang?u=Nama+Tamu') }}"
+                        <a href="{{ route('get.project.data', 'satria-berlin?u=Nama+Tamu') }}"
                             class="read-more"><span>Lihat Tema</span> <i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
@@ -390,13 +390,8 @@
 
     </section><!-- End Pricing Section -->
 
-<<<<<<< HEAD
     <!-- ======= About Section ======= -->
     <section id="videInvitation" class="about">
-=======
-    <!-- ======= Video Section ======= -->
-    <section id="video" class="video">
->>>>>>> c2d85e9c9ea9bb876904a6a620c56851480331cc
 
         <div class="container" data-aos="fade-up">
             <header class="section-header">
@@ -421,7 +416,8 @@
                         <p>
                             Dapatkan video undangan digital dengan tambahan Rp. 50.000 dari setiap paket.
                         </p>
-                        <button class="btn btn-primary">Lihat Video Lainnya</button>
+                        <a href="{{ route('video.invitation') }}" target="__blank" class="btn btn-primary">Lihat Video
+                            Lainnya</a>
                     </div>
                 </div>
 

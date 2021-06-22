@@ -35,13 +35,13 @@ Route::POST('send-message', [LandingPage_Controller::class, 'sendMessage'])->nam
 Route::get('video-invitation', [LandingPage_Controller::class, 'videoInvitation'])->name("video.invitation");
 
 //show tema
+
 Route::get('share/{slug}', [ProjectController::class, 'generateShare'])->name("share");
 Route::POST('share-link', [ProjectController::class, 'shareLink'])->name("share.link");
 
-
-Auth::routes();
+    Auth::routes();
+    
     Route::get('{slug}', [ProjectController::class, 'getData'])->name("get.project.data");
-
     Route::get('/login/dashboard', [App\Http\Controllers\CalonController::class, 'index'])->name('home');
 
     //routing slug
