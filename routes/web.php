@@ -31,6 +31,8 @@ Route::get('/', [LandingPage_Controller::class, 'index'])->name('landing.page');
 
 //send message to admin
 Route::POST('send-message', [LandingPage_Controller::class, 'sendMessage'])->name('send.message');
+//vide Invitation
+Route::get('video-invitation', [LandingPage_Controller::class, 'videoInvitation'])->name("video.invitation");
 
 //show tema
 

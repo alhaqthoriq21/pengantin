@@ -14,7 +14,7 @@ class LandingPage_Controller extends Controller
 
     public function sendMessage(Request $request)
     {
-        //Validasi pilihat paket
+        //Validasi pilihan paket
         if($request->input('paket') == 'bronze'){
             $paket = 'Bronze';
         }
@@ -32,6 +32,10 @@ class LandingPage_Controller extends Controller
         $encode = 'Hallo%2C+Saya+%28nama%29.%0D%0ASaya+ingin+memesan+E-Invitation+Letter+paket+'. $paket;
 
         return redirect()->away('https://api.whatsapp.com/send/?phone='. $noWa. '&text='. $encode .'&app_absent=0');
-        
+    }
+
+    public function videoInvitation()
+    {
+        return view('video-invitation');
     }
 }
