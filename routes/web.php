@@ -33,12 +33,13 @@ Route::get('/', [LandingPage_Controller::class, 'index'])->name('landing.page');
 Route::POST('send-message', [LandingPage_Controller::class, 'sendMessage'])->name('send.message');
 
 //show tema
-Route::get('{slug}', [ProjectController::class, 'getData'])->name("get.project.data");
+
 Route::get('share/{slug}', [ProjectController::class, 'generateShare'])->name("share");
 Route::POST('share-link', [ProjectController::class, 'shareLink'])->name("share.link");
 
     Auth::routes();
-
+    
+    Route::get('{slug}', [ProjectController::class, 'getData'])->name("get.project.data");
     Route::get('/login/dashboard', [App\Http\Controllers\CalonController::class, 'index'])->name('home');
 
     //routing slug
