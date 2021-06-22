@@ -404,7 +404,7 @@
                 <div class="col-lg-8 d-flex align-items-center embed-responsive embed-responsive-1by1"
                     data-aos="zoom-out" data-aos-delay="200">
                     <iframe class="embed-responsive-item" width="760" height="400"
-                        src="https://www.youtube.com/embed/GlqcbVUsyhY" title="YouTube video player" frameborder="0"
+                        src="https://www.youtube.com/embed/lX8mjWC3Bxw" title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
                 </div>
@@ -480,7 +480,8 @@
                             </h2>
                             <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
                                 <div class="accordion-body">
-                                    Saat ini pembayaran hanya dilakukan melalui transfer antar bank dan via e-wallet Dana setelah mengisi
+                                    Saat ini pembayaran hanya dilakukan melalui transfer antar bank dan via e-wallet
+                                    Dana setelah mengisi
                                     format yang diberikan admin melalui pesan WhatsApp. Konfirmasi pembayaran juga
                                     dilakukan melalui pesan WhatsApp.
                                 </div>
@@ -518,7 +519,7 @@
                             </h2>
                             <div id="faq2-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
                                 <div class="accordion-body">
-                                    Tidak ada batasan untuk membagikan link undangan (Sepuasny)
+                                    Tidak ada batasan untuk membagikan link undangan (Sepuasnya)
                                 </div>
                             </div>
                         </div>
