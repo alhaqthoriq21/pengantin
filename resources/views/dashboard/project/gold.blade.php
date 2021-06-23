@@ -467,10 +467,8 @@
                     <div class="display-tc">
                         <div class="container">
                             <div class="col-md-10 col-md-offset-1 wow slideInUp">
-                                <!-- <div class="animate-box svg-sm colored"> -->
-                                <!-- <img src="assets/img/premium/flaticon/svg/004-nature.svg" class="svg" alt=""> -->
                                 @if (isset($qs['u']))
-                                <h3>Dear {{$qs['u']}},</h3>
+                                    <h6>Dear {{ Str::title($qs['u'])}},</h6>
                                 @endif
                                 <p><strong>You're Invited!</strong></p>
                                 <h1 class="holder"><span>The Wedding of</span></h1>
