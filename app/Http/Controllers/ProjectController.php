@@ -138,7 +138,7 @@ class ProjectController extends Controller
 
         $linkUndangan = $request->input('linkUndangan') .'?u=' . Str::slug($request->input('namaTamu'));
 
-        $message = '&text=_Bismillahirrahmanirrahim_%0D%0A%0D%0A_Assalamualaikum+Warrahmatullahi+Wabarakatuh._%0D%0A%0D%0A%E2%80%9CDan+di+antara+tanda-tanda+%28kebesaran%29-Nya+ialah+Dia+menciptakan+pasangan-pasangan+untukmu+dari+jenismu+sendiri%2C+agar+kamu+cenderung+dan+merasa+tenteram+kepadanya%2C+dan+Dia+menjadikan+di+antaramu+rasa+kasih+dan+sayang%E2%80%9D+%28Q.S+Ar-Rum+ayat+21%29.++%0D%0A%0D%0ATanpa+mengurangi+rasa+hormat%2C+kami+mengundang+saudara%2Fi+dalam+hari+pernikahan+kami.+%0D%0A%0D%0A%2AKlik+disini+untuk+membuka+undangan%3A+%2A ' .$linkUndangan;
+        $message = '&text=_Bismillahirrahmanirrahim_%0D%0A%0D%0A_Assalamualaikum+Warrahmatullahi+Wabarakatuh._%0D%0A%0D%0A%E2%80%9CDan+di+antara+tanda-tanda+%28kebesaran%29-Nya+ialah+Dia+menciptakan+pasangan-pasangan+untukmu+dari+jenismu+sendiri%2C+agar+kamu+cenderung+dan+merasa+tenteram+kepadanya%2C+dan+Dia+menjadikan+di+antaramu+rasa+kasih+dan+sayang%E2%80%9D+%28Q.S+Ar-Rum+ayat+21%29.++%0D%0A%0D%0ATanpa+mengurangi+rasa+hormat%2C+kami+mengundang+saudara%2Fi+dalam+hari+pernikahan+kami.+%0D%0A%0D%0A%2AKlik+disini+untuk+membuka+undangan%3A%2A%0D%0A%0D%0A' .$linkUndangan;
 
         $linkWhatsapp = 'https://api.whatsapp.com/send/?phone=';
 

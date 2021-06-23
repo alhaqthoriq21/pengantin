@@ -1269,6 +1269,16 @@ couple-area end
             object-fit: cover;
         }
     }
+
+    .comment-box{
+        padding: 20px;
+    }
+
+    .media-body{
+        border-radius: 10px;
+        height: 300px;
+        overflow: auto;
+    }
     </style>
 
 
@@ -1316,7 +1326,7 @@ couple-area end
                                 <div class="slider-content">
                                     <div class="col-lg-12">
                                         @if (isset($qs['u']))
-                                        <h3>Dear {{$qs['u']}},</h3>
+                                            <h6>Dear {{ Str::title($qs['u'])}},</h6>
                                         @endif
                                         <p><strong>You're Invited!</strong></h6>
                                         <h4>We're Getting Married</h4>
@@ -1971,17 +1981,11 @@ couple-area end
                                         <input type="text" placeholder="Your Name*" id="nama" name="nama">
                                     </div>
                                     <div class="col-12">
-                                        <textarea class="contact-textarea" id="comment" name="comment"
-                                            placeholder="Message"></textarea>
+                                        <textarea class="contact-textarea p-3" id="comment" name="comment" placeholder="Message"></textarea>
                                     </div>
                                     <div class="col-12 text-center">
                                         <button id="submit" class="submit">Submit</button>
-                                        <!-- <span id="loader"><i class="fa fa-refresh fa-spin fa-3x fa-fw"></i></span> -->
                                     </div>
-                                    <!-- <div class="col col-md-12 success-error-message">
-                                        <div id="success">Thank you</div>
-                                        <div id="error"> Error occurred while sending email. Please try again later.
-                                    </div> -->
                                 </div>
                         </div>
                         </form>
@@ -1991,15 +1995,12 @@ couple-area end
         </div>
     </div>
 
-    <div class="row">
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-            integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <div class="row comment-box">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 wow fadeInDown">
                     <h1><strong>Comment Section</strong></h1>
                     <div class="media g-mb-30 media-comment">
-                        <!-- <img class="d-flex g-width-50 g-height-50 rounded-circle g-mt-3 g-mr-15"> -->
                         <div class="media-body u-shadow-v18 g-bg-secondary g-pa-30">
                             @foreach($calon->comment as $data)
                             <div class="commentText">
@@ -2035,13 +2036,11 @@ couple-area end
                     </ul>
                 </div>
             </div>
-            <!-- <div class="copyright text-center">ToBeABrideXCloudStudio</div> -->
-            <p><img class="center" style="width:230px;height:100px;" src="assets/img/logo/tobeabride.png" alt=""></p>
+            <p><img class="center" style="width: 100px;" src="{{ asset('tbb-logo-putih.png') }}" alt="logo"></p>
             <div class="row">
                 <div class="col-md-12 text-center">
                     <ol class="social social-circle">
-                        <li><a href="https://www.instagram.com/tobeabride_/"><i class="icon-instagram"></i></a></li>
-                        <li><a href="https://www.instagram.com/cloudphoto.id/"><i class="icon-instagram"></i></a></li>
+                        <li><a href="https://www.instagram.com/tobeabride_/"><i class="fa fa-instagram"></i></a></li>
                     </ol>
                 </div>
             </div>
