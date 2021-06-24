@@ -264,8 +264,8 @@
                                                             <div class="col-sm-8">
                                                                 <div class="d-flex flex-row">
                                                                     <input name="size_font" id="size_font"
-                                                                        placeholder="" type="number"
-                                                                        class="form-control" value="">
+                                                                        placeholder="" type="text" class="form-control"
+                                                                        value="">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -460,25 +460,25 @@
                                                         </div>
                                                         <div class="row form-group">
                                                             <div class="col-sm-4">
-                                                                <label for="" class="col-form-label">Nama Rekening</label>
+                                                                <label for="" class="col-form-label">Nama
+                                                                    Rekening</label>
                                                             </div>
                                                             <div class="col-sm-8">
                                                                 <div class="d-flex flex-row">
-                                                                    <input name="nama_rek" id="nama_rek"
-                                                                        placeholder="" type="text" class="form-control"
-                                                                        value="">
+                                                                    <input name="nama_rek" id="nama_rek" placeholder=""
+                                                                        type="text" class="form-control" value="">
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="row form-group">
                                                             <div class="col-sm-4">
-                                                                <label for="" class="col-form-label">Nomor Rekening</label>
+                                                                <label for="" class="col-form-label">Nomor
+                                                                    Rekening</label>
                                                             </div>
                                                             <div class="col-sm-8">
                                                                 <div class="d-flex flex-row">
-                                                                    <input name="no_rek" id="no_rek"
-                                                                        placeholder="" type="text" class="form-control"
-                                                                        value="">
+                                                                    <input name="no_rek" id="no_rek" placeholder=""
+                                                                        type="text" class="form-control" value="">
                                                                 </div>
                                                             </div>
                                                         </div>

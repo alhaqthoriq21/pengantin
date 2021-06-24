@@ -109,6 +109,40 @@ class ImageUploadController extends Controller
             }
         }
 
+        if ($files = $request->file('foto_wanita')) {
+            try {
+                    $image = $files;
+                    $input['foto_wanita'] = md5(time() . $files->getClientOriginalName()) . '.' . $image->getClientOriginalExtension();
+                    $destinationPath = public_path('/uploads/');
+                    $image->move($destinationPath, $input['foto_wanita']);
+                    // $img = Image::make($image->getRealPath());
+                    $img = Image::make($destinationPath . $input['foto_wanita']);
+                    $width = $img->width() > 1280 ? 1280 : round($img->width() * 0.8);
+                    $img->resize($width, null, function ($constraint) {
+                        $constraint->aspectRatio();
+                    })->save($destinationPath . '/' . $input['foto_wanita']);
+
+                    $year = date("Y");
+                    $month = date("m");
+                    $date = date("d");
+                    $fixPath = public_path("uploads/images/$year/$month/$date/");
+                    if (!File::isDirectory($fixPath)) {
+                        File::makeDirectory($fixPath, 0777, true, true);
+                    }
+                    $this->compress_image(public_path('uploads/' . $input['foto_wanita']), $fixPath . $input['foto_wanita'], 80);
+                    unlink(public_path('uploads/' . $input['foto_wanita']));
+
+                    $calon = Calon::where('id',$data['uniq_id'])
+                ->update([
+                        "foto_wanita" => "uploads/images/$year/$month/$date/" . $input['foto_wanita']
+                    ]);
+
+                    $images[] = $image;
+            } catch (\Exception $e) {
+                return $this->sendError("Terjadi Kesalahan dalam Upload Gambar", $e->getMessage());
+            }
+        }
+
         if ($files = $request->file('foto_gateway')) {
             try {
                     $image = $files;
@@ -143,62 +177,6 @@ class ImageUploadController extends Controller
             }
         }
     }
-
-    // public function uploadSong(Request $request, $data)
-    // {
-    //     $validator = Validator::make($data, [
-    //         'uniq_id' => 'required',
-    //         'type' => 'required',
-    //     ]);
-
-    //     // $validatorFile = Validator::make($request->all(), [
-    //     //     'foto_pria' => 'required|image',
-    //     //     'foto_wanita' => 'required|image'
-    //     // ]);
-
-    //     if ($validator->fails()) {
-    //         return $validator->errors();
-    //     }
-
-    //     // if ($validatorFile->fails()) {
-    //     //     return $validator->errors();
-    //     // }
-
-    //     $songs = [];
-    //     if ($files = $request->file('song')) {
-    //         try {
-    //                 $song = $files;
-    //                 $input['song'] = time() . $files->getClientOriginalName() . '.' . $song->getClientOriginalExtension();
-    //                 $destinationPath = public_path('/uploads/');
-    //                 $song = $request->file('avatar')->store('avatars');
-
-    //                 $song->save($destinationPath . '/' . $input['song']);
-
-    //                 $year = date("Y");
-    //                 $month = date("m");
-    //                 $date = date("d");
-    //                 $fixPath = public_path("uploads/songs/$year/$month/$date/");
-    //                 if (!File::isDirectory($fixPath)) {
-    //                     File::makeDirectory($fixPath, 0777, true, true);
-    //                 }
-    //                 $this->compress_image(public_path('uploads/' . $input['song']), $fixPath . $input['song'], 80);
-    //                 unlink(public_path('uploads/' . $input['song']));
-
-    //                 $song = Song::where('id',$data['uniq_id'])
-    //             ->update([
-    //                     "song" => "uploads/images/$year/$month/$date/" . $input['song']
-    //                 ]);
-
-    //                 $songs[] = $song;
-    //         } catch (\Exception $e) {
-
-    //             dd($e);
-    //             return $this->sendError("Terjadi Kesalahan dalam Upload Gambar", $e->getMessage());
-    //         }
-    //     } 
-
-        
-    // }
 
 
     public function uploadHeader(Request $request, $data)

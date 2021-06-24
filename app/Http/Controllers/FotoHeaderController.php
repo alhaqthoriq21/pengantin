@@ -68,7 +68,7 @@ class FotoHeaderController extends Controller
             $input = $request->only(["calon_id","foto_header","foto_countdown","status"]);
             $fotoHeader = FotoHeader::create($input);
             $this->uploadImage($request, $fotoHeader->id);
-            dd($input);
+            // dd($input);
             return redirect(route("get.fotoHeader.data"))->with("success", "Foto Header Has Been Added");
         } catch (\Exception $e) {
             return redirect(route("get.fotoHeader.data"))->with("error", $e->getMessage());

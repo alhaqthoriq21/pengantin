@@ -80,7 +80,7 @@
                 </div>
 
                 <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
-                    <img src="{{ url('landing-page/img/wedding1.jpg') }}" class="img-fluid" alt="">
+                    <img src="{{ url('landing-page/img/wedding2.jpg') }}" class="img-fluid" alt="">
                 </div>
 
             </div>

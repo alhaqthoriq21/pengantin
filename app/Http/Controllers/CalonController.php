@@ -74,7 +74,7 @@ class CalonController extends Controller
 
         try {
             $input = $request->only(["slug","template","color","size_font","foto_gateway","nick_pria","nick_wanita","calon_pria","calon_wanita","sosmed_pria",
-            "sosmed_wanita","foto_pria","foto_wanita","ayah_pria","ibu_pria","ayah_wanita","ibu_wanita","undang","nama_rek","no_rek"]);
+            "sosmed_wanita","foto_pria","foto_wanita","ayah_pria","ibu_pria","ayah_wanita","ibu_wanita","undang","nama_bank","nama_rek","no_rek"]);
             if ($request->undang != null) {
                 $undang = str_replace(",","|",$request->undang);
                  $input['undang'] = $undang;
@@ -106,7 +106,7 @@ class CalonController extends Controller
             $song = Song::create($song);
 
 
-            // dd($input,$akadNikah,$resepsi,$quotes);
+            // dd($input);
             return redirect(route("get.calon.data"))->with("success", "Calon Has Been Added");
         } catch (\Exception $e) {
             return redirect(route("get.calon.data"))->with("error", $e->getMessage());
@@ -127,7 +127,7 @@ class CalonController extends Controller
 
         try {
             $input = $request->only(["slug","template","color","size_font","foto_gateway","nick_pria","nick_wanita","calon_pria","calon_wanita","sosmed_pria",
-            "sosmed_wanita","foto_pria","foto_wanita","ayah_pria","ibu_pria","ayah_wanita","ibu_wanita","undang","nama_rek","no_rek"]);
+            "sosmed_wanita","foto_pria","foto_wanita","ayah_pria","ibu_pria","ayah_wanita","ibu_wanita","undang","nama_bank","nama_rek","no_rek"]);
             $calon = Calon::find($calonId);
             // dd($request);
             if ($calon) {
@@ -167,7 +167,7 @@ class CalonController extends Controller
             // $song['calon_id'] = $calon->id;
             $song = Song::where("calon_id",$request->calonId)->update($song);
             
-            // dd($calon,$akadNikah,$resepsi,$quotes);
+            // dd($calon);
             return redirect(route("get.calon.data"))->with("success", "Calon Has Been Edited");
             throw new \Exception($validator->errors(), 1);
         } catch (\Exception $e) {

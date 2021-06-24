@@ -67,6 +67,7 @@ class FotoFooterController extends Controller
             $input = $request->only(["calon_id","foto","status"]);
             $fotoFooter = FotoFooter::create($input);
             $this->uploadImage($request, $fotoFooter->id);
+            // dd($input);
             return redirect(route("get.fotoFooter.data"))->with("success", "Foto Footer Has Been Added");
         } catch (\Exception $e) {
             return redirect(route("get.fotoFooter.data"))->with("error", $e->getMessage());
