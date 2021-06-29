@@ -18,7 +18,7 @@
                 <li><a class="nav-link scrollto" href="#values">Services</a></li>
                 <li><a class="nav-link scrollto" href="#theme">Pilihan Tema</a></li>
                 <li><a class="nav-link scrollto" href="#pricing">Price List</a></li>
-                <li><a class="nav-link scrollto" href="#video">Pilihan Video</a></li>
+                <li><a class="nav-link scrollto" href="#videInvitation">Pilihan Video</a></li>
                 <li><a class="nav-link scrollto" href="#portfolio">Portfolio</a></li>
                 <li><a class="nav-link scrollto" href="#contact">Kontak</a></li>
             </ul>
