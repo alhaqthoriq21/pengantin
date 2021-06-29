@@ -867,12 +867,11 @@
                 </div>
             </div>
             <!-- <div class="copyright text-center color-wht">ToBeABrideXCloudStudio</div> -->
-            <p><img class="center" style="width:230px;height:100px;" src="assets/img/logo/tobeabride.png" alt=""></p>
+            <p><img class="center" style="width: 100px;" src="{{ asset('tbb-logo-putih.png') }}" alt="logo"></p>
             <div class="row">
                 <div class="col-md-12 text-center">
                     <ol class="social social-circle">
-                        <li><a href="https://www.instagram.com/tobeabride_/"><i class="icon-instagram"></i></a></li>
-                        <li><a href="https://www.instagram.com/cloudphoto.id/"><i class="icon-instagram"></i></a></li>
+                        <li><a href="https://www.instagram.com/tobeabride_/"><i class="fa fa-instagram"></i></a></li>
                     </ol>
                 </div>
             </div>

@@ -1276,7 +1276,7 @@ couple-area end
 
     .media-body{
         border-radius: 10px;
-        height: 300px;
+        max-height: 300px;
         overflow: auto;
     }
     </style>

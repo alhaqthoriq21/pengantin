@@ -254,6 +254,15 @@
         color: #000000;
     }
 
+    .comment-box{
+        padding: 20px;
+    }
+
+    .media-body{
+        border-radius: 10px;
+        max-height: 300px;
+        overflow: auto;
+    }
 
     div.parent {
         text-align: center;
@@ -823,18 +832,15 @@
         </div>
     </div>
 
-    <div class="qbootstrap-comment" data-section="comment" data-stellar-background-ratio="0.5">
-        <div class="row horizontal-line">
+    <div class="qbootstrap-comment" data-section="comment" data-stellar-background-ratio="0.5" style="padding: 20px">
             <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
                 integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
                 crossorigin="anonymous">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-
                         <div class="media g-mb-30 media-comment animate-box">
                             <h7><strong>Comment Section</strong></h7>
-                            <!-- <img class="d-flex g-width-50 g-height-50 rounded-circle g-mt-3 g-mr-15"> -->
                             <div class="media-body u-shadow-v18 g-bg-secondary g-pa-30">
                                 @foreach($calon->comment as $data)
                                 <div class="commentText">
@@ -847,97 +853,7 @@
                     </div>
                 </div>
             </div>
-        </div>
     </div>
-
-    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <div class="container">
-        
-    </div> -->
-
-
-
-
-
-
-    <!-- <div id="qbootstrap-press" data-section="blog">
-        <div class="container">
-            <div class="row animate-box">
-                <div class="col-md-8 col-md-offset-2">
-                    <div class="col-md-12 text-center section-heading svg-sm colored">
-                        <img src="assets/img/flaticon/svg/005-two.svg" class="svg"
-                            alt="">
-                        <h2>Our Blog</h2>
-                        <div class="row">
-                            <div class="col-md-10 col-md-offset-1 subtext">
-                                <h3>Far far away, behind the word mountains, far from the countries Vokalia and
-                                    Consonantia, there live the blind texts.</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="qbootstrap-press-item animate-box">
-                        <div class="qbootstrap-press-img" style="background-image: url(assets/img/blog-1.jpg)">
-                        </div>
-                        <div class="qbootstrap-press-text">
-                            <h3 class="h2 qbootstrap-press-title">The Wedding Party <span
-                                    class="qbootstrap-border"></span></h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis eius quos similique
-                                suscipit dolorem cumque vitae qui molestias illo accusantium...</p>
-                            <p><a href="#" class="btn btn-primary btn-sm">Learn more</a></p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6">
-                    <div class="qbootstrap-press-item animate-box">
-                        <div class="qbootstrap-press-img" style="background-image: url(assets/img/blog-2.jpg)">
-                        </div>
-                        <div class="qbootstrap-press-text">
-                            <h3 class="h2 qbootstrap-press-title">Wedding Party <span class="qbootstrap-border"></span>
-                            </h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis eius quos similique
-                                suscipit dolorem cumque vitae qui molestias illo accusantium...</p>
-                            <p><a href="#" class="btn btn-primary btn-sm">Learn more</a></p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6">
-                    <div class="qbootstrap-press-item animate-box">
-                        <div class="qbootstrap-press-img" style="background-image: url(assets/img/blog-3.jpg);">
-                        </div>
-                        <div class="qbootstrap-press-text">
-                            <h3 class="h2 qbootstrap-press-title">Venue Wedding <span class="qbootstrap-border"></span>
-                            </h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis eius quos similique
-                                suscipit dolorem cumque vitae qui molestias illo accusantium...</p>
-                            <p><a href="#" class="btn btn-primary btn-sm">Learn more</a></p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6">
-                    <div class="qbootstrap-press-item animate-box">
-                        <div class="qbootstrap-press-img" style="background-image: url(assets/img/blog-4.jpg);">
-                        </div>
-                        <div class="qbootstrap-press-text">
-                            <h3 class="h2 qbootstrap-press-title">About The Couple <span
-                                    class="qbootstrap-border"></span></h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis eius quos similique
-                                suscipit dolorem cumque vitae qui molestias illo accusantium...</p>
-                            <p><a href="#" class="btn btn-primary btn-sm">Learn more</a></p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div> -->
 
     <footer id="footer" role="contentinfo" class="section--bg">
         <div class="container overlay footer animate-box">
@@ -961,17 +877,12 @@
 
                 </div>
             </div>
-            <div class="row row-bottom-padded-sm">
-                <div class="col-md-12">
-                    <!-- <p class="copyright text-center">ToBeABrideXCloudStudio</p> -->
-                    <img class="center" style="width:230px;height:100px;" src="assets/img/logo/tobeabride.png" alt="">
-                </div>
-            </div>
+            <br>
+            <img class="center" style="width: 100px;" src="{{ asset('tbb-logo-putih.png') }}" alt="logo">
             <div class="row">
                 <div class="col-md-12 text-center">
                     <ol class="social social-circle">
-                        <li><a href="https://www.instagram.com/tobeabride_/"><i class="icon-instagram"></i></a></li>
-                        <li><a href="https://www.instagram.com/cloudphoto.id/"><i class="icon-instagram"></i></a></li>
+                        <li><a href="https://www.instagram.com/tobeabride_/"><i class="fa fa-instagram"></i></a></li>
                     </ol>
                 </div>
             </div>
