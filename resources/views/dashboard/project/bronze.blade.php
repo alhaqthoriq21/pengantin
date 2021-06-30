@@ -1,11 +1,5 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
 <html class="no-js">
-<!--<![endif]-->
-
 <head>
 
     <meta charset="utf-8">
@@ -63,7 +57,6 @@
     <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
 
     <script src="{{ asset('assets/js/bronze/modernizr-2.6.2.min.js') }}"></script>
-
 
     <style>
         body,
@@ -408,6 +401,30 @@
             background-color: <?= $calon->color ?> ;
         }
 
+        .protokol-covid{
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .protokol-covid h5, .protokol-covid p {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
+            margin: 20px;
+            color: white !important;
+        }
+
+        .couple-font{
+            border: transparent;
+        }
+        
+        .couple-font h3{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
+            font-size: 18px !important;
+        }
+
+        .couple-font p{
+            font-size: 15px;
+        }
+
     </style>
 
 </head>
@@ -481,7 +498,7 @@
             <div class="row animate-box">
                 <div class="col-md-8 col-md-offset-2 text-center couple-font">
                     <div class="col-md-5 col-sm-5 col-xs-5 nopadding">
-                        <img class="center" src="{{$calon->foto_pria}}" style="width:110px; height: 110px;" class="img-responsive" alt="">
+                        <img class="center" src="{{$calon->foto_pria}}" style="width:110px; height: 110px;" class="img-responsive">
                         <h3>{{$calon->calon_pria}}</h3>
                         <p><strong>Putra Dari</strong></p>
                         <p>Bpk. {{$calon->ayah_pria}}</p>
@@ -640,6 +657,35 @@
         </div>
     </div>
 
+    <div class="section--bg protokol-covid">
+        <div class="container overlay footer animate-box">
+            <h1 class="title--special">Protokol Kesehatan covid-19</h1>
+            <p class="subtitle mx-auto mb-3">Demi keamanan dan kenyamanan bersama, para hadirin undangan dihimbau untuk memenuhi beberapa peraturan berikut :</p>
+            <div class="row">
+                <div class="col-sm-1 col-md-6 col-lg-3 rounded-md py-2">
+                    <h5>Menjaga Jarak</h5>
+                    <img src="{{ asset('assets/img/covid19/social-distancing-1.png') }}" alt="Jaga Jarak" class="image-fluid" style="width: 100px">
+                    <p>Saling menjaga jarak ketika menghadiri acara</p>
+                </div>
+                <div class="col-sm-1 col-md-6 col-lg-3 rounded-md py-2">
+                    <h5>Menggunakan Masker</h5>
+                    <img src="{{ asset('assets/img/covid19/mask-1-1.png') }}" alt="Jaga Jarak" class="image-fluid" style="width: 100px">
+                    <p>Wajib menggunakan masker selama acara berlangsung</p>
+                </div>
+                <div class="col-sm-1 col-md-6 col-lg-3 rounded-md py-2">
+                    <h5>Mencuci Tangan</h5>
+                    <img src="{{ asset('assets/img/covid19/wash-your-hands-1.png') }}" alt="Jaga Jarak" class="image-fluid" style="width: 100px">
+                    <p>Mencuci tangan dan menggunakan hand sanitizer</p>
+                </div>
+                <div class="col-sm-1 col-md-6 col-lg-3 rounded-md py-2">
+                    <h5>Cek Suhu Tubuh</h5>
+                    <img src="{{ asset('assets/img/covid19/thermometer-1.png') }}" alt="Jaga Jarak" class="image-fluid" style="width: 100px">
+                    <p>Cek suhu ketika hendak memasuki ruangan acara</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     @if ($calon->fotoFooter == null)
         <div id="fh5co-gallery" class="fh5co-section-gray">
             <div class="container">
@@ -774,7 +820,7 @@
     </footer>
 
     <!-- strat music-box -->
-    {{-- <div class="music-box music-box-2">
+    <div class="music-box music-box-2">
         <button class="music-box-toggle-btn">
             <i class="fa fa-music" aria-hidden="true"></i>
         </button>
@@ -782,7 +828,7 @@
             <iframe id="music" src="{{$calon->song->song}}" frameborder="0" allow="autoplay; encrypted-media"
                 allowfullscreen></iframe>
         </div>
-    </div> --}}
+    </div>
     <!-- end music box -->
 
 
@@ -839,10 +885,6 @@
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
         // Display the result in an element with id="demo"
-        // document.getElementById("demo").innerHTML = days + "Days " + hours + "Hours "
-        // + minutes + "Minutes " + seconds + "Seconds ";
-
-        // Display the result in an element with id="demo"
         document.getElementById("days").innerHTML = days + " <small>days</small>";
         document.getElementById("hours").innerHTML = hours + " <small>hours</small> ";
         document.getElementById("minutes").innerHTML = minutes + " <small>minutes</small> ";
@@ -863,15 +905,6 @@
     $(".button").click(function() {
         $(".gateway").slideUp("slow");
     });
-
-    // $(document).ready(function() {
-    //     $('#play-music').on('click', function(ev) {
-
-    //         $("#music")[0].src += "&autoplay=1";
-    //         ev.preventDefault();
-
-    //     });
-    // });
     </script>
 
 </body>

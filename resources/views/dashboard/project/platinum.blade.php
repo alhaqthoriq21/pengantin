@@ -1169,22 +1169,6 @@ couple-area end
         width: 250px;
     }
 
-    /* @media screen and (min-width: 950px) {
-        .video-card {
-            margin-top: -100px;
-            clear: both;
-            text-align: center;
-        }
-
-        .video-card-top {
-            border-radius: 10px;
-            border-top: 10px;
-            box-shadow: 16px 13px 42px -17px rgba(0, 0, 0, 0.63);
-            height: 420px;
-            width: 450px;
-        }
-    } */
-
     @media screen and (min-width: 550px) {
         .video-card {
             margin-top: -100px;
@@ -1217,45 +1201,6 @@ couple-area end
         }
     }
 
-
-    /* //modal vid  */
-    /* body {
-        margin: 0;
-    } */
-
-    /* .modal-dialog {
-        max-width: 800px;
-        margin: 30px auto;
-    }
-
-    .modal-body {
-        position: relative;
-        padding: 0px;
-    }
-
-    .close {
-        position: absolute;
-        right: -30px;
-        top: 0;
-        z-index: 999;
-        font-size: 2rem;
-        font-weight: normal;
-        color: #fff;
-        opacity: 1;
-    } */
-
-    /* //header love  */
-    /* .header-area.header-area-3 .logo h1 a {
-        font-size: 20px;
-        font-family: 'Great Vibes', cursive;
-        color: <?=$calon->color ?>;
-    } */
-
-    /* // colored  */
-    /* .colored-header {
-        fill: <?=$calon->color ?>;
-    } */
-
     img.gallery {
         width: 100%;
         height: 400px;
@@ -1279,22 +1224,29 @@ couple-area end
         max-height: 300px;
         overflow: auto;
     }
+
+    .protokol-covid{
+        text-align: center;
+        padding: 30px 20px;
+        background-color: <?=$calon->color ?>;;
+    }
+
+    .protokol-covid h5, .protokol-covid p {
+        margin: 20px;
+        color: white !important;
+    }
+
     </style>
 
 
 </head>
 
 <body id="home">
-    <!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
-    <!-- preloader area start -->
     <div class="preloader">
         <div class="hart-wrap">
             <div class="heart"></div>
         </div>
     </div>
-
 
     <!-- prealoader area end -->
 
@@ -1340,10 +1292,6 @@ couple-area end
                                     </div>
 
                                 </div>
-                                <!-- <button type="button" class="btn btn-primary video-btn" data-toggle="modal"
-                                    data-src="https://www.youtube.com/embed/Jfrjeg26Cwk" data-target="#myModal">
-                                    Play Video 1
-                                </button> -->
                                 <div class="video-card">
                                     <iframe id="yt" allowfullscreen="" class="YOUTUBE-iframe-video video-card-top"
                                         data-thumbnail-src="" frameborder="0" src="{{$calon->song->video}}">
@@ -1359,30 +1307,6 @@ couple-area end
             </div>
         </div>
     </div>
-
-    <!-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-
-
-                <div class="modal-body">
-
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    16:9 aspect ratio
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="" id="video" allowscriptaccess="always"
-                            allow="autoplay"></iframe>
-                    </div>
-
-
-                </div>
-
-            </div>
-        </div>
-    </div> -->
 
     <!-- slider-area start -->
     <div class="qbootstrap-hero" data-section="home">
@@ -1807,12 +1731,6 @@ couple-area end
                 </div>
             </div>
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                <!-- Indicators -->
-                <!-- <ol class="carousel-indicators">
-                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                </ol> -->
 
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner">
@@ -1826,28 +1744,8 @@ couple-area end
                         <img class="gallery" src="{{$data->foto}}" alt="">
                     </div>
                     @endforeach
-
-                    <!-- <div class="item">
-                        <img src="assets/img/love/7.jpg" alt="New york" style="width:100%;">
-                    </div> -->
                 </div>
             </div>
-            <!-- <div class="row grid"> -->
-            <!-- <div class="gallery__slider">
-                <div class="slick-gallery slick mb-0 ">
-                    @foreach($calon->fotoFooter as $data)
-                    <div class="slider__item">
-                        <img src="{{$data->foto}}" alt="slider">
-                    </div>
-                    @endforeach
-                </div>
-                <div class="gallery__slider-num d-none d-lg-flex">
-                    <div class="gallery__slider-current pr-1"></div>
-                    <div class="pr-1">from</div>
-                    <div class="gallery__slider-all"></div>
-                </div>
-            </div> -->
-            <!-- </div> -->
         </div>
     </div>
 
@@ -1884,7 +1782,7 @@ couple-area end
                     </div>
                     <div class="col-lg-5">
                         <div class="gift-img">
-                            <img src="{{ asset('assets/img/platinum/gift.png') }}" alt="Gift Image" class="img-fluid">
+                            <img src="{{ asset('assets/img/gift.png') }}" alt="Gift Image" class="img-fluid">
                         </div>
                     </div>
                 </div>
@@ -1949,6 +1847,73 @@ couple-area end
         </div>
     </div>
     <!-- //guest area end -->
+
+    <!-- protokol covid area start -->
+    <div id="gift" class="service-area ptb--100 protokol-covid horizontal-line">
+        <div class="container wow fadeInDown">
+            <div class="col-12">
+                    <div class="section-title-gallery text-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.0"
+                            style="margin-bottom: -105px; margin-top: -105px" width="200px" height="200px"
+                            viewBox="0 0 1280.000000 320.000000" preserveAspectRatio="xMidYMid meet">
+                            <metadata>
+                                Created by potrace 1.15, written by Peter Selinger 2001-2017
+                            </metadata>
+                            <g transform="translate(0.000000,320.000000) scale(0.100000,-0.100000)" fill="#fff"
+                                stroke="none">
+                                <path
+                                    d="M5915 2729 c-77 -4 -279 -15 -450 -23 -977 -50 -1698 -139 -2483 -306 -722 -153 -1713 -219 -2182 -144 -157 25 -330 75 -368 106 -9 8 9 22 77 54 96 46 111 62 111 117 0 68 -103 126 -200 113 -25 -3 -88 -27 -140 -54 -107 -54 -140 -90 -140 -154 0 -214 476 -352 1145 -333 644 18 1068 66 1695 190 629 124 1146 200 1720 250 96 8 186 15 200 14 14 0 -72 -33 -190 -73 -260 -87 -410 -147 -595 -235 -410 -196 -671 -394 -761 -577 -37 -73 -39 -83 -39 -170 0 -87 2 -95 30 -136 119 -168 473 -236 895 -172 468 70 981 300 1245 558 220 214 189 406 -73 462 -238 50 -633 -23 -960 -177 -350 -164 -519 -312 -499 -435 8 -46 22 -63 77 -87 58 -27 209 -27 330 -2 274 56 595 230 673 364 l18 30 -28 7 c-15 3 -35 8 -44 10 -9 2 -25 -9 -37 -26 -17 -22 -31 -30 -55 -30 -25 0 -37 -7 -56 -35 -68 -101 -257 -186 -474 -214 -49 -7 -109 -9 -134 -5 -188 28 -30 233 273 355 231 93 478 143 674 137 138 -5 193 -21 240 -72 20 -23 25 -38 24 -81 -2 -308 -863 -694 -1474 -661 -375 20 -536 161 -432 379 73 154 275 322 572 476 252 130 485 215 847 306 494 125 925 171 1513 162 347 -5 496 -17 775 -58 817 -120 1601 -441 1927 -788 145 -154 178 -297 90 -390 -46 -48 -104 -67 -260 -83 -260 -27 -643 45 -998 187 -392 157 -635 358 -634 524 1 84 35 101 196 101 418 0 1079 -281 1087 -462 l2 -33 -65 3 c-199 10 -454 109 -569 221 -32 31 -63 64 -68 74 -9 17 -14 17 -51 7 -23 -6 -42 -14 -42 -18 0 -4 15 -27 34 -52 42 -58 126 -122 229 -176 92 -49 96 -57 10 -18 -95 42 -196 110 -249 167 -43 47 -54 54 -78 50 -38 -8 -42 -26 -16 -68 33 -53 133 -129 235 -180 169 -83 339 -127 501 -128 88 -1 107 2 155 25 30 14 74 35 99 46 48 23 80 64 80 104 0 42 -50 126 -103 174 -157 142 -458 280 -762 349 -93 22 -155 29 -275 32 -181 6 -251 -6 -370 -64 -141 -68 -173 -106 -173 -204 0 -166 203 -359 553 -528 297 -142 573 -222 864 -250 283 -28 476 0 675 98 129 63 174 99 207 167 38 78 32 164 -21 272 -74 151 -284 330 -560 476 -60 33 -111 60 -113 61 -2 2 9 15 23 29 16 16 37 26 55 26 34 0 70 31 70 58 0 55 -97 74 -137 28 -15 -17 -32 -26 -52 -26 -33 0 -69 -39 -55 -61 5 -8 2 -10 -7 -7 -181 75 -307 123 -454 175 l-180 63 70 -6 c462 -38 1007 -119 1610 -239 612 -122 961 -163 1574 -186 562 -21 874 22 1157 161 130 63 196 120 209 181 23 104 -72 193 -205 193 -58 0 -76 -6 -158 -48 -80 -41 -96 -53 -109 -84 -14 -34 -14 -40 3 -71 38 -69 137 -91 221 -50 24 12 46 20 48 17 2 -2 -5 -18 -16 -35 -24 -37 -88 -65 -219 -94 -195 -42 -322 -53 -620 -52 -604 2 -1065 51 -1733 183 -862 170 -1506 250 -2327 290 -124 6 -349 18 -500 25 -288 16 -885 18 -1125 4z m6646 -256 c-12 -20 -14 -14 -5 12 4 9 9 14 11 11 3 -2 0 -13 -6 -23z m-12150 -187 c91 -46 52 -37 -49 12 -71 34 -122 79 -122 108 0 9 21 -6 48 -33 27 -27 82 -66 123 -87z m7931 68 c280 -101 587 -259 774 -400 98 -74 217 -202 250 -271 19 -38 29 -76 31 -117 l3 -61 -15 59 c-24 93 -73 174 -162 267 -167 174 -439 336 -813 484 -80 32 -147 59 -149 61 -10 9 12 3 81 -22z m-2877 -234 c46 -22 75 -64 74 -107 l-1 -28 -15 35 c-19 45 -60 89 -98 106 -16 7 -24 13 -16 14 8 0 33 -9 56 -20z m2893 -126 c235 -97 392 -223 392 -313 l0 -36 -19 40 c-10 22 -31 55 -47 74 -49 58 -182 149 -308 212 -66 32 -117 59 -113 59 5 0 47 -16 95 -36z m-1024 -163 c83 -112 249 -234 475 -347 69 -35 123 -64 119 -64 -14 0 -194 82 -268 123 -246 134 -401 290 -399 402 0 27 2 26 18 -17 11 -26 35 -70 55 -97z m-3251 -238 c26 -29 9 -30 -21 -3 -12 12 -22 31 -22 43 1 21 1 21 12 2 6 -11 20 -30 31 -42z m-668 -109 c19 -66 83 -137 161 -178 59 -32 18 -23 -48 10 -70 35 -115 86 -127 145 -20 94 -11 108 14 23z" />
+                                <path
+                                    d="M3986 2395 c-13 -14 -34 -25 -49 -25 -54 0 -77 -65 -35 -94 33 -24 75 -20 104 9 15 15 36 25 54 25 34 0 70 31 70 58 0 54 -102 73 -144 27z" />
+                                <path
+                                    d="M3722 2339 c-18 -4 -43 -16 -56 -28 -12 -11 -31 -21 -42 -21 -26 0 -64 -27 -64 -46 0 -18 -4 -18 -41 2 -56 28 -124 20 -216 -26 -90 -45 -113 -68 -113 -115 1 -57 65 -105 141 -105 82 0 249 98 249 147 0 11 4 11 21 2 31 -16 106 -5 133 20 12 11 32 21 45 21 12 0 36 14 53 30 24 25 29 36 23 58 -3 15 -12 33 -19 40 -19 19 -75 30 -114 21z" />
+                                <path
+                                    d="M9062 2315 c-17 -14 -39 -25 -50 -25 -36 0 -72 -38 -72 -76 0 -68 103 -97 174 -49 20 14 45 25 55 25 34 0 71 39 71 75 0 47 -37 75 -101 75 -36 0 -55 -6 -77 -25z" />
+                                <path
+                                    d="M9427 2259 c-21 -3 -50 -15 -65 -26 -15 -11 -40 -23 -56 -27 -16 -4 -41 -20 -57 -36 -70 -69 -4 -170 112 -170 59 0 220 78 237 114 16 36 15 62 -4 92 -30 44 -96 66 -167 53z" />
+                                <path
+                                    d="M9896 2150 c10 -10 254 -114 362 -155 40 -15 71 -29 69 -32 -3 -2 -85 17 -183 43 -209 55 -244 61 -228 45 41 -44 751 -289 1089 -376 403 -104 742 -131 827 -66 13 10 39 23 58 30 44 15 80 49 80 76 0 60 -86 85 -421 125 -729 85 -1200 172 -1568 289 -51 16 -90 26 -85 21z" />
+                                <path
+                                    d="M2900 2124 c-332 -107 -846 -201 -1520 -279 -293 -34 -348 -46 -449 -97 -94 -47 -107 -62 -97 -102 22 -89 283 -95 672 -15 356 73 980 281 1344 449 175 80 183 87 50 44z" />
+                                <path
+                                    d="M2980 1996 c-361 -125 -778 -331 -995 -491 -138 -102 -257 -228 -274 -292 -18 -66 32 -115 118 -115 35 0 68 11 139 48 78 39 104 59 150 113 215 252 501 487 850 695 61 38 112 70 112 72 0 2 -1 4 -2 3 -2 0 -46 -15 -98 -33z" />
+                                <path
+                                    d="M9830 2017 c0 -2 51 -33 113 -70 61 -37 126 -78 142 -92 28 -23 24 -22 -50 9 -103 43 -245 89 -251 83 -7 -6 10 -18 179 -127 276 -179 520 -384 701 -588 48 -54 101 -107 118 -117 47 -27 129 -24 175 7 21 14 50 29 65 32 68 16 87 85 42 152 -122 181 -399 375 -764 538 -192 85 -470 187 -470 173z" />
+                                <path
+                                    d="M3152 1880 c-46 -28 -87 -50 -92 -50 -5 0 -55 -31 -112 -69 -178 -120 -309 -250 -359 -355 -51 -108 -31 -181 49 -181 26 0 52 8 69 21 15 11 41 24 56 28 65 16 112 78 224 300 98 195 112 217 179 284 39 39 71 72 70 72 0 0 -38 -23 -84 -50z" />
+                                <path
+                                    d="M9717 1869 c60 -64 127 -158 118 -167 -2 -2 -21 9 -42 25 -66 52 -151 105 -163 101 -6 -2 11 -32 38 -68 57 -76 105 -158 191 -326 76 -147 109 -190 161 -205 43 -13 94 0 104 27 3 8 18 14 33 14 101 0 105 119 10 253 -79 110 -272 269 -472 387 -39 23 -38 21 22 -41z" />
+                            </g>
+                        </svg>
+                        <h2>Protokol Kesehatan covid-19</h2>
+                    </div>
+                </div>
+            <p class="subtitle mx-auto mb-3">Demi keamanan dan kenyamanan bersama, para hadirin undangan dihimbau untuk memenuhi beberapa peraturan berikut :</p>
+            <div class="row">
+                <div class="col-sm-1 col-md-6 col-lg-3 rounded-md py-3">
+                    <h5>Menjaga Jarak</h5>
+                    <img src="{{ asset('assets/img/covid19/social-distancing-1.png') }}" alt="Jaga Jarak" class="image-fluid" style="width: 100px">
+                    <p>Saling menjaga jarak ketika menghadiri acara</p>
+                </div>
+                <div class="col-sm-1 col-md-6 col-lg-3 rounded-md py-3">
+                    <h5>Menggunakan Masker</h5>
+                    <img src="{{ asset('assets/img/covid19/mask-1-1.png') }}" alt="Jaga Jarak" class="image-fluid" style="width: 100px">
+                    <p>Wajib menggunakan masker selama acara berlangsung</p>
+                </div>
+                <div class="col-sm-1 col-md-6 col-lg-3 rounded-md py-3">
+                    <h5>Mencuci Tangan</h5>
+                    <img src="{{ asset('assets/img/covid19/wash-your-hands-1.png') }}" alt="Jaga Jarak" class="image-fluid" style="width: 100px">
+                    <p>Mencuci tangan dan menggunakan hand sanitizer</p>
+                </div>
+                <div class="col-sm-1 col-md-6 col-lg-3 rounded-md py-3">
+                    <h5>Cek Suhu Tubuh</h5>
+                    <img src="{{ asset('assets/img/covid19/thermometer-1.png') }}" alt="Jaga Jarak" class="image-fluid" style="width: 100px">
+                    <p>Cek suhu ketika hendak memasuki ruangan acara</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- protokol covid area end -->
 
     <!-- //comment  -->
     <div id="comment" class="comment-area horizontal-line">
@@ -2047,6 +2012,7 @@ couple-area end
         </div>
     </footer>
     <!-- .footer-area start -->
+
     <!-- strat music-box -->
     <div class="music-box music-box-2">
         <button class="music-box-toggle-btn">
@@ -2104,21 +2070,12 @@ couple-area end
         }
     });
 
-    // const Player = document.getElementById('yt');
-    // const PlayBtn = document.getElementById('stop-yt');
-    // let times = 0,
-    //     playY;
-    // const playVideo = PlayBtn.addEventListener('click', () => {
-    //     playY = Player.src += '?autoplay=0';
-    // });
-
     const calon = @json($calon);
     // console.log(calon);
 
     if ($("#clock").length) {
         $('#clock').countdown(new Date(calon.akad_nikah.tgl), function(event) {
             var $this = $(this).html(event.strftime('' +
-                // '<div class="box"><div class="date">%D</div> <span>month</span> </div>' +
                 '<div class="box"><div class="date">%D</div> <span>Days</span> </div>' +
                 '<div class="box"><div class="date">%H</div> <span>Hours</span> </div>' +
                 '<div class="box"><div class="date">%M</div> <span>Mins</span> </div>' +
@@ -2139,35 +2096,6 @@ couple-area end
     });
     wow.init();
 
-    // $(document).ready(function() {
-
-    //     // Gets the video src from the data-src on each button
-
-    //     var $videoSrc;
-    //     $('.video-btn').click(function() {
-    //         $videoSrc = $(this).data("src");
-    //     });
-    //     console.log($videoSrc);
-
-
-
-    //     // when the modal is opened autoplay it  
-    //     $('#myModal').on('shown.bs.modal', function(e) {
-
-    //         // set the video src to autoplay and not to show related video. Youtube related video is like a box of chocolates... you never know what you're gonna get
-    //         $("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
-    //     })
-
-
-
-    //     // stop playing the youtube video when I close the modal
-    //     $('#myModal').on('hide.bs.modal', function(e) {
-    //         // a poor man's stop video
-    //         $("#video").attr('src', $videoSrc);
-    //     })
-
-    //     // document ready  
-    // });
     </script>
 </body>
 

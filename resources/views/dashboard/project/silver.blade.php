@@ -92,6 +92,12 @@
         margin-top: 5px;
     }
 
+    .media-body{
+        border-radius: 10px;
+        max-height: 300px;
+        overflow: auto;
+    }
+
     div.parent {
         text-align: center;
     }
@@ -188,23 +194,12 @@
         padding-right: 50px;
     }
 
-    /* .comment-area {
-        background: url("{{$calon->fotoBody->foto_kedua}}") no-repeat center center / cover;
-        padding: 100px 0;
-        position: absolute;
-        background-attachment: fixed;
-        z-index: 1;
-    } */
-    /* //footer  */
-
     footer:before {
         height: 100%;
         background-position: center;
         background-size: cover;
         position: absolute;
         color: white;
-        /* font-family: "Courier New", Courier, monospace; */
-        /* font-size: 25px; */
     }
 
     /* // background  */
@@ -294,6 +289,17 @@
         font-size: <?=$calon->size_font ?>px;
         line-height: 40px;
         margin-bottom: 40px;
+    }
+
+    .protokol-covid{
+        text-align: center;
+        padding: 30px 20px;
+        background-color: <?=$calon->color ?>;;
+    }
+
+    .protokol-covid h5, .protokol-covid p {
+        margin: 20px;
+        color: white !important;
     }
     </style>
 
@@ -474,95 +480,6 @@
             </div>
         </div>
 
-        <!-- <div id="fh5co-couple-story">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-                        <span>We Love Each Other</span>
-                        <h2>Our Love Story</h2>
-                        <p>{{$calon->quotes->isi}}.</p>
-                        <span>&ldquo;{{$calon->quotes->judul}}&rdquo;</span>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 col-md-offset-0">
-                        <ul class="timeline animate-box">
-                            <li class="animate-box">
-                                @if($calon->loveStory->foto_firstmeet)
-                                <div class="timeline-badge"
-                                    style="background-image:url({{$calon->loveStory->foto_firstmeet}});">
-                                    @endif
-                                </div>
-                                <div class="timeline-panel">
-                                    <div class="timeline-heading">
-                                        <h3 class="timeline-title">First Meet</h3>
-                                        <span class="date">{{$calon->loveStory->tgl_firstmeet}}</span>
-                                    </div>
-                                    <div class="timeline-body">
-                                        <p>
-                                            {{$calon->loveStory->story_firstmeet}}.
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="timeline-inverted animate-box">
-                                @if($calon->loveStory->foto_firstdate)
-                                <div class="timeline-badge"
-                                    style="background-image:url({{$calon->loveStory->foto_firstdate}});">
-                                    @endif
-                                </div>
-                                <div class="timeline-panel">
-                                    <div class="timeline-heading">
-                                        <h3 class="timeline-title">First Date</h3>
-                                        <span class="date">{{$calon->loveStory->tgl_firstdate}}</span>
-                                    </div>
-                                    <div class="timeline-body">
-                                        <p>{{$calon->loveStory->story_firstdate}}.
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="animate-box">
-                                @if($calon->loveStory->foto_relationship)
-                                <div class="timeline-badge"
-                                    style="background-image:url({{$calon->loveStory->foto_relationship}});">
-                                    @endif
-                                </div>
-                                <div class="timeline-panel">
-                                    <div class="timeline-heading">
-                                        <h3 class="timeline-title">In A Relationship</h3>
-                                        <span class="date">{{$calon->loveStory->tgl_relationship}}</span>
-                                    </div>
-                                    <div class="timeline-body">
-                                        <p>
-                                            {{$calon->loveStory->story_relationship}}.
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="timeline-inverted animate-box">
-                                @if($calon->loveStory->foto_enganged)
-                                <div class="timeline-badge"
-                                    style="background-image:url({{$calon->loveStory->foto_enganged}});">
-                                    @endif
-                                </div>
-                                <div class="timeline-panel">
-                                    <div class="timeline-heading">
-                                        <h3 class="timeline-title">Enganged</h3>
-                                        <span class="date">{{$calon->loveStory->tgl_enganged}}</span>
-                                    </div>
-                                    <div class="timeline-body">
-                                        <p>{{$calon->loveStory->story_enganged}}.
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
         <div id="fh5co-gallery" class="fh5co-section-gray">
             <div class="container">
                 <div class="row">
@@ -592,186 +509,36 @@
             </div>
         </div>
 
-        <!-- <div id="fh5co-counter" class="fh5co-bg fh5co-counter"
-            style="background-image:url(assets/img/silver/img_bg_5.jpg);">
-            <div class="overlay"></div>
-            <div class="container">
+        <footer class="section section--bg protokol-covid">
+            <div class="container position-relative wow slideInLeft text-white">
+                <div class="footer__title color-wht">
+                    <div class="text-center">Protokol Kesehatan covid-19</div>
+                </div>
+                <p class="subtitle mx-auto mb-3">Demi keamanan dan kenyamanan bersama, para hadirin undangan dihimbau untuk memenuhi beberapa peraturan berikut :</p>
                 <div class="row">
-                    <div class="display-t">
-                        <div class="display-tc">
-                            <div class="col-md-3 col-sm-6 animate-box">
-                                <div class="feature-center">
-                                    <span class="icon">
-                                        <i class="icon-users"></i>
-                                    </span>
-
-                                    <span class="counter js-counter" data-from="0" data-to="500" data-speed="5000"
-                                        data-refresh-interval="50">1</span>
-                                    <span class="counter-label">Estimated Guest</span>
-
-                                </div>
-                            </div>
-                            <div class="col-md-3 col-sm-6 animate-box">
-                                <div class="feature-center">
-                                    <span class="icon">
-                                        <i class="icon-user"></i>
-                                    </span>
-
-                                    <span class="counter js-counter" data-from="0" data-to="1000" data-speed="5000"
-                                        data-refresh-interval="50">1</span>
-                                    <span class="counter-label">We Catter</span>
-                                </div>
-                            </div>
-                            <div class="col-md-3 col-sm-6 animate-box">
-                                <div class="feature-center">
-                                    <span class="icon">
-                                        <i class="icon-calendar"></i>
-                                    </span>
-                                    <span class="counter js-counter" data-from="0" data-to="402" data-speed="5000"
-                                        data-refresh-interval="50">1</span>
-                                    <span class="counter-label">Events Done</span>
-                                </div>
-                            </div>
-                            <div class="col-md-3 col-sm-6 animate-box">
-                                <div class="feature-center">
-                                    <span class="icon">
-                                        <i class="icon-clock"></i>
-                                    </span>
-
-                                    <span class="counter js-counter" data-from="0" data-to="2345" data-speed="5000"
-                                        data-refresh-interval="50">1</span>
-                                    <span class="counter-label">Hours Spent</span>
-
-                                </div>
-                            </div>
-                        </div>
+                    <div class="col-sm-1 col-md-6 col-lg-3 rounded-md py-3">
+                        <h5>Menjaga Jarak</h5>
+                        <img src="{{ asset('assets/img/covid19/social-distancing-1.png') }}" alt="Jaga Jarak" class="image-fluid" style="width: 100px">
+                        <p>Saling menjaga jarak ketika menghadiri acara</p>
+                    </div>
+                    <div class="col-sm-1 col-md-6 col-lg-3 rounded-md py-3">
+                        <h5>Menggunakan Masker</h5>
+                        <img src="{{ asset('assets/img/covid19/mask-1-1.png') }}" alt="Jaga Jarak" class="image-fluid" style="width: 100px">
+                        <p>Wajib menggunakan masker selama acara berlangsung</p>
+                    </div>
+                    <div class="col-sm-1 col-md-6 col-lg-3 rounded-md py-3">
+                        <h5>Mencuci Tangan</h5>
+                        <img src="{{ asset('assets/img/covid19/wash-your-hands-1.png') }}" alt="Jaga Jarak" class="image-fluid" style="width: 100px">
+                        <p>Mencuci tangan dan menggunakan hand sanitizer</p>
+                    </div>
+                    <div class="col-sm-1 col-md-6 col-lg-3 rounded-md py-3">
+                        <h5>Cek Suhu Tubuh</h5>
+                        <img src="{{ asset('assets/img/covid19/thermometer-1.png') }}" alt="Jaga Jarak" class="image-fluid" style="width: 100px">
+                        <p>Cek suhu ketika hendak memasuki ruangan acara</p>
                     </div>
                 </div>
             </div>
-        </div> -->
-
-        <!-- <div id="fh5co-testimonial">
-            <div class="container">
-                <div class="row">
-                    <div class="row animate-box">
-                        <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-                            <span>Best Wishes</span>
-                            <h2>Friends Wishes</h2>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12 animate-box">
-                            <div class="wrap-testimony">
-                                <div class="owl-carousel-fullwidth">
-                                    <div class="item">
-                                        <div class="testimony-slide active text-center">
-                                            <figure>
-                                                <img src="assets/img/silver/couple-1.jpg" alt="user">
-                                            </figure>
-                                            <span>John Doe, via <a href="#" class="twitter">Twitter</a></span>
-                                            <blockquote>
-                                                <p>"Far far away, behind the word mountains, far from the countries
-                                                    Vokalia and Consonantia, there live the blind texts. Separated they
-                                                    live in Bookmarksgrove right at the coast of the Semantics"</p>
-                                            </blockquote>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="testimony-slide active text-center">
-                                            <figure>
-                                                <img src="assets/img/silver/couple-2.jpg" alt="user">
-                                            </figure>
-                                            <span>John Doe, via <a href="#" class="twitter">Twitter</a></span>
-                                            <blockquote>
-                                                <p>"Far far away, behind the word mountains, far from the countries
-                                                    Vokalia and Consonantia, at the coast of the Semantics, a large
-                                                    language ocean."</p>
-                                            </blockquote>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="testimony-slide active text-center">
-                                            <figure>
-                                                <img src="assets/img/silver/couple-3.jpg" alt="user">
-                                            </figure>
-                                            <span>John Doe, via <a href="#" class="twitter">Twitter</a></span>
-                                            <blockquote>
-                                                <p>"Far far away, far from the countries Vokalia and Consonantia, there
-                                                    live the blind texts. Separated they live in Bookmarksgrove right at
-                                                    the coast of the Semantics, a large language ocean."</p>
-                                            </blockquote>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
-        <!-- <div id="fh5co-services" class="fh5co-section-gray">
-            <div class="container">
-
-                <div class="row animate-box">
-                    <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-                        <h2>We Offer Services</h2>
-                        <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem
-                            provident. Odit ab aliquam dolor eius.</p>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="feature-left animate-box" data-animate-effect="fadeInLeft">
-                            <span class="icon">
-                                <i class="icon-calendar"></i>
-                            </span>
-                            <div class="feature-copy">
-                                <h3>We Organized Events</h3>
-                                <p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos
-                                    cumque dicta adipisci architecto culpa amet.</p>
-                            </div>
-                        </div>
-
-                        <div class="feature-left animate-box" data-animate-effect="fadeInLeft">
-                            <span class="icon">
-                                <i class="icon-image"></i>
-                            </span>
-                            <div class="feature-copy">
-                                <h3>Photoshoot</h3>
-                                <p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos
-                                    cumque dicta adipisci architecto culpa amet.</p>
-                            </div>
-                        </div>
-
-                        <div class="feature-left animate-box" data-animate-effect="fadeInLeft">
-                            <span class="icon">
-                                <i class="icon-video"></i>
-                            </span>
-                            <div class="feature-copy">
-                                <h3>Video Editing</h3>
-                                <p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos
-                                    cumque dicta adipisci architecto culpa amet.</p>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="col-md-6 animate-box">
-                        <div class="fh5co-video fh5co-bg" style="background-image: url(assets/img/silver/img_bg_3.jpg); ">
-                            <a href="https://vimeo.com/channels/staffpicks/93951774" class="popup-vimeo"><i
-                                    class="icon-video2"></i></a>
-                            <div class="overlay"></div>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-        </div> -->
-
-
+        </footer>
 
         @if($calon->fotoBody->foto_kedua)
         <div id="fh5co-started" class="fh5co-bg comment-area animate-box"
@@ -814,9 +581,7 @@
             </div>
         </div>
 
-        <div id="fh5co-started" class="">
-            <!-- style="background-image:url(assets/img/silver/img_bg_4.jpg);" -->
-            <!-- <div class="overlay"></div> -->
+        <div id="fh5co-started" >
             <div class="row horizontal-line animate-box">
                 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
                     rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
@@ -824,9 +589,8 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="media g-mb-30 media-comment">
+                            <div class="media g-mb-30 media-comment animate-box">
                                 <h7><strong>Comment Section</strong></h7>
-                                <!-- <img class="d-flex g-width-50 g-height-50 rounded-circle g-mt-3 g-mr-15"> -->
                                 <div class="media-body u-shadow-v18 g-bg-secondary g-pa-30">
                                     @foreach($calon->comment as $data)
                                     <div class="commentText">
@@ -891,9 +655,9 @@
 
     <!-- end music box -->
 
-    <div class="gototop js-top">
+    {{-- <div class="gototop js-top">
         <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
-    </div>
+    </div> --}}
 
     <!-- jQuery -->
     <script src="{{asset('assets/js/silver/jquery.min.js')}}"></script>
@@ -923,17 +687,6 @@
     // var d = new Date(new Date("{{$calon->akadNikah->tgl}}").getTime());
 
     var d = new Date(new Date(calon.akad_nikah.tgl).getTime());
-    // console.log(new Date());
-
-    // default example
-    // simplyCountdown('.simply-countdown-one', {
-    //     year: d.getFullYear(),
-    //     month: d.getMonth() + 1,
-    //     day: d.getDate(),
-    //     hour: d.getHours(),
-    //     minute: d.getMinutes(),
-    //     second: d.getSeconds()
-    // });
 
     //jQuery example
     $('.simply-countdown-one').simplyCountdown({
@@ -947,15 +700,6 @@
         $(".gateway").slideUp("slow");
     });
 
-    // wow = new WOW({
-    //     boxClass: 'wow', // default
-    //     animateClass: 'animated', // change this if you are not using animate.css
-    //     offset: 0, // default
-    //     mobile: true, // keep it on mobile
-    //     live: true // track if element updates
-    // })
-    // wow.init();
-
     const Player = document.getElementById('music');
     const PlayBtn = document.getElementById('play-music');
     let times = 0,
@@ -967,30 +711,6 @@
         }
     });
 
-
-    // $(document).ready(function() {
-    //     $('#play-music').on('click', function(ev) {
-
-    //         $("#music")[0].src += "&autoplay=1";
-    //         ev.preventDefault();
-
-    //     });
-    // });
-
-    // function play() {
-    //     var audio = document.getElementById('audio');
-    //     if (audio.paused) {
-    //         audio.play();
-    //     } else {
-    //         audio.pause();
-    //     }
-    //     var audios = document.getElementById('audios');
-    //     if (audios.paused) {
-    //         audios.play();
-    //     } else {
-    //         audios.pause();
-    //     }
-    // }
     </script>
 
 
