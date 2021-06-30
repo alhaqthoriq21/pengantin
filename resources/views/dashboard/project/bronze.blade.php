@@ -412,6 +412,11 @@
             color: white !important;
         }
 
+        .protokol-covid h5{
+            font-size: 16px;
+            font-weight: bold;
+        }
+
         .couple-font{
             border: transparent;
         }
@@ -448,7 +453,7 @@
                                     <h2><strong>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</strong></h2>
                                     <p>
                                         <button href="#" id="play-music" class="button button4">
-                                            <img src="{{ asset('assets/img/logo/btn.png') }}" width="25px" height="25px"
+                                            <img src="{{ asset('assets/img/logo/tobeabride.ico') }}" width="25px" height="25px"
                                                 alt="" srcset="">
                                             Open Invitation
                                         </button>

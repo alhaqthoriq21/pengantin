@@ -505,7 +505,7 @@
                                 <h2>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</h2>
                                 <p>
                                     <button href="#" id="play-music" class="button text-center button4">
-                                        <img src="assets/img/logo/tobeabride.ico" width="25px" height="25px">
+                                        <img src="{{ asset('assets/img/logo/tobeabride.ico') }}" width="25px" height="25px">
                                         Open Invitation
                                     </button>
                                 </p>
@@ -970,7 +970,7 @@
                     <div class="col-md-12 text-center parent">
                         <p>Turut Mengundang :</p>
                         <ul>
-                            @foreach(explode("|", $calon->$undang) as $data)
+                            @foreach( explode("|", $calon->undang) as $data )
                                 <li>{{$data}}</li>
                             @endforeach
                         </ul>

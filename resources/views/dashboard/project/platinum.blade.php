@@ -1285,7 +1285,7 @@ couple-area end
                                         <h2><strong>{{$calon->nick_pria}} &amp;</strong></h2>
                                         <h2><strong>{{$calon->nick_wanita}}</strong></h2>
                                         <p><button href="#" id="play-music" class="button text-center button4">
-                                                <img src="assets/img/logo/btn.png" width="25px" height="25px" alt=""
+                                                <img src="{{ asset('assets/img/logo/tobeabride.ico') }}" width="25px" height="25px" alt=""
                                                     srcset="">
                                                 Open
                                                 Invitation</button></p>
@@ -1297,10 +1297,7 @@ couple-area end
                                         data-thumbnail-src="" frameborder="0" src="{{$calon->song->video}}">
                                     </iframe>
                                 </div>
-
-
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -1989,17 +1986,16 @@ couple-area end
                 <div class="text-center"><strong>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</strong></div>
             </div>
             <div class="row pb-4">
-                <div class="col-md-12 text-center parent">
-                    <p>Turut Mengundang :</p>
-                    <?php 
-                    $undang = explode("|",$calon->undang);
-                    ?>
-                    <ul>
-                        @foreach($undang as $data)
-                        <li>{{$data}}</li>
-                        @endforeach
-                    </ul>
-                </div>
+                @if ($calon->undang)
+                    <div class="col-md-12 text-center parent">
+                        <p>Turut Mengundang :</p>
+                        <ul>
+                            @foreach(ecplode($calon->undang) as $data)
+                            <li>{{$data}}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
             </div>
             <p><img class="center" style="width: 100px;" src="{{ asset('tbb-logo-putih.png') }}" alt="logo"></p>
             <div class="row">
