@@ -121,7 +121,7 @@ class ProjectController extends Controller
 
         //jika ada return dengan data dibawah
         $data = [
-            'linkUndangan' => 'https://tobeabride.com/'.$slug
+            'slug' => $slug,
         ];
         
         return view('share-link', $data);
@@ -134,13 +134,12 @@ class ProjectController extends Controller
             'namaTamu' => 'required|max:255'
         ]);
 
-        $noWhatsapp = $request->input('noWhatsapp');
-
-        $linkUndangan = $request->input('linkUndangan') .'?u=' . Str::slug($request->input('namaTamu'));
-
-        $message = '&text=_Bismillahirrahmanirrahim_%0D%0A%0D%0A_Assalamualaikum+Warrahmatullahi+Wabarakatuh._%0D%0A%0D%0A%E2%80%9CDan+di+antara+tanda-tanda+%28kebesaran%29-Nya+ialah+Dia+menciptakan+pasangan-pasangan+untukmu+dari+jenismu+sendiri%2C+agar+kamu+cenderung+dan+merasa+tenteram+kepadanya%2C+dan+Dia+menjadikan+di+antaramu+rasa+kasih+dan+sayang%E2%80%9D+%28Q.S+Ar-Rum+ayat+21%29.++%0D%0A%0D%0ATanpa+mengurangi+rasa+hormat%2C+kami+mengundang+saudara%2Fi+dalam+hari+pernikahan+kami.+%0D%0A%0D%0A%2AKlik+disini+untuk+membuka+undangan%3A%2A%0D%0A%0D%0A' .$linkUndangan;
-
         $linkWhatsapp = 'https://api.whatsapp.com/send/?phone=';
+        $noWhatsapp = $request->input('noWhatsapp');
+        $linkUndangan = 'https://tobeabride.com/'. $request->input('slug') .'?u=' . Str::slug($request->input('namaTamu'));
+        $calon = Calon::where('slug', $request->input('slug'))->first();
+
+        $message = '&text=%2AAssalamu%27alaikum%20Warahmatullah%20Wabarakatuh%2A%0A%0A_Bismillahirahmanirrahim._%0ATanpa%20mengurangi%20rasa%20hormat%2C%20perkenankan%20kami%20mengundang%20Bapak%2FIbu%2FSaudara%2Fi%2C%20untuk%20menghadiri%20acara%20pernikahan%20kami%20%3A%0A%0A%2A'. $calon->calon_wanita .'%20%26%20'. $calon->calon_pria .'%2A%0A%0ABerikut%20link%20untuk%20info%20lengkap%20dari%20acara%20kami%20%3A%0A%0A'.$linkUndangan.'%0A%0AMerupakan%20suatu%20kebahagiaan%20bagi%20kami%20apabila%20Bapak%2FIbu%2FSaudara%2Fi%20berkenan%20untuk%20hadir%20dan%20memberikan%20doa%20restu.%0A%0A%2AWassalamu%27alaikum%20Warahmatullah%20Wabarakatuh%2A%0A%0A-%20'. $calon->nick_wanita .'%20%26%20'. $calon->nick_pria .'%20-';
 
         return redirect()->away($linkWhatsapp.$noWhatsapp.$message);
     }

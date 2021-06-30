@@ -6,7 +6,7 @@
     <div class="container">
         <form class="mb-3" action="{{ route('share.link') }}" method="POST" target="__blank">
             @csrf
-            <input type="text" value="{{ $linkUndangan }}" name="linkUndangan" hidden>
+            <input type="text" value="{{ $slug }}" name="slug" hidden>
             <div class="form-row justify-content-center align-items-center" style="margin-top: 200px">
                 <div class="row">
                     <div class="col-lg-12">

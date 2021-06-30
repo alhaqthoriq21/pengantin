@@ -477,6 +477,10 @@
             font-size: 18px;
         }
 
+        .wallet{
+            margin-top: 150px;
+            width: 250px;
+        }
 
     </style>
 </head>
