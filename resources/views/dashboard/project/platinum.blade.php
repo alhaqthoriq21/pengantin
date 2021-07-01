@@ -1989,8 +1989,8 @@ couple-area end
                     <div class="col-md-12 text-center parent">
                         <p>Turut Mengundang :</p>
                         <ul>
-                            @foreach(ecplode($calon->undang) as $data)
-                            <li>{{$data}}</li>
+                            @foreach( explode("|", $calon->undang) as $data )
+                                <li>{{$data}}</li>
                             @endforeach
                         </ul>
                     </div>
