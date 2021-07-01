@@ -818,7 +818,7 @@
     <section id="protokol-covid" class="protokol-covid section section--bg text-center">
         <div class="container position-relative wow slideInLeft">
             <h1 class="title--special">Protokol Kesehatan covid-19</h1>
-            <p class="subtitle mx-auto mb-3">Demi keamanan dan kenyamanan bersama, para hadirin undangan dihimbau untuk memenuhi beberapa peraturan berikut :</p>
+            <p class="subtitle mx-auto mb-3">Demi keamanan dan kenyamanan bersama, kami memohon kerjasamanya untuk tidak diperkenankan membawa balita dan anak anak. Dianjurkan menghadiri acara dalam keadaan baik dan sehat. serta dimohon untuk memenuhi beberapa peraturan berikut :</p>
             <div class="row">
                 <div class="col-sm-1 col-md-6 col-lg-3 rounded-md py-3">
                     <h5>Menjaga Jarak</h5>
