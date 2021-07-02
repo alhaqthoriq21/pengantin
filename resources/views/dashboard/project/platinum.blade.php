@@ -786,7 +786,7 @@ couple-area
 
     .social-icon ol li a {
         font-size: 24px;
-        color: <?=$calon->color ?>;
+        color: <?=$calon->color ?> !important;
     }
 
     .social-icon ol li {
