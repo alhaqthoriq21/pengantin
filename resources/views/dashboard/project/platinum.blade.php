@@ -786,7 +786,7 @@ couple-area
 
     .social-icon ol li a {
         font-size: 24px;
-        color: #5e9a8e;
+        color: <?=$calon->color ?>;
     }
 
     .social-icon ol li {
@@ -1350,7 +1350,6 @@ couple-area end
                         </g>
                     </svg>
                     <h2>Happy Couple</h2>
-                    <!-- <img src="assets/img/platinum/svg/2.svg" class="svg" alt=""> -->
                 </div>
             </div>
             <div class="couple-wrap">
@@ -1370,8 +1369,11 @@ couple-area end
                                 </div>
                                 <div class="social-icon">
                                     <ol class="d-flex">
-                                        <li><a href="https://www.instagram.com/{{$calon->sosmed_wanita}}/"><i
-                                                    class="fa fa-instagram"></i></a></li>
+                                        <li>
+                                            <a href="https://www.instagram.com/{{$calon->sosmed_wanita}}/">
+                                                <i class="fa fa-instagram"></i>
+                                            </a>
+                                        </li>
                                     </ol>
                                 </div>
                             </div>
