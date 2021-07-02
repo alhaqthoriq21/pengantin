@@ -786,7 +786,7 @@ couple-area
 
     .social-icon ol li a {
         font-size: 24px;
-        color: <?=$calon->color ?> !important;
+        color: <?= $calon->color ?> !important;
     }
 
     .social-icon ol li {
@@ -1371,7 +1371,7 @@ couple-area end
                                     <ol class="d-flex">
                                         <li>
                                             <a href="https://www.instagram.com/{{$calon->sosmed_wanita}}/">
-                                                <i class="fa fa-instagram"></i>
+                                                <i class="fa fa-instagram" style="color: <?= $calon->color ?> !important;"></i>
                                             </a>
                                         </li>
                                     </ol>
