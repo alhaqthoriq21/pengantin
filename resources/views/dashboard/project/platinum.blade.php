@@ -1402,8 +1402,11 @@ couple-area end
                                 </div>
                                 <div class="social-icon">
                                     <ol class="d-flex">
-                                        <li><a href="https://www.instagram.com/{{$calon->sosmed_pria}}/"><i
-                                                    class="fa fa-instagram"></i></a></li>
+                                        <li>
+                                            <a href="https://www.instagram.com/{{$calon->sosmed_pria}}/">
+                                                <i class="fa fa-instagram" style="color: <?= $calon->color ?> !important;"></i>
+                                            </a>
+                                        </li>
                                     </ol>
                                 </div>
                             </div>
