@@ -1337,7 +1337,6 @@ couple-area end
         <div class="container">
             <div class="col-l2">
                 <div class="text-center section-title svg-sm colored wow slideInUp">
-                    <!-- <img src="assets/img/premium/flaticon/svg/005-two.svg" class="svg" alt=""> -->
                     <svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="200px" height="200px"
                         style="margin-bottom: -105px; margin-top: -105px" viewBox="0 0 1280.000000 640.000000"
                         preserveAspectRatio="xMidYMid meet">
@@ -1990,8 +1989,8 @@ couple-area end
                     <div class="col-md-12 text-center parent">
                         <p>Turut Mengundang :</p>
                         <ul>
-                            @foreach(ecplode($calon->undang) as $data)
-                            <li>{{$data}}</li>
+                            @foreach( explode("|", $calon->undang) as $data )
+                                <li>{{$data}}</li>
                             @endforeach
                         </ul>
                     </div>
