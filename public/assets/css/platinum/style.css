@@ -948,10 +948,10 @@ Story-Area
     font-size: 18px;
     line-height: 60px;
     border-radius: 50%;
-    background: #E8EFED;
+    background: #ffffff;
     content: "\f108";
     font-family: "Flaticon";
-    border: 5px solid #d9ece7;
+    border: 5px solid #ffffff;
 }
 
 .story-area.story-style-2 .story .story-icon {
