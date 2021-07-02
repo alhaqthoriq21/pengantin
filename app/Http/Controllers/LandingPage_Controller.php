@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Calon;
 use Illuminate\Http\Request;
 
 class LandingPage_Controller extends Controller
@@ -9,7 +10,13 @@ class LandingPage_Controller extends Controller
 
     public function index()
     {
-        return view('landing-page',);
+        $calon = Calon::select('slug', 'foto_gateway', 'nick_pria', 'nick_wanita')
+                ->offset(0)
+                ->limit(6)
+                ->orderBy('id', 'DESC')
+                ->get();
+                
+        return view('landing-page', compact('calon', $calon));
     }
 
     public function sendMessage(Request $request)

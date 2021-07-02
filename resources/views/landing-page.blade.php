@@ -559,47 +559,26 @@
 
             <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
-                <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                    <div class="portfolio-wrap">
-                        <img src="{{ url('landing-page/img/portfolio/portfolio-1.jpg') }}" class="img-fluid" alt="">
-                        <div class="portfolio-info">
-                            <h4>Wedding Of</h4>
-                            <p>Irfan & Rifa</p>
-                            <div class="portfolio-links">
-                                <a href="#" title="More Details"><i class="bi bi-link"></i></a>
+                @foreach ($calon as $data)
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                        <div class="portfolio-wrap">
+                            <div class="image-portfolio">
+                                <img src="{{ url($data['foto_gateway']) }}" 
+                                    class="img-fluid" alt="{{ $data['slug'] }}">
+                            </div>
+                            <div class="portfolio-info">
+                                <h4>Wedding Of</h4>
+                                <p>{{ $data['nick_pria'] }} & {{ $data['nick_wanita'] }}</p>
+                                <div class="portfolio-links">
+                                    <a href="{{ route('get.project.data', $data['slug']) }}" title="More Details" target="_blank">
+                                        <i class="bi bi-link"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                    <div class="portfolio-wrap">
-                        <img src="{{ url('landing-page/img/portfolio/portfolio-2.jpg') }}" class="img-fluid" alt="">
-                        <div class="portfolio-info">
-                            <h4>Wedding Of</h4>
-                            <p>Citra & Rio</p>
-                            <div class="portfolio-links">
-                                <a href="#" title="More Details"><i class="bi bi-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                    <div class="portfolio-wrap">
-                        <img src="{{ url('landing-page/img/portfolio/portfolio-3.jpg') }}" class="img-fluid" alt="">
-                        <div class="portfolio-info">
-                            <h4>Wedding Of</h4>
-                            <p>Laras Budi</p>
-                            <div class="portfolio-links">
-                                <a href="#" title="More Details"><i class="bi bi-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+                @endforeach
             </div>
-
         </div>
 
     </section><!-- End Portfolio Section -->
