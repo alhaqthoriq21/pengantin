@@ -822,6 +822,7 @@
     </section>
     @endif
 
+    @if ($calon->akadNikah->google_loc)
     <!-- protokol covid -->
     <section id="protokol-covid" class="protokol-covid section section--bg text-center">
         <div class="container position-relative wow slideInLeft">
@@ -857,7 +858,9 @@
             </div>
         </div>
     </section>
+    @endif
 
+    @if ($calon->akadNikah->google_loc)
     <!-- RSVP -->
     <section id="rsvp" class="rsvp section">
         <div class="container">
@@ -911,6 +914,7 @@
             </div>
         </div>
     </section>
+    @endif
 
     <section id="comment" class="comment section section--bg">
         <div class="container">
