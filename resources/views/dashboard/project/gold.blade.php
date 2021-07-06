@@ -41,447 +41,447 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 
     <style>
-        .gateway {
-            background-image: url('{{$calon->foto_gateway}}');
-            height: 100%;
-            background-position: center;
-            background-size: cover;
-            position: relative;
-            color: white;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, Courier, monospace;
-            font-size: 25px;
+    .gateway {
+        background-image: url('{{$calon->foto_gateway}}');
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        color: white;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, Courier, monospace;
+        font-size: 25px;
+    }
+
+    .gt-section {
+        z-index: 11;
+        position: relative;
+        height: 100%;
+        position: fixed;
+        width: 100%;
+        top: 0px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .button4 {
+        /* margin-top: 10px; */
+        background-color: #ffffff;
+        color: black;
+        border-radius: 12px;
+        width: 300px;
+        height: 45px;
+    }
+
+
+    @media screen and (min-width: 280px) {
+
+        .qbootstrap-cover .display-t .display-tc .button4 {
+            width: 250px;
+            vertical-align: middle;
         }
+    }
 
-        .gt-section {
-            z-index: 11;
-            position: relative;
-            height: 100%;
-            position: fixed;
-            width: 100%;
-            top: 0px;
-            display: flex;
-            flex-direction: column;
-        }
+    .h4 {
+        margin: 0px;
+        margin-bottom: 0px;
+    }
 
-        .button4 {
-            /* margin-top: 10px; */
-            background-color: #ffffff;
-            color: black;
-            border-radius: 12px;
-            width: 300px;
-            height: 45px;
-        }
+    .commentText p,
+    h6 {
+        margin-bottom: 5px;
+        margin-top: 0px;
+        /* margin: 0px; */
+        padding: 0px;
+        line-height: normal;
+    }
 
+    .rsvp {
+        position: relative;
+    }
 
-        @media screen and (min-width: 280px) {
+    .rsvp:after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: url(assets/img/gold/rsvp-flowers-r.png) no-repeat;
+        background-size: contain;
+        background-position: 0 100%;
+        max-width: 500px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+    }
 
-            .qbootstrap-cover .display-t .display-tc .button4 {
-                width: 250px;
-                vertical-align: middle;
-            }
-        }
-
-        .h4 {
-            margin: 0px;
-            margin-bottom: 0px;
-        }
-
-        .commentText p,
-        h6 {
-            margin-bottom: 5px;
-            margin-top: 0px;
-            /* margin: 0px; */
-            padding: 0px;
-            line-height: normal;
-        }
-
-        .rsvp {
-            position: relative;
-        }
-
-        .rsvp:after {
+    @media only screen and (min-width: 768px) {
+        .rsvp:before {
             content: '';
             display: block;
             width: 100%;
             height: 100%;
-            background: url(assets/img/gold/rsvp-flowers-r.png) no-repeat;
+            background: url(assets/img/gold/rsvp-flowers-l.png) no-repeat;
             background-size: contain;
-            background-position: 0 100%;
-            max-width: 500px;
+            background-position: left;
+            max-width: 400px;
             position: absolute;
-            right: 0;
+            left: 0;
             bottom: 0;
             z-index: -1;
         }
+    }
 
-        @media only screen and (min-width: 768px) {
-            .rsvp:before {
-                content: '';
-                display: block;
-                width: 100%;
-                height: 100%;
-                background: url(assets/img/gold/rsvp-flowers-l.png) no-repeat;
-                background-size: contain;
-                background-position: left;
-                max-width: 400px;
-                position: absolute;
-                left: 0;
-                bottom: 0;
-                z-index: -1;
-            }
-        }
+    .rsvp .title {
+        font-family: "Playfair Display", serif;
+        display: block;
+    }
 
-        .rsvp .title {
-            font-family: "Playfair Display", serif;
-            display: block;
-        }
+    .rsvp .title:after,
+    .rsvp .title:before {
+        display: none;
+    }
 
-        .rsvp .title:after,
-        .rsvp .title:before {
-            display: none;
-        }
+    .gift .title {
+        font-family: "Playfair Display", serif;
+        display: block;
+    }
 
-        .gift .title {
-            font-family: "Playfair Display", serif;
-            display: block;
-        }
+    .gift .title:after,
+    .gift .title:before {
+        display: none;
+    }
 
-        .gift .title:after,
-        .gift .title:before {
-            display: none;
-        }
+    .rsvp .title {
+        font-family: "Playfair Display", serif;
+        display: block;
+    }
 
-        .rsvp .title {
-            font-family: "Playfair Display", serif;
-            display: block;
-        }
+    .rsvp .title:after,
+    .rsvp .title:before {
+        display: none;
+    }
 
-        .rsvp .title:after,
-        .rsvp .title:before {
-            display: none;
-        }
+    /* //comment */
+    .comment {
+        position: relative;
+    }
 
-        /* //comment */
-        .comment {
-            position: relative;
-        }
+    .comment:after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: url(assets/img/gold/rsvp-flowers-r.png) no-repeat;
+        background-size: contain;
+        background-position: 0 100%;
+        max-width: 500px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+    }
 
-        .comment:after {
+    @media only screen and (min-width: 768px) {
+        .comment:before {
             content: '';
             display: block;
             width: 100%;
             height: 100%;
-            background: url(assets/img/gold/rsvp-flowers-r.png) no-repeat;
+            background: url(assets/img/gold/rsvp-flowers-l.png) no-repeat;
             background-size: contain;
-            background-position: 0 100%;
-            max-width: 500px;
+            background-position: left;
+            max-width: 400px;
             position: absolute;
-            right: 0;
+            left: 0;
             bottom: 0;
             z-index: -1;
         }
+    }
 
-        @media only screen and (min-width: 768px) {
-            .comment:before {
-                content: '';
-                display: block;
-                width: 100%;
-                height: 100%;
-                background: url(assets/img/gold/rsvp-flowers-l.png) no-repeat;
-                background-size: contain;
-                background-position: left;
-                max-width: 400px;
-                position: absolute;
-                left: 0;
-                bottom: 0;
-                z-index: -1;
-            }
-        }
+    .comment .title {
+        font-family: "Playfair Display", serif;
+        display: block;
+    }
 
-        .comment .title {
-            font-family: "Playfair Display", serif;
-            display: block;
-        }
+    .comment .title:after,
+    .comment .title:before {
+        display: none;
+    }
 
-        .comment .title:after,
-        .comment .title:before {
-            display: none;
-        }
+    /* //gallery  */
 
-        /* //gallery  */
+    .gallery {
+        position: relative;
+        background: url("{{$calon->fotoBody->foto_kedua}}");
+        background-size: cover;
+        background-position: center;
+    }
 
-        .gallery {
-            position: relative;
-            background: url("{{$calon->fotoBody->foto_kedua}}");
-            background-size: cover;
-            background-position: center;
-        }
+    .gallery:before {
+        content: '';
+        background: <?=$calon->color ?>;
+        width: 100%;
+        height: 100%;
+        top: 0;
+    }
 
-        .gallery:before {
-            content: '';
-            background: <?=$calon->color ?>;
-            width: 100%;
-            height: 100%;
-            top: 0;
-        }
+    .gallery__slider {
+        position: relative;
+        margin-top: 80px;
+    }
 
+    @media only screen and (min-width: 992px) {
         .gallery__slider {
-            position: relative;
-            margin-top: 80px;
+            margin-bottom: 100px;
         }
+    }
 
-        @media only screen and (min-width: 992px) {
-            .gallery__slider {
-                margin-bottom: 100px;
-            }
-        }
+    .gallery__slider .slick-list {
+        margin-bottom: 30px;
+    }
 
-        .gallery__slider .slick-list {
-            margin-bottom: 30px;
-        }
+    .gallery__slider-num {
+        position: absolute;
+        bottom: -79px;
+        display: -ms-flexbox;
+        display: flex;
+        left: 50%;
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+        font-size: 30px;
+        font-family: georgia;
+    }
 
-        .gallery__slider-num {
-            position: absolute;
-            bottom: -79px;
-            display: -ms-flexbox;
-            display: flex;
-            left: 50%;
-            -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
-            font-size: 30px;
-            font-family: georgia;
-        }
+    .gallery__flower-prlx-l {
+        top: -150px;
+    }
 
-        .gallery__flower-prlx-l {
-            top: -150px;
-        }
+    .gallery__flower-prlx-r {
+        bottom: -75px;
+        right: 0;
+    }
 
-        .gallery__flower-prlx-r {
-            bottom: -75px;
-            right: 0;
-        }
+    /* Body */
+    html,
+    body {
+        height: 100%;
+    }
 
-        /* Body */
-        html,
-        body {
-            height: 100%;
-        }
+    body {
+        font-family: "Open Sans", sans-serif;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1.7;
+        color: #212529;
+        overflow-x: hidden;
+        background: url(assets/img/gold/seamless.png);
+    }
 
-        body {
-            font-family: "Open Sans", sans-serif;
-            font-size: 14px;
-            font-weight: 300;
-            line-height: 1.7;
-            color: #212529;
-            overflow-x: hidden;
-            background: url(assets/img/gold/seamless.png);
-        }
+    body.offcanvas {
+        overflow: hidden;
+    }
 
-        body.offcanvas {
-            overflow: hidden;
-        }
+    /*** music box ***/
+    .music-box {
+        position: fixed;
+        width: 300px;
+        height: 160px;
+        z-index: 120;
+        bottom: 30px;
+        right: 30px;
+    }
 
-        /*** music box ***/
+    @media (max-width: 991px) {
         .music-box {
-            position: fixed;
-            width: 300px;
-            height: 160px;
-            z-index: 120;
-            bottom: 30px;
-            right: 30px;
+            width: 250px;
+            height: 120px;
+            right: auto;
+            left: 30px;
         }
+    }
 
-        @media (max-width: 991px) {
-            .music-box {
-                width: 250px;
-                height: 120px;
-                right: auto;
-                left: 30px;
-            }
-        }
+    .music-box .music-holder {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: -30px;
+        visibility: hidden;
+        opacity: 0;
+        -webkit-transition: all 0.5s ease-out;
+        -o-transition: all 0.5s ease-out;
+        transition: all 0.5s ease-out;
+    }
 
-        .music-box .music-holder {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            right: 0;
-            top: -30px;
-            visibility: hidden;
-            opacity: 0;
-            -webkit-transition: all 0.5s ease-out;
-            -o-transition: all 0.5s ease-out;
-            transition: all 0.5s ease-out;
-        }
+    .music-box .music-holder iframe {
+        width: 100%;
+        height: 100%;
+    }
 
-        .music-box .music-holder iframe {
-            width: 100%;
-            height: 100%;
-        }
+    .music-box button {
+        background: rgba(0, 0, 0, 0.1);
+        width: 40px;
+        height: 40px;
+        line-height: 35px;
+        font-size: 18px;
+        color: <?=$calon->color ?>;
+        border: 1px solid #e6e6e6;
+        outline: 0;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -o-border-radius: 50%;
+        -ms-border-radius: 50%;
+        border-radius: 50%;
+    }
 
+    .music-box.music-box-2 button {
+        color: <?=$calon->color ?>;
+    }
+
+    @media (max-width: 991px) {
         .music-box button {
-            background: rgba(0, 0, 0, 0.1);
-            width: 40px;
-            height: 40px;
-            line-height: 35px;
-            font-size: 18px;
-            color: <?=$calon->color ?>;
-            border: 1px solid #e6e6e6;
-            outline: 0;
-            padding: 0;
-            margin: 0;
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            -webkit-border-radius: 50%;
-            -moz-border-radius: 50%;
-            -o-border-radius: 50%;
-            -ms-border-radius: 50%;
-            border-radius: 50%;
+            right: auto;
+            left: 0;
         }
+    }
 
-        .music-box.music-box-2 button {
-            color: <?=$calon->color ?>;
-        }
+    .music-box .toggle-music-box {
+        top: -50px;
+        visibility: visible;
+        opacity: 1;
+    }
 
-        @media (max-width: 991px) {
-            .music-box button {
-                right: auto;
-                left: 0;
-            }
-        }
+    div.parent {
+        text-align: center;
+    }
 
-        .music-box .toggle-music-box {
-            top: -50px;
-            visibility: visible;
-            opacity: 1;
-        }
+    ul {
+        list-style: inside;
+        display: inline-block;
+        text-align: left;
+    }
 
-        div.parent {
-            text-align: center;
-        }
+    /* // background  */
+    .section {
+        padding: 6.25rem 0;
+    }
 
-        ul {
-            list-style: inside;
-            display: inline-block;
-            text-align: left;
-        }
+    .section--bg {
+        background: <?=$calon->color ?>;
+        color: white;
+    }
 
-        /* // background  */
-        .section {
-            padding: 6.25rem 0;
-        }
-
-        .section--bg {
-            background: <?=$calon->color ?>;
-            color: white;
-        }
-
-        /* //popup gmaps  */
-        /**
+    /* //popup gmaps  */
+    /**
         * Simple fade transition,
         */
-        .mfp-fade.mfp-bg {
-            opacity: 0;
-            -webkit-transition: all 0.15s ease-out;
-            -moz-transition: all 0.15s ease-out;
-            transition: all 0.15s ease-out;
-        }
+    .mfp-fade.mfp-bg {
+        opacity: 0;
+        -webkit-transition: all 0.15s ease-out;
+        -moz-transition: all 0.15s ease-out;
+        transition: all 0.15s ease-out;
+    }
 
-        .mfp-fade.mfp-bg.mfp-ready {
-            opacity: 0.8;
-        }
+    .mfp-fade.mfp-bg.mfp-ready {
+        opacity: 0.8;
+    }
 
-        .mfp-fade.mfp-bg.mfp-removing {
-            opacity: 0;
-        }
+    .mfp-fade.mfp-bg.mfp-removing {
+        opacity: 0;
+    }
 
-        .mfp-fade.mfp-wrap .mfp-content {
-            opacity: 0;
-            -webkit-transition: all 0.15s ease-out;
-            -moz-transition: all 0.15s ease-out;
-            transition: all 0.15s ease-out;
-        }
+    .mfp-fade.mfp-wrap .mfp-content {
+        opacity: 0;
+        -webkit-transition: all 0.15s ease-out;
+        -moz-transition: all 0.15s ease-out;
+        transition: all 0.15s ease-out;
+    }
 
-        .mfp-fade.mfp-wrap.mfp-ready .mfp-content {
-            opacity: 1;
-        }
+    .mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+        opacity: 1;
+    }
 
-        .mfp-fade.mfp-wrap.mfp-removing .mfp-content {
-            opacity: 0;
-        }
+    .mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+        opacity: 0;
+    }
 
-        .icon {
-            margin: 5px auto;
-            width: 90px;
+    .icon {
+        margin: 5px auto;
+        width: 90px;
 
-            /*background-color: red;*/
-        }
+        /*background-color: red;*/
+    }
 
-        /* button footer  */
-        .social.social-circle a {
-            background: <?=$calon->color ?>;
-            color: #fff;
-            -webkit-border-radius: 50%;
-            -moz-border-radius: 50%;
-            -ms-border-radius: 50%;
-            border-radius: 50%;
-        }
+    /* button footer  */
+    .social.social-circle a {
+        background: <?=$calon->color ?>;
+        color: #fff;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        border-radius: 50%;
+    }
 
-        @media screen and (max-width: 768px) {
+    @media screen and (max-width: 768px) {
 
-            .qbootstrap-cover .display-tc h2,
-            .video-hero .display-tc h2 {
-                font-size: <?=$calon->size_font ?>px;
-            }
-            .title--special{
-                font-size: 25px !important;
-                line-height: 50px;
-            }
-        }
-
-        .footer__title {
-            position: relative;
-            font-family: "Sofia";
+        .qbootstrap-cover .display-tc h2,
+        .video-hero .display-tc h2 {
             font-size: <?=$calon->size_font ?>px;
-            line-height: 2.5rem;
-            margin-bottom: 40px;
         }
 
-        .item-p p {
-            font-size: inherit;
-            line-height: normal;
-            margin-bottom: 0px;
-            margin-top: revert;
+        .title--special {
+            font-size: 25px !important;
+            line-height: 50px;
         }
+    }
 
-        .media-body{
-            border-radius: 10px;
-            max-height: 300px;
-            overflow: auto;
-        }
+    .footer__title {
+        position: relative;
+        font-family: "Sofia";
+        font-size: <?=$calon->size_font ?>px;
+        line-height: 2.5rem;
+        margin-bottom: 40px;
+    }
 
-        /* gift content */
-        .nomor-rekening {
-            border-radius: 10px;
-            margin: auto 0;
-            background-color: rgba(255, 255, 255, 0.3);
-        }
+    .item-p p {
+        font-size: inherit;
+        line-height: normal;
+        margin-bottom: 0px;
+        margin-top: revert;
+    }
 
-        .nomor-rekening h3 {
-            color: <?=$calon->color ?>;
-            font-size: 20px;
-        }
+    .media-body {
+        border-radius: 10px;
+        max-height: 300px;
+        overflow: auto;
+    }
 
-        .nomor-rekening p {
-            margin-bottom: 20px;
-            font-size: 18px;
-        }
+    /* gift content */
+    .nomor-rekening {
+        border-radius: 10px;
+        margin: auto 0;
+        background-color: rgba(255, 255, 255, 0.3);
+    }
 
-        .wallet{
-            margin-top: 150px;
-            width: 250px;
-        }
+    .nomor-rekening h3 {
+        color: <?=$calon->color ?>;
+        font-size: 20px;
+    }
 
+    .nomor-rekening p {
+        margin-bottom: 20px;
+        font-size: 18px;
+    }
+
+    .wallet {
+        margin-top: 150px;
+        width: 250px;
+    }
     </style>
 </head>
 
@@ -502,14 +502,15 @@
                         <div class="container">
                             <div class="col-md-10 col-md-offset-1 wow slideInUp" style="margin-top: 200px;">
                                 @if (isset($qs['u']))
-                                    <h6>Dear {{ Str::title($qs['u'])}},</h6>
+                                <h6>Dear {{ Str::title($qs['u'])}},</h6>
                                 @endif
                                 <p><strong>You're Invited!</strong></p>
                                 <h1 class="holder"><span>The Wedding of</span></h1>
                                 <h2>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</h2>
                                 <p>
                                     <button href="#" id="play-music" class="button text-center button4">
-                                        <img src="{{ asset('assets/img/logo/tobeabride.ico') }}" width="25px" height="25px">
+                                        <img src="{{ asset('assets/img/logo/tobeabride.ico') }}" width="25px"
+                                            height="25px">
                                         Open Invitation
                                     </button>
                                 </p>
@@ -524,8 +525,9 @@
     <div class="qbootstrap-hero" data-section="home">
         <div class="qbootstrap-overlay"></div>
         @if($calon->fotoHeader->foto_header)
-            <div class="qbootstrap-cover text-center center-bg" data-stellar-background-ratio="0.5" style="background-image: url({{$calon->fotoHeader->foto_header}});">
-        @endif
+        <div class="qbootstrap-cover text-center center-bg" data-stellar-background-ratio="0.5"
+            style="background-image: url({{$calon->fotoHeader->foto_header}});">
+            @endif
             <div class="display-t">
                 <div class="display-tc">
                     <div class="container">
@@ -555,7 +557,8 @@
                     <div class="slick slick-wishes mb-0 item-p">
                         <div class="slider__item">
                             <div class="wishes__person">
-                                <img class="rounded-circle m-auto" style="width:200px;height:200px;" src="{{$calon->foto_pria}}" alt="slider">
+                                <img class="rounded-circle m-auto" style="width:200px;height:200px;"
+                                    src="{{$calon->foto_pria}}" alt="slider">
                             </div>
                             <h4 class="wishes__title font-weight-bold">{{$calon->calon_pria}}</h4>
                             <h5 style="margin: 10px 0px"><strong>Putra Dari</strong></h5>
@@ -563,7 +566,8 @@
                             <h5>Ibu {{$calon->ibu_pria}}</h5>
                             <div class="col-md-12 text-center">
                                 <ol class="social social-circle-couple">
-                                    <li><a href="https://www.instagram.com/{{$calon->sosmed_pria}}/"><i class="fa fa-instagram"></i></a></li>
+                                    <li><a href="https://www.instagram.com/{{$calon->sosmed_pria}}/"><i
+                                                class="fa fa-instagram"></i></a></li>
                                 </ol>
                             </div>
                         </div>
@@ -578,7 +582,8 @@
                             <h5>Ibu {{$calon->ibu_wanita}}</h5>
                             <div class="col-md-12 text-center">
                                 <ol class="social social-circle-couple">
-                                    <li><a href="https://www.instagram.com/{{$calon->sosmed_wanita}}/"><i class="fa fa-instagram"></i></a></li>
+                                    <li><a href="https://www.instagram.com/{{$calon->sosmed_wanita}}/"><i
+                                                class="fa fa-instagram"></i></a></li>
                                 </ol>
                             </div>
                         </div>
@@ -643,6 +648,7 @@
         </div>
     </section>
 
+    @if ($calon->akadNikah->google_loc)
     <!-- Section Events -->
     <section id="events" class="events section text-center">
         <div class="container wow slideInUp">
@@ -664,9 +670,10 @@
                         <div class="row">
                             <h2 class="accordion__item-heading">Akad Nikah</h2>
                             @if($calon->fotoBody->foto_pertama)
-                                <div class="col-md-6">
-                                    <img class="accordion__item-img" src="{{$calon->fotoBody->foto_pertama}}" alt="ceremony">
-                                </div>
+                            <div class="col-md-6">
+                                <img class="accordion__item-img" src="{{$calon->fotoBody->foto_pertama}}"
+                                    alt="ceremony">
+                            </div>
                             @endif
                             <div class="col-md-6 text-left">
                                 <h3 class="accordion__item-subheading">When and Where</h3>
@@ -686,9 +693,9 @@
                         <div class="row">
                             <h2 class="accordion__item-heading">Resepsi</h2>
                             @if($calon->fotoBody->foto_kedua)
-                                <div class="col-md-6">
-                                    <img class="accordion__item-img" src="{{$calon->fotoBody->foto_kedua}}" alt="ceremony">
-                                </div>
+                            <div class="col-md-6">
+                                <img class="accordion__item-img" src="{{$calon->fotoBody->foto_kedua}}" alt="ceremony">
+                            </div>
                             @endif
                             <div class="col-md-6 text-left">
                                 <h3 class="accordion__item-subheading">When and Where</h3>
@@ -753,6 +760,7 @@
             </div> -->
         </div>
     </section>
+    @endif
 
     <!-- Section Gallery -->
     <section id="gallery" class="gallery section section--bg text-center">
@@ -768,9 +776,9 @@
             <div class="gallery__slider">
                 <div class="slick-gallery slick mb-0 ">
                     @foreach($calon->fotoFooter as $data)
-                        <div class="slider__item">
-                            <img class="gallery" src="{{$data->foto}}" alt="slider">
-                        </div>
+                    <div class="slider__item">
+                        <img class="gallery" src="{{$data->foto}}" alt="slider">
+                    </div>
                     @endforeach
                 </div>
 
@@ -785,59 +793,65 @@
 
     <!-- gift -->
     @if ($calon->nama_bank)
-        <section id="gift" class="gift section ">
-            <div class="container">
-                <div class="row wow slideInUp">
-                    <div class="d-md-block col-sm-12 col-md-4">
-                        <img src="assets\img\gift.png" class="parallax" alt="flower">
-                    </div>
-                    <div class="col-sm-12 col-md-8 align-self-center">
-                        <h2 class="title">GIFT</h2>
-                        <h6 class="text-uppercase font-weight-bold mb-0">send as a gift</h6>
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-lg-12 p-3 nomor-rekening">
-                                    <p>Nama Bank</p>
-                                    <h3>{{ $calon->nama_bank ?? '' }}</h3>
+    <section id="gift" class="gift section ">
+        <div class="container">
+            <div class="row wow slideInUp">
+                <div class="d-md-block col-sm-12 col-md-4">
+                    <img src="assets\img\gift.png" class="parallax" alt="flower">
+                </div>
+                <div class="col-sm-12 col-md-8 align-self-center">
+                    <h2 class="title">GIFT</h2>
+                    <h6 class="text-uppercase font-weight-bold mb-0">send as a gift</h6>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-lg-12 p-3 nomor-rekening">
+                                <p>Nama Bank</p>
+                                <h3>{{ $calon->nama_bank ?? '' }}</h3>
 
-                                    <p>Pemilik Rekening</p>
-                                    <h3>{{ $calon->nama_rek ?? '' }}</h3>
+                                <p>Pemilik Rekening</p>
+                                <h3>{{ $calon->nama_rek ?? '' }}</h3>
 
-                                    <p>Nomor Rekening</p>
-                                    <h3>{{ $calon->no_rek ?? '' }}</h3>
-                                </div>
+                                <p>Nomor Rekening</p>
+                                <h3>{{ $calon->no_rek ?? '' }}</h3>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
     @endif
 
     <!-- protokol covid -->
     <section id="protokol-covid" class="protokol-covid section section--bg text-center">
         <div class="container position-relative wow slideInLeft">
             <h1 class="title--special">Protokol Kesehatan covid-19</h1>
-            <p class="subtitle mx-auto mb-3">Demi keamanan dan kenyamanan bersama, kami memohon kerjasamanya untuk tidak diperkenankan membawa balita dan anak anak. Dianjurkan menghadiri acara dalam keadaan baik dan sehat. serta dimohon untuk memenuhi beberapa peraturan berikut :</p>
+            <p class="subtitle mx-auto mb-3">Demi keamanan dan kenyamanan bersama, kami memohon kerjasamanya untuk tidak
+                diperkenankan membawa balita dan anak anak. Dianjurkan menghadiri acara dalam keadaan baik dan sehat.
+                serta dimohon untuk memenuhi beberapa peraturan berikut :</p>
             <div class="row">
                 <div class="col-sm-1 col-md-6 col-lg-3 rounded-md py-3">
                     <h5>Menjaga Jarak</h5>
-                    <img src="{{ asset('assets/img/covid19/social-distancing-1.png') }}" alt="Jaga Jarak" class="image-fluid" style="width: 100px">
+                    <img src="{{ asset('assets/img/covid19/social-distancing-1.png') }}" alt="Jaga Jarak"
+                        class="image-fluid" style="width: 100px">
                     <p>Saling menjaga jarak ketika menghadiri acara</p>
                 </div>
                 <div class="col-sm-1 col-md-6 col-lg-3 rounded-md py-3">
                     <h5>Menggunakan Masker</h5>
-                    <img src="{{ asset('assets/img/covid19/mask-1-1.png') }}" alt="Jaga Jarak" class="image-fluid" style="width: 100px">
+                    <img src="{{ asset('assets/img/covid19/mask-1-1.png') }}" alt="Jaga Jarak" class="image-fluid"
+                        style="width: 100px">
                     <p>Wajib menggunakan masker selama acara berlangsung</p>
                 </div>
                 <div class="col-sm-1 col-md-6 col-lg-3 rounded-md py-3">
                     <h5>Mencuci Tangan</h5>
-                    <img src="{{ asset('assets/img/covid19/wash-your-hands-1.png') }}" alt="Jaga Jarak" class="image-fluid" style="width: 100px">
+                    <img src="{{ asset('assets/img/covid19/wash-your-hands-1.png') }}" alt="Jaga Jarak"
+                        class="image-fluid" style="width: 100px">
                     <p>Mencuci tangan dan menggunakan hand sanitizer</p>
                 </div>
                 <div class="col-sm-1 col-md-6 col-lg-3 rounded-md py-3">
                     <h5>Cek Suhu Tubuh</h5>
-                    <img src="{{ asset('assets/img/covid19/thermometer-1.png') }}" alt="Jaga Jarak" class="image-fluid" style="width: 100px">
+                    <img src="{{ asset('assets/img/covid19/thermometer-1.png') }}" alt="Jaga Jarak" class="image-fluid"
+                        style="width: 100px">
                     <p>Cek suhu ketika hendak memasuki ruangan acara</p>
                 </div>
             </div>
@@ -967,18 +981,19 @@
         <div class="container text-white position-relative wow slideInUp">
             <div class="footer__title">
                 <div class="text-center" style="color: white">Thank You</div>
-                <div class="text-center" style="color: white"><strong>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</strong></div>
+                <div class="text-center" style="color: white"><strong>{{$calon->nick_pria}} &amp;
+                        {{$calon->nick_wanita}}</strong></div>
             </div>
             <div class="row pb-2" style="color: white">
                 @if ($calon->undang)
-                    <div class="col-md-12 text-center parent">
-                        <p>Turut Mengundang :</p>
-                        <ul>
-                            @foreach( explode("|", $calon->undang) as $data )
-                                <li>{{$data}}</li>
-                            @endforeach
-                        </ul>
-                    </div>
+                <div class="col-md-12 text-center parent">
+                    <p>Turut Mengundang :</p>
+                    <ul>
+                        @foreach( explode("|", $calon->undang) as $data )
+                        <li>{{$data}}</li>
+                        @endforeach
+                    </ul>
+                </div>
                 @endif
             </div>
             <p>
