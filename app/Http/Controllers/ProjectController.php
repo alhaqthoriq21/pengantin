@@ -137,9 +137,13 @@ class ProjectController extends Controller
         $linkWhatsapp = 'https://api.whatsapp.com/send/?phone=';
         $noWhatsapp = $request->input('noWhatsapp');
         $linkUndangan = 'https://tobeabride.com/'. $request->input('slug') .'?u=' . Str::slug($request->input('namaTamu'));
-        $calon = Calon::where('slug', $request->input('slug'))->first();
+        $calon = Calon::where('slug', $request->input('slug'))->with('akadNikah')->first();
 
-        $message = '&text=%2AAssalamu%27alaikum%20Warahmatullah%20Wabarakatuh%2A%0A%0A_Bismillahirahmanirrahim._%0ATanpa%20mengurangi%20rasa%20hormat%2C%20perkenankan%20kami%20mengundang%20Bapak%2FIbu%2FSaudara%2Fi%2C%20untuk%20menghadiri%20acara%20pernikahan%20kami%20%3A%0A%0A%2A'. $calon->calon_wanita .'%20%26%20'. $calon->calon_pria .'%2A%0A%0ABerikut%20link%20untuk%20info%20lengkap%20dari%20acara%20kami%20%3A%0A%0A'.$linkUndangan.'%0A%0AMerupakan%20suatu%20kebahagiaan%20bagi%20kami%20apabila%20Bapak%2FIbu%2FSaudara%2Fi%20berkenan%20untuk%20hadir%20dan%20memberikan%20doa%20restu.%0A%0A%2AWassalamu%27alaikum%20Warahmatullah%20Wabarakatuh%2A%0A%0A-%20'. $calon->nick_wanita .'%20%26%20'. $calon->nick_pria .'%20-';
+        if($calon->akadNikah->status == 1){
+            $message = '&text=%2AAssalamu%27alaikum%20Warahmatullah%20Wabarakatuh%2A%0A%0A_Bismillahirahmanirrahim._%0ATanpa%20mengurangi%20rasa%20hormat%2C%20perkenankan%20kami%20mengundang%20Bapak%2FIbu%2FSaudara%2Fi%2C%20untuk%20menghadiri%20acara%20pernikahan%20kami%20%3A%0A%0A%2A'. $calon->calon_wanita .'%20%26%20'. $calon->calon_pria .'%2A%0A%0ABerikut%20link%20untuk%20info%20lengkap%20dari%20acara%20kami%20%3A%0A%0A'.$linkUndangan.'%0A%0AMerupakan%20suatu%20kebahagiaan%20bagi%20kami%20apabila%20Bapak%2FIbu%2FSaudara%2Fi%20berkenan%20untuk%20hadir%20dan%20memberikan%20doa%20restu.%0A%0A%2AWassalamu%27alaikum%20Warahmatullah%20Wabarakatuh%2A%0A%0A-%20'. $calon->nick_wanita .'%20%26%20'. $calon->nick_pria .'%20-';
+        }elseif($calon->akadNikah->status == 2){
+            $message = '&text=_Bismillahirrahmanirrahim_%0A%0AAssalamu%27alaikum%20Warahmatullahi%20Wabarakatuh%0A%0ADengan%20memohon%20rahmat%20dan%20ridha%20Allah%20Subhanahu%20Wa%20Ta%27ala%20%2C%20kami%20bermaksud%20mengundang%20Bapak%2FIbu%2FSaudara%2Fi%20untuk%20hadir%20secara%20virtual%20melalui%20Zoom%20pada%20acara%20pernikahan%20kami.%0A%0A'. $calon->calon_wanita .'%20%26%20'. $calon->calon_pria .'%0A%0ABerikut%20link%20untuk%20info%20lengkap%20dari%20acara%20pernikahan%20kami%20%3A%0A%0A'.$linkUndangan.'%0A%0AKami%20memohon%20maaf%20karena%20tidak%20bisa%20mengundang%20untuk%20hadir%20secara%20langsung%20dikarenakan%20situasi%20pandemi%20Covid-19%20serta%20mentaati%20aturan%20dari%20Pemerintah.%0A%0AMerupakan%20suatu%20kehormatan%20bagi%20kami%20apabila%20Bapak%2FIbu%2FSaudara%2Fi%20berkenan%20hadir%20secara%20virtual%20untuk%20memberi%20do%27a%20dan%20restu.%0A%0AWassalamu%27alaikum%20Warahmatullahi%20Wabarakatuh%0A%0A-%20'. $calon->nick_wanita .'%20%26%20'. $calon->nick_pria .'%20-';
+        }
 
         return redirect()->away($linkWhatsapp.$noWhatsapp.$message);
     }

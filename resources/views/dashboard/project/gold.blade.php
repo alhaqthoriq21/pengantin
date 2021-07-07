@@ -670,7 +670,7 @@
 
     {{-- 2 = Live Streaming --}}
     @if ($calon->akadNikah->status == 2) 
-        <section id="komentar-panel" class="comment section">
+        <section id="events" class="events section">
         <!-- <div class="row horizontal-line"> -->
         <div class="container text-center">
             <div class="row wow slideInUp">
