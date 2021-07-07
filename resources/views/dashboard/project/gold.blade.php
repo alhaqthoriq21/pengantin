@@ -461,6 +461,26 @@
         overflow: auto;
     }
 
+    /* live wedding */
+    .live-wedding {
+        border-radius: 10px;
+        margin: auto 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .live-wedding .btn-live-streaming{
+        background-color: <?=$calon->color ?>;
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin: 25px 2px 4px 2px;
+        cursor: pointer;
+        padding: 10px 24px;
+    }
+
     /* gift content */
     .nomor-rekening {
         border-radius: 10px;
@@ -648,118 +668,101 @@
         </div>
     </section>
 
-    @if ($calon->akadNikah->google_loc)
-    <!-- Section Events -->
-    <section id="events" class="events section text-center">
-        <div class="container wow slideInUp">
-            <h1 class="title">Wedding events</h1>
-            <p class="subtitle mx-auto">Real life will begins.</p>
-            <div id="accordion">
-                <div class="accordion__header d-flex justify-content-center">
-                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
-                        aria-controls="collapseOne">
-                        Akad Nikah
-                    </button>
-                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
-                        aria-expanded="false" aria-controls="collapseTwo">
-                        Resepsi
-                    </button>
-                </div>
-                <div class="accordion__body">
-                    <div id="collapseOne" class="collapse show" data-parent="#accordion">
-                        <div class="row">
-                            <h2 class="accordion__item-heading">Akad Nikah</h2>
-                            @if($calon->fotoBody->foto_pertama)
-                            <div class="col-md-6">
-                                <img class="accordion__item-img" src="{{$calon->fotoBody->foto_pertama}}"
-                                    alt="ceremony">
-                            </div>
-                            @endif
-                            <div class="col-md-6 text-left">
-                                <h3 class="accordion__item-subheading">When and Where</h3>
-                                <p class="d-flex align-items-center"><i
-                                        class="fa fa-2x fa-map-marker align-middle pr-1"></i>{{$calon->akadNikah->alamat}}
-                                </p>
-                                <p class="d-flex align-items-center"><i
-                                        class="fa fa-2x fa-clock-o align-middle pr-1"></i>{{$calon->akadNikah->waktu}},
-                                    {{$tanggalIndoAkad}}
-                                </p>
-                                <a class="btn btn-outline-dark rounded-0 px-2 py-1 popup-gmaps"
-                                    href="https://maps.google.com/?q={{$calon->akadNikah->google_loc}}">View on map</a>
-                            </div>
+    {{-- 2 = Live Streaming --}}
+    @if ($calon->akadNikah->status == 2) 
+        <section id="komentar-panel" class="comment section">
+        <!-- <div class="row horizontal-line"> -->
+        <div class="container text-center">
+            <div class="row wow slideInUp">
+                <div class="col-md-12 position-relative wow slideInLeft">
+                    <h1 class="title">Live Wedding</h1>
+                    <div class="media g-mb-30 media-comment">
+                        <div class="live-wedding u-shadow-v18 g-pa-30">
+                            Tanpa mengurangi rasa hormat, kami memohon maaf karena tidak dapat mengundang Bapak/Ibu/Saudara/i secara fisik dalam acara pernikahan kami </br> 
+                            sehubungan dengan diberlakukanya PPKM Darurat, serta untuk mencegah penularan Covid-19.</br>
+                            Maka saksikanlah ikrar suci kami serta memberikan do'a secara virtual dalam live streaming dibawah ini </br>
+                            <button class="btn-live-streaming">
+                                <a href="{{ $calon->akadNikah->alamat }}" target="_blank">
+                                    <i></i>Live Streaming
+                                </a>
+                            </button>
                         </div>
                     </div>
-                    <div id="collapseTwo" class="collapse" data-parent="#accordion">
-                        <div class="row">
-                            <h2 class="accordion__item-heading">Resepsi</h2>
-                            @if($calon->fotoBody->foto_kedua)
-                            <div class="col-md-6">
-                                <img class="accordion__item-img" src="{{$calon->fotoBody->foto_kedua}}" alt="ceremony">
-                            </div>
-                            @endif
-                            <div class="col-md-6 text-left">
-                                <h3 class="accordion__item-subheading">When and Where</h3>
-                                <p class="d-flex align-items-center"><i
-                                        class="fa fa-2x fa-map-marker align-middle pr-1"></i>{{$calon->resepsi->alamat_rsp}}
-                                </p>
-                                <p class="d-flex align-items-center"><i
-                                        class="fa fa-2x fa-clock-o align-middle pr-1"></i>{{$calon->resepsi->waktu_rsp}},
-                                    {{$tanggalIndoResepsi}}
-                                </p>
-                                <a class="btn btn-outline-dark rounded-0 px-2 py-1 popup-gmaps"
-                                    href="https://maps.google.com/?q={{$calon->akadNikah->google_loc_rsp}}">View on
-                                    map</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- <div id="collapseThree" class="collapse" data-parent="#accordion">
-                        <div class="row">
-                            <h2 class="accordion__item-heading">Party</h2>
-                            <div class="col-md-6">
-                                <img class="accordion__item-img" src="assets\img\gold\party.jpg" alt="ceremony">
-                            </div>
-                            <div class="col-md-6 text-left">
-                                <h3 class="accordion__item-subheading">When and Where</h3>
-                                <p class="d-flex align-items-center"><i
-                                        class="fa fa-2x fa-map-marker align-middle pr-1"></i>W Hotel, 1423 Hobart St,
-                                    Pittsburgh, PA, 15217</p>
-                                <p class="d-flex align-items-center"><i
-                                        class="fa fa-2x fa-clock-o align-middle pr-1"></i>21:00 - 00:00, Sep 15, 2018
-                                </p>
-                                <p class="font-weight-bold">Keep it classy</p>
-                                <div class="btn btn-outline-dark rounded-0 px-2 py-1">View on map</div>
-                            </div>
-                        </div>
-                    </div> -->
                 </div>
             </div>
-            <!-- <div class="events__info">
-                <div class="row text-left">
-                    <div class="col-md-4 event__info-item">
-                        <h6 class="event__info-header font-weight-bold">Getting there</h6>
-                        <p>You can get there using the car, bus or train.</p>
+        </div>
+        <!-- </div> -->
+    </section>
+    
+    {{-- 1 = akad nikah langsung --}}
+    @elseif($calon->akadNikah->status == 1)
+        <!-- Section Events -->
+        <section id="events" class="events section text-center">
+            <div class="container wow slideInUp">
+                <h1 class="title">Wedding events</h1>
+                <p class="subtitle mx-auto">Real life will begins.</p>
+                <div id="accordion">
+                    <div class="accordion__header d-flex justify-content-center">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                            aria-controls="collapseOne">
+                            Akad Nikah
+                        </button>
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                            aria-expanded="false" aria-controls="collapseTwo">
+                            Resepsi
+                        </button>
                     </div>
-                    <div class="col-md-4 event__info-item">
-                        <h6 class="event__info-header font-weight-bold">Where to stay</h6>
-                        <p>Hotel, Motel</p>
-                        <p>There are many options to choose around. You can book accommodation online, either at hotel's
-                            own web site or at web site of an agency.</p>
-                    </div>
-                    <div class="col-md-4 event__info-item">
-                        <h6 class="event__info-header font-weight-bold">Activities</h6>
-                        <p>Here are a few of our favorite local spots.</p>
-                        <ul>
-                            <li>Climbing Park</li>
-                            <li>Bowling</li>
-                            <li>Golf</li>
-                            <li>Spa center</li>
-                            <li>Biking</li>
-                        </ul>
+                    <div class="accordion__body">
+                        <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                            <div class="row">
+                                <h2 class="accordion__item-heading">Akad Nikah</h2>
+                                @if($calon->fotoBody->foto_pertama)
+                                <div class="col-md-6">
+                                    <img class="accordion__item-img" src="{{$calon->fotoBody->foto_pertama}}"
+                                        alt="ceremony">
+                                </div>
+                                @endif
+                                <div class="col-md-6 text-left">
+                                    <h3 class="accordion__item-subheading">When and Where</h3>
+                                    <p class="d-flex align-items-center"><i
+                                            class="fa fa-2x fa-map-marker align-middle pr-1"></i>{{$calon->akadNikah->alamat}}
+                                    </p>
+                                    <p class="d-flex align-items-center"><i
+                                            class="fa fa-2x fa-clock-o align-middle pr-1"></i>{{$calon->akadNikah->waktu}},
+                                        {{$tanggalIndoAkad}}
+                                    </p>
+                                    <a class="btn btn-outline-dark rounded-0 px-2 py-1 popup-gmaps"
+                                        href="https://maps.google.com/?q={{$calon->akadNikah->google_loc}}">View on map</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                            <div class="row">
+                                <h2 class="accordion__item-heading">Resepsi</h2>
+                                @if($calon->fotoBody->foto_kedua)
+                                <div class="col-md-6">
+                                    <img class="accordion__item-img" src="{{$calon->fotoBody->foto_kedua}}" alt="ceremony">
+                                </div>
+                                @endif
+                                <div class="col-md-6 text-left">
+                                    <h3 class="accordion__item-subheading">When and Where</h3>
+                                    <p class="d-flex align-items-center"><i
+                                            class="fa fa-2x fa-map-marker align-middle pr-1"></i>{{$calon->resepsi->alamat_rsp}}
+                                    </p>
+                                    <p class="d-flex align-items-center"><i
+                                            class="fa fa-2x fa-clock-o align-middle pr-1"></i>{{$calon->resepsi->waktu_rsp}},
+                                        {{$tanggalIndoResepsi}}
+                                    </p>
+                                    <a class="btn btn-outline-dark rounded-0 px-2 py-1 popup-gmaps"
+                                        href="https://maps.google.com/?q={{$calon->akadNikah->google_loc_rsp}}">View on
+                                        map</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div> -->
-        </div>
-    </section>
+            </div>
+        </section>
     @endif
 
     <!-- Section Gallery -->
@@ -822,7 +825,7 @@
     </section>
     @endif
 
-    @if ($calon->akadNikah->google_loc)
+    @if ($calon->akadNikah->status == 1)
     <!-- protokol covid -->
     <section id="protokol-covid" class="protokol-covid section section--bg text-center">
         <div class="container position-relative wow slideInLeft">
@@ -860,7 +863,7 @@
     </section>
     @endif
 
-    @if ($calon->akadNikah->google_loc)
+    @if ($calon->akadNikah->status == 1)
     <!-- RSVP -->
     <section id="rsvp" class="rsvp section">
         <div class="container">
