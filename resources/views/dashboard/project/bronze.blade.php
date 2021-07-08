@@ -691,7 +691,7 @@
         </div>
     </div>
 
-    @if ($calon->fotoFooter == null)
+    @if ($calon->fotoFooter)
         <div id="fh5co-gallery" class="fh5co-section-gray">
             <div class="container">
                 <div class="row">
@@ -718,6 +718,7 @@
                 </div>
             </div>
         </div>
+    @else
     @endif
 
     <div id="qbootstrap-comment" class="" data-section="comment" data-stellar-background-ratio="0.5"
