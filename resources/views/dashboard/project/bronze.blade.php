@@ -725,7 +725,7 @@
             </div>
         </div>
     </div>
-    <!-- @else -->
+    @else
     @endif
 
     <div id="qbootstrap-comment" class="" data-section="comment" data-stellar-background-ratio="0.5"
