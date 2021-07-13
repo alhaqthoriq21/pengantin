@@ -518,7 +518,7 @@
                                 alt=""></h2>
                     </div>
                     <div class="col-md-5 col-sm-5 col-xs-5 nopadding">
-                        <img class="center" src="{{$calon->foto_wanita}}" style="width:120px; height: 110px;"
+                        <img class="center" src="{{$calon->foto_wanita}}" style="width:110px; height: 110px;"
                             class="img-responsive" alt="">
                         <h3>{{$calon->calon_wanita}}</h3>
                         <p><strong>Putri Dari</strong></p>
