@@ -282,10 +282,9 @@
                             <li><i class="bi bi-check-circle mx-2" style="color: #0d6efd"></i> Hitung Mundur</li>
                             <li><i class="bi bi-check-circle mx-2" style="color: #0d6efd"></i> Kolom Ucapan</li>
                             <li><i class="bi bi-check-circle mx-2" style="color: #0d6efd"></i> Musik</li>
-                            <li class="na"><i class="bi bi-x-circle mx-2" style="color: #dc3545"></i> Add To Calender
-                            </li>
-                            <li class="na"><i class="bi bi-x-circle mx-2" style="color: #dc3545"></i> RSVP/Buku Tamu
-                            </li>
+                            {{-- <li class="na"><i class="bi bi-x-circle mx-2" style="color: #dc3545"></i> Add To Calender</li> --}}
+                            <li class="na"><i class="bi bi-x-circle mx-2" style="color: #dc3545"></i> Gift</li>
+                            <li class="na"><i class="bi bi-x-circle mx-2" style="color: #dc3545"></i> RSVP/Buku Tamu</li>
                             <li class="na"><i class="bi bi-x-circle mx-2" style="color: #dc3545"></i> Love Story</li>
                             <li class="na"><i class="bi bi-x-circle mx-2" style="color: #dc3545"></i> Video</li>
                         </ul>
@@ -313,10 +312,9 @@
                             <li><i class="bi bi-check-circle mx-2" style="color: #0d6efd"></i> Hitung Mundur</li>
                             <li><i class="bi bi-check-circle mx-2" style="color: #0d6efd"></i> Kolom Ucapan</li>
                             <li><i class="bi bi-check-circle mx-2" style="color: #0d6efd"></i> Musik</li>
-                            <li class="na"><i class="bi bi-x-circle mx-2" style="color: #dc3545"></i> Add To Calender
-                            </li>
-                            <li class="na"><i class="bi bi-x-circle mx-2" style="color: #dc3545"></i> RSVP/Buku Tamu
-                            </li>
+                            {{-- <li class="na"><i class="bi bi-x-circle mx-2" style="color: #dc3545"></i> Add To Calender</li> --}}
+                            <li class="na"><i class="bi bi-x-circle mx-2" style="color: #dc3545"></i> Gift</li>
+                            <li class="na"><i class="bi bi-x-circle mx-2" style="color: #dc3545"></i> RSVP/Buku Tamu</li>
                             <li class="na"><i class="bi bi-x-circle mx-2" style="color: #dc3545"></i> Love Story</li>
                             <li class="na"><i class="bi bi-x-circle mx-2" style="color: #dc3545"></i> Video</li>
                         </ul>
@@ -343,7 +341,8 @@
                             <li><i class="bi bi-check-circle mx-2" style="color: #0d6efd"></i> Hitung Mundur</li>
                             <li><i class="bi bi-check-circle mx-2" style="color: #0d6efd"></i> Kolom Ucapan</li>
                             <li><i class="bi bi-check-circle mx-2" style="color: #0d6efd"></i> Musik</li>
-                            <li><i class="bi bi-check-circle mx-2" style="color: #0d6efd"></i> Add To Calender</li>
+                            {{-- <li><i class="bi bi-check-circle mx-2" style="color: #0d6efd"></i> Add To Calender</li> --}}
+                            <li><i class="bi bi-check-circle mx-2" style="color: #0d6efd"></i> Gift</li>
                             <li><i class="bi bi-check-circle mx-2" style="color: #0d6efd"></i> RSVP/Buku Tamu</li>
                             <li class="na"><i class="bi bi-x-circle mx-2" style="color: #dc3545"></i> Love Story</li>
                             <li class="na"><i class="bi bi-x-circle mx-2" style="color: #dc3545"></i> Video</li>
@@ -371,7 +370,8 @@
                             <li><i class="bi bi-check-circle mx-2" style="color: #0d6efd"></i> Hitung Mundur</li>
                             <li><i class="bi bi-check-circle mx-2" style="color: #0d6efd"></i> Kolom Ucapan</li>
                             <li><i class="bi bi-check-circle mx-2" style="color: #0d6efd"></i> Musik</li>
-                            <li><i class="bi bi-check-circle mx-2" style="color: #0d6efd"></i> Add To Calender</li>
+                            <li><i class="bi bi-check-circle mx-2" style="color: #0d6efd"></i> Gift</li>
+                            {{-- <li><i class="bi bi-check-circle mx-2" style="color: #0d6efd"></i> Add To Calender</li> --}}
                             <li><i class="bi bi-check-circle mx-2" style="color: #0d6efd"></i> RSVP/Buku Tamu</li>
                             <li><i class="bi bi-check-circle mx-2" style="color: #0d6efd"></i> Love Story</li>
                             <li><i class="bi bi-check-circle mx-2" style="color: #0d6efd"></i> Video</li>

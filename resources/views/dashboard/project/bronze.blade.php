@@ -698,34 +698,34 @@
         </div>
     </div>
 
-    @if ($calon->fotoFooter)
-    <div id="fh5co-gallery" class="fh5co-section-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center section-heading svg-sm colored">
-                    <img src="assets/img/bronze/flaticon/svg/005-two.svg" class="svg" alt="">
-                    <h2>Our Galleries</h2>
-                    <div class="row">
-                        <div class="col-md-10 col-md-offset-1 subtext">
-                            <h3><strong>Our memories in photograph.</strong></h3>
+    @if ($calon->fotoFooter->isEmpty())
+    @else
+        <div id="fh5co-gallery" class="fh5co-section-gray">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center section-heading svg-sm colored">
+                        <img src="assets/img/bronze/flaticon/svg/005-two.svg" class="svg" alt="">
+                        <h2>Our Galleries</h2>
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1 subtext">
+                                <h3><strong>Our memories in photograph.</strong></h3>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row row-bottom-padded-md">
-                <div class="col-md-12">
-                    <ul id="fh5co-gallery-list">
-                        @foreach($calon->fotoFooter as $data)
-                        <li class="one-third animate-box center-bg" data-animate-effect="fadeIn"
-                            style="background-image: url({{$data->foto}});">
-                            <a href="{{$data->foto}}" target="_blank"></a>
-                        </li>
-                        @endforeach
+                <div class="row row-bottom-padded-md">
+                    <div class="col-md-12">
+                        <ul id="fh5co-gallery-list">
+                            @foreach($calon->fotoFooter as $data)
+                            <li class="one-third animate-box center-bg" data-animate-effect="fadeIn"
+                                style="background-image: url({{$data->foto}});">
+                                <a href="{{$data->foto}}" target="_blank"></a>
+                            </li>
+                            @endforeach
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    @else
     @endif
 
     <div id="qbootstrap-comment" class="" data-section="comment" data-stellar-background-ratio="0.5"
@@ -799,9 +799,9 @@
     <footer id="footer" role="contentinfo" class="section--bg">
         <div class="container overlay footer animate-box">
             <div class="col-md-12 text-center">
-                <h1>Thank You</h1>
+                <p>Thank You</p>
                 <p style="font-size: 30px; color: white;">
-                    <strong>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</strong>
+                    <h1><strong>{{$calon->nick_pria}} &amp; {{$calon->nick_wanita}}</strong></h1>
                 </p>
             </div>
             @if ($calon->undang)
