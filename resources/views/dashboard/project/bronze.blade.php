@@ -241,8 +241,9 @@
     }
 
     .media-body {
+        position: relative;
         border-radius: 10px;
-        max-height: 300px;
+        height: 10px;
         overflow: auto;
     }
 
@@ -783,12 +784,12 @@
                     <div class="media g-mb-30 media-comment animate-box">
                         <h7><strong>Comment Section</strong></h7>
                         <div class="media-body u-shadow-v18 g-bg-secondary g-pa-30">
-                            @foreach($calon->comment as $data)
                             <div class="commentText">
-                                <p><strong>{{ $data->nama }}</strong></p>
-                                <p class="">{{ $data->comment }}</p>
+                                @foreach($calon->comment as $data)
+                                    <p><strong>{{ $data->nama }}</strong></p>
+                                    <p class="">{{ $data->comment }}</p>
+                                @endforeach
                             </div>
-                            @endforeach
                         </div>
                     </div>
                 </div>

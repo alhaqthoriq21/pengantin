@@ -763,36 +763,65 @@
                 </div>
             </div>
         </section>
+
+        @if ($calon->slug == 'rifa-irfan')
+            <section id="events" class="events section" style="margin-top: -50px">
+                <!-- <div class="row horizontal-line"> -->
+                <div class="container text-center">
+                    <div class="row wow slideInUp">
+                        <div class="col-md-12 position-relative wow slideInLeft">
+                            <h1 class="title">Live Wedding</h1>
+                            <div class="media g-mb-30 media-comment">
+                                <div class="live-wedding u-shadow-v18 g-pa-30">
+                                    Sehubungan dengan diberlakukanya PPKM Darurat, serta untuk mencegah penularan Covid-19.</br>
+                                    Maka saksikanlah ikrar suci kami serta berikan do'a restu secara virtual dalam live streaming dibawah ini </br>
+                                    <button class="btn-live-streaming">
+                                        <a href="https://www.instagram.com/rifamaghfira/" target="_blank">
+                                            <i></i>Live Streaming
+                                        </a>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- </div> -->
+            </section>
+        @endif
     @endif
 
     <!-- Section Gallery -->
-    <section id="gallery" class="gallery section section--bg text-center">
-        <div class="d-none d-lg-block gallery__flower-prlx-l position-absolute parallax">
-            <img src="assets\img\gold\gallery-prlx-l.png" alt="flower">
-        </div>
-        <div class="d-none d-lg-block gallery__flower-prlx-r position-absolute parallax">
-            <img src="assets\img\gold\gallery-prlx-r.png" alt="flower">
-        </div>
-        <div class="container position-relative wow slideInLeft">
-            <h1 class="title">Gallery</h1>
-            <p class="subtitle mx-auto">Our hapiness in photograph...</p>
-            <div class="gallery__slider">
-                <div class="slick-gallery slick mb-0 ">
-                    @foreach($calon->fotoFooter as $data)
-                    <div class="slider__item">
-                        <img class="gallery" src="{{$data->foto}}" alt="slider">
+    @if ($calon->fotoFooter->isEmpty())
+        
+    @else
+        <section id="gallery" class="gallery section section--bg text-center">
+            <div class="d-none d-lg-block gallery__flower-prlx-l position-absolute parallax">
+                <img src="assets\img\gold\gallery-prlx-l.png" alt="flower">
+            </div>
+            <div class="d-none d-lg-block gallery__flower-prlx-r position-absolute parallax">
+                <img src="assets\img\gold\gallery-prlx-r.png" alt="flower">
+            </div>
+            <div class="container position-relative wow slideInLeft">
+                <h1 class="title">Gallery</h1>
+                <p class="subtitle mx-auto">Our hapiness in photograph...</p>
+                <div class="gallery__slider">
+                    <div class="slick-gallery slick mb-0 ">
+                        @foreach($calon->fotoFooter as $data)
+                        <div class="slider__item">
+                            <img class="gallery" src="{{$data->foto}}" alt="slider">
+                        </div>
+                        @endforeach
                     </div>
-                    @endforeach
-                </div>
 
-                <div class="gallery__slider-num d-none d-lg-flex">
-                    <div class="gallery__slider-current pr-1"></div>
-                    <div class="pr-1">from</div>
-                    <div class="gallery__slider-all"></div>
+                    <div class="gallery__slider-num d-none d-lg-flex">
+                        <div class="gallery__slider-current pr-1"></div>
+                        <div class="pr-1">from</div>
+                        <div class="gallery__slider-all"></div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    @endif
 
     <!-- gift -->
     @if ($calon->nama_bank)
