@@ -595,7 +595,7 @@
                                 <div class="media-body u-shadow-v18 g-bg-secondary g-pa-30">
                                     @foreach($calon->comment as $data)
                                     <div class="commentText">
-                                        <p><strong>{{ $data->nama }}</strong></p>
+                                        <p><strong>{{ $data-> }}</strong></p>
                                         <p class="">{{ $data->comment }}</p>
                                     </div>
                                     @endforeach
